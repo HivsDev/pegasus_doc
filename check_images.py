@@ -12,7 +12,7 @@ for root, dirs, files in os.walk(DOCS):
             with open(fp, "r", encoding="utf-8", errors="replace") as f:
                 content = f.read()
             for m in re.finditer(r"!\[([^\]]*)\]\(([^()]*)\)", content):
-                url = m.group(1)
+                url = m.group(2)  # group(2) = URL inside ()
                 rel = os.path.relpath(fp, DOCS).replace("\\", "/")
                 abs_path = os.path.normpath(os.path.join(os.path.dirname(fp), url)).replace("\\", "/")
                 if os.path.exists(abs_path):
