@@ -106,15 +106,16 @@ document.addEventListener('DOMContentLoaded', function() {
   // 初次加载执行
   setupHomepageLayout();
 
-  // 监听 MkDocs Material 即时导航（instant navigation）后的内容更新
-  document.addEventListener('locationchange', function() {
-    setupHomepageLayout();
-  });
+  // 监听 MkDocs Material 即时导航后的内容更新（MutationObserver 比 locationchange 更可靠）
+  var mdContent = document.querySelector('.md-content');
+  if (mdContent) {
+    var contentObserver = new MutationObserver(function() {
+      setupHomepageLayout();
+    });
+    contentObserver.observe(mdContent, { childList: true, subtree: true });
+  }
 
-  // 监听同页锚点跳转与浏览器前进/后退（popstate 兼容 hash 变化）
-  window.addEventListener('hashchange', function() {
-    setupHomepageLayout();
-  });
+  // 备选：监听浏览器前进/后退
   window.addEventListener('popstate', function() {
     setupHomepageLayout();
   });
