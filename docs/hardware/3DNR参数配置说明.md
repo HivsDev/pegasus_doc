@@ -45,28 +45,28 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span>![](figures/zh-cn_image_0000002424202298.png)</span></p>
+<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p1757432116410"><a name="p1757432116410"></a><a name="p1757432116410"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span>![](figures/zh-cn_image_0000002457840909.png)</span></p>
+<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p959197916410"><a name="p959197916410"></a><a name="p959197916410"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span>![](figures/zh-cn_image_0000002457880977.png)</span></p>
+<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p123197916410"><a name="p123197916410"></a><a name="p123197916410"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span>![](figures/zh-cn_image_0000002424362102.png)</span></p>
+<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4388861916410"><a name="p4388861916410"></a><a name="p4388861916410"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
 <p id="p1238861916410"><a name="p1238861916410"></a><a name="p1238861916410"></a>“须知”不涉及人身伤害。</p>
 </td>
 </tr>
-<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span>![](figures/zh-cn_image_0000002457881065.png)</span></p>
+<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4612588116410"><a name="p4612588116410"></a><a name="p4612588116410"></a>对正文中重点信息的补充说明。</p>
 <p id="p1232588116410"><a name="p1232588116410"></a><a name="p1232588116410"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
@@ -104,13 +104,13 @@
 
 下面介绍3DNR的接口及参数。
 
--   [ot\_vpss\_nrx\_v2](ot_vpss_nrx_v2.md)：定义3DNR X接口版本V2的参数。
--   [ot\_vpss\_nrx\_v2\_iey](ot_vpss_nrx_v2_iey.md)：3DNR增强模块参数。
--   [ot\_vpss\_nrx\_v2\_sfy](ot_vpss_nrx_v2_sfy.md)：3DNR空域滤波参数。
--   [ot\_vpss\_nrx\_v2\_mdy](ot_vpss_nrx_v2_mdy.md)：3DNR运动检测参数。
--   [ot\_vpss\_nrx\_v2\_tfy](ot_vpss_nrx_v2_tfy.md)：3DNR时域滤波参数。
--   [ot\_vpss\_nrx\_v2\_nrc0](ot_vpss_nrx_v2_nrc0.md)：3DNR视频色度C0级滤波参数。
--   [ot\_vpss\_nrx\_v2\_nrc1](ot_vpss_nrx_v2_nrc1.md)：3DNR视频色度C1级滤波参数。
+-   [ot\_vpss\_nrx\_v2]：定义3DNR X接口版本V2的参数。
+-   [ot\_vpss\_nrx\_v2\_iey]：3DNR增强模块参数。
+-   [ot\_vpss\_nrx\_v2\_sfy]：3DNR空域滤波参数。
+-   [ot\_vpss\_nrx\_v2\_mdy]：3DNR运动检测参数。
+-   [ot\_vpss\_nrx\_v2\_tfy]：3DNR时域滤波参数。
+-   [ot\_vpss\_nrx\_v2\_nrc0]：3DNR视频色度C0级滤波参数。
+-   [ot\_vpss\_nrx\_v2\_nrc1]：3DNR视频色度C1级滤波参数。
 
 
 
@@ -994,23 +994,23 @@ typedef struct {
 
 ## 默认参数<a name="ZH-CN_TOPIC_0000002424361866"></a>
 
-SS928V100 YUV 3DNR参数的接口默认参数，如[图1](#ref515453020)所示。
+SS928V100 YUV 3DNR参数的接口默认参数，如[图1]所示。
 
 **图 1**  3DNR参数的接口参数界面<a name="ref515453020"></a>  
-![](figures/3DNR参数的接口参数界面.png)
+![]
 
 3DNR的亮度去噪（NRy）由四级串联去噪功能组成，按如下分为4级，编号为N0，N1，N2，N3，不同级之间的同样编号、类型滤波器效果由于实现差异、串联效应等，导致不同级结果并不完全一样。
 
-N0\~N2可以选择时域滤波和空域滤波、N3为纯空域滤波器（带时域辅助）。色彩滤波器独立于亮度滤波器，分为两级C1和C2，如[图2](#ref515443368)所示。
+N0\~N2可以选择时域滤波和空域滤波、N3为纯空域滤波器（带时域辅助）。色彩滤波器独立于亮度滤波器，分为两级C1和C2，如[图2]所示。
 
 **图 2**  3DNR参数编号示意图<a name="ref515443368"></a>  
-![](figures/3DNR参数编号示意图.png)
+![]
 
 > **说明：** 
 >-   nX\*\*,mX\*\*参数里面的X的均指级数，代指第n级。如n0sf2特指nXsf2系列参数里的N0级对应参数，m1id0特指mXid0系列里第一级对应参数。
 >-   \[en\] 使能该级去噪功能，0时表示此级功能关闭，1则表示此级功能生效。以红色字体标识的参数为不建议调试的参数。
->-   N3级空域滤波器参数\[nXsf6\]、\[nXsf7\]、\[nXsfr7\]、\[nXsbr7\]、\[nXsf8\]、\[nXsfn\]、\[nXsth\]和\[sfr\]分别有两套接口（如[图2](#ref515443368)中的N3a和N3b区域），作用于运动区域（N3a）和静止区域（N3b），实现不同的处理效果。N3级使能，需要N2级使能并且打开时域参考，否则N3级无实际效果。
->-   色度分为C0和C2两级，分别由nC0en和 nC1en开关控制。\[nCsfc6\]、\[nCsfc6uv\]、\[nCXsf7\]、 \[nCXsf8\]、\[nCXsf9\]和\[nCXsf10\]分别有两套接口（如[图2](#ref515443368)中的C3a和C3b区域），作用于运动区域（C3a）和静止区域（C3b），实现不同的处理效果。
+>-   N3级空域滤波器参数\[nXsf6\]、\[nXsf7\]、\[nXsfr7\]、\[nXsbr7\]、\[nXsf8\]、\[nXsfn\]、\[nXsth\]和\[sfr\]分别有两套接口（如[图2]中的N3a和N3b区域），作用于运动区域（N3a）和静止区域（N3b），实现不同的处理效果。N3级使能，需要N2级使能并且打开时域参考，否则N3级无实际效果。
+>-   色度分为C0和C2两级，分别由nC0en和 nC1en开关控制。\[nCsfc6\]、\[nCsfc6uv\]、\[nCXsf7\]、 \[nCXsf8\]、\[nCXsf9\]和\[nCXsf10\]分别有两套接口（如[图2]中的C3a和C3b区域），作用于运动区域（C3a）和静止区域（C3b），实现不同的处理效果。
 >-   F区域是表格区域。
 
 # 接口空域滤波器参数说明<a name="ZH-CN_TOPIC_0000002424202006"></a>

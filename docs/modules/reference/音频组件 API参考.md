@@ -71,28 +71,28 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row190mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p192mcpsimp"><a name="p192mcpsimp"></a><a name="p192mcpsimp"></a><a name="image103"></a><a name="image103"></a><span>![](figures/zh-cn_image_0000002441714733.png)</span></p>
+<tbody><tr id="row190mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p192mcpsimp"><a name="p192mcpsimp"></a><a name="p192mcpsimp"></a><a name="image103"></a><a name="image103"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="77%" headers="mcps1.1.3.1.2 "><p id="p194mcpsimp"><a name="p194mcpsimp"></a><a name="p194mcpsimp"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row195mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p197mcpsimp"><a name="p197mcpsimp"></a><a name="p197mcpsimp"></a><a name="image104"></a><a name="image104"></a><span>![](figures/zh-cn_image_0000002441674929.png)</span></p>
+<tr id="row195mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p197mcpsimp"><a name="p197mcpsimp"></a><a name="p197mcpsimp"></a><a name="image104"></a><a name="image104"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="77%" headers="mcps1.1.3.1.2 "><p id="p199mcpsimp"><a name="p199mcpsimp"></a><a name="p199mcpsimp"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row200mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p202mcpsimp"><a name="p202mcpsimp"></a><a name="p202mcpsimp"></a><a name="image105"></a><a name="image105"></a><span>![](figures/zh-cn_image_0000002441714825.png)</span></p>
+<tr id="row200mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p202mcpsimp"><a name="p202mcpsimp"></a><a name="p202mcpsimp"></a><a name="image105"></a><a name="image105"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="77%" headers="mcps1.1.3.1.2 "><p id="p204mcpsimp"><a name="p204mcpsimp"></a><a name="p204mcpsimp"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row205mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p207mcpsimp"><a name="p207mcpsimp"></a><a name="p207mcpsimp"></a><a name="image106"></a><a name="image106"></a><span>![](figures/zh-cn_image_0000002408275514.png)</span></p>
+<tr id="row205mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p207mcpsimp"><a name="p207mcpsimp"></a><a name="p207mcpsimp"></a><a name="image106"></a><a name="image106"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="77%" headers="mcps1.1.3.1.2 "><p id="p209mcpsimp"><a name="p209mcpsimp"></a><a name="p209mcpsimp"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
 <p id="p210mcpsimp"><a name="p210mcpsimp"></a><a name="p210mcpsimp"></a>“须知”不涉及人身伤害。</p>
 </td>
 </tr>
-<tr id="row211mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p213mcpsimp"><a name="p213mcpsimp"></a><a name="p213mcpsimp"></a><a name="image107"></a><a name="image107"></a><span>![](figures/zh-cn_image_0000002408115650.png)</span></p>
+<tr id="row211mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p213mcpsimp"><a name="p213mcpsimp"></a><a name="p213mcpsimp"></a><a name="image107"></a><a name="image107"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="77%" headers="mcps1.1.3.1.2 "><p id="p215mcpsimp"><a name="p215mcpsimp"></a><a name="p215mcpsimp"></a>对正文中重点信息的补充说明。</p>
 <p id="p216mcpsimp"><a name="p216mcpsimp"></a><a name="p216mcpsimp"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
@@ -144,7 +144,7 @@
 
     音频组件提供的编解码功能基于独立封装的AAC编解码库，核心编解码器工作在用户态，使用CPU软件编解码。
 
-    AAC编解码协议说明如[表1](#_Ref224548251)所示。
+    AAC编解码协议说明如[表1]所示。
 
 **表 1**  音频编解码协议说明
 
@@ -694,15 +694,15 @@ if (ret != TD_SUCCESS) {
 
 SDK发布包中的以下API用于注册和注销编码器和解码器。
 
--   [ss\_mpi\_aenc\_register\_encoder](ss_mpi_aenc_register_encoder.md)：注册编码器。
--   [ss\_mpi\_aenc\_unregister\_encoder](ss_mpi_aenc_unregister_encoder.md)：注销编码器。
--   [ss\_mpi\_adec\_register\_decoder](ss_mpi_adec_register_decoder.md)：注册解码器。
--   [ss\_mpi\_adec\_unregister\_decoder](ss_mpi_adec_unregister_decoder.md)：注销解码器。
+-   [ss\_mpi\_aenc\_register\_encoder]：注册编码器。
+-   [ss\_mpi\_aenc\_unregister\_encoder]：注销编码器。
+-   [ss\_mpi\_adec\_register\_decoder]：注册解码器。
+-   [ss\_mpi\_adec\_unregister\_decoder]：注销解码器。
 
 音频组件中提供的注册示例：
 
--   [ss\_mpi\_aenc\_aac\_init](ss_mpi_aenc_aac_init.md)：注册AAC编码器。
--   [ss\_mpi\_adec\_aac\_init](ss_mpi_adec_aac_init.md)：注册AAC解码器。
+-   [ss\_mpi\_aenc\_aac\_init]：注册AAC编码器。
+-   [ss\_mpi\_adec\_aac\_init]：注册AAC解码器。
 
 
 
@@ -1255,13 +1255,13 @@ td_s32 ss_mpi_adec_aac_init(td_void);
 
 音频组件相关数据类型、数据结构定义如下：
 
--   [ot\_aenc\_encoder](ot_aenc_encoder.md)：定义编码器属性结构体。
--   [ot\_adec\_decoder](ot_adec_decoder.md)：定义解码器属性结构体。
--   [ot\_aac\_type](ot_aac_type.md)：定义AAC音频编解码协议类型。
--   [ot\_aac\_bps](ot_aac_bps.md)：定义AAC音频编码码率。
--   [ot\_aac\_transport\_type](ot_aac_transport_type.md)：定义AAC音频编解码协议传输封装类型。
--   [ot\_aenc\_attr\_aac](ot_aenc_attr_aac.md)：定义AAC编码协议属性结构体。
--   [ot\_adec\_attr\_aac](ot_adec_attr_aac.md)：定义AAC解码协议属性结构体。
+-   [ot\_aenc\_encoder]：定义编码器属性结构体。
+-   [ot\_adec\_decoder]：定义解码器属性结构体。
+-   [ot\_aac\_type]：定义AAC音频编解码协议类型。
+-   [ot\_aac\_bps]：定义AAC音频编码码率。
+-   [ot\_aac\_transport\_type]：定义AAC音频编解码协议传输封装类型。
+-   [ot\_aenc\_attr\_aac]：定义AAC编码协议属性结构体。
+-   [ot\_adec\_attr\_aac]：定义AAC解码协议属性结构体。
 
 
 
@@ -1337,7 +1337,7 @@ typedef struct {
 
 【相关数据类型及接口】
 
-[ss\_mpi\_aenc\_register\_encoder](#ss_mpi_aenc_register_encoder)
+[ss\_mpi\_aenc\_register\_encoder]
 
 ### ot\_adec\_decoder<a name="ZH-CN_TOPIC_0000002441714629"></a>
 
@@ -1412,7 +1412,7 @@ typedef struct {
 
 【相关数据类型及接口】
 
-[ss\_mpi\_adec\_register\_decoder](#ss_mpi_adec_register_decoder)
+[ss\_mpi\_adec\_register\_decoder]
 
 ### ot\_aac\_type<a name="ZH-CN_TOPIC_0000002441674777"></a>
 

@@ -51,28 +51,28 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span>![](figures/zh-cn_image_0000002408423058.png)</span></p>
+<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p1757432116410"><a name="p1757432116410"></a><a name="p1757432116410"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span>![](figures/zh-cn_image_0000002442022197.png)</span></p>
+<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p959197916410"><a name="p959197916410"></a><a name="p959197916410"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span>![](figures/zh-cn_image_0000002441982341.png)</span></p>
+<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p123197916410"><a name="p123197916410"></a><a name="p123197916410"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span>![](figures/zh-cn_image_0000002408582970.png)</span></p>
+<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4388861916410"><a name="p4388861916410"></a><a name="p4388861916410"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
 <p id="p1238861916410"><a name="p1238861916410"></a><a name="p1238861916410"></a>“须知”不涉及人身伤害。</p>
 </td>
 </tr>
-<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span>![](figures/zh-cn_image_0000002408582962.png)</span></p>
+<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span>![]</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4612588116410"><a name="p4612588116410"></a><a name="p4612588116410"></a>对正文中重点信息的补充说明。</p>
 <p id="p1232588116410"><a name="p1232588116410"></a><a name="p1232588116410"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
@@ -117,17 +117,17 @@
 
 ## 功能架构<a name="ZH-CN_TOPIC_0000002408422674"></a>
 
-SVP ATC Graph功能架构如[图1](#fig2817181918158)所示。从中可以看出，不局限于Caffe、Onnx等框架，用户可以通过开放的API接口进行构图，并编译为离线模型，用于在板端硬件加速处理器上进行离线推理。
+SVP ATC Graph功能架构如[图1]所示。从中可以看出，不局限于Caffe、Onnx等框架，用户可以通过开放的API接口进行构图，并编译为离线模型，用于在板端硬件加速处理器上进行离线推理。
 
 **图 1**  SVP ATC Graph功能架构<a name="fig2817181918158"></a>  
-![](figures/SVP-ATC-Graph功能架构.png)
+![]
 
 ## 运行流程<a name="ZH-CN_TOPIC_0000002408582630"></a>
 
-使用SVP ATC Graph进行模型转换的用户侧调用流程如[图1](#fig11567732171618)所示。
+使用SVP ATC Graph进行模型转换的用户侧调用流程如[图1]所示。
 
 **图 1**  运行流程<a name="fig11567732171618"></a>  
-![](figures/运行流程.png)
+![]
 
 SVP ATC Graph API接口包含两部分。
 
@@ -734,7 +734,7 @@ void AddOutputQuantFactor(const OpQuantFactor &quantFactor)
 </tbody>
 </table>
 
-OpQuantFactor对象的定义参考[AddInputQuantFactor](AddInputQuantFactor.md)。
+OpQuantFactor对象的定义参考[AddInputQuantFactor]。
 
 #### GetOutputQuantFactor<a name="ZH-CN_TOPIC_0000002442021253"></a>
 
@@ -809,7 +809,7 @@ void AddParamQuantFactor(const OpQuantFactor &quantFactor)
 </tbody>
 </table>
 
-OpQuantFactor对象的定义参考[AddInputQuantFactor](AddInputQuantFactor.md)。
+OpQuantFactor对象的定义参考[AddInputQuantFactor]。
 
 #### GetParamQuantFactor<a name="ZH-CN_TOPIC_0000002408422542"></a>
 
@@ -884,7 +884,7 @@ void SetInputQuantFactorsVec(const std::vector<OpQuantFactor> &inputQuantFactors
 </tbody>
 </table>
 
-OpQuantFactor对象的定义参考[AddInputQuantFactor](AddInputQuantFactor.md)。
+OpQuantFactor对象的定义参考[AddInputQuantFactor]。
 
 #### GetInputQuantFactorsVec<a name="ZH-CN_TOPIC_0000002441981777"></a>
 
@@ -952,7 +952,7 @@ void SetOutputQuantFactorsVec(const std::vector<OpQuantFactor> &outputQuantFacto
 </tbody>
 </table>
 
-OpQuantFactor对象的定义参考[AddInputQuantFactor](AddInputQuantFactor.md)。
+OpQuantFactor对象的定义参考[AddInputQuantFactor]。
 
 #### GetOutputQuantFactorsVec<a name="ZH-CN_TOPIC_0000002408422310"></a>
 
@@ -1020,7 +1020,7 @@ void SetParamQuantFactorsVec(const std::vector<OpQuantFactor> &paramQuantFactors
 </tbody>
 </table>
 
-OpQuantFactor对象的定义参考[AddInputQuantFactor](AddInputQuantFactor.md)。
+OpQuantFactor对象的定义参考[AddInputQuantFactor]。
 
 #### GetParamQuantFactorsVec<a name="ZH-CN_TOPIC_0000002442021949"></a>
 
@@ -3117,7 +3117,7 @@ bool GetWeightQuanted() const
 
 ### PoolOperator配置接口<a name="ZH-CN_TOPIC_0000002408422322"></a>
 
-部分接口参考[算子通用接口](算子通用接口.md)章节。使用SetOpType配置pool类型，支持POOLINGAVE、POOLINGMAX两种模式。使用SetKernelHeight、SetKernelWidth配置kernel尺寸。使用SetStrideHeight、SetStrideWidth配置stride值。使用SetPadLeft、SetPadRight、SetPadUp、SetPadDown配置pad值。
+部分接口参考[算子通用接口]章节。使用SetOpType配置pool类型，支持POOLINGAVE、POOLINGMAX两种模式。使用SetKernelHeight、SetKernelWidth配置kernel尺寸。使用SetStrideHeight、SetStrideWidth配置stride值。使用SetPadLeft、SetPadRight、SetPadUp、SetPadDown配置pad值。
 
 
 
@@ -5459,7 +5459,7 @@ const int32_t* GetRecurrentBiasQuantPtr()
 
 ### ArgmaxOperator配置接口<a name="ZH-CN_TOPIC_0000002408582350"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考[SetAxis]章节，其默认值为1。
 
 
 
@@ -6630,7 +6630,7 @@ float GetExpShift() const
 
 ### GatherOperator配置接口<a name="ZH-CN_TOPIC_0000002442021493"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考[SetAxis]章节，其默认值为1。
 
 ### InterpOperator配置接口<a name="ZH-CN_TOPIC_0000002408422862"></a>
 
@@ -8747,7 +8747,7 @@ bool GetReduceIsFromCaffe() const
 
 ### ScaleOperator配置接口<a name="ZH-CN_TOPIC_0000002408422850"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考[SetAxis]章节，其默认值为1。
 
 
 
@@ -10615,7 +10615,7 @@ const vector<DetectionOutputParam>& GetDetectionOutputParamVec() const
 
 ### BiasOperator配置接口<a name="ZH-CN_TOPIC_0000002442021849"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考[SetAxis]章节，其默认值为1。
 
 
 
@@ -10823,11 +10823,11 @@ const vector<int32_t>& GetBiasShapeVec() const
 
 ### ConcatOperator配置接口<a name="ZH-CN_TOPIC_0000002408582614"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考[SetAxis]章节，其默认值为1。
 
 ### CropOperator配置接口<a name="ZH-CN_TOPIC_0000002408421994"></a>
 
-SetAxis接口参考[部分算子通用接口](部分算子通用接口.md)章节，其默认值为1。
+SetAxis接口参考[部分算子通用接口]章节，其默认值为1。
 
 
 
@@ -11379,7 +11379,7 @@ const RgbxOrderType GetModelFormat() const
 
 ### ReshapeOperator配置接口<a name="ZH-CN_TOPIC_0000002408582066"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考[SetAxis]章节，其默认值为1。
 
 > **须知：** 
 >当axis<0时，实际起始维度为axis+1。如当shape=NCHW时，axis=-2，意味着仅对W轴reshape。
@@ -11764,7 +11764,7 @@ int32_t GetShuffleChannelGroup() const
 
 ### SliceOperator配置接口<a name="ZH-CN_TOPIC_0000002408422826"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考[SetAxis]章节，其默认值为1。
 
 
 
@@ -11942,7 +11942,7 @@ void AddSlicePoint(uint32_t slicePoint)
 
 ### ExtractOperator配置接口<a name="ZH-CN_TOPIC_0000002408582734"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考[SetAxis]章节，其默认值为1。
 
 
 
@@ -12150,7 +12150,7 @@ uint32_t GetSlicePointEnd() const
 
 ### TileOperator配置接口<a name="ZH-CN_TOPIC_0000002408582302"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考[SetAxis]章节，其默认值为1。
 
 
 
@@ -15056,7 +15056,7 @@ float GetSwishBeta() const
 
 ### LayerNormOperator配置接口<a name="ZH-CN_TOPIC_0000002441981749"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为3，不支持input，scale，bias全部离线场景。
+SetAxis接口参考[SetAxis]章节，其默认值为3，不支持input，scale，bias全部离线场景。
 
 
 
@@ -15787,7 +15787,7 @@ RoundType GetRoundType() const
 
 ### ArgminOperator配置接口<a name="ZH-CN_TOPIC_0000002442021741"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考[SetAxis]章节，其默认值为1。
 
 
 
