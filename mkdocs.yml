@@ -147,6 +147,27 @@ nav:
     - 抓拍使用指南: "getting-started/抓拍 使用指南.md"
 
   - 模块 / API:
+    - ISP 图像处理器:
+      - ISP 开发参考 (1-2): "modules/isp/ISP 开发参考（1--2）.md"
+      - ISP 开发参考 (3-5): "modules/isp/ISP 开发参考（3--5）.md"
+      - ISP 开发参考 (6): "modules/isp/ISP 开发参考（6）.md"
+      - ISP 开发参考 (7-14): "modules/isp/ISP 开发参考（7--14）.md"
+      - ISP 图像调优指南: "modules/isp/ISP 图像调优指南.md"
+      - ISP 颜色调优说明: "modules/isp/ISP 颜色调优说明.md"
+      - ISP FAQ: "modules/isp/ISP FAQ.md"
+      - Sensor 调试指南: "modules/isp/Sensor 调试指南.md"
+      - 黑白彩色双路融合 (开发): "modules/isp/黑白彩色双路融合 开发参考.md"
+      - 黑白彩色双路融合 (调试): "modules/isp/黑白彩色双路融合调试指南.md"
+    - 视频处理子系统:
+      - HDMI 开发参考: "modules/video/HDMI 开发参考.md"
+      - MIPI 使用指南: "modules/video/MIPI 使用指南.md"
+      - MotionFusion 开发参考: "modules/video/MotionFusion 开发参考.md"
+      - PCIE 级联: "modules/video/PCIE级联 应用指南.md"
+      - 拼接 FAQ: "modules/video/拼接 FAQ.md"
+    - IVE/IVS 智能视觉:
+      - IVE API 参考 (1-2): "modules/ive/IVE API 参考（1--2）.md"
+      - IVE API 参考 (3-6): "modules/ive/IVE API 参考（3--6）.md"
+      - IVS API 参考: "modules/ive/IVS API参考.md"
     - 媒体处理 (MPP):
       - 前言: "modules/mpp/00 前言.md"
       - 概述: "modules/mpp/01 概述.md"
@@ -167,17 +188,6 @@ nav:
       - Proc 调试信息 (1): "modules/mpp/13 Proc调试信息（13.1--13.14.15）.md"
       - Proc 调试信息 (2): "modules/mpp/13 Proc调试信息（13.16--13.29）.md"
       - MPP FAQ: "modules/mpp/MPP 媒体处理软件 V5.0 FAQ.md"
-    - ISP 图像处理器:
-      - ISP 开发参考 (1-2): "modules/isp/ISP 开发参考（1--2）.md"
-      - ISP 开发参考 (3-5): "modules/isp/ISP 开发参考（3--5）.md"
-      - ISP 开发参考 (6): "modules/isp/ISP 开发参考（6）.md"
-      - ISP 开发参考 (7-14): "modules/isp/ISP 开发参考（7--14）.md"
-      - ISP 图像调优指南: "modules/isp/ISP 图像调优指南.md"
-      - ISP 颜色调优说明: "modules/isp/ISP 颜色调优说明.md"
-      - ISP FAQ: "modules/isp/ISP FAQ.md"
-      - Sensor 调试指南: "modules/isp/Sensor 调试指南.md"
-      - 黑白彩色双路融合 (开发): "modules/isp/黑白彩色双路融合 开发参考.md"
-      - 黑白彩色双路融合 (调试): "modules/isp/黑白彩色双路融合调试指南.md"
     - 智能分析引擎:
       - SVP2.0 开发指南: "modules/ai/SVP2.0 开发指南.md"
       - SVP2.0 API 参考: "modules/ai/SVP2.0 API 参考.md"
@@ -191,16 +201,6 @@ nav:
       - 精度比对工具: "modules/ai/精度比对工具使用指南.md"
       - 引擎差异说明: "modules/ai/图像分析引擎2与图像分析引擎1使用差异说明.md"
       - 图像质量工具: "modules/ai/图像质量调试工具使用指南.md"
-    - 视频处理子系统:
-      - HDMI 开发参考: "modules/video/HDMI 开发参考.md"
-      - MIPI 使用指南: "modules/video/MIPI 使用指南.md"
-      - MotionFusion 开发参考: "modules/video/MotionFusion 开发参考.md"
-      - PCIE 级联: "modules/video/PCIE级联 应用指南.md"
-      - 拼接 FAQ: "modules/video/拼接 FAQ.md"
-    - IVE/IVS 智能视觉:
-      - IVE API 参考 (1-2): "modules/ive/IVE API 参考（1--2）.md"
-      - IVE API 参考 (3-6): "modules/ive/IVE API 参考（3--6）.md"
-      - IVS API 参考: "modules/ive/IVS API参考.md"
     - 芯片参考 API:
       - CIPHER: "modules/reference/CIPHER API 参考.md"
       - GFBG: "modules/reference/GFBG API 参考.md"
