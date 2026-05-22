@@ -3,7 +3,7 @@
 
 site_name: Hi3403V100 芯片开发文档
 site_description: 海思 Hi3403V100/SS927V100 超高清智能网络录像机 SoC 完整开发文档社区
-site_url: https://docs.hisilicon.com/repos/fbb_ss928v100/zh-CN/master/
+site_url: https://HivsDev.github.io/pegasus_doc/
 repo_url: https://gitlab.local/hisilicon/ss928v100-docs
 repo_name: ss928v100-docs
 
@@ -11,6 +11,7 @@ use_directory_urls: false
 
 theme:
   name: material
+  logo: assets/images/hisilicon_light.svg
   locale: zh
   language: zh
   palette:
