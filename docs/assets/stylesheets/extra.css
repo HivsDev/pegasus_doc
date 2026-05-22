@@ -926,47 +926,6 @@ div.highlight {
   }
 }
 
-/* ========== 首页左侧自定义目录（非克隆方式，独立生成） ========== */
-.homepage .cloned-homepage-toc-title {
-  padding: 0.6rem 0.6rem 0.2rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--hi-red);
-  border-top: 1px solid var(--hi-border);
-  margin-top: 0.6rem;
-}
-
-.homepage .cloned-homepage-toc-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.homepage .cloned-homepage-toc-item {
-  margin: 0;
-  padding: 0;
-}
-
-.homepage .cloned-homepage-toc-link {
-  display: block;
-  font-size: 0.65rem;
-  padding: 0.15rem 0.6rem;
-  color: var(--hi-dark);
-  text-decoration: none;
-  transition: color 0.15s;
-  border-radius: 4px;
-}
-
-.homepage .cloned-homepage-toc-link:hover {
-  color: var(--hi-red);
-  background-color: var(--hi-red-light);
-}
-
-.homepage .toc-level-h3 .cloned-homepage-toc-link {
-  padding-left: 1.4rem;
-  font-size: 0.6rem;
-}
-
 /* =============================================
  * 响应式 ========== */
 @media screen and (max-width: 76.2344em) {
