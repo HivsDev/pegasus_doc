@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 100);
   }
 
-  // ========== 布局优化：首页右侧栏隐藏 ==========
+  // ========== 布局优化：首页右侧目录合并到左侧 ==========
   function setupHomepageLayout() {
     var isHomepage = window.location.pathname === '/pegasus_doc/'
       || window.location.pathname === '/pegasus_doc/index.html'
@@ -19,7 +19,76 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (isHomepage) {
       document.body.classList.add('homepage');
+
+      var leftInner = document.querySelector('.md-sidebar--primary .md-sidebar__inner');
+      var contentArea = document.querySelector('.md-content__inner');
       var rightSidebar = document.querySelector('.md-sidebar--secondary');
+
+      if (leftInner && contentArea) {
+        // 清除之前生成的目录（防止重复）
+        var oldTitle = leftInner.querySelector('.cloned-homepage-toc-title');
+        if (oldTitle) oldTitle.remove();
+        var oldList = leftInner.querySelector('.cloned-homepage-toc-list');
+        if (oldList) oldList.remove();
+
+        // 从页面内容中提取 h2/h3 标题，生成纯链接目录
+        var headings = contentArea.querySelectorAll('h2, h3');
+        var items = [];
+        headings.forEach(function(h) {
+          var id = h.id || (h.querySelector('[id]') ? h.querySelector('[id]').id : null);
+          if (id && id.length > 0) {
+            // 获取纯净的标题文字（去掉 MkDocs 自动添加的 ¶ permalink 符号）
+            var hClone = h.cloneNode(true);
+            var perm = hClone.querySelector('.headerlink');
+            if (perm) perm.remove();
+            var cleanText = hClone.textContent.trim();
+            items.push({ id: id, text: cleanText, tag: h.tagName });
+          }
+        });
+
+        if (items.length > 0) {
+          // 分隔标题
+          var tocTitle = document.createElement('div');
+          tocTitle.className = 'cloned-homepage-toc-title';
+          tocTitle.textContent = '📑 本页目录';
+          leftInner.appendChild(tocTitle);
+
+          // 生成目录列表
+          var list = document.createElement('ul');
+          list.className = 'cloned-homepage-toc-list';
+
+          items.forEach(function(item) {
+            var li = document.createElement('li');
+            li.className = 'cloned-homepage-toc-item';
+            if (item.tag === 'H3') {
+              li.classList.add('toc-level-h3');
+            }
+
+            var link = document.createElement('a');
+            link.href = '#' + item.id;
+            link.className = 'cloned-homepage-toc-link';
+            link.textContent = item.text;
+
+            // 自定义点击处理：绕过 MkDocs 即时导航，平滑滚动到目标
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              var target = document.getElementById(item.id);
+              if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.pushState(null, '', '#' + item.id);
+              }
+            });
+
+            li.appendChild(link);
+            list.appendChild(li);
+          });
+
+          leftInner.appendChild(list);
+        }
+      }
+
+      // 隐藏右侧栏
       if (rightSidebar) {
         rightSidebar.style.display = 'none';
         rightSidebar.setAttribute('hidden', '');
