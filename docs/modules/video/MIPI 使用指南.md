@@ -45,28 +45,28 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row217mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p219mcpsimp"><a name="p219mcpsimp"></a><a name="p219mcpsimp"></a><a name="image105"></a><a name="image105"></a><span>![](figures/zh-cn_image_0000002441661733.png)</span></p>
+<tbody><tr id="row217mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p219mcpsimp"><a name="p219mcpsimp"></a><a name="p219mcpsimp"></a><a name="image105"></a><a name="image105"></a><span><img src="figures/zh-cn_image_0000002441661733.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p221mcpsimp"><a name="p221mcpsimp"></a><a name="p221mcpsimp"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row222mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p224mcpsimp"><a name="p224mcpsimp"></a><a name="p224mcpsimp"></a><a name="image106"></a><a name="image106"></a><span>![](figures/zh-cn_image_0000002441661737.png)</span></p>
+<tr id="row222mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p224mcpsimp"><a name="p224mcpsimp"></a><a name="p224mcpsimp"></a><a name="image106"></a><a name="image106"></a><span><img src="figures/zh-cn_image_0000002441661737.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p226mcpsimp"><a name="p226mcpsimp"></a><a name="p226mcpsimp"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row227mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p229mcpsimp"><a name="p229mcpsimp"></a><a name="p229mcpsimp"></a><a name="image107"></a><a name="image107"></a><span>![](figures/zh-cn_image_0000002408102414.png)</span></p>
+<tr id="row227mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p229mcpsimp"><a name="p229mcpsimp"></a><a name="p229mcpsimp"></a><a name="image107"></a><a name="image107"></a><span><img src="figures/zh-cn_image_0000002408102414.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p231mcpsimp"><a name="p231mcpsimp"></a><a name="p231mcpsimp"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row232mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p234mcpsimp"><a name="p234mcpsimp"></a><a name="p234mcpsimp"></a><a name="image108"></a><a name="image108"></a><span>![](figures/zh-cn_image_0000002408262318.png)</span></p>
+<tr id="row232mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p234mcpsimp"><a name="p234mcpsimp"></a><a name="p234mcpsimp"></a><a name="image108"></a><a name="image108"></a><span><img src="figures/zh-cn_image_0000002408262318.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p236mcpsimp"><a name="p236mcpsimp"></a><a name="p236mcpsimp"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
 <p id="p237mcpsimp"><a name="p237mcpsimp"></a><a name="p237mcpsimp"></a>“须知”不涉及人身伤害。</p>
 </td>
 </tr>
-<tr id="row238mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p240mcpsimp"><a name="p240mcpsimp"></a><a name="p240mcpsimp"></a><a name="image109"></a><a name="image109"></a><span>![](figures/zh-cn_image_0000002408102410.png)</span></p>
+<tr id="row238mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p240mcpsimp"><a name="p240mcpsimp"></a><a name="p240mcpsimp"></a><a name="image109"></a><a name="image109"></a><span><img src="figures/zh-cn_image_0000002408102410.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p242mcpsimp"><a name="p242mcpsimp"></a><a name="p242mcpsimp"></a>对正文中重点信息的补充说明。</p>
 <p id="p243mcpsimp"><a name="p243mcpsimp"></a><a name="p243mcpsimp"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
@@ -135,7 +135,7 @@ MIPI Rx支持MIPI D-PHY、LVDS（Low-Voltage Differential Signal）、HiSPi（Hi
     -   使用SOF/EOF表示帧起始和结束，使用SOL/EOL表示行的起始和结束。同步方式如[图1](#fig9405124663417)所示。
 
         **图 1**  SOF/EOF/SOL/EOL同步方式<a name="fig9405124663417"></a>  
-        ![](figures/SOF-EOF-SOL-EOL同步方式.png)
+        <img src="figures/SOF-EOF-SOL-EOL同步方式.png" alt="" />
 
     -   使用SAV\(invalid\) EAV\(invalid\)表示消隐区的无效数据开始和结束，使用SAV\(valid\) EAV\(valid\)表示有效像素数据的开始和结束。
 
@@ -144,7 +144,7 @@ MIPI Rx支持MIPI D-PHY、LVDS（Low-Voltage Differential Signal）、HiSPi（Hi
         由于不同的sensor可能会有不同的同步码，所以需要根据sensor配置同步码。同步方式如[图2](#fig1737184853619)所示。
 
         **图 2**  SAV/EAV同步方式<a name="fig1737184853619"></a>  
-        ![](figures/SAV-EAV同步方式.png)
+        <img src="figures/SAV-EAV同步方式.png" alt="" />
 
 ## 功能描述<a name="ZH-CN_TOPIC_0000002408262130"></a>
 
@@ -3801,7 +3801,7 @@ MIPI\_RX正常工作状态下proc信息中宽高应该是稳定不变且和senso
 -   Phy PhyController PixelController由sensor的pixel clk提供时钟，output模块的时钟为称为随路时钟，与后级模块的工作时钟相同。MIPI\_Rx的crop功能在Pixel Controller的末端实现，所以Crop后可以降低需要的随路时钟。
 
 **图 1**  MIPI数据流<a name="fig34812154546"></a>  
-![](figures/MIPI数据流.png)
+<img src="figures/MIPI数据流.png" alt="" />
 
 【参数说明】
 
@@ -4588,7 +4588,7 @@ Lane id的配置对应[mipi\_dev\_attr\_t](mipi_dev_attr_t.md)中的short lane\_
 
 MIPI的最大Lane数为8，我们认为SENSOR的Lane数目最多8个，由于sensor实际只有4个Lane，只输出数据到MIPI的4个Lane，需要将SENSOR未连接的或者不存在的Lane的lane\_id配置为-1，所以lane\_id配置如下：
 
-![](figures/3.png)
+<img src="figures/3.png" alt="" />
 
 ### MIPI TX Lane id如何配置<a name="ZH-CN_TOPIC_0000002408102222"></a>
 
@@ -4632,7 +4632,7 @@ Lane id的配置对应[combo\_dev\_cfg\_t](combo_dev_cfg_t.md)中的short lane\_
 
 MIPI TX的最大Lane数为4，屏幕实际可能有4、2个Lane，只使用到MIPI TX的4个Lane或2个lane，需要将屏幕端未连接的或者不存在的Lane的lane\_id配置为-1，所以4lane屏幕时，lane\_id配置如下：
 
-![](figures/4.png)
+<img src="figures/4.png" alt="" />
 
 **表 2**  2lane屏幕与MIPI\_TX管脚关系
 
@@ -4668,7 +4668,7 @@ MIPI TX的最大Lane数为4，屏幕实际可能有4、2个Lane，只使用到MI
 
 2lane屏幕时，lane\_id配置如下：
 
-![](figures/5.png)
+<img src="figures/5.png" alt="" />
 
 ### MIPI频率说明<a name="ZH-CN_TOPIC_0000002408262210"></a>
 

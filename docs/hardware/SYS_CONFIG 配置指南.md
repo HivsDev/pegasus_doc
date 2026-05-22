@@ -49,28 +49,28 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row186mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p188mcpsimp"><a name="p188mcpsimp"></a><a name="p188mcpsimp"></a><a name="image103"></a><a name="image103"></a><span>![](figures/zh-cn_image_0000002408102390.png)</span></p>
+<tbody><tr id="row186mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p188mcpsimp"><a name="p188mcpsimp"></a><a name="p188mcpsimp"></a><a name="image103"></a><a name="image103"></a><span><img src="figures/zh-cn_image_0000002408102390.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p190mcpsimp"><a name="p190mcpsimp"></a><a name="p190mcpsimp"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row191mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p193mcpsimp"><a name="p193mcpsimp"></a><a name="p193mcpsimp"></a><a name="image104"></a><a name="image104"></a><span>![](figures/zh-cn_image_0000002408262290.png)</span></p>
+<tr id="row191mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p193mcpsimp"><a name="p193mcpsimp"></a><a name="p193mcpsimp"></a><a name="image104"></a><a name="image104"></a><span><img src="figures/zh-cn_image_0000002408262290.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p195mcpsimp"><a name="p195mcpsimp"></a><a name="p195mcpsimp"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row196mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p198mcpsimp"><a name="p198mcpsimp"></a><a name="p198mcpsimp"></a><a name="image105"></a><a name="image105"></a><span>![](figures/zh-cn_image_0000002408102394.png)</span></p>
+<tr id="row196mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p198mcpsimp"><a name="p198mcpsimp"></a><a name="p198mcpsimp"></a><a name="image105"></a><a name="image105"></a><span><img src="figures/zh-cn_image_0000002408102394.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p200mcpsimp"><a name="p200mcpsimp"></a><a name="p200mcpsimp"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row201mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p203mcpsimp"><a name="p203mcpsimp"></a><a name="p203mcpsimp"></a><a name="image106"></a><a name="image106"></a><span>![](figures/zh-cn_image_0000002441661709.png)</span></p>
+<tr id="row201mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p203mcpsimp"><a name="p203mcpsimp"></a><a name="p203mcpsimp"></a><a name="image106"></a><a name="image106"></a><span><img src="figures/zh-cn_image_0000002441661709.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p205mcpsimp"><a name="p205mcpsimp"></a><a name="p205mcpsimp"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
 <p id="p206mcpsimp"><a name="p206mcpsimp"></a><a name="p206mcpsimp"></a>“须知”不涉及人身伤害。</p>
 </td>
 </tr>
-<tr id="row207mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p209mcpsimp"><a name="p209mcpsimp"></a><a name="p209mcpsimp"></a><a name="image107"></a><a name="image107"></a><span>![](figures/zh-cn_image_0000002441701561.png)</span></p>
+<tr id="row207mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p209mcpsimp"><a name="p209mcpsimp"></a><a name="p209mcpsimp"></a><a name="image107"></a><a name="image107"></a><span><img src="figures/zh-cn_image_0000002441701561.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p211mcpsimp"><a name="p211mcpsimp"></a><a name="p211mcpsimp"></a>对正文中重点信息的补充说明。</p>
 <p id="p212mcpsimp"><a name="p212mcpsimp"></a><a name="p212mcpsimp"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
@@ -194,7 +194,7 @@ insmod sys\_config.ko sensors=sns0=sensor0\_xxx,sns1=sensor1\_xxx,sns2=sensor2\_
 SYS\_CONFIG配置流程如[图1](#_fig9145151194318)所示。
 
 **图 1**  SYS\_CONFIG整体流程图<a name="_fig9145151194318"></a>  
-![](figures/SYS_CONFIG整体流程图.png "SYS_CONFIG整体流程图")
+<img src="figures/SYS_CONFIG整体流程图.png" alt="" title="SYS_CONFIG整体流程图" />
 
 包括以下4个流程：
 
@@ -1211,7 +1211,7 @@ static void i2c1_pin_mux(void)
 以I2C0为例，I2C原理图如[图1](#fig13182150165411)所示，参考硬件原理图。
 
 **图 1**  I2C原理图<a name="fig13182150165411"></a>  
-![](figures/I2C原理图.jpg "I2C原理图")
+<img src="figures/I2C原理图.jpg" alt="" title="I2C原理图" />
 
 I2C0需要I2C0\_SCL\(时钟\)/ I2C0\_SDA\(数据\)2根管脚。以下对2根管脚的管脚复用进行描述。
 
@@ -1443,7 +1443,7 @@ static void spi0_pin_mux(void)
 SPI0\_SDI（AL33），SPI0\_SDO（AL34），SPI0\_CSN（AM34），SPI0\_SCLK（AK33）管脚如[图1](#_fig1987716341641)所示。
 
 **图 1**  SPI0原理图<a name="_fig1987716341641"></a>  
-![](figures/SPI0原理图.jpg "SPI0原理图")
+<img src="figures/SPI0原理图.jpg" alt="" title="SPI0原理图" />
 
 以AK33管脚的复用关系配置为例进行描述，SPI0\_SCLK（AK33）管脚控制寄存器如[表1](#_table3777103411415)所示。
 
@@ -1614,7 +1614,7 @@ static void mipi0_rx_pin_mux(void)
 原理图如[图1](#_toc51764061)所示。
 
 **图 1**  MIPI\_RX0原理图<a name="_toc51764061"></a>  
-![](figures/MIPI_RX0原理图.png "MIPI_RX0原理图")
+<img src="figures/MIPI_RX0原理图.png" alt="" title="MIPI_RX0原理图" />
 
 当VI视频采集接口为MIPI\_RX接口采集时，需要配置[图1](#_toc51764061)中对应的10根管脚为对应的MIPI\_RX的相关功能，MIPI接口的10根管脚分为1对时钟线和4对DATA数据线，1对管脚为1对差分信号。
 
@@ -1837,7 +1837,7 @@ static void vi_bt656_mode_mux(void)
 原理图如[图1](#_toc51764062)所示。
 
 **图 1**  VI BT.656原理图<a name="_toc51764062"></a>  
-![](figures/VI-BT-656原理图.png "VI-BT-656原理图")
+<img src="figures/VI-BT-656原理图.png" alt="" title="VI-BT-656原理图" />
 
 当VI视频采集接口为BT.656接口采集时，需要配置上图中对应的10根管脚为对应的BT.656的相关功能，BT.656接口的10根管脚包含有时钟管脚和8根DATA（VI\_DATA0\~ VI\_DATA7）数据管脚。
 
@@ -2099,7 +2099,7 @@ static void vi_bt1120_mode_mux(void)
 原理图如[图1](#_toc51764063)所示。
 
 **图 1**  VI BT.1120原理图<a name="_toc51764063"></a>  
-![](figures/VI-BT-1120原理图.png "VI-BT-1120原理图")
+<img src="figures/VI-BT-1120原理图.png" alt="" title="VI-BT-1120原理图" />
 
 当VI视频采集接口为BT.1120接口采集时,需要配置上图中对应的管脚为对应的BT.1120的相关功能，BT.1120接口的管脚分为时钟管脚和16根DATA（VI\_DATA0\~ VI\_DATA15）管脚。
 
@@ -2365,7 +2365,7 @@ static void sensor3_pin_mux(void)
 SENSOR0\_CLK（AL32），SENSOR0\_RSTN（AM32）原理图如[图1](#_toc51764064)所示。
 
 **图 1**  SENSOR0原理图<a name="_toc51764064"></a>  
-![](figures/SENSOR0原理图.png "SENSOR0原理图")
+<img src="figures/SENSOR0原理图.png" alt="" title="SENSOR0原理图" />
 
 以AL32管脚的复用关系配置为例进行描述，SENSOR0\_CLK（AL32）管脚控制寄存器如[表1](#_table20274582)所示。
 
@@ -2521,7 +2521,7 @@ static void hdmi_pin_mux(void)
 HDMI\_HOTPLUG（AK11），HDMI\_SDA （AL11），HDMI\_SCL（AL12）原理如[图1](#_fig1554832315140)所示。
 
 **图 1**  HDMI原理图<a name="_fig1554832315140"></a>  
-![](figures/HDMI原理图.jpg "HDMI原理图")
+<img src="figures/HDMI原理图.jpg" alt="" title="HDMI原理图" />
 
 以AK11管脚的复用关系配置为例进行描述，HDMI\_HOTPLUG（AK11）管脚控制寄存器如[表1](#_table161131023191416)所示。
 
@@ -2664,7 +2664,7 @@ static void vo_mipi_tx_pin_mux(void)
 参考硬件设计原理图，VSYNC\_TE\_MIPITX（AL4）、DSI\_D3N（AH1）、DSI\_D3P（AH2）、DSI\_D1N（AL1）、DSI\_D1P（AL2）、DSI\_CKN（AK1）、DSI\_CKP（AK2）、DSI\_D0N（AM1）、DSI\_D0P（AM2）、DSI\_D2N（AJ1）、DSI\_D2P（AJ2）管脚如[图1](#_fig1954917234140)所示。
 
 **图 1**  MIPI\_TX原理图<a name="_fig1954917234140"></a>  
-![](figures/MIPI_TX原理图.jpg "MIPI_TX原理图")
+<img src="figures/MIPI_TX原理图.jpg" alt="" title="MIPI_TX原理图" />
 
 以AL4管脚的复用关系配置为例进行描述，VSYNC\_TE\_MIPITX（AL4）管脚控制寄存器如[表1](#_table101432023181417)所示。
 
@@ -2833,9 +2833,9 @@ static void vo_bt_pin_mux(int vo_bt_mode)
 参考实际硬件设计原理图，VO\_BT1120\_CLK、VO\_BT1120\_DATA0、VO\_BT1120\_DATA1、……、VO\_BT1120\_DATA15通过AH4、AL1、AL2、……、AL6进行输出，BT.1120相关管脚如[图1](#_fig1455072321410)所示（以实际原理图为准）。
 
 **图 1**  VO BT.1120原理图<a name="_fig1455072321410"></a>  
-![](figures/VO-BT-1120原理图.jpg "VO-BT-1120原理图")
+<img src="figures/VO-BT-1120原理图.jpg" alt="" title="VO-BT-1120原理图" />
 
-![](figures/zh-cn_image_0000002441661705.jpg)
+<img src="figures/zh-cn_image_0000002441661705.jpg" alt="" />
 
 以AH4、AL1管脚的复用关系配置为例进行描述，VO\_BT1120\_CLK（AH4），VO\_BT1120\_DATA0（AL1）管脚控制寄存器如[表1](#_table1318817235141)所示。
 
@@ -3189,7 +3189,7 @@ static void vo_bt_pin_mux(int vo_bt_mode)
 参考实际硬件设计原理图，VO\_BT656\_CLK、VO\_BT656\_DATA0、VO\_BT656\_DATA1、……、VO\_BT656\_DATA7通过AH4、AL1、AL2、……、AM2进行输出，BT.656相关管脚[图1](#_fig355162313143)所示。
 
 **图 1**  VO BT.656原理图<a name="_fig355162313143"></a>  
-![](figures/VO-BT-656原理图.jpg "VO-BT-656原理图")
+<img src="figures/VO-BT-656原理图.jpg" alt="" title="VO-BT-656原理图" />
 
 【注意事项】
 
@@ -3264,16 +3264,16 @@ static void vo_rgb_pin_mux(int vo_rgb_mode)
 参考实际硬件设计原理图，RGB\_CLK、RGB\_DE、RGB\_HS、RGB\_VS、RGB \_DATA0、RGB \_DATA1、……、RGB \_DATA23通过AF2、AD2、AD3、AD1、AJ1、AM1、……、AD4进行输出，RGB接口管脚如[图1](#_fig15552162361413)至[图4](#_fig12552112391412)所示。
 
 **图 1**  RGB\_CLK、RGB\_DE、RGB\_HS、RGB\_VS、RGB\_DATA12、RGB\_DATA13、RGB\_DATA14、RGB\_DATA15<a name="_fig15552162361413"></a>  
-![](figures/RGB_CLK-RGB_DE-RGB_HS-RGB_VS-RGB_DATA12-RGB_DATA13-RGB_DATA14-RGB_DATA15.jpg "RGB_CLK-RGB_DE-RGB_HS-RGB_VS-RGB_DATA12-RGB_DATA13-RGB_DATA14-RGB_DATA15")
+<img src="figures/RGB_CLK-RGB_DE-RGB_HS-RGB_VS-RGB_DATA12-RGB_DATA13-RGB_DATA14-RGB_DATA15.jpg" alt="" title="RGB_CLK-RGB_DE-RGB_HS-RGB_VS-RGB_DATA12-RGB_DATA13-RGB_DATA14-RGB_DATA15" />
 
 **图 2**  RGB\_DATA0、RGB\_DATA1、RGB\_DATA2、RGB\_DATA3、RGB\_DATA4、RGB\_DATA5、RGB\_DATA6、RGB\_DATA7、RGB\_DATA8、RGB\_DATA9、RGB\_DATA10、RGB\_DATA11、RGB\_DATA17、RGB\_DATA18、RGB\_DATA19<a name="fig2909mcpsimp"></a>  
-![](figures/RGB_DATA0-RGB_DATA1-RGB_DATA2-RGB_DATA3-RGB_DATA4-RGB_DATA5-RGB_DATA6-RGB_DATA7-RGB_DATA8-RGB_DATA9.jpg "RGB_DATA0-RGB_DATA1-RGB_DATA2-RGB_DATA3-RGB_DATA4-RGB_DATA5-RGB_DATA6-RGB_DATA7-RGB_DATA8-RGB_DATA9")
+<img src="figures/RGB_DATA0-RGB_DATA1-RGB_DATA2-RGB_DATA3-RGB_DATA4-RGB_DATA5-RGB_DATA6-RGB_DATA7-RGB_DATA8-RGB_DATA9.jpg" alt="" title="RGB_DATA0-RGB_DATA1-RGB_DATA2-RGB_DATA3-RGB_DATA4-RGB_DATA5-RGB_DATA6-RGB_DATA7-RGB_DATA8-RGB_DATA9" />
 
 **图 3**  RGB\_DATA16<a name="fig2911mcpsimp"></a>  
-![](figures/RGB_DATA16.jpg "RGB_DATA16")
+<img src="figures/RGB_DATA16.jpg" alt="" title="RGB_DATA16" />
 
 **图 4**  RGB\_DATA20、RGB\_DATA21、RGB\_DATA22、RGB\_DATA23<a name="_fig12552112391412"></a>  
-![](figures/RGB_DATA20-RGB_DATA21-RGB_DATA22-RGB_DATA23.jpg "RGB_DATA20-RGB_DATA21-RGB_DATA22-RGB_DATA23")
+<img src="figures/RGB_DATA20-RGB_DATA21-RGB_DATA22-RGB_DATA23.jpg" alt="" title="RGB_DATA20-RGB_DATA21-RGB_DATA22-RGB_DATA23" />
 
 以AF2、AJ1管脚的复用关系配置为例进行描述，RGB\_CLK（AF2），RGB\_DATA0（AJ1）管脚控制寄存器如[表1](#_table162701523171418)所示。
 
@@ -3506,7 +3506,7 @@ sys_writel(iocfg2_base + 0x0110, 0x0142); /* I2S_MCLK */
 I2S原理图如[图1](#_toc51764073)所示。
 
 **图 1**  I2S原理图<a name="_toc51764073"></a>  
-![](figures/I2S原理图.png "I2S原理图")
+<img src="figures/I2S原理图.png" alt="" title="I2S原理图" />
 
 以I2S\_MCLK为例，对应芯片管脚编号为AK15 \(寄存器：0x0102F0110\)。
 
@@ -3639,7 +3639,7 @@ sys_writel(gpio_base + 0xA004, 0x01);
 功放芯片的使能通过GPIO10\_0管脚进行控制，原理图如[图1](#_toc51764074)所示。
 
 **图 1**  GPIO10\_0原理图<a name="_toc51764074"></a>  
-![](figures/GPIO10_0原理图.png "GPIO10_0原理图")
+<img src="figures/GPIO10_0原理图.png" alt="" title="GPIO10_0原理图" />
 
 功放芯片使能控制的具体配置为：
 

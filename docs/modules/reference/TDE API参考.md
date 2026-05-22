@@ -75,28 +75,28 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row151mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p153mcpsimp"><a name="p153mcpsimp"></a><a name="p153mcpsimp"></a><a name="image103"></a><a name="image103"></a><span>![](figures/zh-cn_image_0000002441678633.png)</span></p>
+<tbody><tr id="row151mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p153mcpsimp"><a name="p153mcpsimp"></a><a name="p153mcpsimp"></a><a name="image103"></a><a name="image103"></a><span><img src="figures/zh-cn_image_0000002441678633.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p155mcpsimp"><a name="p155mcpsimp"></a><a name="p155mcpsimp"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row156mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p158mcpsimp"><a name="p158mcpsimp"></a><a name="p158mcpsimp"></a><a name="image104"></a><a name="image104"></a><span>![](figures/zh-cn_image_0000002408279254.png)</span></p>
+<tr id="row156mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p158mcpsimp"><a name="p158mcpsimp"></a><a name="p158mcpsimp"></a><a name="image104"></a><a name="image104"></a><span><img src="figures/zh-cn_image_0000002408279254.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p160mcpsimp"><a name="p160mcpsimp"></a><a name="p160mcpsimp"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row161mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p163mcpsimp"><a name="p163mcpsimp"></a><a name="p163mcpsimp"></a><a name="image105"></a><a name="image105"></a><span>![](figures/zh-cn_image_0000002441718501.png)</span></p>
+<tr id="row161mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p163mcpsimp"><a name="p163mcpsimp"></a><a name="p163mcpsimp"></a><a name="image105"></a><a name="image105"></a><span><img src="figures/zh-cn_image_0000002441718501.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p165mcpsimp"><a name="p165mcpsimp"></a><a name="p165mcpsimp"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row166mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p168mcpsimp"><a name="p168mcpsimp"></a><a name="p168mcpsimp"></a><a name="image106"></a><a name="image106"></a><span>![](figures/zh-cn_image_0000002441678637.png)</span></p>
+<tr id="row166mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p168mcpsimp"><a name="p168mcpsimp"></a><a name="p168mcpsimp"></a><a name="image106"></a><a name="image106"></a><span><img src="figures/zh-cn_image_0000002441678637.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p170mcpsimp"><a name="p170mcpsimp"></a><a name="p170mcpsimp"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
 <p id="p171mcpsimp"><a name="p171mcpsimp"></a><a name="p171mcpsimp"></a>“须知”不涉及人身伤害。</p>
 </td>
 </tr>
-<tr id="row172mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p174mcpsimp"><a name="p174mcpsimp"></a><a name="p174mcpsimp"></a><a name="image107"></a><a name="image107"></a><span>![](figures/zh-cn_image_0000002408279250.png)</span></p>
+<tr id="row172mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p174mcpsimp"><a name="p174mcpsimp"></a><a name="p174mcpsimp"></a><a name="image107"></a><a name="image107"></a><span><img src="figures/zh-cn_image_0000002408279250.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p176mcpsimp"><a name="p176mcpsimp"></a><a name="p176mcpsimp"></a>对正文中重点信息的补充说明。</p>
 <p id="p177mcpsimp"><a name="p177mcpsimp"></a><a name="p177mcpsimp"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
@@ -1278,7 +1278,7 @@ td_s32 ss_tde_quick_draw_rect(td_s32 handle, const ot_tde_none_src *none_src, co
 填充好角框的属性结构体corner\_rect\_info，将之绘制到none\_src中以dst\_surface为目的地址、dst\_rect为输出区域的内存中，可实现快速绘制角框，具体如[图1](#fig49824962518)所示。
 
 **图 1**  智能角框属性<a name="fig49824962518"></a>  
-![](figures/智能角框属性.png)
+<img src="figures/智能角框属性.png" alt="" />
 
 > **说明：** 
 >-   1.角框坐标\(x,y\)：
@@ -1783,7 +1783,7 @@ td_s32 ss_tde_quick_copy(td_s32 handle, const ot_tde_single_src *single_src);
 >有效操作区域：指调用者指定的操作区域与位图的相交部分。
 
 **图 1**  位图与位图中的操作区域的关系<a name="fig41526365582"></a>  
-![](figures/位图与位图中的操作区域的关系.png)
+<img src="figures/位图与位图中的操作区域的关系.png" alt="" />
 
 【参数】
 
@@ -6503,7 +6503,7 @@ pixel = \(foreground x fs + background x fd\)，其中：
 【举例】
 
 **图 1**  blend操作的效果图<a name="fig128504521400"></a>  
-![](figures/blend操作的效果图.png)
+<img src="figures/blend操作的效果图.png" alt="" />
 
 foreground = 0xffff0000; background = 0xff0000ff; 操作OT\_TDE\_BLEND\_CMD\_SRCOVER
 
@@ -6829,7 +6829,7 @@ typedef struct {
     ROP操作是指在将前景位图的RGB颜色分量和alpha分量值与背景位图的RGB颜色分量值和alpha分量值进行按位的布尔运算（包括按位与，按位或等），将结果输出，如ROP运算的搬移操作示意图（src1：R,G,B=0xFF,0xFF,0；src2：R,G,B=0,0,0xFF）图所示。
 
 **图 1**  ROP运算的搬移操作示意图（src1：R,G,B=0xFF,0xFF,0；src2：R,G,B=0,0,0xFF）<a name="fig5134112815911"></a>  
-![](figures/ROP运算的搬移操作示意图（src1-R-G-B-0xFF-0xFF-0-src2-R-G-B-0-0-0xFF）.png)
+<img src="figures/ROP运算的搬移操作示意图（src1-R-G-B-0xFF-0xFF-0-src2-R-G-B-0-0-0xFF）.png" alt="" />
 
 注：单源rop运算仅支持S2,即单源S1的rop运算不支持。
 
@@ -6850,10 +6850,10 @@ typedef struct {
     -   对背景进行colorkey，其设置的含义是背景位图中的关键色区域直接拷贝至输出位图，其他区域是运算结果，如[图3](#fig197841835191313)所示。
 
 **图 2**  对前景位图进行colorkey运算的搬移操作示意图<a name="fig117276613136"></a>  
-![](figures/对前景位图进行colorkey运算的搬移操作示意图.png)
+<img src="figures/对前景位图进行colorkey运算的搬移操作示意图.png" alt="" />
 
 **图 3**  对背景位图进行colorkey运算的搬移操作示意图<a name="fig197841835191313"></a>  
-![](figures/对背景位图进行colorkey运算的搬移操作示意图.png)
+<img src="figures/对背景位图进行colorkey运算的搬移操作示意图.png" alt="" />
 
 -   缩放操作
 
@@ -6892,10 +6892,10 @@ typedef struct {
     -   区域外裁剪：指TDE运算结果仅更新clip指定范围外的区域。如[图5](#fig13127121218197)所示，clip区域与目的位图的操作区域相交，区域外裁剪就导致仅将灰色区域更新为TDE运算结果，clip区域内部的地方保持不变。
 
 **图 4**  区域内clip示意图<a name="fig191309558186"></a>  
-![](figures/区域内clip示意图.png)
+<img src="figures/区域内clip示意图.png" alt="" />
 
 **图 5**  区域外clip示意图<a name="fig13127121218197"></a>  
-![](figures/区域外clip示意图.png)
+<img src="figures/区域外clip示意图.png" alt="" />
 
 -   输出alpha来源
 
@@ -8259,14 +8259,14 @@ type            total    used
 该例的软件实现流程如[图1](#fig8964192515515)所示。
 
 **图 1**  软件实现的流程图（主流程）<a name="fig8964192515515"></a>  
-![](figures/软件实现的流程图（主流程）.png)
+<img src="figures/软件实现的流程图（主流程）.png" alt="" />
 
 注：“调用TDE刷新两个屏幕surface”的详细流程请参见[图2](#fig1821212212612)。
 
 调用TDE刷新两个屏幕surface函数的实现过程如[图2](#fig1821212212612)所示。
 
 **图 2**  调用TDE刷新两个屏幕surface函数的实现过程<a name="fig1821212212612"></a>  
-![](figures/调用TDE刷新两个屏幕surface函数的实现过程.png)
+<img src="figures/调用TDE刷新两个屏幕surface函数的实现过程.png" alt="" />
 
 ## 代码参考<a name="ZH-CN_TOPIC_0000002441718417"></a>
 

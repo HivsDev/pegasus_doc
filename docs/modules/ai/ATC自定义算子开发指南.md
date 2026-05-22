@@ -48,28 +48,28 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span>![](figures/zh-cn_image_0000002441982933.png)</span></p>
+<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span><img src="figures/zh-cn_image_0000002441982933.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p1757432116410"><a name="p1757432116410"></a><a name="p1757432116410"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span>![](figures/zh-cn_image_0000002408583542.png)</span></p>
+<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span><img src="figures/zh-cn_image_0000002408583542.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p959197916410"><a name="p959197916410"></a><a name="p959197916410"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span>![](figures/zh-cn_image_0000002408423634.png)</span></p>
+<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span><img src="figures/zh-cn_image_0000002408423634.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p123197916410"><a name="p123197916410"></a><a name="p123197916410"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span>![](figures/zh-cn_image_0000002442022777.png)</span></p>
+<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span><img src="figures/zh-cn_image_0000002442022777.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4388861916410"><a name="p4388861916410"></a><a name="p4388861916410"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
 <p id="p1238861916410"><a name="p1238861916410"></a><a name="p1238861916410"></a>“须知”不涉及人身伤害。</p>
 </td>
 </tr>
-<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span>![](figures/zh-cn_image_0000002442022785.png)</span></p>
+<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span><img src="figures/zh-cn_image_0000002442022785.png" alt="" /></span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4612588116410"><a name="p4612588116410"></a><a name="p4612588116410"></a>对正文中重点信息的补充说明。</p>
 <p id="p1232588116410"><a name="p1232588116410"></a><a name="p1232588116410"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
@@ -468,7 +468,7 @@ export DDK_PATH=${install_path}/ascend-toolkit/svp_latest/x86_64-linux
 算子定义规定了算子输入、输出和属性信息，基本参数的校验和shape的推导，并注册到自定义算子库中。网络模型生成时，发现包含自定义算子，ATC会根据自定义算子接口调用创建Op方法，返回对应的自定义算子指针，可根据此指针调用接口。
 
 **图 1**  自定义算子时序图<a name="fig1675518406475"></a>  
-![](figures/自定义算子时序图.png)
+<img src="figures/自定义算子时序图.png" alt="" />
 
 其中算子注册包括OP Node注册、OP Parser注册和OP Propagation注册，注册的时候算子类型作为传入条件。
 
@@ -482,7 +482,7 @@ export DDK_PATH=${install_path}/ascend-toolkit/svp_latest/x86_64-linux
 自定义算子调用时序图如[图2](#fig54771023115019)。
 
 **图 2**  自定义算子调用时序图<a name="fig54771023115019"></a>  
-![](figures/自定义算子调用时序图.png)
+<img src="figures/自定义算子调用时序图.png" alt="" />
 
 ### 算子分析<a name="ZH-CN_TOPIC_0000002441982797"></a>
 
@@ -622,7 +622,7 @@ export DDK_PATH=${install_path}/ascend-toolkit/svp_latest/x86_64-linux
 自定义算子开发完成后，需要对算子工程进行编译，编译出ATC转换模型依赖的libsvp\_custom.so，指令仿和功能仿依赖的libsvp\_aacpu\_custom\_x86.so，板端ACL依赖的libsvp\_aacpu\_custom\_aarch64.so。详细的编译部署流程如[图1](#fig11232960472)所示。
 
 **图 1**  算子工程编译部署图<a name="fig11232960472"></a>  
-![](figures/算子工程编译部署图.png)
+<img src="figures/算子工程编译部署图.png" alt="" />
 
 所有自定义算子需要在同一算子工程进行编译，编译成ATC加载调用的.so库。
 
@@ -1942,7 +1942,7 @@ enum MemScope {
 功能：从TensorA中抠出一个小TensorB，该功能仅在Tensor处于DDR中时有效。如[图1](#fig89274714310)所示。
 
 **图 1**  GetSubTensor示意<a name="fig89274714310"></a>  
-![](figures/GetSubTensor示意.png)
+<img src="figures/GetSubTensor示意.png" alt="" />
 
 接口原型：
 
@@ -4011,7 +4011,7 @@ int32_t TestAddProcessLayer()
 
 运行结果：
 
-![](figures/zh-cn_image_0000002408583534.png)
+<img src="figures/zh-cn_image_0000002408583534.png" alt="" />
 
 #### 板端工程运行测试<a name="ZH-CN_TOPIC_0000002408583498"></a>
 
@@ -4023,5 +4023,5 @@ int32_t TestAddProcessLayer()
 
 板端用例与AddPropagation运行相似度对比结果：
 
-![](figures/zh-cn_image_0000002408583546.png)
+<img src="figures/zh-cn_image_0000002408583546.png" alt="" />
 

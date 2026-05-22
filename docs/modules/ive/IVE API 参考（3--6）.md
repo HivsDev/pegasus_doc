@@ -3680,19 +3680,19 @@ typedef struct {
 </thead>
 <tbody><tr id="row3720mcpsimp"><td class="cellrowborder" valign="top" width="48%" headers="mcps1.1.3.1.1 "><p id="p3722mcpsimp"><a name="p3722mcpsimp"></a><a name="p3722mcpsimp"></a>num</p>
 </td>
-<td class="cellrowborder" valign="top" width="52%" headers="mcps1.1.3.1.2 "><p class="msonormal" id="p3724mcpsimp"><a name="p3724mcpsimp"></a><a name="p3724mcpsimp"></a>NCC计算公式的分子--<a name="image159281555102516"></a><a name="image159281555102516"></a><span>![](figures/zh-cn_formulaimage_0000002503971347.png)</span></p>
+<td class="cellrowborder" valign="top" width="52%" headers="mcps1.1.3.1.2 "><p class="msonormal" id="p3724mcpsimp"><a name="p3724mcpsimp"></a><a name="p3724mcpsimp"></a>NCC计算公式的分子--<a name="image159281555102516"></a><a name="image159281555102516"></a><span><img src="figures/zh-cn_formulaimage_0000002503971347.png" alt="" /></span></p>
 </td>
 </tr>
 <tr id="row3725mcpsimp"><td class="cellrowborder" valign="top" width="48%" headers="mcps1.1.3.1.1 "><p id="p3727mcpsimp"><a name="p3727mcpsimp"></a><a name="p3727mcpsimp"></a>quad_sum1</p>
 </td>
 <td class="cellrowborder" valign="top" width="52%" headers="mcps1.1.3.1.2 "><p class="msonormal" id="p16204756268"><a name="p16204756268"></a><a name="p16204756268"></a>NCC计算公式的分母--根号内部分：</p>
-<p id="p1020311552617"><a name="p1020311552617"></a><a name="p1020311552617"></a>NCC计算公式的分子--<a name="image89161940183311"></a><a name="image89161940183311"></a><span>![](figures/zh-cn_formulaimage_0000002503971349.png)</span></p>
+<p id="p1020311552617"><a name="p1020311552617"></a><a name="p1020311552617"></a>NCC计算公式的分子--<a name="image89161940183311"></a><a name="image89161940183311"></a><span><img src="figures/zh-cn_formulaimage_0000002503971349.png" alt="" /></span></p>
 </td>
 </tr>
 <tr id="row3730mcpsimp"><td class="cellrowborder" valign="top" width="48%" headers="mcps1.1.3.1.1 "><p id="p3732mcpsimp"><a name="p3732mcpsimp"></a><a name="p3732mcpsimp"></a>quad_sum2</p>
 </td>
 <td class="cellrowborder" valign="top" width="52%" headers="mcps1.1.3.1.2 "><p class="msonormal" id="p3734mcpsimp"><a name="p3734mcpsimp"></a><a name="p3734mcpsimp"></a>NCC计算公式的分母--根号内部分：</p>
-<p id="p173405772616"><a name="p173405772616"></a><a name="p173405772616"></a>NCC计算公式的分子--<a name="image20114173123411"></a><a name="image20114173123411"></a><span>![](figures/zh-cn_formulaimage_0000002471091414.png)</span></p>
+<p id="p173405772616"><a name="p173405772616"></a><a name="p173405772616"></a>NCC计算公式的分子--<a name="image20114173123411"></a><a name="image20114173123411"></a><span><img src="figures/zh-cn_formulaimage_0000002471091414.png" alt="" /></span></p>
 </td>
 </tr>
 <tr id="row3735mcpsimp"><td class="cellrowborder" valign="top" width="48%" headers="mcps1.1.3.1.1 "><p xml:lang="de-DE" id="p3737mcpsimp"><a name="p3737mcpsimp"></a><a name="p3737mcpsimp"></a><span xml:lang="en-US" id="ph3738mcpsimp"><a name="ph3738mcpsimp"></a><a name="ph3738mcpsimp"></a>reserved[</span><a href="OT_IVE_ARR_RESERVED_NUM_EIGHT.md">OT_IVE_ARR_RESERVED_NUM_EIGHT</a><span xml:lang="en-US" id="ph3741mcpsimp"><a name="ph3741mcpsimp"></a><a name="ph3741mcpsimp"></a>]</span></p>
@@ -6101,7 +6101,7 @@ typedef struct {
 </tr>
 <tr id="row1110mcpsimp"><td class="cellrowborder" valign="top" width="48%" headers="mcps1.1.3.1.1 "><p id="p1112mcpsimp"><a name="p1112mcpsimp"></a><a name="p1112mcpsimp"></a>max_cnt</p>
 </td>
-<td class="cellrowborder" valign="top" width="52%" headers="mcps1.1.3.1.2 "><p class="msonormal" id="p1114mcpsimp"><a name="p1114mcpsimp"></a><a name="p1114mcpsimp"></a>所有层中神经元数目或者特征维度的最大值：<a name="image108374142236"></a><a name="image108374142236"></a><span>![](figures/zh-cn_formulaimage_0000002471091532.png)</span></p>
+<td class="cellrowborder" valign="top" width="52%" headers="mcps1.1.3.1.2 "><p class="msonormal" id="p1114mcpsimp"><a name="p1114mcpsimp"></a><a name="p1114mcpsimp"></a>所有层中神经元数目或者特征维度的最大值：<a name="image108374142236"></a><a name="image108374142236"></a><span><img src="figures/zh-cn_formulaimage_0000002471091532.png" alt="" /></span></p>
 </td>
 </tr>
 <tr id="row1115mcpsimp"><td class="cellrowborder" valign="top" width="48%" headers="mcps1.1.3.1.1 "><p id="p1117mcpsimp"><a name="p1117mcpsimp"></a><a name="p1117mcpsimp"></a>layer_num</p>
@@ -8412,7 +8412,7 @@ plate_char             sad       gmm2         resize         cnn  persp_trans
 > **说明：** 
 >以函数f\(u\)建立查找表为例，建立查找表的步骤如下\(下面提到的table\_in\_lower，table\_in\_upper，table\_in\_precision，elem\_num，table\_out\_norm，table请参ot\_svp\_lut结构体说明\).
 
-1.  明确自变量u的范围：若u在\[a, b\]之间，假设r=b-a; a、b分别对应table\_in\_lower，table\_in\_upper；（ANN建表时u即为自变量u；svm建表时u对应![](figures/zh-cn_formulaimage_0000002504091435.png)或者![](figures/zh-cn_formulaimage_0000002470931574.png)，具体公式可参考ss\_mpi\_ive\_ann\_mlp\_predict和ss\_mpi\_ive\_svm\_predict的【注意】）
+1.  明确自变量u的范围：若u在\[a, b\]之间，假设r=b-a; a、b分别对应table\_in\_lower，table\_in\_upper；（ANN建表时u即为自变量u；svm建表时u对应<img src="figures/zh-cn_formulaimage_0000002504091435.png" alt="" />或者<img src="figures/zh-cn_formulaimage_0000002470931574.png" alt="" />，具体公式可参考ss\_mpi\_ive\_ann\_mlp\_predict和ss\_mpi\_ive\_svm\_predict的【注意】）
 2.  明确自变量1个单位的采样数g，则g=1<< table\_in\_precision；整个查找表的元素个数elem\_num =r\*g=r<< table\_in\_precision; \(ANN和SVM均对查找表有最大数目限制要求，具体参考ss\_mpi\_ive\_ann\_mlp\_predict和ss\_mpi\_ive\_svm\_predict的【注意】\)
 3.  明确值域f\(u\)的范围，由于一般需要将值域约束到\[-1, 1\]，这时候，可以使用table\_out\_norm或者1<<table\_out\_norm做除数来对f\(u\)做归一化;（ANN仅支持1<<table\_out\_norm做除数；SVM支持2种，所以ive\_xml2bin\_ui.exe中对svm的模型转换时要求输入divisor，且divisor必须与建立查找表的归一化除数一致）
 4.  根据f\(u\)的具体公式以及u的采样值，生成对应的f\(u\)查找表，保存在table中。
