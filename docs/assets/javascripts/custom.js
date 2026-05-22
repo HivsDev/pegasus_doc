@@ -12,17 +12,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ========== 布局优化：首页右侧目录合并到左侧 ==========
   function setupHomepageLayout() {
-    var isHomepage = window.location.pathname === '/pegasus_doc/'
-      || window.location.pathname === '/pegasus_doc/index.html'
-      || window.location.pathname === '/'
-      || window.location.pathname === '/index.html';
+    var path = window.location.pathname.replace(/\/+$/, '');
+    var isHomepage = path === '/pegasus_doc'
+      || path === '/pegasus_doc/index.html'
+      || path === ''
+      || path === '/'
+      || path === '/index.html';
 
     if (isHomepage) {
       document.body.classList.add('homepage');
 
-      var leftInner = document.querySelector('.md-sidebar--primary .md-sidebar__inner');
-      var contentArea = document.querySelector('.md-content__inner');
-      var rightSidebar = document.querySelector('.md-sidebar--secondary');
+      // 延迟执行，等待 MkDocs Material 完成页面渲染
+      setTimeout(function() {
+        var leftInner = document.querySelector('.md-sidebar--primary .md-sidebar__inner');
+        var contentArea = document.querySelector('.md-content__inner');
+        var rightSidebar = document.querySelector('.md-sidebar--secondary');
 
       if (leftInner && contentArea) {
         // 清除之前生成的目录（防止重复）
@@ -89,10 +93,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // 隐藏右侧栏
-      if (rightSidebar) {
-        rightSidebar.style.display = 'none';
-        rightSidebar.setAttribute('hidden', '');
-      }
+        if (rightSidebar) {
+          rightSidebar.style.display = 'none';
+          rightSidebar.setAttribute('hidden', '');
+        }
+      }, 500);
     } else {
       document.body.classList.remove('homepage');
     }
