@@ -591,6 +591,294 @@ div.highlight {
 }
 
 /* =============================================
+ * 反馈按钮 & 模态框
+ * ============================================= */
+
+/* ---------- 悬浮反馈按钮 ---------- */
+.feedback-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 120px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: var(--hi-red);
+  color: #fff !important;
+  border: none;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(199, 0, 11, 0.35);
+  transition: all 0.25s ease;
+  text-decoration: none !important;
+  letter-spacing: 0.3px;
+  user-select: none;
+}
+
+.feedback-fab:hover {
+  background: var(--hi-red-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(199, 0, 11, 0.45);
+  color: #fff !important;
+}
+
+.feedback-fab:active {
+  transform: translateY(0);
+}
+
+.feedback-fab .fab-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.feedback-fab .fab-label {
+  line-height: 1;
+}
+
+/* ---------- 模态框遮罩 ---------- */
+.feedback-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  animation: feedbackFadeIn 0.2s ease;
+}
+
+.feedback-overlay.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes feedbackFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes feedbackSlideUp {
+  from { opacity: 0; transform: translateY(30px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ---------- 模态框主体 ---------- */
+.feedback-modal {
+  background: var(--hi-white);
+  border-radius: 12px;
+  width: 520px;
+  max-width: 90vw;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: feedbackSlideUp 0.25s ease;
+  position: relative;
+}
+
+.feedback-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 0;
+}
+
+.feedback-modal-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--hi-black);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feedback-modal-close {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: var(--hi-bg);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--hi-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.feedback-modal-close:hover {
+  background: #e8e8e8;
+  color: var(--hi-black);
+}
+
+.feedback-modal-body {
+  padding: 16px 24px 24px;
+}
+
+/* ---------- 表单字段 ---------- */
+.feedback-field {
+  margin-bottom: 16px;
+}
+
+.feedback-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--hi-dark);
+  margin-bottom: 5px;
+}
+
+.feedback-field label .required {
+  color: var(--hi-red);
+  margin-left: 2px;
+}
+
+.feedback-field input,
+.feedback-field select,
+.feedback-field textarea {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--hi-border);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--hi-dark);
+  background: var(--hi-white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.feedback-field input:focus,
+.feedback-field select:focus,
+.feedback-field textarea:focus {
+  outline: none;
+  border-color: var(--hi-red);
+  box-shadow: 0 0 0 3px var(--hi-red-light);
+}
+
+.feedback-field input[readonly] {
+  background: var(--hi-bg);
+  color: var(--hi-gray-light);
+  cursor: default;
+  font-size: 12px;
+}
+
+.feedback-field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.feedback-field .field-hint {
+  font-size: 11px;
+  color: var(--hi-gray-light);
+  margin-top: 4px;
+}
+
+/* ---------- 提交按钮 ---------- */
+.feedback-submit {
+  width: 100%;
+  padding: 11px 0;
+  background: var(--hi-red);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.feedback-submit:hover {
+  background: var(--hi-red-hover);
+  box-shadow: 0 4px 12px rgba(199, 0, 11, 0.3);
+}
+
+.feedback-submit:active {
+  transform: scale(0.98);
+}
+
+.feedback-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- 提交成功提示 ---------- */
+.feedback-success {
+  display: none;
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.feedback-success.active {
+  display: block;
+}
+
+.feedback-success .success-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.feedback-success h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--hi-black);
+  margin: 0 0 8px;
+}
+
+.feedback-success p {
+  font-size: 14px;
+  color: var(--hi-gray);
+  margin: 0 0 4px;
+  line-height: 1.6;
+}
+
+.feedback-success .success-note {
+  font-size: 12px;
+  color: var(--hi-gray-light);
+  margin-top: 12px;
+}
+
+/* ---------- 响应式 ---------- */
+@media screen and (max-width: 600px) {
+  .feedback-fab {
+    right: 16px;
+    bottom: 100px;
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .feedback-fab .fab-label {
+    display: none;
+  }
+
+  .feedback-fab .fab-icon {
+    font-size: 20px;
+  }
+
+  .feedback-modal {
+    width: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .feedback-modal-body {
+    padding: 12px 16px 20px;
+  }
+}
+
+/* =============================================
  * 响应式 ========== */
 @media screen and (max-width: 76.2344em) {
   .md-nav--primary .md-nav__title[for="__drawer"] {
