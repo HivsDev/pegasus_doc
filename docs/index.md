@@ -2,18 +2,6 @@
 
 > 海思 Hi3403V100 / SS927V100 超高清智能网络录像机 SoC 完整开发文档社区
 
-<!-- 快速上手快捷入口 -->
-<div class="quick-start-strip">
-<h3><span class="qs-icon">⚡</span> 快速上手</h3>
-<div class="quick-start-links">
-  <a href="getting-started/快速上手指南.md"><span class="qs-icon">🚀</span> 快速上手指南</a>
-  <a href="getting-started/Hi3403V100环境搭建指南.md"><span class="qs-icon">🔧</span> 环境搭建指南</a>
-  <a href="getting-started/应用开发指南.md"><span class="qs-icon">💻</span> 应用开发指南</a>
-  <a href="getting-started/图形开发用户指南.md"><span class="qs-icon">🎨</span> 图形开发指南</a>
-  <a href="system-architecture/SDK安装与升级.md"><span class="qs-icon">📦</span> SDK 安装与升级</a>
-</div>
-</div>
-
 <!-- 芯片概览 -->
 ## 芯片概览
 
