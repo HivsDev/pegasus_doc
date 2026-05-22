@@ -7,6 +7,8 @@ site_url: https://docs.hisilicon.com/repos/fbb_ss928v100/zh-CN/master/
 repo_url: https://gitlab.local/hisilicon/ss928v100-docs
 repo_name: ss928v100-docs
 
+use_directory_urls: false
+
 theme:
   name: material
   locale: zh
