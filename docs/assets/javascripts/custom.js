@@ -38,7 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
         headings.forEach(function(h) {
           var id = h.id || (h.querySelector('[id]') ? h.querySelector('[id]').id : null);
           if (id && id.length > 0) {
-            items.push({ id: id, text: h.textContent, tag: h.tagName });
+            // 获取纯净的标题文字（去掉 MkDocs 自动添加的 ¶ permalink 符号）
+            var hClone = h.cloneNode(true);
+            var perm = hClone.querySelector('.headerlink');
+            if (perm) perm.remove();
+            var cleanText = hClone.textContent.trim();
+            items.push({ id: id, text: cleanText, tag: h.tagName });
           }
         });
 
