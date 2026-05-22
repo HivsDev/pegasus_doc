@@ -49,28 +49,28 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span>![]</span></p>
+<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span>![](figures/zh-cn_image_0000002424357674.png)</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p1757432116410"><a name="p1757432116410"></a><a name="p1757432116410"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span>![]</span></p>
+<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span>![](figures/zh-cn_image_0000002457876557.png)</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p959197916410"><a name="p959197916410"></a><a name="p959197916410"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span>![]</span></p>
+<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span>![](figures/zh-cn_image_0000002424197818.png)</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p123197916410"><a name="p123197916410"></a><a name="p123197916410"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
 </td>
 </tr>
-<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span>![]</span></p>
+<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span>![](figures/zh-cn_image_0000002457836413.png)</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4388861916410"><a name="p4388861916410"></a><a name="p4388861916410"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
 <p id="p1238861916410"><a name="p1238861916410"></a><a name="p1238861916410"></a>“须知”不涉及人身伤害。</p>
 </td>
 </tr>
-<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span>![]</span></p>
+<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span>![](figures/zh-cn_image_0000002424197822.png)</span></p>
 </td>
 <td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4612588116410"><a name="p4612588116410"></a><a name="p4612588116410"></a>对正文中重点信息的补充说明。</p>
 <p id="p1232588116410"><a name="p1232588116410"></a><a name="p1232588116410"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
@@ -102,7 +102,7 @@
 
 # 首次安装SDK<a name="ZH-CN_TOPIC_0000002424357650"></a>
 
-如果您已安装过SDK，可以直接参看[安装、升级Hi3403V100 DEMO板开发环境]。
+如果您已安装过SDK，可以直接参看[安装、升级Hi3403V100 DEMO板开发环境](安装-升级Hi3403V100-DEMO板开发环境.md)。
 
 
 
@@ -480,7 +480,7 @@ ping serverip (确保网络畅通)
     ```
 
     > **须知：** 
-    >上述[烧写映像文件到SPI Nor Flash]-[烧写镜像文件到EMMC]  镜像请按照实际大小调整，LiteOS的默认启动地址是 0x44000000，若客户内存布局有调整，请调整LiteOS的启动地址；若无LiteOS时客户可调整 linux 启动地址。
+    >上述[烧写映像文件到SPI Nor Flash](烧写映像文件到SPI-Nor-Flash.md)-[烧写镜像文件到EMMC](烧写镜像文件到EMMC.md)  镜像请按照实际大小调整，LiteOS的默认启动地址是 0x44000000，若客户内存布局有调整，请调整LiteOS的启动地址；若无LiteOS时客户可调整 linux 启动地址。
 
 ## 启动新系统<a name="ZH-CN_TOPIC_0000002457876541"></a>
 

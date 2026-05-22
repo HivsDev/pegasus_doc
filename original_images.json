@@ -1,0 +1,34 @@
+{
+  "docs/modules/isp/ISP FAQ.md": [
+    "figures/光源字体附近出现方向性的毛刺效果图.png",
+    "figures/zh-cn_image_0000002441684005.png",
+    "figures/zh-cn_image_0000002408284590.png",
+    "figures/数据处理流程.png",
+    "figures/交流电波形.png",
+    "figures/可裁剪模块的图示说明.png"
+  ],
+  "docs/other/BSP FAQ.md": [
+    "figures/zh-cn_image_0000002424360586.png",
+    "figures/zh-cn_image_0000002457879481.png",
+    "figures/zh-cn_image_0000002424200738.png",
+    "figures/zh-cn_image_0000002457879469.png",
+    "figures/zh-cn_image_0000002457839357.png",
+    "figures/zh-cn_image_0000002424360610.png",
+    "figures/USB3-0-U盘启动识别流程.png \"USB3-0-U盘启动识别流程\"",
+    "figures/内核态接口中申请锁的操作.png \"内核态接口中申请锁的操作\"",
+    "figures/写操作示例图.png \"写操作示例图\"",
+    "figures/Nand-Flash-块结构图.jpg \"Nand-Flash-块结构图\"",
+    "figures/bsp_faq_4-4-1.png",
+    "figures/bsp_faq_4-4-2.png",
+    "figures/bsp_faq_4-4-3.png",
+    "figures/zh-cn_image_0000002457879509.png",
+    "figures/bsp_faq_4-4-4.png",
+    "figures/bsp_faq_4-4-5.png",
+    "figures/zh-cn_image_0000002424200754.png",
+    "figures/zh-cn_image_0000002457879493.png",
+    "figures/zh-cn_image_0000002457839369.jpg",
+    "figures/CPU占用率升高.png \"CPU占用率升高\"",
+    "figures/内核启动打印.png \"内核启动打印\"",
+    "figures/修改方法.png \"修改方法\""
+  ]
+}

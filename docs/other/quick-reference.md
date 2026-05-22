@@ -9,23 +9,23 @@ title: 快速参考索引
 ## 按模块快速定位
 
 ### 媒体处理
-- [MPP 概述]
-- [视频输入]
-- [视频编码]
-- [视频解码]
-- [音频]
+- [MPP 概述](modules/mpp/01%20概述.md)
+- [视频输入](modules/mpp/03%20视频输入.md)
+- [视频编码](modules/mpp/06%20视频编码（6.1--6.3）.md)
+- [视频解码](modules/mpp/07%20视频解码.md)
+- [音频](modules/mpp/09%20音频（9.1--9.3）.md)
 
 ### ISP
-- [ISP 开发参考]
-- [ISP 调优]
-- [Sensor 调试]
+- [ISP 开发参考](modules/isp/ISP%20开发参考（1--2）.md)
+- [ISP 调优](modules/isp/ISP%20图像调优指南.md)
+- [Sensor 调试](modules/isp/Sensor%20调试指南.md)
 
 ### 智能分析
-- [SVP2.0 开发]
-- [ATC 工具]
-- [模型量化]
+- [SVP2.0 开发](modules/ai/SVP2.0%20开发指南.md)
+- [ATC 工具](modules/ai/ATC工具使用指南.md)
+- [模型量化](modules/ai/AMCT使用指南（PyTorch）.md)
 
 ### 硬件适配
-- [U-Boot 移植]
-- [内核适配]
-- [DDR 小型化]
+- [U-Boot 移植](hardware/U-boot%20移植应用开发指南.md)
+- [内核适配](hardware/OpenHarmony内核适配Hi3403V100%20SDK%20内核6.6特性指导文档.md)
+- [DDR 小型化](hardware/DDR%20小型化指南.md)
