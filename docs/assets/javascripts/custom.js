@@ -20,39 +20,71 @@ document.addEventListener('DOMContentLoaded', function() {
     if (isHomepage) {
       document.body.classList.add('homepage');
 
-      var rightSidebar = document.querySelector('.md-sidebar--secondary');
-      var rightToc = rightSidebar ? rightSidebar.querySelector('.md-nav--secondary') : null;
       var leftInner = document.querySelector('.md-sidebar--primary .md-sidebar__inner');
-      if (rightToc && leftInner) {
-        // 清除之前克隆的内容（instant navigation 时防止重复）
+      var contentArea = document.querySelector('.md-content__inner');
+      var rightSidebar = document.querySelector('.md-sidebar--secondary');
+
+      if (leftInner && contentArea) {
+        // 清除之前生成的目录（防止重复）
         var oldTitle = leftInner.querySelector('.cloned-homepage-toc-title');
         if (oldTitle) oldTitle.remove();
-        var oldClone = leftInner.querySelector('.cloned-homepage-toc');
-        if (oldClone) oldClone.remove();
+        var oldList = leftInner.querySelector('.cloned-homepage-toc-list');
+        if (oldList) oldList.remove();
 
-        var tocClone = rightToc.cloneNode(true);
-        tocClone.classList.add('cloned-homepage-toc');
-        // 缩小字号
-        var cloneLinks = tocClone.querySelectorAll('.md-nav__link');
-        cloneLinks.forEach(function(link) {
-          link.style.fontSize = '0.65rem';
-          link.style.padding = '0.15rem 0.6rem';
-        });
-        var cloneLabels = tocClone.querySelectorAll('.md-nav__title');
-        cloneLabels.forEach(function(label) {
-          label.style.fontSize = '0.7rem';
-          label.style.padding = '0.2rem 0.6rem';
+        // 从页面内容中提取 h2/h3 标题，生成纯链接目录
+        // 不克隆右侧 TOC，避免携带 mkdocs material 的导航类名导致 JS 拦截
+        var headings = contentArea.querySelectorAll('h2, h3');
+        var items = [];
+        headings.forEach(function(h) {
+          var id = h.id || (h.querySelector('[id]') ? h.querySelector('[id]').id : null);
+          if (id && id.length > 0) {
+            items.push({ id: id, text: h.textContent, tag: h.tagName });
+          }
         });
 
-        // 添加分隔标题
-        var tocTitle = document.createElement('div');
-        tocTitle.className = 'md-nav__title cloned-homepage-toc-title';
-        tocTitle.style.cssText = 'padding:0.6rem 0.6rem 0.2rem;font-size:0.7rem;font-weight:600;color:var(--hi-red);border-top:1px solid var(--hi-border);margin-top:0.6rem;';
-        tocTitle.textContent = '📑 本页目录';
-        leftInner.appendChild(tocTitle);
-        leftInner.appendChild(tocClone);
+        if (items.length > 0) {
+          // 分隔标题
+          var tocTitle = document.createElement('div');
+          tocTitle.className = 'cloned-homepage-toc-title';
+          tocTitle.textContent = '📑 本页目录';
+          leftInner.appendChild(tocTitle);
+
+          // 生成目录列表（使用自定义类名，避免 mkdocs material 导航 JS 拦截）
+          var list = document.createElement('ul');
+          list.className = 'cloned-homepage-toc-list';
+
+          items.forEach(function(item) {
+            var li = document.createElement('li');
+            li.className = 'cloned-homepage-toc-item';
+            if (item.tag === 'H3') {
+              li.classList.add('toc-level-h3');
+            }
+
+            var link = document.createElement('a');
+            link.href = '#' + item.id;
+            link.className = 'cloned-homepage-toc-link';
+            link.textContent = item.text;
+
+            // 自定义点击处理：绕过 MkDocs 即时导航，平滑滚动到目标
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              var target = document.getElementById(item.id);
+              if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.pushState(null, '', '#' + item.id);
+              }
+            });
+
+            li.appendChild(link);
+            list.appendChild(li);
+          });
+
+          leftInner.appendChild(list);
+        }
       }
 
+      // 隐藏右侧栏
       if (rightSidebar) {
         rightSidebar.style.display = 'none';
         rightSidebar.setAttribute('hidden', '');
