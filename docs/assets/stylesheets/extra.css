@@ -920,12 +920,7 @@ div.highlight {
     text-overflow: ellipsis;
   }
 
-  /* 首页专用：右侧栏隐藏，由 JS 将目录移到左侧 */
-  .homepage .md-sidebar--secondary {
-    display: none !important;
-  }
-
-  /* 让中间栏自动吸收省出的空间 */
+  /* 中间栏自动吸收省出的空间 */
   .homepage .md-content {
     flex: 1;
   }

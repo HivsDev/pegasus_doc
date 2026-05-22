@@ -11,34 +11,72 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ========== 布局优化：首页右侧目录合并到左侧 ==========
-  var isHomepage = window.location.pathname === '/pegasus_doc/'
-    || window.location.pathname === '/pegasus_doc/index.html'
-    || window.location.pathname === '/'
-    || window.location.pathname === '/index.html';
+  function setupHomepageLayout() {
+    var isHomepage = window.location.pathname === '/pegasus_doc/'
+      || window.location.pathname === '/pegasus_doc/index.html'
+      || window.location.pathname === '/'
+      || window.location.pathname === '/index.html';
 
-  if (isHomepage) {
-    document.body.classList.add('homepage');
+    if (isHomepage) {
+      document.body.classList.add('homepage');
 
-    // 将右侧目录（TOC）克隆到左侧导航栏底部
-    var rightToc = document.querySelector('.md-sidebar--secondary .md-nav--secondary');
-    var leftInner = document.querySelector('.md-sidebar--primary .md-sidebar__inner');
-    if (rightToc && leftInner) {
-      var tocClone = rightToc.cloneNode(true);
-      // 添加一个分隔标题
-      var tocTitle = document.createElement('nav');
-      tocTitle.className = 'md-nav md-nav--secondary';
-      tocTitle.innerHTML = '<div class="homepage-toc-heading" style="padding:0.6rem 0.6rem 0.2rem;font-size:0.7rem;font-weight:600;color:var(--hi-red);border-top:1px solid var(--hi-border);margin-top:0.6rem;">📑 本页目录</div>';
-      leftInner.appendChild(tocTitle);
-      leftInner.appendChild(tocClone);
+      var rightSidebar = document.querySelector('.md-sidebar--secondary');
+      var rightToc = rightSidebar ? rightSidebar.querySelector('.md-nav--secondary') : null;
+      var leftInner = document.querySelector('.md-sidebar--primary .md-sidebar__inner');
+      if (rightToc && leftInner) {
+        // 清除之前克隆的内容（instant navigation 时防止重复）
+        var oldTitle = leftInner.querySelector('.cloned-homepage-toc-title');
+        if (oldTitle) oldTitle.remove();
+        var oldClone = leftInner.querySelector('.cloned-homepage-toc');
+        if (oldClone) oldClone.remove();
 
-      // 缩小左侧目录字号以适配
-      var navLinks = tocClone.querySelectorAll('.md-nav__link');
-      navLinks.forEach(function(link) {
-        link.style.fontSize = '0.65rem';
-        link.style.padding = '0.15rem 0.6rem';
-      });
+        var tocClone = rightToc.cloneNode(true);
+        tocClone.classList.add('cloned-homepage-toc');
+        // 缩小字号
+        var cloneLinks = tocClone.querySelectorAll('.md-nav__link');
+        cloneLinks.forEach(function(link) {
+          link.style.fontSize = '0.65rem';
+          link.style.padding = '0.15rem 0.6rem';
+        });
+        var cloneLabels = tocClone.querySelectorAll('.md-nav__title');
+        cloneLabels.forEach(function(label) {
+          label.style.fontSize = '0.7rem';
+          label.style.padding = '0.2rem 0.6rem';
+        });
+
+        // 添加分隔标题
+        var tocTitle = document.createElement('div');
+        tocTitle.className = 'md-nav__title cloned-homepage-toc-title';
+        tocTitle.style.cssText = 'padding:0.6rem 0.6rem 0.2rem;font-size:0.7rem;font-weight:600;color:var(--hi-red);border-top:1px solid var(--hi-border);margin-top:0.6rem;';
+        tocTitle.textContent = '📑 本页目录';
+        leftInner.appendChild(tocTitle);
+        leftInner.appendChild(tocClone);
+      }
+
+      if (rightSidebar) {
+        rightSidebar.style.display = 'none';
+        rightSidebar.setAttribute('hidden', '');
+      }
+    } else {
+      document.body.classList.remove('homepage');
     }
   }
+
+  // 初次加载执行
+  setupHomepageLayout();
+
+  // 监听 MkDocs Material 即时导航（instant navigation）后的内容更新
+  document.addEventListener('locationchange', function() {
+    setupHomepageLayout();
+  });
+
+  // 监听同页锚点跳转与浏览器前进/后退（popstate 兼容 hash 变化）
+  window.addEventListener('hashchange', function() {
+    setupHomepageLayout();
+  });
+  window.addEventListener('popstate', function() {
+    setupHomepageLayout();
+  });
 
   // 在代码块右上角显示语言标签
   var codeBlocks = document.querySelectorAll('div.highlight pre');
