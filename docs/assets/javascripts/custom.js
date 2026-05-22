@@ -10,6 +10,36 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 100);
   }
 
+  // ========== 布局优化：首页右侧目录合并到左侧 ==========
+  var isHomepage = window.location.pathname === '/pegasus_doc/'
+    || window.location.pathname === '/pegasus_doc/index.html'
+    || window.location.pathname === '/'
+    || window.location.pathname === '/index.html';
+
+  if (isHomepage) {
+    document.body.classList.add('homepage');
+
+    // 将右侧目录（TOC）克隆到左侧导航栏底部
+    var rightToc = document.querySelector('.md-sidebar--secondary .md-nav--secondary');
+    var leftInner = document.querySelector('.md-sidebar--primary .md-sidebar__inner');
+    if (rightToc && leftInner) {
+      var tocClone = rightToc.cloneNode(true);
+      // 添加一个分隔标题
+      var tocTitle = document.createElement('nav');
+      tocTitle.className = 'md-nav md-nav--secondary';
+      tocTitle.innerHTML = '<div class="homepage-toc-heading" style="padding:0.6rem 0.6rem 0.2rem;font-size:0.7rem;font-weight:600;color:var(--hi-red);border-top:1px solid var(--hi-border);margin-top:0.6rem;">📑 本页目录</div>';
+      leftInner.appendChild(tocTitle);
+      leftInner.appendChild(tocClone);
+
+      // 缩小左侧目录字号以适配
+      var navLinks = tocClone.querySelectorAll('.md-nav__link');
+      navLinks.forEach(function(link) {
+        link.style.fontSize = '0.65rem';
+        link.style.padding = '0.15rem 0.6rem';
+      });
+    }
+  }
+
   // 在代码块右上角显示语言标签
   var codeBlocks = document.querySelectorAll('div.highlight pre');
   codeBlocks.forEach(function(block) {
