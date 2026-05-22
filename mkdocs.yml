@@ -1,8 +1,8 @@
-# 海思 SS928V100 芯片开发文档
+# 海思 Hi3403V100 芯片开发文档
 # 基于 Material for MkDocs + 海思开发者社区风格
 
-site_name: SS928V100 芯片开发文档
-site_description: 海思 SS928V100/SS927V100 超高清智能网络录像机 SoC 完整开发文档社区
+site_name: Hi3403V100 芯片开发文档
+site_description: 海思 Hi3403V100/SS927V100 超高清智能网络录像机 SoC 完整开发文档社区
 site_url: https://docs.hisilicon.com/repos/fbb_ss928v100/zh-CN/master/
 repo_url: https://gitlab.local/hisilicon/ss928v100-docs
 repo_name: ss928v100-docs

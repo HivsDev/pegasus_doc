@@ -2,10 +2,10 @@
 
 **概述<a name="section142mcpsimp"></a>**
 
-本文为SS928V100 SDK的安装及升级使用说明，方便使用者能快速在对应芯片的DEMB板上搭建好SDK运行环境。
+本文为Hi3403V100 SDK的安装及升级使用说明，方便使用者能快速在对应芯片的DEMB板上搭建好SDK运行环境。
 
 > **说明：** 
->本文以SS928V100描述为例，未有特殊说明，SS927V100与SS928V100内容一致。
+>本文以Hi3403V100描述为例，未有特殊说明，SS927V100与Hi3403V100内容一致。
 
 **产品版本<a name="section145mcpsimp"></a>**
 
@@ -18,7 +18,7 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row159mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p161mcpsimp"><a name="p161mcpsimp"></a><a name="p161mcpsimp"></a>SS928</p>
+<tbody><tr id="row159mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p161mcpsimp"><a name="p161mcpsimp"></a><a name="p161mcpsimp"></a>Hi3403V100</p>
 </td>
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p163mcpsimp"><a name="p163mcpsimp"></a><a name="p163mcpsimp"></a>V100</p>
 </td>
@@ -102,7 +102,7 @@
 
 # 首次安装SDK<a name="ZH-CN_TOPIC_0000002424357650"></a>
 
-如果您已安装过SDK，可以直接参看[安装、升级SS928V100 DEMO板开发环境]。
+如果您已安装过SDK，可以直接参看[安装、升级Hi3403V100 DEMO板开发环境]。
 
 
 
@@ -110,17 +110,17 @@
 
 
 
-## SS928V100 SDK包位置<a name="ZH-CN_TOPIC_0000002457876545"></a>
+## Hi3403V100 SDK包位置<a name="ZH-CN_TOPIC_0000002457876545"></a>
 
-在"SS928V100R001\*\*\*/01.software/board"目录下，您可以看到一个 SS928V100\_SDK\_Vx.x.x.x.tgz 的文件，该文件就是SS928V100的软件开发包。
+在"Hi3403V100R001\*\*\*/01.software/board"目录下，您可以看到一个 Hi3403V100\_SDK\_Vx.x.x.x.tgz 的文件，该文件就是Hi3403V100的软件开发包。
 
 ## 解压缩SDK包<a name="ZH-CN_TOPIC_0000002457836397"></a>
 
-在linux服务器上（或者一台装有linux的PC上，主流的linux发行版本均可以），使用命令：tar -zxf SS928V100\_SDK\_Vx.x.x.x.tgz，解压缩该文件，可以得到一个SS928V100\_SDK\_Vx.x.x.x目录。
+在linux服务器上（或者一台装有linux的PC上，主流的linux发行版本均可以），使用命令：tar -zxf Hi3403V100\_SDK\_Vx.x.x.x.tgz，解压缩该文件，可以得到一个Hi3403V100\_SDK\_Vx.x.x.x目录。
 
 ## 展开SDK包内容<a name="ZH-CN_TOPIC_0000002424197802"></a>
 
-返回SS928V100\_SDK\_Vx.x.x.x目录，运行./sdk.unpack\(请用root或sudo权限执行\)将会展开SDK包打包压缩存放的内容，请按照提示完成操作。
+返回Hi3403V100\_SDK\_Vx.x.x.x目录，运行./sdk.unpack\(请用root或sudo权限执行\)将会展开SDK包打包压缩存放的内容，请按照提示完成操作。
 
 如果您需要通过WINDOWS操作系统中转拷贝SDK包，请先运行./sdk.cleanup，收起SDK包的内容，拷贝到新的目录后再展开。
 
@@ -134,7 +134,7 @@
 
 ## SDK目录介绍<a name="ZH-CN_TOPIC_0000002457876533"></a>
 
-SS928V100\_SDK\_Vx.x.x.x 目录结构如下：
+Hi3403V100\_SDK\_Vx.x.x.x 目录结构如下：
 
 ├── smp                             \#smp目录
 
@@ -218,9 +218,9 @@ SS928V100\_SDK\_Vx.x.x.x 目录结构如下：
 
 └── sdk.unpack                        \#SDK展开脚本
 
-# 安装、升级SS928V100 DEMO板开发环境<a name="ZH-CN_TOPIC_0000002457836393"></a>
+# 安装、升级Hi3403V100 DEMO板开发环境<a name="ZH-CN_TOPIC_0000002457836393"></a>
 
-如果您使用的SS928V100的DEMO板，可以按照以下操作烧写uboot、内核以及文件系统，以下操作均使用网络来更新:
+如果您使用的Hi3403V100的DEMO板，可以按照以下操作烧写uboot、内核以及文件系统，以下操作均使用网络来更新:
 
 -   如果您拿到的单板没有uboot的话，就需要使用01.software/pc/ToolPlatform进行烧写。更详细的烧写操作步骤及说明，请参见01.software/pc/ToolPlatform目录下的《BurnTool 工具使用指南》。
 -   如果您拿到的单板中已经有uboot，可以按照以下步骤使用网口烧写uboot、kernel及rootfs到Flash中。DEMO板默认为从SPI Flash启动。
@@ -249,7 +249,7 @@ ping serverip (确保网络畅通)
 ```
 
 > **须知：** 
->-   SS928V100启动方案分快速启动（使用u-boot-ss928v100.bin）和非快速启动（非安全启动/安全启动，使用boot\_image.bin），详见《SS928V100/SS927V100 安全启动使用指南》文档第二章节 “启动方案”。
+>-   Hi3403V100启动方案分快速启动（使用u-boot-ss928v100.bin）和非快速启动（非安全启动/安全启动，使用boot\_image.bin），详见《Hi3403V100/SS927V100 安全启动使用指南》文档第二章节 “启动方案”。
 >-   其启动方案可通过读取0x10122090寄存器查看确认，如值为0x5为快速启动，其余值为非快速启动。
 >-   默认出厂单板为“非安全启动”，下文以该模式为例烧写镜像。
 
@@ -493,7 +493,7 @@ reset	\# 重启进入新系统。
 
 与媒体业务相关的管脚复用、DDR优先级配置等在interdrv/sys\_config开源驱动中配置（使用linux DTS进行管理），如果与实际情况不符可直接修改，sys\_config.ko驱动被load\_ss928v100调用，在加载mpp内核模块之前被执行。
 
-MPP之外的其他管脚复用统一在uboot中配置，详细说明请参见《SS928V100/SS927V100 U-boot 移植应用开发指南》。
+MPP之外的其他管脚复用统一在uboot中配置，详细说明请参见《Hi3403V100/SS927V100 U-boot 移植应用开发指南》。
 
 # 使用SDK和DEMO板进行开发<a name="ZH-CN_TOPIC_0000002457836405"></a>
 

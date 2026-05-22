@@ -5,7 +5,7 @@
 平台框架主要是集成了BurnTool，FastplayBinTool，LoaderBinTool等工具的一款平台工具，本文档主要介绍平台框架的功能及使用方法。
 
 > **说明：** 
->本文以SS928V100为例，未有特殊说明，SS528V100、SS524V100、SS522V100、SS626V100、SS927V100与SS928V100内容完全一致。
+>本文以Hi3403V100为例，未有特殊说明，SS528V100、SS524V100、SS522V100、SS626V100、SS927V100与Hi3403V100内容完全一致。
 
 **产品版本<a name="section329632361710"></a>**
 
@@ -18,7 +18,7 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row1034642371711"><td class="cellrowborder" valign="top" width="31.759999999999998%" headers="mcps1.1.3.1.1 "><p id="p1134682313174"><a name="p1134682313174"></a><a name="p1134682313174"></a>SS928</p>
+<tbody><tr id="row1034642371711"><td class="cellrowborder" valign="top" width="31.759999999999998%" headers="mcps1.1.3.1.1 "><p id="p1134682313174"><a name="p1134682313174"></a><a name="p1134682313174"></a>Hi3403V100</p>
 </td>
 <td class="cellrowborder" valign="top" width="68.24%" headers="mcps1.1.3.1.2 "><p id="p43461623201712"><a name="p43461623201712"></a><a name="p43461623201712"></a>V100</p>
 </td>
@@ -136,14 +136,14 @@
 
 ## 方案工具适配性<a name="ZH-CN_TOPIC_0000002408329616"></a>
 
-在工具平台菜单中【Device】\>【Current Device】中，显示当前为SS928V100，如[图1]所示。
+在工具平台菜单中【Device】\>【Current Device】中，显示当前为Hi3403V100，如[图1]所示。
 
-**图 1**  切换到SS928V100<a name="2-3-1"></a>  
+**图 1**  切换到Hi3403V100<a name="2-3-1"></a>  
 ![]
 
-在ToolPlatform平台界面上显示SS928V100可调用的工具，如[图2]所示。
+在ToolPlatform平台界面上显示Hi3403V100可调用的工具，如[图2]所示。
 
-**图 2**  SS928V100可用工具<a name="2-3-2"></a>  
+**图 2**  Hi3403V100可用工具<a name="2-3-2"></a>  
 ![]
 
 # 语言切换<a name="ZH-CN_TOPIC_0000002441889029"></a>

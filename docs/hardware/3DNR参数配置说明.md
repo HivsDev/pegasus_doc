@@ -11,7 +11,7 @@
 </th>
 </tr>
 </thead>
-<tbody><tr id="row152mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p154mcpsimp"><a name="p154mcpsimp"></a><a name="p154mcpsimp"></a>SS928</p>
+<tbody><tr id="row152mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p154mcpsimp"><a name="p154mcpsimp"></a><a name="p154mcpsimp"></a>Hi3403V100</p>
 </td>
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p156mcpsimp"><a name="p156mcpsimp"></a><a name="p156mcpsimp"></a>V100</p>
 </td>
@@ -25,7 +25,7 @@
 </table>
 
 > **说明：** 
->本文以SS928V100描述为例，未有特殊说明，SS927V100与SS928V100内容一致。
+>本文以Hi3403V100描述为例，未有特殊说明，SS927V100与Hi3403V100内容一致。
 
 **读者对象<a name="section76301743411"></a>**
 
@@ -994,7 +994,7 @@ typedef struct {
 
 ## 默认参数<a name="ZH-CN_TOPIC_0000002424361866"></a>
 
-SS928V100 YUV 3DNR参数的接口默认参数，如[图1]所示。
+Hi3403V100 YUV 3DNR参数的接口默认参数，如[图1]所示。
 
 **图 1**  3DNR参数的接口参数界面<a name="ref515453020"></a>  
 ![]
