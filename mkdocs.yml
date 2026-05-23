@@ -49,7 +49,7 @@ theme:
     - toc.follow
   icon:
     repo: fontawesome/brands/github
-    edit: fontawesome/pen-to-square
+    edit: fontawesome/solid/edit
 
 plugins:
   - search:
