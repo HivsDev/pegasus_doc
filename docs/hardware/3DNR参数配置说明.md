@@ -104,13 +104,13 @@
 
 下面介绍3DNR的接口及参数。
 
--   [ot\_vpss\_nrx\_v2](ot_vpss_nrx_v2.md)：定义3DNR X接口版本V2的参数。
--   [ot\_vpss\_nrx\_v2\_iey](ot_vpss_nrx_v2_iey.md)：3DNR增强模块参数。
--   [ot\_vpss\_nrx\_v2\_sfy](ot_vpss_nrx_v2_sfy.md)：3DNR空域滤波参数。
--   [ot\_vpss\_nrx\_v2\_mdy](ot_vpss_nrx_v2_mdy.md)：3DNR运动检测参数。
--   [ot\_vpss\_nrx\_v2\_tfy](ot_vpss_nrx_v2_tfy.md)：3DNR时域滤波参数。
--   [ot\_vpss\_nrx\_v2\_nrc0](ot_vpss_nrx_v2_nrc0.md)：3DNR视频色度C0级滤波参数。
--   [ot\_vpss\_nrx\_v2\_nrc1](ot_vpss_nrx_v2_nrc1.md)：3DNR视频色度C1级滤波参数。
+-   `ot_vpss_nrx_v2`：定义3DNR X接口版本V2的参数。
+-   `ot_vpss_nrx_v2_iey`：3DNR增强模块参数。
+-   `ot_vpss_nrx_v2_sfy`：3DNR空域滤波参数。
+-   `ot_vpss_nrx_v2_mdy`：3DNR运动检测参数。
+-   `ot_vpss_nrx_v2_tfy`：3DNR时域滤波参数。
+-   `ot_vpss_nrx_v2_nrc0`：3DNR视频色度C0级滤波参数。
+-   `ot_vpss_nrx_v2_nrc1`：3DNR视频色度C1级滤波参数。
 
 
 

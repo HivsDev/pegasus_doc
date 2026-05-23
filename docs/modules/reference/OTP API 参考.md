@@ -156,15 +156,15 @@ OTP部署在不同场景下时，使用方式可能会有所不同。
 
 OTP提供以下API：
 
--   [ss\_mpi\_otp\_init](ss_mpi_otp_init.md)：初始化OTP模块。
--   [ss\_mpi\_otp\_deinit](ss_mpi_otp_deinit.md)：去初始化OTP模块。
--   [ss\_mpi\_otp\_set\_user\_data](ss_mpi_otp_set_user_data.md)：设置OTP用户空间数据。
--   [ss\_mpi\_otp\_get\_user\_data](ss_mpi_otp_get_user_data.md)：读取OTP用户空间数据。
--   [ss\_mpi\_otp\_set\_user\_data\_lock](ss_mpi_otp_set_user_data_lock.md)：设置OTP用户数据锁
--   [ss\_mpi\_otp\_get\_user\_data\_lock](ss_mpi_otp_get_user_data_lock.md)：获取OTP用户数据锁
--   [ss\_mpi\_otp\_burn\_product\_pv](ss_mpi_otp_burn_product_pv.md)：烧写PV的数据和锁标志到芯片内部OTP。
--   [ss\_mpi\_otp\_read\_product\_pv](ss_mpi_otp_read_product_pv.md)：获取芯片内部OTP的PV数据或锁标志。
--   [ss\_mpi\_otp\_get\_key\_verify\_status](ss_mpi_otp_get_key_verify_status.md)：获取芯片内部OTP中存储KEY的校验状态。
+-   `ss_mpi_otp_init`：初始化OTP模块。
+-   `ss_mpi_otp_deinit`：去初始化OTP模块。
+-   `ss_mpi_otp_set_user_data`：设置OTP用户空间数据。
+-   `ss_mpi_otp_get_user_data`：读取OTP用户空间数据。
+-   `ss_mpi_otp_set_user_data_lock`：设置OTP用户数据锁
+-   `ss_mpi_otp_get_user_data_lock`：获取OTP用户数据锁
+-   `ss_mpi_otp_burn_product_pv`：烧写PV的数据和锁标志到芯片内部OTP。
+-   `ss_mpi_otp_read_product_pv`：获取芯片内部OTP的PV数据或锁标志。
+-   `ss_mpi_otp_get_key_verify_status`：获取芯片内部OTP中存储KEY的校验状态。
 
 
 
@@ -207,7 +207,7 @@ td_s32 ss_mpi_otp_init(td_void);
 </tr>
 <tr id="row567mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p569mcpsimp"><a name="p569mcpsimp"></a><a name="p569mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p571mcpsimp"><a name="p571mcpsimp"></a><a name="p571mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p571mcpsimp"><a name="p571mcpsimp"></a><a name="p571mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -258,7 +258,7 @@ td_s32 ss_mpi_otp_deinit(td_void);
 </tr>
 <tr id="row1169mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p1171mcpsimp"><a name="p1171mcpsimp"></a><a name="p1171mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p1173mcpsimp"><a name="p1173mcpsimp"></a><a name="p1173mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p1173mcpsimp"><a name="p1173mcpsimp"></a><a name="p1173mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -347,7 +347,7 @@ td_s32 ss_mpi_otp_set_user_data(const td_char *field_name, td_u32 offset, const 
 </tr>
 <tr id="row240mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p242mcpsimp"><a name="p242mcpsimp"></a><a name="p242mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p244mcpsimp"><a name="p244mcpsimp"></a><a name="p244mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p244mcpsimp"><a name="p244mcpsimp"></a><a name="p244mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -439,7 +439,7 @@ td_s32 ss_mpi_otp_get_user_data(const td_char *field_name, td_u32 offset, td_u8 
 </tr>
 <tr id="row645mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p647mcpsimp"><a name="p647mcpsimp"></a><a name="p647mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p649mcpsimp"><a name="p649mcpsimp"></a><a name="p649mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p649mcpsimp"><a name="p649mcpsimp"></a><a name="p649mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -524,7 +524,7 @@ td_s32 ss_mpi_otp_set_user_data_lock(const td_char *field_name, td_u32 offset, t
 </tr>
 <tr id="row417mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p419mcpsimp"><a name="p419mcpsimp"></a><a name="p419mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p421mcpsimp"><a name="p421mcpsimp"></a><a name="p421mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p421mcpsimp"><a name="p421mcpsimp"></a><a name="p421mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -616,7 +616,7 @@ td_s32 ss_mpi_otp_get_user_data_lock(const td_char *field_name, td_u32 offset, t
 </tr>
 <tr id="row799mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p801mcpsimp"><a name="p801mcpsimp"></a><a name="p801mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p803mcpsimp"><a name="p803mcpsimp"></a><a name="p803mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p803mcpsimp"><a name="p803mcpsimp"></a><a name="p803mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -694,7 +694,7 @@ td_s32 ss_mpi_otp_burn_product_pv(const ot_otp_burn_pv_item *pv, td_u32 num);
 </tr>
 <tr id="row715mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p717mcpsimp"><a name="p717mcpsimp"></a><a name="p717mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p719mcpsimp"><a name="p719mcpsimp"></a><a name="p719mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p719mcpsimp"><a name="p719mcpsimp"></a><a name="p719mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -774,7 +774,7 @@ td_s32 ss_mpi_otp_read_product_pv(ot_otp_burn_pv_item *pv, td_u32 num);
 </tr>
 <tr id="row869mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p871mcpsimp"><a name="p871mcpsimp"></a><a name="p871mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p873mcpsimp"><a name="p873mcpsimp"></a><a name="p873mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p873mcpsimp"><a name="p873mcpsimp"></a><a name="p873mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -853,7 +853,7 @@ td_s32 ss_mpi_otp_get_key_verify_status(const td_char *key_name, td_bool *status
 </tr>
 <tr id="row1095mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p1097mcpsimp"><a name="p1097mcpsimp"></a><a name="p1097mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p1099mcpsimp"><a name="p1099mcpsimp"></a><a name="p1099mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p1099mcpsimp"><a name="p1099mcpsimp"></a><a name="p1099mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -876,10 +876,10 @@ td_s32 ss_mpi_otp_get_key_verify_status(const td_char *key_name, td_bool *status
 
 相关数据类型、数据结构定义如下：
 
--   [ot\_otp\_burn\_pv\_item](ot_otp_burn_pv_item.md)：OTP PV数据类型。
--   [ot\_otp\_lock\_status](ot_otp_lock_status.md)：定义OTP数据锁状态。
--   [OT\_OTP\_PV\_NAME\_MAX\_LEN](OT_OTP_PV_NAME_MAX_LEN.md)：字段名称最大字节长度（单位：byte）。
--   [OT\_OTP\_PV\_VALUE\_MAX\_LEN](OT_OTP_PV_VALUE_MAX_LEN.md)：ot\_otp\_burn\_pv\_item成员value最大字节长度（单位：byte）。
+-   `ot_otp_burn_pv_item`：OTP PV数据类型。
+-   `ot_otp_lock_status`：定义OTP数据锁状态。
+-   `OT_OTP_PV_NAME_MAX_LEN`：字段名称最大字节长度（单位：byte）。
+-   `OT_OTP_PV_VALUE_MAX_LEN`：ot\_otp\_burn\_pv\_item成员value最大字节长度（单位：byte）。
 
 
 
@@ -946,8 +946,8 @@ value\_len指向value的位宽长度。
 
 【相关数据类型及接口】
 
--   [ss\_mpi\_otp\_burn\_product\_pv](#ss_mpi_otp_burn_product_pv)
--   [ss\_mpi\_otp\_read\_product\_pv](#ss_mpi_otp_read_product_pv)
+-   ss\_mpi\_otp\_burn\_product\_pv
+-   ss\_mpi\_otp\_read\_product\_pv
 
 ## ot\_otp\_lock\_status<a name="ZH-CN_TOPIC_0000002424190110"></a>
 
@@ -1004,7 +1004,7 @@ typedef enum {
 
 【相关数据类型及接口】
 
-[ss\_mpi\_otp\_get\_user\_data\_lock](#ss_mpi_otp_get_user_data_lock)
+ss\_mpi\_otp\_get\_user\_data\_lock
 
 ## OT\_OTP\_PV\_NAME\_MAX\_LEN<a name="ZH-CN_TOPIC_0000002457828749"></a>
 
@@ -1028,8 +1028,8 @@ typedef enum {
 
 【相关数据类型及接口】
 
--   [ss\_mpi\_otp\_burn\_product\_pv](#ss_mpi_otp_burn_product_pv)
--   [ss\_mpi\_otp\_read\_product\_pv](#ss_mpi_otp_read_product_pv)
+-   ss\_mpi\_otp\_burn\_product\_pv
+-   ss\_mpi\_otp\_read\_product\_pv
 
 ## OT\_OTP\_PV\_VALUE\_MAX\_LEN<a name="ZH-CN_TOPIC_0000002424349938"></a>
 
@@ -1053,8 +1053,8 @@ ot\_otp\_burn\_pv\_item成员value最大字节长度（单位：byte）。
 
 【相关数据类型及接口】
 
--   [ss\_mpi\_otp\_burn\_product\_pv](#ss_mpi_otp_burn_product_pv)
--   [ss\_mpi\_otp\_read\_product\_pv](#ss_mpi_otp_read_product_pv)
+-   ss\_mpi\_otp\_burn\_product\_pv
+-   ss\_mpi\_otp\_read\_product\_pv
 
 # 错误码<a name="ZH-CN_TOPIC_0000002424349930"></a>
 

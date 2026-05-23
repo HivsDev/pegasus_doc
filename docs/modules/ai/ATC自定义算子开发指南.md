@@ -597,21 +597,21 @@ export DDK_PATH=${install_path}/ascend-toolkit/svp_latest/x86_64-linux
 自定义算子的实现包括以下部分：
 
 -   OpNode类的实现，需要继承ExtendedOpNodeBase基类。必须实现如下接口。
-    -   Parser：创建对应自定义算子Op的Parse指针并返回。参考[Parser](Parser.md)。
-    -   CalcDataShape：计算输入输出数据的shape信息。参考[CalcDataShape](CalcDataShape.md)。
-    -   GetIsAacpuOp：获取自定义算子Op的属性，CPU算子或_NNN_算子。参考[GetIsAAcpuOp](GetIsAAcpuOp.md)。
+    -   Parser：创建对应自定义算子Op的Parse指针并返回。参考`Parser`。
+    -   CalcDataShape：计算输入输出数据的shape信息。参考`CalcDataShape`。
+    -   GetIsAacpuOp：获取自定义算子Op的属性，CPU算子或_NNN_算子。参考`GetIsAAcpuOp`。
 
 -   Parser类的实现，需要继承ExtendedParserBase基类，必须实现如下接口。
 
-    ParseParam：对自定义算子的参数进行解析。参考[ParseParam](ParseParam.md)。
+    ParseParam：对自定义算子的参数进行解析。参考`ParseParam`。
 
 -   Propagation类的实现，需要继承ExtendedPropagationBase基类，必须实现如下接口。
-    -   PrePare：准备校准推理的参数。参考[Prepare](Prepare.md)。
-    -   ForwardCpu：根据传入的推理参数进行校准推理。参考[ForwardCpu](ForwardCpu.md)。
+    -   PrePare：准备校准推理的参数。参考`Prepare`。
+    -   ForwardCpu：根据传入的推理参数进行校准推理。参考`ForwardCpu`。
 
-若为CPU算子，需实现算子的CPU下的计算函数详见[Cpu Sample介绍](Cpu-Sample介绍.md)。
+若为CPU算子，需实现算子的CPU下的计算函数详见Cpu Sample介绍。
 
-若为_NNN_算子，需实现XXXProcessLayer类，详见[NNN Sample介绍](NNN-Sample介绍.md)。
+若为_NNN_算子，需实现XXXProcessLayer类，详见NNN Sample介绍。
 
 ### 算子工程编译部署<a name="ZH-CN_TOPIC_0000002442022689"></a>
 
@@ -3859,7 +3859,7 @@ AbsCpuForward是实现abs的cpu推理接口，实现float的计算，供ATC的cp
 
 #### 板端工程测试<a name="ZH-CN_TOPIC_0000002441982889"></a>
 
-参考[调试模式使用](调试模式使用.md)。
+参考调试模式使用。
 
 ## _NNN_  Sample介绍<a name="ZH-CN_TOPIC_0000002408583378"></a>
 
@@ -4017,8 +4017,8 @@ int32_t TestAddProcessLayer()
 
 板端测试流程：
 
-1.  参考[设置环境变量](设置环境变量.md)；
-2.  参考[编译custom样例工程](编译custom样例工程.md)；
+1.  参考设置环境变量；
+2.  参考编译custom样例工程；
 3.  执行ATC，运行流程与其它非custom用例一样。
 
 板端用例与AddPropagation运行相似度对比结果：

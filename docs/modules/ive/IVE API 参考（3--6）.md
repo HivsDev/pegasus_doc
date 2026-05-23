@@ -2,145 +2,145 @@
 
 SVP相关数据类型、数据结构定义如下：
 
--   [ot\_svp\_img\_type](ot_svp_img_type.md)：定义二维广义图像支持的图像类型。
--   [ot\_svp\_img](ot_svp_img.md)：定义二维广义图像信息。
--   [ot\_svp\_src\_img](ot_svp_src_img.md)：定义源图像。
--   [ot\_svp\_dst\_img](ot_svp_dst_img.md)：定义输出图像。
--   [OT\_SVP\_IMG\_ADDR\_NUM](OT_SVP_IMG_ADDR_NUM.md)：定义地址通道数目。
+-   `ot_svp_img_type`：定义二维广义图像支持的图像类型。
+-   `ot_svp_img`：定义二维广义图像信息。
+-   `ot_svp_src_img`：定义源图像。
+-   `ot_svp_dst_img`：定义输出图像。
+-   `OT_SVP_IMG_ADDR_NUM`：定义地址通道数目。
 
 定点数据类型：
 
--   [ot\_svp\_data](ot_svp_data.md)：定义以byte为单位的二维图像信息。
--   [ot\_svp\_src\_data](ot_svp_src_data.md)：定义以byte为单位的二维源数据信息。
--   [ot\_svp\_dst\_data](ot_svp_dst_data.md)：定义byte为单位的二维输出数据信息。
--   [ot\_svp\_8bit](ot_svp_8bit.md)：定义8bit数据联合体。
--   [ot\_svp\_point\_u16](ot_svp_point_u16.md)：定义u16bit的点信息结构体。
--   [ot\_svp\_point\_s16](ot_svp_point_s16.md)：定义s16bit的点信息结构体。
--   [ot\_svp\_point\_s25q7](ot_svp_point_s25q7.md)：定义s25q7表示的点信息结构体。
--   [ot\_svp\_point\_u14q2](ot_svp_point_u14q2.md)：定义u14q2表示的点信息结构体。
--   [ot\_svp\_rect\_u32](ot_svp_rect_u32.md)：定义u16表示的矩形信息结构体。
--   [ot\_svp\_rect\_u16](ot_svp_rect_u16.md)：定义u32表示的矩形信息结构体。
--   [ot\_svp\_rect\_s24q8](ot_svp_rect_s24q8.md)：定义s24q8表示的矩形信息结构体。
--   [ot\_svp\_lut](ot_svp_lut.md)：定义查找表结构体。
+-   `ot_svp_data`：定义以byte为单位的二维图像信息。
+-   `ot_svp_src_data`：定义以byte为单位的二维源数据信息。
+-   `ot_svp_dst_data`：定义byte为单位的二维输出数据信息。
+-   `ot_svp_8bit`：定义8bit数据联合体。
+-   `ot_svp_point_u16`：定义u16bit的点信息结构体。
+-   `ot_svp_point_s16`：定义s16bit的点信息结构体。
+-   `ot_svp_point_s25q7`：定义s25q7表示的点信息结构体。
+-   `ot_svp_point_u14q2`：定义u14q2表示的点信息结构体。
+-   `ot_svp_rect_u32`：定义u16表示的矩形信息结构体。
+-   `ot_svp_rect_u16`：定义u32表示的矩形信息结构体。
+-   `ot_svp_rect_s24q8`：定义s24q8表示的矩形信息结构体。
+-   `ot_svp_lut`：定义查找表结构体。
 
 IVE相关数据类型、数据结构定义如下：
 
--   [ot\_ive\_handle](ot_ive_handle.md)：定义IVE句柄。
--   [OT\_IVE\_HIST\_NUM](OT_IVE_HIST_NUM.md)：定义直方图统计bin数目。
--   [OT\_IVE\_MAP\_NUM](OT_IVE_MAP_NUM.md)：定义映射查找表项数目。
--   [OT\_IVE\_MAX\_RGN\_NUM](OT_IVE_MAX_RGN_NUM.md)：定义最大连通区域数目。
--   [OT\_IVE\_ST\_MAX\_CORNER\_NUM](OT_IVE_ST_MAX_CORNER_NUM.md)：定义Shi-Tomasi-like角点最大数目。
--   [OT\_IVE\_MASK\_NUM](OT_IVE_MASK_NUM.md)：掩码mask数组长度
--   [OT\_IVE\_ARR\_RESERVED\_NUM\_TWO](OT_IVE_ARR_RESERVED_NUM_TWO.md)：保留字段数组长度2
--   [OT\_IVE\_ARR\_RESERVED\_NUM\_THREE](OT_IVE_ARR_RESERVED_NUM_THREE.md)：保留字段数组长度3
--   [OT\_IVE\_ARR\_RESERVED\_NUM\_EIGHT](OT_IVE_ARR_RESERVED_NUM_EIGHT.md)：保留字段数组长度8
--   [OT\_IVE\_ARR\_RESERVED\_NUM\_TWELVE](OT_IVE_ARR_RESERVED_NUM_TWELVE.md)：保留字段数组长度12
--   [OT\_IVE\_ARR\_RESERVED\_NUM\_FOURTEEN](OT_IVE_ARR_RESERVED_NUM_FOURTEEN.md)：保留字段数组长度14
--   [OT\_IVE\_ARR\_NUM\_THREE](OT_IVE_ARR_NUM_THREE.md)：数组长度3
--   [OT\_IVE\_ARR\_NUM\_EIGHT](OT_IVE_ARR_NUM_EIGHT.md)：数组长度8
--   [OT\_IVE\_DEV\_NAME\_LENGTH](OT_IVE_DEV_NAME_LENGTH.md)：IVE设备名字的长度。
--   [OT\_IVE\_DEV\_DEFAULT\_NODE\_NUM](OT_IVE_DEV_DEFAULT_NODE_NUM.md)：默认的IVE节点个数。
--   [ot\_ive\_mod\_param](ot_ive_mod_param.md)：IVE模块相关参数定义。
--   [ot\_ive\_err\_code](ot_ive_err_code.md)：定义错误码。
--   [ot\_ive\_dma\_mode](ot_ive_dma_mode.md)：定义DMA运算模式。
--   [ot\_ive\_dma\_ctrl](ot_ive_dma_ctrl.md)：定义DMA控制信息。
--   [ot\_ive\_filter\_ctrl](ot_ive_filter_ctrl.md)：定义模板滤波控制信息。
--   [ot\_ive\_csc\_mode](ot_ive_csc_mode.md)：定义色彩空间转换模式。
--   [ot\_ive\_csc\_ctrl](ot_ive_csc_ctrl.md)：定义色彩空间转换控制信息。
--   [ot\_ive\_filter\_and\_csc\_ctrl](ot_ive_filter_and_csc_ctrl.md)：定义模板滤波加色彩空间转换复合功能控制信息。
--   [ot\_ive\_sobel\_out\_ctrl](ot_ive_sobel_out_ctrl.md)：定义sobel输出控制信息。
--   [ot\_ive\_sobel\_ctrl](ot_ive_sobel_ctrl.md)：定义sobel边缘提取控制信息。
--   [ot\_ive\_mag\_and\_ang\_out\_ctrl](ot_ive_mag_and_ang_out_ctrl.md)：定义canny边缘幅值与角度计算的输出格式。
--   [ot\_ive\_mag\_and\_ang\_ctrl](ot_ive_mag_and_ang_ctrl.md)：定义canny边缘幅值和幅角计算的控制信息。
--   [ot\_ive\_dilate\_ctrl](ot_ive_dilate_ctrl.md)：定义膨胀控制信息。
--   [ot\_ive\_erode\_ctrl](ot_ive_erode_ctrl.md)：定义腐蚀控制信息。
--   [ot\_ive\_threshold\_mode](ot_ive_threshold_mode.md)：定义图像二值化输出格式。
--   [ot\_ive\_threshold\_ctrl](ot_ive_threshold_ctrl.md)：定义图像二值化控制信息。
--   [ot\_ive\_sub\_mode](ot_ive_sub_mode.md)：定义两图像相减输出格式。
--   [ot\_ive\_sub\_ctrl](ot_ive_sub_ctrl.md)：定义两图像相减控制参数。
--   [ot\_ive\_integ\_out\_ctrl](ot_ive_integ_out_ctrl.md)：定义积分图输出控制参数。
--   [ot\_ive\_integ\_ctrl](ot_ive_integ_ctrl.md)：定义积分图计算控制参数。
--   [ot\_ive\_threshold\_s16\_mode](ot_ive_threshold_s16_mode.md)：定义16bit有符号图像的阈值化模式。
--   [ot\_ive\_threshold\_s16\_ctrl](ot_ive_threshold_s16_ctrl.md)：定义16bit有符号图像的阈值化控制参数。
--   [ot\_ive\_threshold\_u16\_mode](ot_ive_threshold_u16_mode.md)：定义16bti无符号图像的阈值化模式。
--   [ot\_ive\_threshold\_u16\_ctrl](ot_ive_threshold_u16_ctrl.md)：定义16bit无符号图像的阈值化控制参数。
--   [ot\_ive\_16bit\_to\_8bit\_mode](ot_ive_16bit_to_8bit_mode.md)：定义16bit图像到8bit图像的转化模式。
--   [ot\_ive\_16bit\_to\_8bit\_ctrl](ot_ive_16bit_to_8bit_ctrl.md)：定义16bit图像到8bit图像的转化控制参数。
--   [ot\_ive\_order\_stats\_filter\_mode](ot_ive_order_stats_filter_mode.md)：定义顺序统计量滤波模式。
--   [ot\_ive\_order\_stats\_filter\_ctrl](ot_ive_order_stats_filter_ctrl.md)：定义顺序统计量滤波控制参数。
--   [ot\_ive\_map\_u8bit\_lut\_mem](ot_ive_map_u8bit_lut_mem.md)：定义Map U8C1→U8C1的查找表内存。
--   [ot\_ive\_map\_u16bit\_lut\_mem](ot_ive_map_u16bit_lut_mem.md)：定义Map U8C1→U16C1的查找表内存。
--   [ot\_ive\_map\_s16bit\_lut\_mem](ot_ive_map_s16bit_lut_mem.md)：定义Map U8C1→S16C1的查找表内存。
--   [ot\_ive\_map\_mode](ot_ive_map_mode.md)：定义Map的模式。
--   [ot\_ive\_map\_ctrl](ot_ive_map_ctrl.md)：定义Map控制参数。
--   [ot\_ive\_equalize\_hist\_ctrl\_mem](ot_ive_equalize_hist_ctrl_mem.md)：定义直方图均衡化辅助内存。
--   [ot\_ive\_equalize\_hist\_ctrl](ot_ive_equalize_hist_ctrl.md)：定义直方图均衡化控制参数。
--   [ot\_ive\_add\_ctrl](ot_ive_add_ctrl.md)：定义两图像的加权加控制参数。
--   [ot\_ive\_ncc\_dst\_mem](ot_ive_ncc_dst_mem.md)：定义NCC的输出内存信息。
--   [ot\_ive\_rgn](ot_ive_rgn.md)：定义连通区域信息。
--   [ot\_ive\_ccblob](ot_ive_ccblob.md)：定义连通区域标记的输出信息。
--   [ot\_ive\_ccl\_mode](ot_ive_ccl_mode.md)：定义连通区域模式。
--   [ot\_ive\_ccl\_ctrl](ot_ive_ccl_ctrl.md)：定义连通区域标记控制参数。
--   [ot\_ive\_gmm\_ctrl](ot_ive_gmm_ctrl.md)：定义GMM背景建模的控制参数。
--   [ot\_ive\_gmm2\_sns\_factor\_mode](ot_ive_gmm2_sns_factor_mode.md)：定义灵敏度系数模式。
--   [ot\_ive\_gmm2\_life\_update\_factor\_mode](ot_ive_gmm2_life_update_factor_mode.md)：定义模型时长参数更新模式。
--   [ot\_ive\_gmm2\_ctrl](ot_ive_gmm2_ctrl.md)：定义GMM2背景建模的控制参数。
--   [ot\_ive\_canny\_stack\_size](ot_ive_canny_stack_size.md)：定义Canny边缘前半部分计算时强边缘点栈大小结构体。
--   [ot\_ive\_canny\_hys\_edge\_ctrl](ot_ive_canny_hys_edge_ctrl.md)：定义Canny边缘前半部分计算任务的控制参数。
--   [ot\_ive\_lbp\_compare\_mode](ot_ive_lbp_compare_mode.md)：定义LBP纹理计算控制参数。
--   [ot\_ive\_lbp\_ctrl](ot_ive_lbp_ctrl.md)：定义LBP纹理计算控制参数。
--   [ot\_ive\_norm\_grad\_out\_ctrl](ot_ive_norm_grad_out_ctrl.md)：定义归一化梯度信息计算任务输出控制枚举类型。
--   [ot\_ive\_norm\_grad\_ctrl](ot_ive_norm_grad_ctrl.md)：定义归一化梯度信息计算控制参数。
--   [ot\_ive\_lk\_optical\_flow\_pyr\_out\_mode](ot_ive_lk_optical_flow_pyr_out_mode.md)：定义金字塔LK光流计算输出模式。
--   [ot\_ive\_lk\_optical\_flow\_pyr\_ctrl](ot_ive_lk_optical_flow_pyr_ctrl.md)：定义金字塔LK光流计算控制参数。
--   [ot\_ive\_st\_max\_eig\_val](ot_ive_st_max_eig_val.md)：定义Shi-Tomas-like角点计算时最大角点响应值结构体。
--   [ot\_ive\_st\_cand\_corner\_ctrl](ot_ive_st_cand_corner_ctrl.md)：定义Shi-Tomas-like候选角点计算控制参数。
--   [ot\_ive\_st\_corner\_info](ot_ive_st_corner_info.md)：定义Shi-Tomas-like角点计算输出的角点信息结构体。
--   [ot\_ive\_st\_corner\_ctrl](ot_ive_st_corner_ctrl.md)：定义Shi-Tomas-like角点筛选控制参数。
--   [ot\_ive\_sad\_mode](ot_ive_sad_mode.md)：定义SAD计算模式。
--   [ot\_ive\_sad\_out\_ctrl](ot_ive_sad_out_ctrl.md)：定义SAD输出控制模式。
--   [ot\_ive\_sad\_ctrl](ot_ive_sad_ctrl.md)：定义SAD控制参数。
--   [ot\_ive\_resize\_mode](ot_ive_resize_mode.md)：定义Resize的模式。
--   [ot\_ive\_resize\_ctrl](ot_ive_resize_ctrl.md)：定义Resize控制参数。
--   [ot\_ive\_grad\_fg\_mode](ot_ive_grad_fg_mode.md)：定义梯度前景计算模式。
--   [ot\_ive\_grad\_fg\_ctrl](ot_ive_grad_fg_ctrl.md)：定义计算梯度前景控制参数。
--   [ot\_ive\_cand\_bg\_pixel](ot_ive_cand_bg_pixel.md)：定义候选背景模型数据。
--   [ot\_ive\_wrok\_bg\_pixel](ot_ive_wrok_bg_pixel.md)：定义工作背景模型数据。
--   [ot\_ive\_bg\_life](ot_ive_bg_life.md)：定义背景生命力数据。
--   [ot\_ive\_bg\_model\_pixel](ot_ive_bg_model_pixel.md)：定义背景模型数据。
--   [ot\_ive\_fg\_status\_data](ot_ive_fg_status_data.md)：定义前景状态数据。
--   [ot\_ive\_bg\_status\_data](ot_ive_bg_status_data.md)：定义背景状态数据。
--   [ot\_ive\_match\_bg\_model\_ctrl](ot_ive_match_bg_model_ctrl.md)：定义背景匹配控制参数。
--   [ot\_ive\_update\_bg\_model\_ctrl](ot_ive_update_bg_model_ctrl.md)：定义背景更新控制参数。
--   [ot\_ive\_ann\_mlp\_accurate](ot_ive_ann_mlp_accurate.md)：定义ann\_mlp输入特征向量类型。
--   [ot\_ive\_ann\_mlp\_actv\_func](ot_ive_ann_mlp_actv_func.md)：定义ann\_mlp激活函数枚举类型。
--   [ot\_ive\_ann\_mlp\_model](ot_ive_ann_mlp_model.md)：定义ann\_mlp模型数据结构体。
--   [ot\_ive\_svm\_type](ot_ive_svm_type.md)：定义SVM类型。
--   [ot\_ive\_svm\_kernel\_type](ot_ive_svm_kernel_type.md)：定义SVM核函数类型。
--   [ot\_ive\_svm\_model](ot_ive_svm_model.md)：定义SVM模型数据结构体。
--   [ot\_ive\_cnn\_actv\_func](ot_ive_cnn_actv_func.md)：定义CNN激活函数枚举类型。
--   [ot\_ive\_cnn\_pooling](ot_ive_cnn_pooling.md)：定义CNN汇聚操作枚举类型。
--   [ot\_ive\_cnn\_conv\_pooling](ot_ive_cnn_conv_pooling.md)：定义CNN单层Conv-ReLU-Pooling运算包参数结构体。
--   [ot\_ive\_cnn\_fc\_info](ot_ive_cnn_fc_info.md)：定义CNN全链接网络参数结构体。
--   [ot\_ive\_cnn\_model](ot_ive_cnn_model.md)：定义CNN模型参数结构体。
--   [ot\_ive\_cnn\_ctrl](ot_ive_cnn_ctrl.md)：定义CNN预测任务的控制参数。
--   [ot\_ive\_cnn\_result](ot_ive_cnn_result.md)：定义CNN单个样本预测结果结构体。
--   [ot\_ive\_persp\_trans\_point\_pair](ot_ive_persp_trans_point_pair.md)：定义透视变换点对结构体。
--   [ot\_ive\_persp\_trans\_alg\_mode](ot_ive_persp_trans_alg_mode.md)：定义透视变换算法模式枚举。
--   [ot\_ive\_persp\_trans\_csc\_mode](ot_ive_persp_trans_csc_mode.md)：定义透视变换色彩空间转换模式。
--   [ot\_ive\_kcf\_core\_id](ot_ive_kcf_core_id.md)：定义KCF的核ID。
--   [ot\_ive\_persp\_trans\_ctrl](ot_ive_persp_trans_ctrl.md)：定义透视变换控制参数。
--   [ot\_ive\_roi\_info](ot_ive_roi_info.md)：定义目前区域信息参数。
--   [ot\_ive\_kcf\_proc\_ctrl](ot_ive_kcf_proc_ctrl.md)：定义跟踪处理控制参数。
--   [ot\_ive\_list\_head](ot_ive_list_head.md)：定义链表头结构体参数。
--   [ot\_ive\_kcf\_obj](ot_ive_kcf_obj.md)：定义目标信息结构体参数。
--   [ot\_ive\_kcf\_obj\_node](ot_ive_kcf_obj_node.md)：定义目标链表节点参数。
--   [ot\_ive\_kcf\_list\_state](ot_ive_kcf_list_state.md)：定义目标链表状态枚举类型。
--   [ot\_ive\_kcf\_obj\_list](ot_ive_kcf_obj_list.md)：定义目标链表结构参数。
--   [ot\_ive\_kcf\_bbox](ot_ive_kcf_bbox.md)：定义目标区域信息参数。
--   [ot\_ive\_kcf\_bbox\_ctrl](ot_ive_kcf_bbox_ctrl.md)：定义目标区域信息控制参数。
--   [ot\_ive\_hog\_mode](ot_ive_hog_mode.md)：定义HOG\(Histogram of Oriented Gradient\)特征存储模式枚举类型。
--   [ot\_ive\_hog\_ctrl](ot_ive_hog_ctrl.md)：定义计算HOG\(Histogram of Oriented Gradient\)特征控制参数。
+-   `ot_ive_handle`：定义IVE句柄。
+-   `OT_IVE_HIST_NUM`：定义直方图统计bin数目。
+-   `OT_IVE_MAP_NUM`：定义映射查找表项数目。
+-   `OT_IVE_MAX_RGN_NUM`：定义最大连通区域数目。
+-   `OT_IVE_ST_MAX_CORNER_NUM`：定义Shi-Tomasi-like角点最大数目。
+-   `OT_IVE_MASK_NUM`：掩码mask数组长度
+-   `OT_IVE_ARR_RESERVED_NUM_TWO`：保留字段数组长度2
+-   `OT_IVE_ARR_RESERVED_NUM_THREE`：保留字段数组长度3
+-   `OT_IVE_ARR_RESERVED_NUM_EIGHT`：保留字段数组长度8
+-   `OT_IVE_ARR_RESERVED_NUM_TWELVE`：保留字段数组长度12
+-   `OT_IVE_ARR_RESERVED_NUM_FOURTEEN`：保留字段数组长度14
+-   `OT_IVE_ARR_NUM_THREE`：数组长度3
+-   `OT_IVE_ARR_NUM_EIGHT`：数组长度8
+-   `OT_IVE_DEV_NAME_LENGTH`：IVE设备名字的长度。
+-   `OT_IVE_DEV_DEFAULT_NODE_NUM`：默认的IVE节点个数。
+-   `ot_ive_mod_param`：IVE模块相关参数定义。
+-   `ot_ive_err_code`：定义错误码。
+-   `ot_ive_dma_mode`：定义DMA运算模式。
+-   `ot_ive_dma_ctrl`：定义DMA控制信息。
+-   `ot_ive_filter_ctrl`：定义模板滤波控制信息。
+-   `ot_ive_csc_mode`：定义色彩空间转换模式。
+-   `ot_ive_csc_ctrl`：定义色彩空间转换控制信息。
+-   `ot_ive_filter_and_csc_ctrl`：定义模板滤波加色彩空间转换复合功能控制信息。
+-   `ot_ive_sobel_out_ctrl`：定义sobel输出控制信息。
+-   `ot_ive_sobel_ctrl`：定义sobel边缘提取控制信息。
+-   `ot_ive_mag_and_ang_out_ctrl`：定义canny边缘幅值与角度计算的输出格式。
+-   `ot_ive_mag_and_ang_ctrl`：定义canny边缘幅值和幅角计算的控制信息。
+-   `ot_ive_dilate_ctrl`：定义膨胀控制信息。
+-   `ot_ive_erode_ctrl`：定义腐蚀控制信息。
+-   `ot_ive_threshold_mode`：定义图像二值化输出格式。
+-   `ot_ive_threshold_ctrl`：定义图像二值化控制信息。
+-   `ot_ive_sub_mode`：定义两图像相减输出格式。
+-   `ot_ive_sub_ctrl`：定义两图像相减控制参数。
+-   `ot_ive_integ_out_ctrl`：定义积分图输出控制参数。
+-   `ot_ive_integ_ctrl`：定义积分图计算控制参数。
+-   `ot_ive_threshold_s16_mode`：定义16bit有符号图像的阈值化模式。
+-   `ot_ive_threshold_s16_ctrl`：定义16bit有符号图像的阈值化控制参数。
+-   `ot_ive_threshold_u16_mode`：定义16bti无符号图像的阈值化模式。
+-   `ot_ive_threshold_u16_ctrl`：定义16bit无符号图像的阈值化控制参数。
+-   `ot_ive_16bit_to_8bit_mode`：定义16bit图像到8bit图像的转化模式。
+-   `ot_ive_16bit_to_8bit_ctrl`：定义16bit图像到8bit图像的转化控制参数。
+-   `ot_ive_order_stats_filter_mode`：定义顺序统计量滤波模式。
+-   `ot_ive_order_stats_filter_ctrl`：定义顺序统计量滤波控制参数。
+-   `ot_ive_map_u8bit_lut_mem`：定义Map U8C1→U8C1的查找表内存。
+-   `ot_ive_map_u16bit_lut_mem`：定义Map U8C1→U16C1的查找表内存。
+-   `ot_ive_map_s16bit_lut_mem`：定义Map U8C1→S16C1的查找表内存。
+-   `ot_ive_map_mode`：定义Map的模式。
+-   `ot_ive_map_ctrl`：定义Map控制参数。
+-   `ot_ive_equalize_hist_ctrl_mem`：定义直方图均衡化辅助内存。
+-   `ot_ive_equalize_hist_ctrl`：定义直方图均衡化控制参数。
+-   `ot_ive_add_ctrl`：定义两图像的加权加控制参数。
+-   `ot_ive_ncc_dst_mem`：定义NCC的输出内存信息。
+-   `ot_ive_rgn`：定义连通区域信息。
+-   `ot_ive_ccblob`：定义连通区域标记的输出信息。
+-   `ot_ive_ccl_mode`：定义连通区域模式。
+-   `ot_ive_ccl_ctrl`：定义连通区域标记控制参数。
+-   `ot_ive_gmm_ctrl`：定义GMM背景建模的控制参数。
+-   `ot_ive_gmm2_sns_factor_mode`：定义灵敏度系数模式。
+-   `ot_ive_gmm2_life_update_factor_mode`：定义模型时长参数更新模式。
+-   `ot_ive_gmm2_ctrl`：定义GMM2背景建模的控制参数。
+-   `ot_ive_canny_stack_size`：定义Canny边缘前半部分计算时强边缘点栈大小结构体。
+-   `ot_ive_canny_hys_edge_ctrl`：定义Canny边缘前半部分计算任务的控制参数。
+-   `ot_ive_lbp_compare_mode`：定义LBP纹理计算控制参数。
+-   `ot_ive_lbp_ctrl`：定义LBP纹理计算控制参数。
+-   `ot_ive_norm_grad_out_ctrl`：定义归一化梯度信息计算任务输出控制枚举类型。
+-   `ot_ive_norm_grad_ctrl`：定义归一化梯度信息计算控制参数。
+-   `ot_ive_lk_optical_flow_pyr_out_mode`：定义金字塔LK光流计算输出模式。
+-   `ot_ive_lk_optical_flow_pyr_ctrl`：定义金字塔LK光流计算控制参数。
+-   `ot_ive_st_max_eig_val`：定义Shi-Tomas-like角点计算时最大角点响应值结构体。
+-   `ot_ive_st_cand_corner_ctrl`：定义Shi-Tomas-like候选角点计算控制参数。
+-   `ot_ive_st_corner_info`：定义Shi-Tomas-like角点计算输出的角点信息结构体。
+-   `ot_ive_st_corner_ctrl`：定义Shi-Tomas-like角点筛选控制参数。
+-   `ot_ive_sad_mode`：定义SAD计算模式。
+-   `ot_ive_sad_out_ctrl`：定义SAD输出控制模式。
+-   `ot_ive_sad_ctrl`：定义SAD控制参数。
+-   `ot_ive_resize_mode`：定义Resize的模式。
+-   `ot_ive_resize_ctrl`：定义Resize控制参数。
+-   `ot_ive_grad_fg_mode`：定义梯度前景计算模式。
+-   `ot_ive_grad_fg_ctrl`：定义计算梯度前景控制参数。
+-   `ot_ive_cand_bg_pixel`：定义候选背景模型数据。
+-   `ot_ive_wrok_bg_pixel`：定义工作背景模型数据。
+-   `ot_ive_bg_life`：定义背景生命力数据。
+-   `ot_ive_bg_model_pixel`：定义背景模型数据。
+-   `ot_ive_fg_status_data`：定义前景状态数据。
+-   `ot_ive_bg_status_data`：定义背景状态数据。
+-   `ot_ive_match_bg_model_ctrl`：定义背景匹配控制参数。
+-   `ot_ive_update_bg_model_ctrl`：定义背景更新控制参数。
+-   `ot_ive_ann_mlp_accurate`：定义ann\_mlp输入特征向量类型。
+-   `ot_ive_ann_mlp_actv_func`：定义ann\_mlp激活函数枚举类型。
+-   `ot_ive_ann_mlp_model`：定义ann\_mlp模型数据结构体。
+-   `ot_ive_svm_type`：定义SVM类型。
+-   `ot_ive_svm_kernel_type`：定义SVM核函数类型。
+-   `ot_ive_svm_model`：定义SVM模型数据结构体。
+-   `ot_ive_cnn_actv_func`：定义CNN激活函数枚举类型。
+-   `ot_ive_cnn_pooling`：定义CNN汇聚操作枚举类型。
+-   `ot_ive_cnn_conv_pooling`：定义CNN单层Conv-ReLU-Pooling运算包参数结构体。
+-   `ot_ive_cnn_fc_info`：定义CNN全链接网络参数结构体。
+-   `ot_ive_cnn_model`：定义CNN模型参数结构体。
+-   `ot_ive_cnn_ctrl`：定义CNN预测任务的控制参数。
+-   `ot_ive_cnn_result`：定义CNN单个样本预测结果结构体。
+-   `ot_ive_persp_trans_point_pair`：定义透视变换点对结构体。
+-   `ot_ive_persp_trans_alg_mode`：定义透视变换算法模式枚举。
+-   `ot_ive_persp_trans_csc_mode`：定义透视变换色彩空间转换模式。
+-   `ot_ive_kcf_core_id`：定义KCF的核ID。
+-   `ot_ive_persp_trans_ctrl`：定义透视变换控制参数。
+-   `ot_ive_roi_info`：定义目前区域信息参数。
+-   `ot_ive_kcf_proc_ctrl`：定义跟踪处理控制参数。
+-   `ot_ive_list_head`：定义链表头结构体参数。
+-   `ot_ive_kcf_obj`：定义目标信息结构体参数。
+-   `ot_ive_kcf_obj_node`：定义目标链表节点参数。
+-   `ot_ive_kcf_list_state`：定义目标链表状态枚举类型。
+-   `ot_ive_kcf_obj_list`：定义目标链表结构参数。
+-   `ot_ive_kcf_bbox`：定义目标区域信息参数。
+-   `ot_ive_kcf_bbox_ctrl`：定义目标区域信息控制参数。
+-   `ot_ive_hog_mode`：定义HOG\(Histogram of Oriented Gradient\)特征存储模式枚举类型。
+-   `ot_ive_hog_ctrl`：定义计算HOG\(Histogram of Oriented Gradient\)特征控制参数。
 
 
 
@@ -764,7 +764,7 @@ typedef struct {
 
 【注意事项】
 
-表示以byte为单位的二维数据；可以与[ot\_svp\_img](ot_svp_img.md)图像进行转换。
+表示以byte为单位的二维数据；可以与`ot_svp_img`图像进行转换。
 
 【相关数据类型及接口】
 

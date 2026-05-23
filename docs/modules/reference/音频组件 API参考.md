@@ -144,7 +144,7 @@
 
     音频组件提供的编解码功能基于独立封装的AAC编解码库，核心编解码器工作在用户态，使用CPU软件编解码。
 
-    AAC编解码协议说明如[表1](#_Ref224548251)所示。
+    AAC编解码协议说明如表1所示。
 
 **表 1**  音频编解码协议说明
 
@@ -694,15 +694,15 @@ if (ret != TD_SUCCESS) {
 
 SDK发布包中的以下API用于注册和注销编码器和解码器。
 
--   [ss\_mpi\_aenc\_register\_encoder](ss_mpi_aenc_register_encoder.md)：注册编码器。
--   [ss\_mpi\_aenc\_unregister\_encoder](ss_mpi_aenc_unregister_encoder.md)：注销编码器。
--   [ss\_mpi\_adec\_register\_decoder](ss_mpi_adec_register_decoder.md)：注册解码器。
--   [ss\_mpi\_adec\_unregister\_decoder](ss_mpi_adec_unregister_decoder.md)：注销解码器。
+-   `ss_mpi_aenc_register_encoder`：注册编码器。
+-   `ss_mpi_aenc_unregister_encoder`：注销编码器。
+-   `ss_mpi_adec_register_decoder`：注册解码器。
+-   `ss_mpi_adec_unregister_decoder`：注销解码器。
 
 音频组件中提供的注册示例：
 
--   [ss\_mpi\_aenc\_aac\_init](ss_mpi_aenc_aac_init.md)：注册AAC编码器。
--   [ss\_mpi\_adec\_aac\_init](ss_mpi_adec_aac_init.md)：注册AAC解码器。
+-   `ss_mpi_aenc_aac_init`：注册AAC编码器。
+-   `ss_mpi_adec_aac_init`：注册AAC解码器。
 
 
 
@@ -766,7 +766,7 @@ td_s32 ss_mpi_aenc_register_encoder(td_s32 *handle, const ot_aenc_encoder *encod
 </tr>
 <tr id="row882mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p884mcpsimp"><a name="p884mcpsimp"></a><a name="p884mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p886mcpsimp"><a name="p886mcpsimp"></a><a name="p886mcpsimp"></a>失败，其值为<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p886mcpsimp"><a name="p886mcpsimp"></a><a name="p886mcpsimp"></a>失败，其值为错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -903,7 +903,7 @@ td_s32 ss_mpi_aenc_unregister_encoder(td_s32 handle);
 </tr>
 <tr id="row985mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p987mcpsimp"><a name="p987mcpsimp"></a><a name="p987mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p989mcpsimp"><a name="p989mcpsimp"></a><a name="p989mcpsimp"></a>失败，其值为<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p989mcpsimp"><a name="p989mcpsimp"></a><a name="p989mcpsimp"></a>失败，其值为错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -982,7 +982,7 @@ td_s32 ss_mpi_adec_register_decoder(td_s32 *handle, const ot_adec_decoder *decod
 </tr>
 <tr id="row1055mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p1057mcpsimp"><a name="p1057mcpsimp"></a><a name="p1057mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p1059mcpsimp"><a name="p1059mcpsimp"></a><a name="p1059mcpsimp"></a>失败，其值为<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p1059mcpsimp"><a name="p1059mcpsimp"></a><a name="p1059mcpsimp"></a>失败，其值为错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -1116,7 +1116,7 @@ td_s32 ss_mpi_adec_unregister_decoder(td_s32 handle);
 </tr>
 <tr id="row1157mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p1159mcpsimp"><a name="p1159mcpsimp"></a><a name="p1159mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p1161mcpsimp"><a name="p1161mcpsimp"></a><a name="p1161mcpsimp"></a>失败，其值为<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p1161mcpsimp"><a name="p1161mcpsimp"></a><a name="p1161mcpsimp"></a>失败，其值为错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -1171,7 +1171,7 @@ td_s32 ss_mpi_aenc_aac_init(td_void);
 </tr>
 <tr id="row1198mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p1200mcpsimp"><a name="p1200mcpsimp"></a><a name="p1200mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p1202mcpsimp"><a name="p1202mcpsimp"></a><a name="p1202mcpsimp"></a>失败，其值为<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p1202mcpsimp"><a name="p1202mcpsimp"></a><a name="p1202mcpsimp"></a>失败，其值为错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -1227,7 +1227,7 @@ td_s32 ss_mpi_adec_aac_init(td_void);
 </tr>
 <tr id="row1240mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p1242mcpsimp"><a name="p1242mcpsimp"></a><a name="p1242mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p1244mcpsimp"><a name="p1244mcpsimp"></a><a name="p1244mcpsimp"></a>失败，其值为<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p1244mcpsimp"><a name="p1244mcpsimp"></a><a name="p1244mcpsimp"></a>失败，其值为错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -1255,13 +1255,13 @@ td_s32 ss_mpi_adec_aac_init(td_void);
 
 音频组件相关数据类型、数据结构定义如下：
 
--   [ot\_aenc\_encoder](ot_aenc_encoder.md)：定义编码器属性结构体。
--   [ot\_adec\_decoder](ot_adec_decoder.md)：定义解码器属性结构体。
--   [ot\_aac\_type](ot_aac_type.md)：定义AAC音频编解码协议类型。
--   [ot\_aac\_bps](ot_aac_bps.md)：定义AAC音频编码码率。
--   [ot\_aac\_transport\_type](ot_aac_transport_type.md)：定义AAC音频编解码协议传输封装类型。
--   [ot\_aenc\_attr\_aac](ot_aenc_attr_aac.md)：定义AAC编码协议属性结构体。
--   [ot\_adec\_attr\_aac](ot_adec_attr_aac.md)：定义AAC解码协议属性结构体。
+-   `ot_aenc_encoder`：定义编码器属性结构体。
+-   `ot_adec_decoder`：定义解码器属性结构体。
+-   `ot_aac_type`：定义AAC音频编解码协议类型。
+-   `ot_aac_bps`：定义AAC音频编码码率。
+-   `ot_aac_transport_type`：定义AAC音频编解码协议传输封装类型。
+-   `ot_aenc_attr_aac`：定义AAC编码协议属性结构体。
+-   `ot_adec_attr_aac`：定义AAC解码协议属性结构体。
 
 
 
@@ -1337,7 +1337,7 @@ typedef struct {
 
 【相关数据类型及接口】
 
-[ss\_mpi\_aenc\_register\_encoder](#ss_mpi_aenc_register_encoder)
+ss\_mpi\_aenc\_register\_encoder
 
 ### ot\_adec\_decoder<a name="ZH-CN_TOPIC_0000002441714629"></a>
 
@@ -1412,7 +1412,7 @@ typedef struct {
 
 【相关数据类型及接口】
 
-[ss\_mpi\_adec\_register\_decoder](#ss_mpi_adec_register_decoder)
+ss\_mpi\_adec\_register\_decoder
 
 ### ot\_aac\_type<a name="ZH-CN_TOPIC_0000002441674777"></a>
 

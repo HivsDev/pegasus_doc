@@ -430,7 +430,7 @@ AE配置，请按如下顺序实现：
 
 ### Sensor 输出<a name="ZH-CN_TOPIC_0000002457880813"></a>
 
-请参考 "[Sensor输出](Sensor输出.md)" 的内容配置mipi，vi，isp等的配置。大部分的配置和线性一致，只是vi的WDR模式选择OT\_WDR\_MODE\_2To1\_FRAME，isp的WDR模式也是选择OT\_WDR\_MODE\_2To1\_FRAME即可。
+请参考 "Sensor输出" 的内容配置mipi，vi，isp等的配置。大部分的配置和线性一致，只是vi的WDR模式选择OT\_WDR\_MODE\_2To1\_FRAME，isp的WDR模式也是选择OT\_WDR\_MODE\_2To1\_FRAME即可。
 
 ## Built-in WDR模式<a name="ZH-CN_TOPIC_0000002424202110"></a>
 

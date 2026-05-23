@@ -122,7 +122,7 @@ KLAD是密钥管理模块。支持密钥派生、明文KEY传递和ROOTKEY层级
 
 用户可根据不同的应用场景生成不同的密钥，最多可以派生2<sup>32</sup>个ROOTKEY。
 
-密钥派生出的 work key 可通过提供的派生工具计算，使用方法请参考 “[密钥派生工具说明](密钥派生工具说明.md)”。
+密钥派生出的 work key 可通过提供的派生工具计算，使用方法请参考 “密钥派生工具说明”。
 
 ### 明文KEY传递<a name="ZH-CN_TOPIC_0000002424349470"></a>
 
@@ -172,14 +172,14 @@ KLAD部署在不同场景下时，使用方式可能会有所不同。
 
 明文KEY传递开发操作步骤如下：
 
-1.  KLAD设备初始化。调用接口[ss\_mpi\_klad\_init](ss_mpi_klad_init.md)。
-2.  创建KLAD句柄。调用接口[ss\_mpi\_klad\_create](ss_mpi_klad_create.md)。
-3.  绑定KLAD和KEYSLOT句柄。调用接口[ss\_mpi\_klad\_attach](ss_mpi_klad_attach.md)。
-4.  设置KLAD属性。调用接口[ss\_mpi\_klad\_set\_attr](ss_mpi_klad_set_attr.md)。
-5.  设置明文KEY。调用接口[ss\_mpi\_klad\_set\_clear\_key](ss_mpi_klad_set_clear_key.md)。
-6.  解绑定KLAD和KEYSLOT句柄。调用接口[ss\_mpi\_klad\_detach](ss_mpi_klad_detach.md)。
-7.  销毁KLAD句柄。调用接口[ss\_mpi\_klad\_destroy](ss_mpi_klad_destroy.md)。
-8.  去初始化KLAD设备。调用接口[ss\_mpi\_klad\_deinit](ss_mpi_klad_deinit.md)。
+1.  KLAD设备初始化。调用接口`ss_mpi_klad_init`。
+2.  创建KLAD句柄。调用接口`ss_mpi_klad_create`。
+3.  绑定KLAD和KEYSLOT句柄。调用接口`ss_mpi_klad_attach`。
+4.  设置KLAD属性。调用接口`ss_mpi_klad_set_attr`。
+5.  设置明文KEY。调用接口`ss_mpi_klad_set_clear_key`。
+6.  解绑定KLAD和KEYSLOT句柄。调用接口`ss_mpi_klad_detach`。
+7.  销毁KLAD句柄。调用接口`ss_mpi_klad_destroy`。
+8.  去初始化KLAD设备。调用接口`ss_mpi_klad_deinit`。
 
 #### 注意事项<a name="ZH-CN_TOPIC_0000002457828253"></a>
 
@@ -201,15 +201,15 @@ KLAD部署在不同场景下时，使用方式可能会有所不同。
 
 ROOTKEY传递开发操作步骤如下：
 
-1.  KLAD设备初始化。调用接口[ss\_mpi\_klad\_init](ss_mpi_klad_init.md)。
-2.  创建KLAD句柄。调用接口[ss\_mpi\_klad\_create](ss_mpi_klad_create.md)。
-3.  绑定KLAD和KEYSLOT句柄。调用接口[ss\_mpi\_klad\_attach](ss_mpi_klad_attach.md)。
-4.  设置KLAD属性。调用接口[ss\_mpi\_klad\_set\_attr](ss_mpi_klad_set_attr.md)。
-5.  设置第1\~n-1级KLAD密钥信息。调用接口[ss\_mpi\_klad\_set\_session\_key](ss_mpi_klad_set_session_key.md)。
-6.  设置第n级KLAD密钥信息。调用接口[ss\_mpi\_klad\_set\_content\_key](ss_mpi_klad_set_content_key.md)。
-7.  解绑定KLAD和KEYSLOT句柄。调用接口[ss\_mpi\_klad\_detach](ss_mpi_klad_detach.md)。
-8.  销毁KLAD句柄。调用接口[ss\_mpi\_klad\_destroy](ss_mpi_klad_destroy.md)。
-9.  去初始化KLAD设备。调用接口[ss\_mpi\_klad\_deinit](ss_mpi_klad_deinit.md)。
+1.  KLAD设备初始化。调用接口`ss_mpi_klad_init`。
+2.  创建KLAD句柄。调用接口`ss_mpi_klad_create`。
+3.  绑定KLAD和KEYSLOT句柄。调用接口`ss_mpi_klad_attach`。
+4.  设置KLAD属性。调用接口`ss_mpi_klad_set_attr`。
+5.  设置第1\~n-1级KLAD密钥信息。调用接口`ss_mpi_klad_set_session_key`。
+6.  设置第n级KLAD密钥信息。调用接口`ss_mpi_klad_set_content_key`。
+7.  解绑定KLAD和KEYSLOT句柄。调用接口`ss_mpi_klad_detach`。
+8.  销毁KLAD句柄。调用接口`ss_mpi_klad_destroy`。
+9.  去初始化KLAD设备。调用接口`ss_mpi_klad_deinit`。
 
 #### 注意事项<a name="ZH-CN_TOPIC_0000002457868377"></a>
 
@@ -283,17 +283,17 @@ ROOTKEY传递开发操作步骤如下：
 
 KLAD提供以下API：
 
--   [ss\_mpi\_klad\_init](ss_mpi_klad_init.md)：初始化KLAD模块。
--   [ss\_mpi\_klad\_deinit](ss_mpi_klad_deinit.md)：去初始化KLAD模块。
--   [ss\_mpi\_klad\_create](ss_mpi_klad_create.md)：创建一路的KLAD句柄。
--   [ss\_mpi\_klad\_destroy](ss_mpi_klad_destroy.md)：销毁已存在的KLAD句柄。
--   [ss\_mpi\_klad\_attach](ss_mpi_klad_attach.md)：绑定KLAD句柄和KEYSLOT句柄。
--   [ss\_mpi\_klad\_detach](ss_mpi_klad_detach.md)：解绑定KLAD句柄和KEYSLOT句柄。
--   [ss\_mpi\_klad\_set\_attr](ss_mpi_klad_set_attr.md)：设置KLAD属性。
--   [ss\_mpi\_klad\_get\_attr](ss_mpi_klad_get_attr.md)：获取KLAD属性。
--   [ss\_mpi\_klad\_set\_session\_key](ss_mpi_klad_set_session_key.md)：配置第1\~n-1级KLAD KEY。
--   [ss\_mpi\_klad\_set\_content\_key](ss_mpi_klad_set_content_key.md)：配置最后一级KLAD KEY，同时将key传递给KEYSLOT。
--   [ss\_mpi\_klad\_set\_clear\_key](ss_mpi_klad_set_clear_key.md)：配置明文KEY，同时将key传递给KEYSLOT。
+-   `ss_mpi_klad_init`：初始化KLAD模块。
+-   `ss_mpi_klad_deinit`：去初始化KLAD模块。
+-   `ss_mpi_klad_create`：创建一路的KLAD句柄。
+-   `ss_mpi_klad_destroy`：销毁已存在的KLAD句柄。
+-   `ss_mpi_klad_attach`：绑定KLAD句柄和KEYSLOT句柄。
+-   `ss_mpi_klad_detach`：解绑定KLAD句柄和KEYSLOT句柄。
+-   `ss_mpi_klad_set_attr`：设置KLAD属性。
+-   `ss_mpi_klad_get_attr`：获取KLAD属性。
+-   `ss_mpi_klad_set_session_key`：配置第1\~n-1级KLAD KEY。
+-   `ss_mpi_klad_set_content_key`：配置最后一级KLAD KEY，同时将key传递给KEYSLOT。
+-   `ss_mpi_klad_set_clear_key`：配置明文KEY，同时将key传递给KEYSLOT。
 
 
 
@@ -338,7 +338,7 @@ td_s32 ss_mpi_klad_init(td_void);
 </tr>
 <tr id="row127mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p129mcpsimp"><a name="p129mcpsimp"></a><a name="p129mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p131mcpsimp"><a name="p131mcpsimp"></a><a name="p131mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p131mcpsimp"><a name="p131mcpsimp"></a><a name="p131mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -390,7 +390,7 @@ td_s32 ss_mpi_klad_deinit(td_void);
 </tr>
 <tr id="row314mcpsimp"><td class="cellrowborder" valign="top" width="36%" headers="mcps1.1.3.1.1 "><p id="p316mcpsimp"><a name="p316mcpsimp"></a><a name="p316mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p318mcpsimp"><a name="p318mcpsimp"></a><a name="p318mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p318mcpsimp"><a name="p318mcpsimp"></a><a name="p318mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -459,7 +459,7 @@ td_s32 ss_mpi_klad_create (td_handle *klad);
 </tr>
 <tr id="row435mcpsimp"><td class="cellrowborder" valign="top" width="36%" headers="mcps1.1.3.1.1 "><p id="p437mcpsimp"><a name="p437mcpsimp"></a><a name="p437mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p439mcpsimp"><a name="p439mcpsimp"></a><a name="p439mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p439mcpsimp"><a name="p439mcpsimp"></a><a name="p439mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -529,7 +529,7 @@ td_s32 ss_mpi_klad_destroy (td_handle klad);
 </tr>
 <tr id="row1738mcpsimp"><td class="cellrowborder" valign="top" width="36%" headers="mcps1.1.3.1.1 "><p id="p1740mcpsimp"><a name="p1740mcpsimp"></a><a name="p1740mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p1742mcpsimp"><a name="p1742mcpsimp"></a><a name="p1742mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p1742mcpsimp"><a name="p1742mcpsimp"></a><a name="p1742mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -605,7 +605,7 @@ td_s32 ss_mpi_klad_attach(td_handle klad, td_handle target);
 </tr>
 <tr id="row194mcpsimp"><td class="cellrowborder" valign="top" width="36%" headers="mcps1.1.3.1.1 "><p id="p196mcpsimp"><a name="p196mcpsimp"></a><a name="p196mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p198mcpsimp"><a name="p198mcpsimp"></a><a name="p198mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p198mcpsimp"><a name="p198mcpsimp"></a><a name="p198mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -681,7 +681,7 @@ td_s32 ss_mpi_klad_detach(td_handle klad, td_handle target);
 </tr>
 <tr id="row1569mcpsimp"><td class="cellrowborder" valign="top" width="36%" headers="mcps1.1.3.1.1 "><p id="p1571mcpsimp"><a name="p1571mcpsimp"></a><a name="p1571mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p1573mcpsimp"><a name="p1573mcpsimp"></a><a name="p1573mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p1573mcpsimp"><a name="p1573mcpsimp"></a><a name="p1573mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -757,7 +757,7 @@ td_s32 ss_mpi_klad_set_attr(td_handle klad, const ot_klad_attr *attr);
 </tr>
 <tr id="row1459mcpsimp"><td class="cellrowborder" valign="top" width="36%" headers="mcps1.1.3.1.1 "><p id="p1461mcpsimp"><a name="p1461mcpsimp"></a><a name="p1461mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p1463mcpsimp"><a name="p1463mcpsimp"></a><a name="p1463mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p1463mcpsimp"><a name="p1463mcpsimp"></a><a name="p1463mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -833,7 +833,7 @@ td_s32 ss_mpi_klad_get_attr(td_handle klad, ot_klad_attr*attr);
 </tr>
 <tr id="row1859mcpsimp"><td class="cellrowborder" valign="top" width="36%" headers="mcps1.1.3.1.1 "><p id="p1861mcpsimp"><a name="p1861mcpsimp"></a><a name="p1861mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p1863mcpsimp"><a name="p1863mcpsimp"></a><a name="p1863mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p1863mcpsimp"><a name="p1863mcpsimp"></a><a name="p1863mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -908,7 +908,7 @@ td_s32 ss_mpi_klad_set_session_key(td_handle klad, const ot_klad_session_key *ke
 </tr>
 <tr id="row515mcpsimp"><td class="cellrowborder" valign="top" width="36%" headers="mcps1.1.3.1.1 "><p id="p517mcpsimp"><a name="p517mcpsimp"></a><a name="p517mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p519mcpsimp"><a name="p519mcpsimp"></a><a name="p519mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p519mcpsimp"><a name="p519mcpsimp"></a><a name="p519mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -984,7 +984,7 @@ td_s32 ss_mpi_klad_set_content_key(td_handle klad, const ot_klad_content_key *ke
 </tr>
 <tr id="row819mcpsimp"><td class="cellrowborder" valign="top" width="36%" headers="mcps1.1.3.1.1 "><p id="p821mcpsimp"><a name="p821mcpsimp"></a><a name="p821mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p823mcpsimp"><a name="p823mcpsimp"></a><a name="p823mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p823mcpsimp"><a name="p823mcpsimp"></a><a name="p823mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -1060,7 +1060,7 @@ td_s32 ss_mpi_klad_set_clear_key(td_handle klad, const ot_klad_clear_key *key);
 </tr>
 <tr id="row1283mcpsimp"><td class="cellrowborder" valign="top" width="36%" headers="mcps1.1.3.1.1 "><p id="p1285mcpsimp"><a name="p1285mcpsimp"></a><a name="p1285mcpsimp"></a>非0</p>
 </td>
-<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p1287mcpsimp"><a name="p1287mcpsimp"></a><a name="p1287mcpsimp"></a>参见<a href="错误码.md">错误码</a>。</p>
+<td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p1287mcpsimp"><a name="p1287mcpsimp"></a><a name="p1287mcpsimp"></a>参见错误码。</p>
 </td>
 </tr>
 </tbody>
@@ -1084,19 +1084,19 @@ td_s32 ss_mpi_klad_set_clear_key(td_handle klad, const ot_klad_clear_key *key);
 
 相关数据类型、数据结构定义如下（其他公共数据类型定义请参考ot\_type.h）：
 
--   [ot\_klad\_rootkey\_sel](ot_klad_rootkey_sel.md)：定义KLAD ROOTKEY选择枚举。
--   [ot\_klad\_rootkey\_secure](ot_klad_rootkey_secure.md)：定义KLAD ROOTKEY的静态值枚举。
--   [ot\_klad\_rootkey\_attr](ot_klad_rootkey_attr.md)：定义KLAD ROOTKEY属性结构体。
--   [ot\_klad\_type](ot_klad_type.md)：定义KLAD类型枚举。
--   [ot\_klad\_cfg](ot_klad_cfg.md)：定义KLAD 配置信息结构体。
--   [ot\_klad\_crypto\_alg](ot_klad_crypto_alg.md)：定义KEY在加解密引擎用于哪种算法。
--   [ot\_klad\_attr](ot_klad_attr.md)：定义KLAD属性结构体。
--   [ot\_klad\_alg\_type](ot_klad_alg_type.md)：定义KLAD算法类型枚举。
--   [ot\_klad\_level](ot_klad_level.md)：定义KLAD层级枚举。
--   [ot\_klad\_session\_key](ot_klad_session_key.md)：定义第1\~n-1级KLAD密钥信息结构体。
--   [ot\_klad\_content\_key](ot_klad_content_key.md)：定义第n级KLAD密钥信息结构体。
--   [ot\_klad\_clear\_key](ot_klad_clear_key.md)：定义明文密钥信息结构体。
--   [OT\_KLAD\_MAX\_KEY\_LEN](OT_KLAD_MAX_KEY_LEN.md)：定义KLAD最大密钥长度。
+-   `ot_klad_rootkey_sel`：定义KLAD ROOTKEY选择枚举。
+-   `ot_klad_rootkey_secure`：定义KLAD ROOTKEY的静态值枚举。
+-   `ot_klad_rootkey_attr`：定义KLAD ROOTKEY属性结构体。
+-   `ot_klad_type`：定义KLAD类型枚举。
+-   `ot_klad_cfg`：定义KLAD 配置信息结构体。
+-   `ot_klad_crypto_alg`：定义KEY在加解密引擎用于哪种算法。
+-   `ot_klad_attr`：定义KLAD属性结构体。
+-   `ot_klad_alg_type`：定义KLAD算法类型枚举。
+-   `ot_klad_level`：定义KLAD层级枚举。
+-   `ot_klad_session_key`：定义第1\~n-1级KLAD密钥信息结构体。
+-   `ot_klad_content_key`：定义第n级KLAD密钥信息结构体。
+-   `ot_klad_clear_key`：定义明文密钥信息结构体。
+-   `OT_KLAD_MAX_KEY_LEN`：定义KLAD最大密钥长度。
 
 
 
@@ -1182,8 +1182,8 @@ typedef enum {
 -   [ot\_klad\_rootkey\_attr](#ot_klad_rootkey_attr)
 -   [ot\_klad\_cfg](#ot_klad_cfg)
 -   [ot\_klad\_attr](#ot_klad_attr)
--   [ss\_mpi\_klad\_set\_attr](#ss_mpi_klad_set_attr)
--   [ss\_mpi\_klad\_get\_attr](#ss_mpi_klad_get_attr)
+-   ss\_mpi\_klad\_set\_attr
+-   ss\_mpi\_klad\_get\_attr
 
 ## ot\_klad\_rootkey\_secure<a name="ZH-CN_TOPIC_0000002457868397"></a>
 
@@ -1238,8 +1238,8 @@ typedef enum {
 -   [ot\_klad\_rootkey\_attr](#ot_klad_rootkey_attr)
 -   [ot\_klad\_cfg](#ot_klad_cfg)
 -   [ot\_klad\_attr](#ot_klad_attr)
--   [ss\_mpi\_klad\_set\_attr](#ss_mpi_klad_set_attr)
--   [ss\_mpi\_klad\_get\_attr](#ss_mpi_klad_get_attr)
+-   ss\_mpi\_klad\_set\_attr
+-   ss\_mpi\_klad\_get\_attr
 
 ## ot\_klad\_rootkey\_attr<a name="ZH-CN_TOPIC_0000002424189658"></a>
 
@@ -1293,8 +1293,8 @@ typedef enum {
 
 -   [ot\_klad\_cfg](#ot_klad_cfg)
 -   [ot\_klad\_attr](#ot_klad_attr)
--   [ss\_mpi\_klad\_set\_attr](#ss_mpi_klad_set_attr)
--   [ss\_mpi\_klad\_get\_attr](#ss_mpi_klad_get_attr)
+-   ss\_mpi\_klad\_set\_attr
+-   ss\_mpi\_klad\_get\_attr
 
 ## ot\_klad\_type<a name="ZH-CN_TOPIC_0000002457828233"></a>
 
@@ -1348,8 +1348,8 @@ typedef enum {
 
 -   [ot\_klad\_cfg](#ot_klad_cfg)
 -   [ot\_klad\_attr](#ot_klad_attr)
--   [ss\_mpi\_klad\_set\_attr](#ss_mpi_klad_set_attr)
--   [ss\_mpi\_klad\_get\_attr](#ss_mpi_klad_get_attr)
+-   ss\_mpi\_klad\_set\_attr
+-   ss\_mpi\_klad\_get\_attr
 
 ## ot\_klad\_cfg<a name="ZH-CN_TOPIC_0000002424189638"></a>
 
@@ -1396,8 +1396,8 @@ rootkey\_attr仅在KLAD类型为OT\_KLAD\_TYPE\_COMMON时有效。
 【相关数据类型及接口】
 
 -   [ot\_klad\_attr](#ot_klad_attr)
--   [ss\_mpi\_klad\_set\_attr](#ss_mpi_klad_set_attr)
--   [ss\_mpi\_klad\_get\_attr](#ss_mpi_klad_get_attr)
+-   ss\_mpi\_klad\_set\_attr
+-   ss\_mpi\_klad\_get\_attr
 
 ## ot\_klad\_crypto\_alg<a name="ZH-CN_TOPIC_0000002457868381"></a>
 
@@ -1449,8 +1449,8 @@ Hi3403V100、SS626V100不支持SM4。
 
 【相关数据类型及接口】
 
--   [ss\_mpi\_klad\_set\_content\_key](#ss_mpi_klad_set_content_key)
--   [ss\_mpi\_klad\_set\_clear\_key](#ss_mpi_klad_set_clear_key)
+-   ss\_mpi\_klad\_set\_content\_key
+-   ss\_mpi\_klad\_set\_clear\_key
 
 ## ot\_klad\_attr<a name="ZH-CN_TOPIC_0000002424349482"></a>
 
@@ -1490,8 +1490,8 @@ Hi3403V100、SS626V100不支持SM4。
 
 【相关数据类型及接口】
 
--   [ss\_mpi\_klad\_set\_attr](#ss_mpi_klad_set_attr)
--   [ss\_mpi\_klad\_get\_attr](#ss_mpi_klad_get_attr)
+-   ss\_mpi\_klad\_set\_attr
+-   ss\_mpi\_klad\_get\_attr
 
 ## ot\_klad\_alg\_type<a name="ZH-CN_TOPIC_0000002457868401"></a>
 
@@ -1545,8 +1545,8 @@ Hi3403V100、SS626V100不支持SM4。
 
 -   [ot\_klad\_session\_key](#ot_klad_session_key)
 -   [ot\_klad\_content\_key](#ot_klad_content_key)
--   [ss\_mpi\_klad\_set\_session\_key](#ss_mpi_klad_set_session_key)
--   [ss\_mpi\_klad\_set\_content\_key](#ss_mpi_klad_set_content_key)
+-   ss\_mpi\_klad\_set\_session\_key
+-   ss\_mpi\_klad\_set\_content\_key
 
 ## ot\_klad\_level<a name="ZH-CN_TOPIC_0000002457868385"></a>
 
@@ -1605,7 +1605,7 @@ Hi3403V100、SS626V100支持2级KLAD。
 【相关数据类型及接口】
 
 -   [ot\_klad\_session\_key](#ot_klad_session_key)
--   [ss\_mpi\_klad\_set\_session\_key](#ss_mpi_klad_set_session_key)
+-   ss\_mpi\_klad\_set\_session\_key
 
 ## ot\_klad\_session\_key<a name="ZH-CN_TOPIC_0000002424349502"></a>
 
@@ -1664,7 +1664,7 @@ Hi3403V100、SS626V100支持2级KLAD。
 
 【相关数据类型及接口】
 
-[ss\_mpi\_klad\_set\_session\_key](#ss_mpi_klad_set_session_key)
+ss\_mpi\_klad\_set\_session\_key
 
 ## ot\_klad\_content\_key<a name="ZH-CN_TOPIC_0000002424189666"></a>
 
@@ -1722,7 +1722,7 @@ typedef struct {
 
 【相关数据类型及接口】
 
-[ss\_mpi\_klad\_set\_content\_key](#ss_mpi_klad_set_content_key)
+ss\_mpi\_klad\_set\_content\_key
 
 ## ot\_klad\_clear\_key<a name="ZH-CN_TOPIC_0000002457828245"></a>
 
@@ -1774,7 +1774,7 @@ typedef struct {
 
 【相关数据类型及接口】
 
-[ss\_mpi\_klad\_set\_clear\_key](#ss_mpi_klad_set_clear_key)
+ss\_mpi\_klad\_set\_clear\_key
 
 ## OT\_KLAD\_MAX\_KEY\_LEN<a name="ZH-CN_TOPIC_0000002424189646"></a>
 
@@ -1797,9 +1797,9 @@ typedef struct {
 -   [ot\_klad\_session\_key](#ot_klad_session_key)
 -   [ot\_klad\_content\_key](#ot_klad_content_key)
 -   [ot\_klad\_clear\_key](#ot_klad_clear_key)
--   [ss\_mpi\_klad\_set\_session\_key](#ss_mpi_klad_set_session_key)
--   [ss\_mpi\_klad\_set\_content\_key](#ss_mpi_klad_set_content_key)
--   [ss\_mpi\_klad\_set\_clear\_key](#ss_mpi_klad_set_clear_key)
+-   ss\_mpi\_klad\_set\_session\_key
+-   ss\_mpi\_klad\_set\_content\_key
+-   ss\_mpi\_klad\_set\_clear\_key
 
 # 错误码<a name="ZH-CN_TOPIC_0000002424349490"></a>
 

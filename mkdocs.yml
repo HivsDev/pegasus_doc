@@ -12,7 +12,6 @@ use_directory_urls: false
 theme:
   name: material
   logo: assets/images/hisilicon_light.svg
-  locale: zh
   language: zh
   palette:
     - scheme: default
@@ -136,6 +135,8 @@ nav:
   - 系统架构:
     - 产品简介: "system-architecture/产品简介.md"
     - SDK 安装与升级: "system-architecture/SDK安装与升级.md"
+    - SS928V100 产品简介: "getting-started/SS928V100 超高清智能网络录像机 SoC 产品简介.md"
+    - SS928V100/SS927V100 SDK 安装升级: "getting-started/SS928V100╱SS927V100 SDK 安装以及升级使用说明.md"
 
   - 快速入门:
     - 快速上手指南: "getting-started/快速上手指南.md"

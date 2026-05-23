@@ -102,7 +102,7 @@
 
 # 首次安装SDK<a name="ZH-CN_TOPIC_0000002424357650"></a>
 
-如果您已安装过SDK，可以直接参看[安装、升级Hi3403V100 DEMO板开发环境](安装-升级Hi3403V100-DEMO板开发环境.md)。
+如果您已安装过SDK，可以直接参看[安装、升级Hi3403V100 DEMO板开发环境](../getting-started/Hi3403V100环境搭建指南.md)。
 
 
 
@@ -480,7 +480,7 @@ ping serverip (确保网络畅通)
     ```
 
     > **须知：** 
-    >上述[烧写映像文件到SPI Nor Flash](烧写映像文件到SPI-Nor-Flash.md)-[烧写镜像文件到EMMC](烧写镜像文件到EMMC.md)  镜像请按照实际大小调整，LiteOS的默认启动地址是 0x44000000，若客户内存布局有调整，请调整LiteOS的启动地址；若无LiteOS时客户可调整 linux 启动地址。
+    >上述[烧写映像文件到SPI Nor Flash](../hardware/内存布局调整指南.md)-[烧写镜像文件到EMMC](../hardware/内存布局调整指南.md)  镜像请按照实际大小调整，LiteOS的默认启动地址是 0x44000000，若客户内存布局有调整，请调整LiteOS的启动地址；若无LiteOS时客户可调整 linux 启动地址。
 
 ## 启动新系统<a name="ZH-CN_TOPIC_0000002457876541"></a>
 

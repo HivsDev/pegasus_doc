@@ -11,6 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ========== 布局优化：首页右侧目录合并到左侧 ==========
+
+  // 防抖：避免 MutationObserver 频繁触发导致重复执行
+  var tocRenderTimer = null;
+  var tocIsRendering = false;
+  var tocLastRunPath = '';
+  var tocLastRunTime = 0;
+
   function setupHomepageLayout() {
     var path = window.location.pathname.replace(/\/+$/, '');
     var isHomepage = path === '/pegasus_doc'
@@ -19,88 +26,124 @@ document.addEventListener('DOMContentLoaded', function() {
       || path === '/'
       || path === '/index.html';
 
-    if (isHomepage) {
-      document.body.classList.add('homepage');
+    if (!isHomepage) {
+      // 非首页：清除 body class，移除旧 TOC
+      document.body.classList.remove('homepage');
+      var oldTitle = document.querySelector('.cloned-homepage-toc-title');
+      if (oldTitle) oldTitle.remove();
+      var oldList = document.querySelector('.cloned-homepage-toc-list');
+      if (oldList) oldList.remove();
+      return;
+    }
 
-      // 延迟执行，等待 MkDocs Material 完成页面渲染
-      setTimeout(function() {
-        var leftInner = document.querySelector('.md-sidebar--primary .md-sidebar__inner');
-        var contentArea = document.querySelector('.md-content__inner');
-        var rightSidebar = document.querySelector('.md-sidebar--secondary');
+    // 同页面且距上次执行不足 100ms，跳过（防抖）
+    if (tocLastRunPath === path && (Date.now() - tocLastRunTime) < 100) {
+      return;
+    }
 
-      if (leftInner && contentArea) {
-        // 清除之前生成的目录（防止重复）
-        var oldTitle = leftInner.querySelector('.cloned-homepage-toc-title');
-        if (oldTitle) oldTitle.remove();
-        var oldList = leftInner.querySelector('.cloned-homepage-toc-list');
-        if (oldList) oldList.remove();
+    // 正在渲染中，跳过（防重入）
+    if (tocIsRendering) {
+      return;
+    }
 
-        // 从页面内容中提取 h2/h3 标题，生成纯链接目录
-        var headings = contentArea.querySelectorAll('h2, h3');
-        var items = [];
-        headings.forEach(function(h) {
-          var id = h.id || (h.querySelector('[id]') ? h.querySelector('[id]').id : null);
-          if (id && id.length > 0) {
-            // 获取纯净的标题文字（去掉 MkDocs 自动添加的 ¶ permalink 符号）
-            var hClone = h.cloneNode(true);
-            var perm = hClone.querySelector('.headerlink');
-            if (perm) perm.remove();
-            var cleanText = hClone.textContent.trim();
-            items.push({ id: id, text: cleanText, tag: h.tagName });
+    document.body.classList.add('homepage');
+
+    // 清除之前 pending 的定时器，避免旧定时器覆盖新结果
+    if (tocRenderTimer !== null) {
+      clearTimeout(tocRenderTimer);
+    }
+
+    tocRenderTimer = setTimeout(function() {
+      tocRenderTimer = null;
+      tocIsRendering = true;
+
+      var leftInner = document.querySelector('.md-sidebar--primary .md-sidebar__inner');
+      var contentArea = document.querySelector('.md-content__inner');
+
+      if (!leftInner || !contentArea) {
+        tocIsRendering = false;
+        // 元素未就绪，稍后重试
+        tocRenderTimer = setTimeout(function() {
+          tocRenderTimer = null;
+          tocIsRendering = false;
+          setupHomepageLayout();
+        }, 300);
+        return;
+      }
+
+      // 清除之前生成的目录（防止重复）
+      var oldTitle = leftInner.querySelector('.cloned-homepage-toc-title');
+      if (oldTitle) oldTitle.remove();
+      var oldList = leftInner.querySelector('.cloned-homepage-toc-list');
+      if (oldList) oldList.remove();
+
+      // 从页面内容中提取 h2/h3 标题，生成纯链接目录
+      var headings = contentArea.querySelectorAll('h2, h3');
+      var items = [];
+      headings.forEach(function(h) {
+        var id = h.id || (h.querySelector('[id]') ? h.querySelector('[id]').id : null);
+        if (id && id.length > 0) {
+          // 获取纯净的标题文字（去掉 MkDocs 自动添加的 ¶ permalink 符号）
+          var hClone = h.cloneNode(true);
+          var perm = hClone.querySelector('.headerlink');
+          if (perm) perm.remove();
+          var cleanText = hClone.textContent.trim();
+          items.push({ id: id, text: cleanText, tag: h.tagName });
+        }
+      });
+
+      if (items.length > 0) {
+        // 分隔标题
+        var tocTitle = document.createElement('div');
+        tocTitle.className = 'cloned-homepage-toc-title';
+        tocTitle.textContent = '📑 本页目录';
+        leftInner.appendChild(tocTitle);
+
+        // 生成目录列表
+        var list = document.createElement('ul');
+        list.className = 'cloned-homepage-toc-list';
+
+        items.forEach(function(item) {
+          var li = document.createElement('li');
+          li.className = 'cloned-homepage-toc-item';
+          if (item.tag === 'H3') {
+            li.classList.add('toc-level-h3');
           }
-        });
 
-        if (items.length > 0) {
-          // 分隔标题
-          var tocTitle = document.createElement('div');
-          tocTitle.className = 'cloned-homepage-toc-title';
-          tocTitle.textContent = '📑 本页目录';
-          leftInner.appendChild(tocTitle);
+          var link = document.createElement('a');
+          link.href = '#' + item.id;
+          link.className = 'cloned-homepage-toc-link';
+          link.textContent = item.text;
 
-          // 生成目录列表
-          var list = document.createElement('ul');
-          list.className = 'cloned-homepage-toc-list';
-
-          items.forEach(function(item) {
-            var li = document.createElement('li');
-            li.className = 'cloned-homepage-toc-item';
-            if (item.tag === 'H3') {
-              li.classList.add('toc-level-h3');
+          // 自定义点击处理：绕过 MkDocs 即时导航，平滑滚动到目标
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var target = document.getElementById(item.id);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              history.pushState(null, '', '#' + item.id);
             }
-
-            var link = document.createElement('a');
-            link.href = '#' + item.id;
-            link.className = 'cloned-homepage-toc-link';
-            link.textContent = item.text;
-
-            // 自定义点击处理：绕过 MkDocs 即时导航，平滑滚动到目标
-            link.addEventListener('click', function(e) {
-              e.preventDefault();
-              e.stopPropagation();
-              var target = document.getElementById(item.id);
-              if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                history.pushState(null, '', '#' + item.id);
-              }
-            });
-
-            li.appendChild(link);
-            list.appendChild(li);
           });
 
-          leftInner.appendChild(list);
-        }
+          li.appendChild(link);
+          list.appendChild(li);
+        });
+
+        leftInner.appendChild(list);
       }
 
       // 隐藏右侧栏
-        if (rightSidebar) {
-          rightSidebar.style.display = 'none';
-          rightSidebar.setAttribute('hidden', '');
-        }
-      }, 500);
-    } else {
-      document.body.classList.remove('homepage');
-    }
+      var rightSidebar = document.querySelector('.md-sidebar--secondary');
+      if (rightSidebar) {
+        rightSidebar.style.display = 'none';
+        rightSidebar.setAttribute('hidden', '');
+      }
+
+      tocIsRendering = false;
+      tocLastRunPath = path;
+      tocLastRunTime = Date.now();
+    }, 200);
   }
 
   // 初次加载执行
@@ -110,6 +153,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var mdContent = document.querySelector('.md-content');
   if (mdContent) {
     var contentObserver = new MutationObserver(function() {
+      // 路由变化时重置状态，确保重新渲染
+      tocLastRunPath = '';
       setupHomepageLayout();
     });
     contentObserver.observe(mdContent, { childList: true, subtree: true });
@@ -117,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // 备选：监听浏览器前进/后退
   window.addEventListener('popstate', function() {
+    tocLastRunPath = '';
     setupHomepageLayout();
   });
 

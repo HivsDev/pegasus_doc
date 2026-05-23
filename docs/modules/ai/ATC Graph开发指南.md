@@ -734,7 +734,7 @@ void AddOutputQuantFactor(const OpQuantFactor &quantFactor)
 </tbody>
 </table>
 
-OpQuantFactor对象的定义参考[AddInputQuantFactor](AddInputQuantFactor.md)。
+OpQuantFactor对象的定义参考`AddInputQuantFactor`。
 
 #### GetOutputQuantFactor<a name="ZH-CN_TOPIC_0000002442021253"></a>
 
@@ -809,7 +809,7 @@ void AddParamQuantFactor(const OpQuantFactor &quantFactor)
 </tbody>
 </table>
 
-OpQuantFactor对象的定义参考[AddInputQuantFactor](AddInputQuantFactor.md)。
+OpQuantFactor对象的定义参考`AddInputQuantFactor`。
 
 #### GetParamQuantFactor<a name="ZH-CN_TOPIC_0000002408422542"></a>
 
@@ -884,7 +884,7 @@ void SetInputQuantFactorsVec(const std::vector<OpQuantFactor> &inputQuantFactors
 </tbody>
 </table>
 
-OpQuantFactor对象的定义参考[AddInputQuantFactor](AddInputQuantFactor.md)。
+OpQuantFactor对象的定义参考`AddInputQuantFactor`。
 
 #### GetInputQuantFactorsVec<a name="ZH-CN_TOPIC_0000002441981777"></a>
 
@@ -952,7 +952,7 @@ void SetOutputQuantFactorsVec(const std::vector<OpQuantFactor> &outputQuantFacto
 </tbody>
 </table>
 
-OpQuantFactor对象的定义参考[AddInputQuantFactor](AddInputQuantFactor.md)。
+OpQuantFactor对象的定义参考`AddInputQuantFactor`。
 
 #### GetOutputQuantFactorsVec<a name="ZH-CN_TOPIC_0000002408422310"></a>
 
@@ -1020,7 +1020,7 @@ void SetParamQuantFactorsVec(const std::vector<OpQuantFactor> &paramQuantFactors
 </tbody>
 </table>
 
-OpQuantFactor对象的定义参考[AddInputQuantFactor](AddInputQuantFactor.md)。
+OpQuantFactor对象的定义参考`AddInputQuantFactor`。
 
 #### GetParamQuantFactorsVec<a name="ZH-CN_TOPIC_0000002442021949"></a>
 
@@ -3117,7 +3117,7 @@ bool GetWeightQuanted() const
 
 ### PoolOperator配置接口<a name="ZH-CN_TOPIC_0000002408422322"></a>
 
-部分接口参考[算子通用接口](算子通用接口.md)章节。使用SetOpType配置pool类型，支持POOLINGAVE、POOLINGMAX两种模式。使用SetKernelHeight、SetKernelWidth配置kernel尺寸。使用SetStrideHeight、SetStrideWidth配置stride值。使用SetPadLeft、SetPadRight、SetPadUp、SetPadDown配置pad值。
+部分接口参考算子通用接口章节。使用SetOpType配置pool类型，支持POOLINGAVE、POOLINGMAX两种模式。使用SetKernelHeight、SetKernelWidth配置kernel尺寸。使用SetStrideHeight、SetStrideWidth配置stride值。使用SetPadLeft、SetPadRight、SetPadUp、SetPadDown配置pad值。
 
 
 
@@ -5459,7 +5459,7 @@ const int32_t* GetRecurrentBiasQuantPtr()
 
 ### ArgmaxOperator配置接口<a name="ZH-CN_TOPIC_0000002408582350"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考`SetAxis`章节，其默认值为1。
 
 
 
@@ -6630,7 +6630,7 @@ float GetExpShift() const
 
 ### GatherOperator配置接口<a name="ZH-CN_TOPIC_0000002442021493"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考`SetAxis`章节，其默认值为1。
 
 ### InterpOperator配置接口<a name="ZH-CN_TOPIC_0000002408422862"></a>
 
@@ -8747,7 +8747,7 @@ bool GetReduceIsFromCaffe() const
 
 ### ScaleOperator配置接口<a name="ZH-CN_TOPIC_0000002408422850"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考`SetAxis`章节，其默认值为1。
 
 
 
@@ -10615,7 +10615,7 @@ const vector<DetectionOutputParam>& GetDetectionOutputParamVec() const
 
 ### BiasOperator配置接口<a name="ZH-CN_TOPIC_0000002442021849"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考`SetAxis`章节，其默认值为1。
 
 
 
@@ -10823,11 +10823,11 @@ const vector<int32_t>& GetBiasShapeVec() const
 
 ### ConcatOperator配置接口<a name="ZH-CN_TOPIC_0000002408582614"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考`SetAxis`章节，其默认值为1。
 
 ### CropOperator配置接口<a name="ZH-CN_TOPIC_0000002408421994"></a>
 
-SetAxis接口参考[部分算子通用接口](部分算子通用接口.md)章节，其默认值为1。
+SetAxis接口参考部分算子通用接口章节，其默认值为1。
 
 
 
@@ -11379,7 +11379,7 @@ const RgbxOrderType GetModelFormat() const
 
 ### ReshapeOperator配置接口<a name="ZH-CN_TOPIC_0000002408582066"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考`SetAxis`章节，其默认值为1。
 
 > **须知：** 
 >当axis<0时，实际起始维度为axis+1。如当shape=NCHW时，axis=-2，意味着仅对W轴reshape。
@@ -11764,7 +11764,7 @@ int32_t GetShuffleChannelGroup() const
 
 ### SliceOperator配置接口<a name="ZH-CN_TOPIC_0000002408422826"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考`SetAxis`章节，其默认值为1。
 
 
 
@@ -11942,7 +11942,7 @@ void AddSlicePoint(uint32_t slicePoint)
 
 ### ExtractOperator配置接口<a name="ZH-CN_TOPIC_0000002408582734"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考`SetAxis`章节，其默认值为1。
 
 
 
@@ -12150,7 +12150,7 @@ uint32_t GetSlicePointEnd() const
 
 ### TileOperator配置接口<a name="ZH-CN_TOPIC_0000002408582302"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考`SetAxis`章节，其默认值为1。
 
 
 
@@ -15056,7 +15056,7 @@ float GetSwishBeta() const
 
 ### LayerNormOperator配置接口<a name="ZH-CN_TOPIC_0000002441981749"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为3，不支持input，scale，bias全部离线场景。
+SetAxis接口参考`SetAxis`章节，其默认值为3，不支持input，scale，bias全部离线场景。
 
 
 
@@ -15787,7 +15787,7 @@ RoundType GetRoundType() const
 
 ### ArgminOperator配置接口<a name="ZH-CN_TOPIC_0000002442021741"></a>
 
-SetAxis接口参考[SetAxis](SetAxis.md)章节，其默认值为1。
+SetAxis接口参考`SetAxis`章节，其默认值为1。
 
 
 
