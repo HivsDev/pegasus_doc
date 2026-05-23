@@ -40,6 +40,46 @@ mkdocs build
 mkdocs gh-deploy --force
 ```
 
+## 复用此工程搭建其他芯片文档
+
+本工程的页面框架、样式和交互脚本可直接复用于其他芯片的文档中心。
+
+### 步骤
+
+1. **复制工程**，移除旧仓库绑定：
+   ```bash
+   cp -r pegasus_doc/ your_chip_docs/
+   cd your_chip_docs/
+   rm -rf .git site/
+   ```
+
+2. **修改 `mkdocs.yml`** 配置：
+   - `site_name` / `site_description` / `site_url` — 替换为新芯片信息
+   - `repo_url` / `repo_name` — 替换为新仓库地址
+   - `nav` — 按新芯片的文档结构调整目录
+
+3. **替换首页 `docs/index.md`**：更新芯片概览表格和各章节文档链接
+
+4. **替换文档内容**：`docs/` 目录下替换为新芯片的 markdown 文档及图片
+
+5. **调整品牌样式**（可选）：修改 `docs/assets/stylesheets/extra.css` 中的 `--hi-red` 等颜色变量
+
+6. **初始化新仓库并部署**：
+   ```bash
+   git init
+   git add -A && git commit -m "init: chip docs"
+   mkdocs gh-deploy --force
+   ```
+
+### 可复用的功能模块
+
+| 文件 | 说明 |
+|------|------|
+| `mkdocs.yml` | 整体配置框架（导航、主题、插件、扩展） |
+| `docs/assets/javascripts/custom.js` | 首页左侧目录克隆、反馈弹窗交互 |
+| `docs/assets/stylesheets/extra.css` | 品牌样式和布局调整 |
+| `docs/assets/images/hisilicon_light.svg` | Logo（替换为新品 logo） |
+
 ## 贡献指南
 
 欢迎提交 Issue 或 Pull Request 来完善文档：
