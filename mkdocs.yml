@@ -1,0 +1,353 @@
+# 海思 Hi3403V100 芯片开发文档
+# 基于 Material for MkDocs + 海思开发者社区风格
+
+site_name: Hi3403V100 芯片开发文档
+site_description: 海思 Hi3403V100/SS927V100 超高清智能网络录像机 SoC 完整开发文档社区
+site_url: https://HivsDev.github.io/pegasus_doc/
+repo_url: https://github.com/HivsDev/pegasus_doc
+repo_name: Hi3403V100-docs
+
+use_directory_urls: false
+
+theme:
+  name: material
+  logo: assets/images/hisilicon_light.svg
+  language: zh
+  palette:
+    - scheme: default
+      primary: white
+      accent: deep-purple
+  font:
+    text: Helvetica Neue, PingFang SC, Microsoft YaHei
+    code: Consolas, Roboto Mono
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - navigation.path
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+    edit: fontawesome/solid/edit
+
+plugins:
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      languages:
+        - locale: zh
+          name: 中文
+          default: true
+          build: true
+          theme:
+            language: zh
+        - locale: en
+          name: English
+          build: true
+          theme:
+            language: en
+          nav_translations:
+            首页: Home
+            系统架构: System Architecture
+            产品简介: Product Overview
+            SDK 安装与升级: SDK Installation & Upgrade
+            SS928V100 产品简介: SS928V100 Product Overview
+            SS928V100/SS927V100 SDK 安装升级: SS928V100/SS927V100 SDK Installation
+            快速入门: Quick Start
+            快速上手指南: Quick Start Guide
+            Hi3403V100 环境搭建指南: Hi3403V100 Environment Setup
+            应用开发指南: Application Development
+            图形开发用户指南: Graphics Development
+            安全子系统使用说明: Security Subsystem
+            样例中心: Examples
+            小型系统 SS928V100 移植案例: SS928V100 Porting Case
+            开机画面使用指南: Splash Screen Guide
+            抓拍使用指南: Snapshot Guide
+            模块 / API: Modules / API
+            媒体处理 (MPP): Media Processing (MPP)
+            前言: Foreword
+            概述: Overview
+            系统控制: System Control
+            视频输入 VI: Video Input (VI)
+            视频输出 VO: Video Output (VO)
+            视频输出 VO (进阶): Video Output (VO) Advanced
+            视频处理子系统 VPU: Video Processing (VPU)
+            视频编码 VENC: Video Encoding (VENC)
+            视频编码 VENC (进阶): Video Encoding (VENC) Advanced
+            视频解码 VDEC: Video Decoding (VDEC)
+            区域管理 Region: Region Management
+            音频 AIO (基础): Audio (AIO) Basic
+            音频 AIO (进阶): Audio (AIO) Advanced
+            视频图形子系统 VGPU: Video Graphics (VGPU)
+            几何畸变矫正 GDC: Geometric Distortion Correction (GDC)
+            视频拼接: Video Stitching
+            Proc 调试信息 (1): Proc Debug Info (1)
+            Proc 调试信息 (2): Proc Debug Info (2)
+            MPP FAQ: MPP FAQ
+            ISP 图像处理器: ISP Image Processor
+            ISP 开发参考 (1-2): ISP Dev Reference (1-2)
+            ISP 开发参考 (3-5): ISP Dev Reference (3-5)
+            ISP 开发参考 (6): ISP Dev Reference (6)
+            ISP 开发参考 (7-14): ISP Dev Reference (7-14)
+            ISP 图像调优指南: ISP Tuning Guide
+            ISP 颜色调优说明: ISP Color Tuning
+            ISP FAQ: ISP FAQ
+            Sensor 调试指南: Sensor Debug Guide
+            黑白彩色双路融合 (开发): Dual Fusion (Dev)
+            黑白彩色双路融合 (调试): Dual Fusion (Tuning)
+            视频处理子系统: Video Processing
+            HDMI 开发参考: HDMI Dev Reference
+            MIPI 使用指南: MIPI Guide
+            MotionFusion 开发参考: MotionFusion Dev Reference
+            PCIE 级联: PCIe Cascading
+            拼接 FAQ: Stitching FAQ
+            IVE/IVS 智能视觉: IVE/IVS Smart Vision
+            IVE API 参考 (1-2): IVE API Ref (1-2)
+            IVE API 参考 (3-6): IVE API Ref (3-6)
+            IVS API 参考: IVS API Reference
+            智能分析引擎: AI Engine
+            SVP2.0 开发指南: SVP2.0 Dev Guide
+            SVP2.0 API 参考: SVP2.0 API Reference
+            ATC 工具使用指南: ATC Tool Guide
+            ATC Graph 开发指南: ATC Graph Dev Guide
+            ATC 自定义算子开发: ATC Custom Operator
+            AMCT (Caffe): AMCT (Caffe)
+            AMCT (PyTorch): AMCT (PyTorch)
+            DPU2.0 工具: DPU2.0 Tool
+            Profiling 工具: Profiling Tool
+            精度比对工具: Accuracy Comparison
+            引擎差异说明: Engine Migration Notes
+            图像质量工具: Image Quality Tool
+            芯片参考 API: Chip Reference API
+            CIPHER: CIPHER
+            GFBG: GFBG
+            KLAD: KLAD
+            OTP: OTP
+            TDE: TDE
+            音频组件: Audio Component
+            硬件手册: Hardware Manual
+            DDR 小型化指南: DDR Miniaturization
+            U-Boot 移植开发: U-Boot Porting
+            OpenHarmony Small 适配: OpenHarmony Small Guide
+            OpenHarmony 内核适配: OpenHarmony Kernel Porting
+            3DNR 参数配置: 3DNR Configuration
+            安全启动: Secure Boot
+            内存布局调整: Memory Layout
+            SYS_CONFIG 配置: SYS_CONFIG Guide
+            外围设备驱动: Peripheral Drivers
+            工具平台: Tools
+            BurnTool 烧录工具: BurnTool
+            ToolPlatform 工具平台: ToolPlatform
+            MindCmd 命令行工具: MindCmd
+            DIS 调试指南: DIS Debug Guide
+            其他: Other
+            BSP FAQ: BSP FAQ
+            版本说明 (v1.0-beta1): Release Notes (v1.0-beta1)
+            版本说明 (v1.1-beta2): Release Notes (v1.1-beta2)
+            版本说明 (v1.1-beta3): Release Notes (v1.1-beta3)
+            快速参考索引: Quick Reference
+
+  - search:
+      lang:
+        - zh
+        - en
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      cache_safe: true
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - tables
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.magiclink
+
+extra:
+  favicon: assets/images/favicon.ico
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/HivsDev/pegasus_doc
+    - icon: fontawesome/solid/globe
+      link: https://www.hisilicon.com
+  version:
+    provider: mike
+  generator: false
+  consent:
+    title: Cookie 同意
+    actions:
+      - accept
+      - manage
+  homepage: https://developers.hisilicon.com
+  alternate:
+    - name: 中文
+      link: /
+      lang: zh
+    - name: English
+      link: /en/
+      lang: en
+
+extra_css:
+  - assets/stylesheets/extra.css
+extra_javascript:
+  - assets/javascripts/custom.js
+
+nav:
+  - 首页: index.md
+
+  - 系统架构:
+    - 产品简介: "system-architecture/产品简介.md"
+    - SDK 安装与升级: "system-architecture/SDK安装与升级.md"
+    - SS928V100 产品简介: "getting-started/SS928V100 超高清智能网络录像机 SoC 产品简介.md"
+    - SS928V100/SS927V100 SDK 安装升级: "getting-started/SS928V100╱SS927V100 SDK 安装以及升级使用说明.md"
+
+  - 快速入门:
+    - 快速上手指南: "getting-started/快速上手指南.md"
+    - Hi3403V100 环境搭建指南: "getting-started/Hi3403V100环境搭建指南.md"
+    - 应用开发指南: "getting-started/应用开发指南.md"
+    - 图形开发用户指南: "getting-started/图形开发用户指南.md"
+    - 安全子系统使用说明: "getting-started/安全子系统使用说明.md"
+
+  - 样例中心:
+    - 小型系统 SS928V100 移植案例: "getting-started/小型系统SS928V100移植案例.md"
+    - 开机画面使用指南: "getting-started/开机画面使用指南.md"
+    - 抓拍使用指南: "getting-started/抓拍 使用指南.md"
+
+  - 模块 / API:
+    - 媒体处理 (MPP):
+      - 前言: "modules/mpp/00 前言.md"
+      - 概述: "modules/mpp/01 概述.md"
+      - 系统控制: "modules/mpp/02 系统控制.md"
+      - 视频输入 VI: "modules/mpp/03 视频输入.md"
+      - 视频输出 VO: "modules/mpp/04 视频输出（4.1--4.3）.md"
+      - 视频输出 VO (进阶): "modules/mpp/04 视频输出（4.4--4.5）.md"
+      - 视频处理子系统 VPU: "modules/mpp/05 视频处理子系统.md"
+      - 视频编码 VENC: "modules/mpp/06 视频编码（6.1--6.3）.md"
+      - 视频编码 VENC (进阶): "modules/mpp/06 视频编码（6.4--6.5）.md"
+      - 视频解码 VDEC: "modules/mpp/07 视频解码.md"
+      - 区域管理 Region: "modules/mpp/08 区域管理.md"
+      - 音频 AIO (基础): "modules/mpp/09 音频（9.1--9.3）.md"
+      - 音频 AIO (进阶): "modules/mpp/09 音频（9.4--9.5）.md"
+      - 视频图形子系统 VGPU: "modules/mpp/10 视频图形子系统.md"
+      - 几何畸变矫正 GDC: "modules/mpp/11 几何畸变矫正子系统.md"
+      - 视频拼接: "modules/mpp/12 拼接.md"
+      - Proc 调试信息 (1): "modules/mpp/13 Proc调试信息（13.1--13.14.15）.md"
+      - Proc 调试信息 (2): "modules/mpp/13 Proc调试信息（13.16--13.29）.md"
+      - MPP FAQ: "modules/mpp/MPP 媒体处理软件 V5.0 FAQ.md"
+    - ISP 图像处理器:
+      - ISP 开发参考 (1-2): "modules/isp/ISP 开发参考（1--2）.md"
+      - ISP 开发参考 (3-5): "modules/isp/ISP 开发参考（3--5）.md"
+      - ISP 开发参考 (6): "modules/isp/ISP 开发参考（6）.md"
+      - ISP 开发参考 (7-14): "modules/isp/ISP 开发参考（7--14）.md"
+      - ISP 图像调优指南: "modules/isp/ISP 图像调优指南.md"
+      - ISP 颜色调优说明: "modules/isp/ISP 颜色调优说明.md"
+      - ISP FAQ: "modules/isp/ISP FAQ.md"
+      - Sensor 调试指南: "modules/isp/Sensor 调试指南.md"
+      - 黑白彩色双路融合 (开发): "modules/isp/黑白彩色双路融合 开发参考.md"
+      - 黑白彩色双路融合 (调试): "modules/isp/黑白彩色双路融合调试指南.md"
+    - 视频处理子系统:
+      - HDMI 开发参考: "modules/video/HDMI 开发参考.md"
+      - MIPI 使用指南: "modules/video/MIPI 使用指南.md"
+      - MotionFusion 开发参考: "modules/video/MotionFusion 开发参考.md"
+      - PCIE 级联: "modules/video/PCIE级联 应用指南.md"
+      - 拼接 FAQ: "modules/video/拼接 FAQ.md"
+    - IVE/IVS 智能视觉:
+      - IVE API 参考 (1-2): "modules/ive/IVE API 参考（1--2）.md"
+      - IVE API 参考 (3-6): "modules/ive/IVE API 参考（3--6）.md"
+      - IVS API 参考: "modules/ive/IVS API参考.md"
+    - 智能分析引擎:
+      - SVP2.0 开发指南: "modules/ai/SVP2.0 开发指南.md"
+      - SVP2.0 API 参考: "modules/ai/SVP2.0 API 参考.md"
+      - ATC 工具使用指南: "modules/ai/ATC工具使用指南.md"
+      - ATC Graph 开发指南: "modules/ai/ATC Graph开发指南.md"
+      - ATC 自定义算子开发: "modules/ai/ATC自定义算子开发指南.md"
+      - AMCT (Caffe): "modules/ai/AMCT使用指南（Caffe）.md"
+      - AMCT (PyTorch): "modules/ai/AMCT使用指南（PyTorch）.md"
+      - DPU2.0 工具: "modules/ai/DPU2.0 工具使用指南.md"
+      - Profiling 工具: "modules/ai/Profiling工具使用指南.md"
+      - 精度比对工具: "modules/ai/精度比对工具使用指南.md"
+      - 引擎差异说明: "modules/ai/图像分析引擎2与图像分析引擎1使用差异说明.md"
+      - 图像质量工具: "modules/ai/图像质量调试工具使用指南.md"
+    - 芯片参考 API:
+      - CIPHER: "modules/reference/CIPHER API 参考.md"
+      - GFBG: "modules/reference/GFBG API 参考.md"
+      - KLAD: "modules/reference/KLAD API 参考.md"
+      - OTP: "modules/reference/OTP API 参考.md"
+      - TDE: "modules/reference/TDE API参考.md"
+      - 音频组件: "modules/reference/音频组件 API参考.md"
+
+  - 硬件手册:
+    - DDR 小型化指南: "hardware/DDR 小型化指南.md"
+    - U-Boot 移植开发: "hardware/U-boot 移植应用开发指南.md"
+    - OpenHarmony Small 适配: "hardware/OpenHarmony Small版本使用指南.md"
+    - OpenHarmony 内核适配: "hardware/OpenHarmony内核适配SS928V100 SDK 内核6.6特性指导文档.md"
+    - 3DNR 参数配置: "hardware/3DNR参数配置说明.md"
+    - 安全启动: "hardware/安全启动使用指南.md"
+    - 内存布局调整: "hardware/内存布局调整指南.md"
+    - SYS_CONFIG 配置: "hardware/SYS_CONFIG 配置指南.md"
+    - 外围设备驱动: "hardware/外围设备驱动 操作指南.md"
+
+  - 工具平台:
+    - BurnTool 烧录工具: "tools/BurnTool 工具使用指南.md"
+    - ToolPlatform 工具平台: "tools/ToolPlatform工具平台使用指南.md"
+    - MindCmd 命令行工具: "tools/MindCmd 使用指南.md"
+    - DIS 调试指南: "tools/DIS 调试指南.md"
+
+  - 其他:
+    - BSP FAQ: "other/BSP FAQ.md"
+    - 版本说明 (v1.0-beta1): "other/Pegasus-v1.0-beta1.md"
+    - 版本说明 (v1.1-beta2): "other/Pegasus-v1.1-beta2.md"
+    - 版本说明 (v1.1-beta3): "other/Pegasus-v1.1-beta3.md"
+    - 快速参考索引: "other/quick-reference.md"
