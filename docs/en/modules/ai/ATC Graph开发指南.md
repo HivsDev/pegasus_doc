@@ -12,7 +12,6 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/ATC Grap
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
 
 **Intended Audience** This document is primarily intended for the following engineers: - Technical support engineers
 - Software development engineers Familiarity with the following experience and skills will help in understanding this document: - Proficient in basic Linux commands.

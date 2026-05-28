@@ -12,7 +12,6 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/ATCè‡ªå®
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
 
 **Intended Audience** This document is primarily intended for software development engineers. Familiarity with the following experience and skills will help in understanding this document: - Proficient in basic Linux commands.
 - Have a certain understanding of machine learning and image analysis methods. **Symbol Conventions** The following symbols may appear in this document, with their meanings described below.

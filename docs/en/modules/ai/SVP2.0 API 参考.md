@@ -5,16 +5,16 @@ title: SVP
 title: "Preface"
 source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/SVP API参考/SVP API参考.md
 --- # Preface
-**Overview** This document mainly introduces the SVP (Smart Vision Platform) API, data types, and Proc debug information. The SVP platform includes the MAU (Matrix Arithmetic Unit), DPU\_RECT, DPU\_MATCH, and DSP modules. >[](../../../../reference/api/svp/public_sys-resources/icon-note.gif) **Note:**
+**Overview** This document mainly introduces the SVP (Smart Vision Platform) API, data types, and Proc debug information. The SVP platform includes the MAU (Matrix Arithmetic Unit), DPU\_RECT, DPU\_MATCH, and DSP modules. > **Note:**
 
 > - This document uses Hi3403V100 as an example. Unless otherwise specified, is consistent with Hi3403V100.
 > - Some modules (like DSP) may not be available on all platform variants. **Product Version** The product version corresponding to this document is as follows. | Product Name | Product Version |
->   |---|---|
->   | Hi3403V100 | V100 |
->   | | V100 | **Target Audience** - Technical Support Engineers
+> |---|---|
+> | Hi3403V100 | V100 |
+> | | V100 | **Target Audience** - Technical Support Engineers
 > - Software Development Engineers **Symbol Conventions (see original document for icon images)** **Revision History** | Document Version | Release Date | Revision Description |
->   |---|---|---|
->   | 00B01 | 2025-09-15 | First interim release. | # MAU
+> |---|---|---|
+> | 00B01 | 2025-09-15 | First interim release. | # MAU
 
 ## Overview The MAU (Matrix Arithmetic Unit) is a hardware accelerator for matrix and vector operations. It supports operations such as matrix multiplication, distance computation (cosine, Euclidean, Manhattan), transposition, vector operations, type conversion, sorting, and FIR filtering. ## Functional Description ### Important Concepts **Blob**: A multi-dimensional array representing data for MAU operations. Each blob has the following attributes:[¶](#overview-the-mau-matrix-arithmetic-unit-is-a-hardware-accelerator-for-matrix-and-vector-operations-it-supports-operations-such-as-matrix-multiplication-distance-computation-cosine-euclidean-manhattan-transposition-vector-operations-type-conversion-sorting-and-fir-filtering-functional-description-important-concepts-blob-a-multi-dimensional-array-representing-data-for-mau-operations-each-blob-has-the-following-attributes "锚链接")
 
@@ -26,8 +26,8 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/SVP API�
 - Call the appropriate MAU operation function.
 - For async operations, call ss\_mpi\_svp\_mau\_query to wait for completion.
 - Retrieve results from destination blob. ## API Reference ### ss\_mpi\_svp\_mau\_matrix\_mul [Purpose]
-  Perform matrix multiplication on two input matrices. [Syntax]
-  ```c
+ Perform matrix multiplication on two input matrices. [Syntax]
+ ```c
 
 # include "ss\_svp\_mau.h"[¶](#include-ss_svp_mauh "锚链接")
 
@@ -105,16 +105,16 @@ Describes a memory region for MAU registration. ### Additional MAU Data Types - 
 - **ss\_mpi\_svp\_rect\_gen\_proposal**: Generate proposal regions.
 - **ss\_mpi\_svp\_rect\_conv**: Convolution on rectangle features.
 - **ss\_mpi\_svp\_rect\_query**: Query DPU\_RECT operation status. ### ss\_mpi\_svp\_rect\_retina\_face [Purpose]
-  Perform Retina Face face detection processing on the DPU\_RECT hardware. [Parameters]
+ Perform Retina Face face detection processing on the DPU\_RECT hardware. [Parameters]
 - src: Input blobs (feature maps from the neural network).
 - dst: Output blobs (detected face bounding boxes and landmarks).
 - ctrl: Control parameters (thresholds, anchor parameters, etc.).
 - sync: Synchronous or asynchronous execution. [Return Value]
-  0 on success, non-zero error code on failure. ### ss\_mpi\_svp\_rect\_nms [Purpose]
-  Perform non-maximum suppression on detected bounding boxes. [Description]
-  Removes duplicate detections by suppressing boxes with high IoU overlap with higher-scoring boxes. Supports configurable IoU thresholds. ### ss\_mpi\_svp\_rect\_anchor\_op [Purpose]
-  Perform anchor-based operations for object detection. [Description]
-  Generates and refines anchor boxes based on feature map locations and learned offsets. ## Data Types ### Key Structures - **ot\_svp\_rect\_handle**: DPU\_RECT operation handle.
+ 0 on success, non-zero error code on failure. ### ss\_mpi\_svp\_rect\_nms [Purpose]
+ Perform non-maximum suppression on detected bounding boxes. [Description]
+ Removes duplicate detections by suppressing boxes with high IoU overlap with higher-scoring boxes. Supports configurable IoU thresholds. ### ss\_mpi\_svp\_rect\_anchor\_op [Purpose]
+ Perform anchor-based operations for object detection. [Description]
+ Generates and refines anchor boxes based on feature map locations and learned offsets. ## Data Types ### Key Structures - **ot\_svp\_rect\_handle**: DPU\_RECT operation handle.
 - **ot\_svp\_rect\_retina\_face\_ctrl**: Control parameters for Retina Face.
 - **ot\_svp\_rect\_nms\_ctrl**: NMS control parameters (IoU threshold, max detections).
 - **ot\_svp\_rect\_anchor\_ctrl**: Anchor operation control parameters.
@@ -134,15 +134,15 @@ Describes a memory region for MAU registration. ### Additional MAU Data Types - 
 - **ss\_mpi\_svp\_match\_calc\_nn**: Nearest-neighbor matching.
 - **ss\_mpi\_svp\_match\_calc\_nn2**: Enhanced nearest-neighbor matching with ratio test.
 - **ss\_mpi\_svp\_match\_query**: Query DPU\_MATCH operation status. ### ss\_mpi\_svp\_match\_calc\_cos\_dist [Purpose]
-  Compute the cosine distance matrix between two sets of feature vectors. [Parameters]
+ Compute the cosine distance matrix between two sets of feature vectors. [Parameters]
 - src[2]: Source blobs containing feature sets A and B.
 - dst: Destination blob for the distance matrix.
 - ctrl: Control parameters.
 - sync: Synchronous or asynchronous. ### ss\_mpi\_svp\_match\_calc\_nn [Purpose]
-  Perform nearest-neighbor matching between two feature sets. [Description]
-  For each feature in the query set, finds the nearest neighbor in the reference set based on the specified distance metric. ### ss\_mpi\_svp\_match\_calc\_nn2 [Purpose]
-  Perform enhanced nearest-neighbor matching with ratio test. [Description]
-  Similar to NN but returns both the nearest and second-nearest distances for ratio testing (useful for Lowe's ratio test in SIFT matching). ## Data Types ### Key Structures - **ot\_svp\_match\_handle**: DPU\_MATCH operation handle.
+ Perform nearest-neighbor matching between two feature sets. [Description]
+ For each feature in the query set, finds the nearest neighbor in the reference set based on the specified distance metric. ### ss\_mpi\_svp\_match\_calc\_nn2 [Purpose]
+ Perform enhanced nearest-neighbor matching with ratio test. [Description]
+ Similar to NN but returns both the nearest and second-nearest distances for ratio testing (useful for Lowe's ratio test in SIFT matching). ## Data Types ### Key Structures - **ot\_svp\_match\_handle**: DPU\_MATCH operation handle.
 - **ot\_svp\_match\_ctrl**: Matching control parameters.
 - **ot\_svp\_match\_cos\_dist\_ctrl**: Cosine distance control.
 - **ot\_svp\_match\_euclid\_dist\_ctrl**: Euclidean distance control.

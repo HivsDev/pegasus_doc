@@ -12,14 +12,13 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/MIPI Use
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
 
-> [](../../../soc-linux/mipi/public_sys-resources/icon-note.gif) **Note:** >This document uses the Hi3403V100 description as an example. Unless otherwise specified, the content for is consistent with Hi3403V100. **Target Audience** This document (guide) is primarily applicable to the following engineers: - Technical Support Engineer
+> **Note:** >This document uses the Hi3403V100 description as an example. Unless otherwise specified, the content for is consistent with Hi3403V100. **Target Audience** This document (guide) is primarily applicable to the following engineers: - Technical Support Engineer
 > - Software Development Engineer **Symbol Conventions** The following symbols may appear in this document, and their meanings are as follows.
 
 | Symbol | Description |
 | --- | --- |
-|  | Indicates a high-level risk hazard that, if not avoided, will result in death or serious injury. |
+| | Indicates a high-level risk hazard that, if not avoided, will result in death or serious injury. |
 
 **Revision History** The revision history accumulates descriptions of each document update. The latest version of the document includes updates from all previous document versions.
 

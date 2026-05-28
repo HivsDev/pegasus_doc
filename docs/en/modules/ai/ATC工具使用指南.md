@@ -12,7 +12,6 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/ATCå·¥å…
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
 
 **Target Audience** This document is primarily intended for the following engineers: - Technical support engineers
 - Software development engineers The following experience and skills are helpful for understanding this document: - Familiarity with basic Linux commands.

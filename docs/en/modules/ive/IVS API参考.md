@@ -12,14 +12,13 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/IVS APIå
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
 
 **Intended Audience** This document (guide) is primarily intended for the following engineers: - Technical Support Engineers
 - Software Development Engineers **Symbol Conventions** The following symbols may appear in this document, and their meanings are described below.
 
 | **Symbol** | **Description** |
 | --- | --- |
-|  | Indicates a high-level hazard which, if not avoided, will result in death or serious injury. |
+| | Indicates a high-level hazard which, if not avoided, will result in death or serious injury. |
 
 **Revision History**
 
@@ -62,7 +61,7 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/IVS APIå
 | Parameter Name | Description | Input/Output |
 | --- | --- | --- |
 | md\_chn | Channel number. Valid range: [0, 63] | Input |
-| md\_attr | Channel information pointer.  Must not be NULL. | Input |
+| md\_attr | Channel information pointer. Must not be NULL. | Input |
 
 [Return Values]
 
@@ -100,7 +99,7 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/IVS APIå
 | Parameter Name | Description | Input/Output |
 | --- | --- | --- |
 | md\_chn | Channel number. Valid range: [0, 63] | Input |
-| md\_attr | Channel information pointer.  Must not be NULL. | Input |
+| md\_attr | Channel information pointer. Must not be NULL. | Input |
 
 [Return Values]
 
@@ -121,7 +120,7 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/IVS APIå
 | Parameter Name | Description | Input/Output |
 | --- | --- | --- |
 | md\_chn | Channel number. Valid range: [0, 63] | Input |
-| md\_attr | Channel information pointer.  Must not be NULL. | Output |
+| md\_attr | Channel information pointer. Must not be NULL. | Output |
 
 [Return Values]
 
@@ -164,10 +163,10 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/IVS APIå
 | Parameter Name | Description | Input/Output |
 | --- | --- | --- |
 | md\_chn | Channel number. Valid range: [0, 63] | Input |
-| cur | Current frame image pointer; must not be NULL.  For detailed definitions, see Section 3.1 of the "IVE API Reference". | Input |
-| ref | Reference frame image pointer; must not be NULL.  For detailed definitions, see Section 3.1 of the "IVE API Reference". | Input |
-| sad | Sad pointer.  Based on md\_attr-> sad\_out\_ctrl, if output is required, must not be NULL.  For detailed definitions, see Section 3.1 of the "IVE API Reference". | Output |
-| blob | Region information pointer.  Must not be NULL.  For detailed definitions, see Section 1.4 of the "SV Px.0 API Reference". | Output |
+| cur | Current frame image pointer; must not be NULL. For detailed definitions, see Section 3.1 of the "IVE API Reference". | Input |
+| ref | Reference frame image pointer; must not be NULL. For detailed definitions, see Section 3.1 of the "IVE API Reference". | Input |
+| sad | Sad pointer. Based on md\_attr-> sad\_out\_ctrl, if output is required, must not be NULL. For detailed definitions, see Section 3.1 of the "IVE API Reference". | Output |
+| blob | Region information pointer. Must not be NULL. For detailed definitions, see Section 1.4 of the "SV Px.0 API Reference". | Output |
 
 | Parameter Name | Supported Image Type | Address Alignment | Resolution |
 | --- | --- | --- | --- |
@@ -205,10 +204,10 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/IVS APIå
 | --- | --- |
 | alg\_mode | Algorithm mode. |
 | sad\_mode | Sad mode. For detailed definitions, see Section 3.3 of the "IVE API Reference". |
-| sad\_out\_ctrl | Sad output control. For detailed definitions, see Section 3.3 of the "IVE API Reference".  Only supports OT\_IVE\_SAD\_OUT\_CTRL\_16BIT\_BOTH, OT\_IVE\_SAD\_OUT\_CTRL\_8BIT\_BOTH, and OT\_IVE\_SAD\_OUT\_CTRL\_THRESHOLD output controls. |
+| sad\_out\_ctrl | Sad output control. For detailed definitions, see Section 3.3 of the "IVE API Reference". Only supports OT\_IVE\_SAD\_OUT\_CTRL\_16BIT\_BOTH, OT\_IVE\_SAD\_OUT\_CTRL\_8BIT\_BOTH, and OT\_IVE\_SAD\_OUT\_CTRL\_THRESHOLD output controls. |
 | width | Image width. Must be an even multiple of the macroblock width. Range: [64, 1920] |
 | height | Image height. Must be an even multiple of the macroblock height. Range: [64, 1080] |
-| sad\_threshold | Sad threshold.  Value depends on sad\_out\_ctrl:   1. OT\_IVE\_SAD\_OUT\_CTRL\_8BIT\_BOTH, range [0, 255] 2. OT\_IVE\_SAD\_OUT\_CTRL\_16BIT\_BOTH and OT\_IVE\_SAD\_OUT\_CTRL\_THRESHOLD, range [0, 65535] |
+| sad\_threshold | Sad threshold. Value depends on sad\_out\_ctrl: 1. OT\_IVE\_SAD\_OUT\_CTRL\_8BIT\_BOTH, range [0, 255] 2. OT\_IVE\_SAD\_OUT\_CTRL\_16BIT\_BOTH and OT\_IVE\_SAD\_OUT\_CTRL\_THRESHOLD, range [0, 65535] |
 | ccl\_ctrl | CCL control parameters. For detailed definitions, see Section 3.3 of the "IVE API Reference". CCL control parameter member information applies to the image after block division. |
 | add\_ctrl | Add control parameters. For detailed definitions, see Section 3.3 of the "IVE API Reference". |
 
@@ -245,7 +244,7 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/IVS APIå
 | 0xa0308022 | OT\_ERR\_ODT\_BUSY | ODT system busy |
 
 ## Proc Debug Information ### Overview Debug information uses the proc file system under Linux, which can reflect the current operating status of the system in real time. The recorded information can be used for problembitbit and analysis. [File Directory] /proc/umap [Information Viewing Method] - On the console, you can use the cat command to view information. `cat /proc/umap/md` can view the MD proc information. Other commonly used file operation commands can also be used, for example, `cp /proc/umap/md ./` to copy the file to the current directory.
-- In an application, the above files can be treated as ordinary read-only files for read operations, such as fopen, fread, etc. >[](../../../../reference/api/ivs/public_sys-resources/icon-note.gif) **Note:**
+- In an application, the above files can be treated as ordinary read-only files for read operations, such as fopen, fread, etc. > **Note:**
 
 > The following 2 situations should be noted when describing parameters:
 > - For parameters with values of {0, 1}, if the specific mapping between values and meanings is not listed, a value of 1 indicates affirmative, and 0 indicates negative.
@@ -256,15 +255,15 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/IVS APIå
 
 | Parameter | | Description |
 | --- | --- | --- |
-| md chn attr  Channel attributes | no. | Channel number. |
-| alg | Working algorithm.  0: Background method;  1: Frame difference method. |
-| sad\_mode | Sad mode.  0: 4x4 macroblock;  1: 8x8 macroblock;  2: 16x16 macroblock. |
-| sad\_out\_ctrl | Sad output control.  0: OT\_IVE\_SAD\_OUT\_CTRL\_16BIT\_BOTH;  1: OT\_IVE\_SAD\_OUT\_CTRL\_8BIT\_BOTH;  4: OT\_IVE\_SAD\_OUT\_CTRL\_THRESHOLD. |
+| md chn attr Channel attributes | no. | Channel number. |
+| alg | Working algorithm. 0: Background method; 1: Frame difference method. |
+| sad\_mode | Sad mode. 0: 4x4 macroblock; 1: 8x8 macroblock; 2: 16x16 macroblock. |
+| sad\_out\_ctrl | Sad output control. 0: OT\_IVE\_SAD\_OUT\_CTRL\_16BIT\_BOTH; 1: OT\_IVE\_SAD\_OUT\_CTRL\_8BIT\_BOTH; 4: OT\_IVE\_SAD\_OUT\_CTRL\_THRESHOLD. |
 | sad\_thr | Sad threshold. |
-| ccl\_mode | CCL mode.  0: 4-connected;  1: 8-connected. |
+| ccl\_mode | CCL mode. 0: 4-connected; 1: 8-connected. |
 | ccl\_init\_thr | CCL initial threshold. |
 | ccl\_step | CCL step. |
 | xwt | Background method update X weight. |
 | ywt | Background method update Y weight. |
 | frm\_rate | Frame rate. |
-| cost\_tm\_per\_frm | Time per frame (unit: us).  **Note: Frame rate and time per frame are calculated every 10 seconds.** |
+| cost\_tm\_per\_frm | Time per frame (unit: us). **Note: Frame rate and time per frame are calculated every 10 seconds.** |

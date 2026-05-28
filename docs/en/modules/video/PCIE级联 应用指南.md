@@ -7,7 +7,7 @@ title: PCIe Cascading
 title: "Preface"
 source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/PCIE级联应用指南/PCIE级联应用指南.md
 --- # Preface
-**Overview** This document introduces the Demo board PC Ie cascade operation guide from the aspects of hardware environment preparation and software environment preparation. It also introduces the basics of PC Ie, the business implementation of PC Ie cascading, and the PC Ie MPI interface functions, providing references for users when using the PC Ie cascade function. >[](../../../soc-linux/pcie/public_sys-resources/icon-note.gif) **Note:**
+**Overview** This document introduces the Demo board PC Ie cascade operation guide from the aspects of hardware environment preparation and software environment preparation. It also introduces the basics of PC Ie, the business implementation of PC Ie cascading, and the PC Ie MPI interface functions, providing references for users when using the PC Ie cascade function. > **Note:**
 
 > - Unless otherwise specified, ssxx in the following text represents solutions including , Hi3403V100, and .
 > - Unless otherwise specified, the content for is identical to that of Hi3403V100. **Product Versions** The product versions corresponding to this document are as follows.
@@ -15,17 +15,13 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/PCIE级�
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
-| V100 |
-| V100 |
-| V100 |
 
 **Intended Audience** This document (guide) is primarily intended for the following engineers: - Technical Support Engineers
 - Software Development Engineers **Symbol Conventions** The following symbols may appear in this document. Their meanings are described below.
 
 | Symbol | Description |
 | --- | --- |
-|  | Indicates a high-level hazard which, if not avoided, will result in death or serious injury. |
+| | Indicates a high-level hazard which, if not avoided, will result in death or serious injury. |
 
 **Revision History** The revision history records the updates made to each document version. The latest version of the document includes all updates from previous versions.
 

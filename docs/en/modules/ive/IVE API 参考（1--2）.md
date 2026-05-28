@@ -7,19 +7,18 @@ title: IVE API 1–2
 title: "Preface"
 source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/IVE API Reference/IVE API Reference (1-2).md
 --- # Preface
-**Overview** This document is written for programmers developing recognition and analysis solutions using the IVE co-processor of the media processing chip. It is intended to provide various reference information supported by the IVE co-processor during development, including APIs, header files, error codes, Proc information, etc. > [](../../../../../reference/api/ive/public_sys-resources/icon-note.gif) **Note:** > Unless otherwise specified in this document, the content for and Hi3403V100 is identical. **Product Version** The product versions corresponding to this document are as follows.
+**Overview** This document is written for programmers developing recognition and analysis solutions using the IVE co-processor of the media processing chip. It is intended to provide various reference information supported by the IVE co-processor during development, including APIs, header files, error codes, Proc information, etc. > **Note:** > Unless otherwise specified in this document, the content for and Hi3403V100 is identical. **Product Version** The product versions corresponding to this document are as follows.
 
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
 
 **Target Audience** This document (guide) is primarily intended for the following engineers: - Technical support engineers
 - Software development engineers **Symbol Conventions** The following symbols may appear in this document, with their meanings described below.
 
 | **Symbol** | **Description** |
 | --- | --- |
-|  | Indicates a high-risk hazard which, if not avoided, will result in death or serious injury. |
+| | Indicates a high-risk hazard which, if not avoided, will result in death or serious injury. |
 
 **Change History**
 

@@ -12,14 +12,13 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/Hi3403V1
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
 
-> [](../../../multimedia/3dnr/public_sys-resources/icon-note.gif) **Note:** >This document uses the Hi3403V100 description as an example. Unless otherwise specified, the content for and Hi3403V100 is identical. **Intended Audience** This document (this guide) is primarily intended for the following engineers: - Technical support engineers
+> **Note:** >This document uses the Hi3403V100 description as an example. Unless otherwise specified, the content for and Hi3403V100 is identical. **Intended Audience** This document (this guide) is primarily intended for the following engineers: - Technical support engineers
 > - Software development engineers **Symbol Conventions** The following symbols may appear in this document. Their meanings are as follows.
 
 | **Symbol** | **Description** |
 | --- | --- |
-|  | Indicates a hazard with a high level of risk that, if not avoided, will result in death or serious injury. |
+| | Indicates a hazard with a high level of risk that, if not avoided, will result in death or serious injury. |
 
 **Modification History**
 
@@ -59,8 +58,8 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/Hi3403V1
 
 | Member Name | Description |
 | --- | --- |
-| ies0, ies1, ies2, ies3 | Absolute enhancement strength of edges, 0~3 correspond to different frequency bands.  Value range: [0, 255]. |
-| iedz | Noise control threshold. Not recommended for adjustment, defaults to 0.  Value range: [0, 999]. |
+| ies0, ies1, ies2, ies3 | Absolute enhancement strength of edges, 0~3 correspond to different frequency bands. Value range: [0, 255]. |
+| iedz | Noise control threshold. Not recommended for adjustment, defaults to 0. Value range: [0, 999]. |
 
 [Correspondence between 3DNR X Interface and MPI Interface] - n Xsf6 of N0 corresponds to iey[0].ies0, iey[0].ies1, iey[0].ies2, iey[0].ies3;
 - n Xsf6 of N1 corresponds to iey[1].ies0, iey[1].ies1, iey[1].ies2, iey[1].ies3;
@@ -70,21 +69,21 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/Hi3403V1
 
 | Member Name | Description |
 | --- | --- |
-| j\_mode | Spatial mixing mode.  Value range: [0, 4]. |
-| spn, sbn | Mixing mode filter selection.  Value range: [0, 7]. |
-| pbr | Indicates the mixing ratio of the spn and sbn filter results; takes effect when mixing mode j\_mode is 1.  Value range: [0, 16]. |
-| sfr7 | Indicates the relative strength of the result produced by the filter selected by sbn after blending with spn.  Value range: [0, 31]. |
-| sfr | Pure spatial filter strength control.  Value range: [0, 31]. |
-| sfs1, sfs2, sfs4 | Indicates the strength of filters 1~4 (filters 3 and 4 have the same strength).  Value range: [0, 255]. |
-| sft2, sft4 | Indicates additional strength of filters 2~4.  Value range: [0, 255]. |
-| sbr1, sbr2, sbr4, sbr7 | Indicates the asymmetric filtering strength of filters 1~4 and 6.  sbr1, sbr2, sbr4 value range: [0, 255].  sbr7 value range: [0, 15]. |
+| j\_mode | Spatial mixing mode. Value range: [0, 4]. |
+| spn, sbn | Mixing mode filter selection. Value range: [0, 7]. |
+| pbr | Indicates the mixing ratio of the spn and sbn filter results; takes effect when mixing mode j\_mode is 1. Value range: [0, 16]. |
+| sfr7 | Indicates the relative strength of the result produced by the filter selected by sbn after blending with spn. Value range: [0, 31]. |
+| sfr | Pure spatial filter strength control. Value range: [0, 31]. |
+| sfs1, sfs2, sfs4 | Indicates the strength of filters 1~4 (filters 3 and 4 have the same strength). Value range: [0, 255]. |
+| sft2, sft4 | Indicates additional strength of filters 2~4. Value range: [0, 255]. |
+| sbr1, sbr2, sbr4, sbr7 | Indicates the asymmetric filtering strength of filters 1~4 and 6. sbr1, sbr2, sbr4 value range: [0, 255]. sbr7 value range: [0, 15]. |
 | sf5\_md | Indicates the strength of filter 5. Value range: [0, 1]. |
-| sth1\_0, sth2\_0, sth3\_0  sth1\_1, sth2\_1, sth3\_1 | Edge preservation thresholds for motion foreground and background regions. The smaller the value, the more edges are preserved, but noise will also be higher. The larger the value, the fewer edges are preserved, with only very strong edges being retained.  Value range: [0, 511]. |
-| sfn0\_0, sfn1\_0, sfn2\_0, sfn3\_0  sfn0\_1, sfn1\_1, sfn2\_1, sfn3\_1 | Selects different filter types (numbers) based on the sth edge preservation threshold and different image characteristics.  Value range: [0, 8]. |
+| sth1\_0, sth2\_0, sth3\_0 sth1\_1, sth2\_1, sth3\_1 | Edge preservation thresholds for motion foreground and background regions. The smaller the value, the more edges are preserved, but noise will also be higher. The larger the value, the fewer edges are preserved, with only very strong edges being retained. Value range: [0, 511]. |
+| sfn0\_0, sfn1\_0, sfn2\_0, sfn3\_0 sfn0\_1, sfn1\_1, sfn2\_1, sfn3\_1 | Selects different filter types (numbers) based on the sth edge preservation threshold and different image characteristics. Value range: [0, 8]. |
 | sf8\_idx0, sf8\_idx1 | Selects the filter numbers used for mixing. Value range: [0, 7]. |
-| sf8\_tfr, sf8\_thrd | Upper and lower threshold limits of filter 8, used to determine the mixing ratio.  Value range: [0, 255]. |
+| sf8\_tfr, sf8\_thrd | Upper and lower threshold limits of filter 8, used to determine the mixing ratio. Value range: [0, 255]. |
 | bri\_idx0, bri\_idx1 | Selects filters for motion foreground and background respectively, mixed based on luminance. Value range: [0, 8]. |
-| bri\_str | Configures the mixing ratio of bri\_idx0, bri\_idx1 with the spatial result based on luminance.  OT\_VPSS\_S\_IDX\_LEN defines the maximum configurable number for YUV 3DNR luminance and saturation table debugging, with a value of 17. |
+| bri\_str | Configures the mixing ratio of bri\_idx0, bri\_idx1 with the spatial result based on luminance. OT\_VPSS\_S\_IDX\_LEN defines the maximum configurable number for YUV 3DNR luminance and saturation table debugging, with a value of 17. |
 | \_rb1\_ | Reserved. |
 
 [Correspondence between 3DNR X Interface and MPI Interface] - sf8\_idx0, sf8\_idx1, sf8\_tfr, and sf8\_thrd are only valid at the N3 level.
@@ -147,9 +146,9 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/Hi3403V1
 | --- | --- |
 | mai00, mai02 | Selects which temporal filter and spatial filter to mix. Value range: [0, 3]. |
 | math0, math1 | Motion/still decision thresholds for channels 0 and 1. Value range: [0, 999]. |
-| mate0, mate1 | Motion detection index for flat areas in channels 0 and 1.  Value range: [0, 8]. |
-| mabw0, mabw1 | Selection of motion detection window size for channels 0 and 1.  Value range: [0, 9]. |
-| adv\_math | Enhanced math mode switch.  0: off,  1: on. |
+| mate0, mate1 | Motion detection index for flat areas in channels 0 and 1. Value range: [0, 8]. |
+| mabw0, mabw1 | Selection of motion detection window size for channels 0 and 1. Value range: [0, 9]. |
+| adv\_math | Enhanced math mode switch. 0: off, 1: on. |
 | adv\_th | Controls the effect of enhanced math. Value range: [0, 999]. |
 | \_rb\_ | Reserved. |
 
@@ -170,12 +169,12 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/Hi3403V1
 | Member Name | Description |
 | --- | --- |
 | tfs0, tfs1 | Temporal filter absolute strength for channels 0 and 1. |
-| tdz0, tdz1 | Protects texture in motion areas from temporal filtering. Increasing tdz protects texture in motion areas but also weakens the temporal filtering strength.  Value range: [0, 999]. |
-| str0, str1 | Proportion of the filter result superimposed on the final result for channels 0 and 1. Larger values mean higher proportion.  Value range: [0, 31]. |
-| tfr0, tfr1 | Relative strength of temporal filtering in still areas for channels 0 and 1.  Value range: [0, 31]. |
-| tss0, tss1 | Proportion of spatial mixing in temporal still areas for channels 0 and 1.  Value range: [0, 15]. |
-| ref\_en | Reference frame switch.  0: off  1: on |
-| sdz0, sdz1 | Constrains the filter strength for channels 0 and 1. Smaller values mean weaker strength.  Value range: [0, 999]. |
+| tdz0, tdz1 | Protects texture in motion areas from temporal filtering. Increasing tdz protects texture in motion areas but also weakens the temporal filtering strength. Value range: [0, 999]. |
+| str0, str1 | Proportion of the filter result superimposed on the final result for channels 0 and 1. Larger values mean higher proportion. Value range: [0, 31]. |
+| tfr0, tfr1 | Relative strength of temporal filtering in still areas for channels 0 and 1. Value range: [0, 31]. |
+| tss0, tss1 | Proportion of spatial mixing in temporal still areas for channels 0 and 1. Value range: [0, 15]. |
+| ref\_en | Reference frame switch. 0: off 1: on |
+| sdz0, sdz1 | Constrains the filter strength for channels 0 and 1. Smaller values mean weaker strength. Value range: [0, 999]. |
 | math\_mode | Motion decision mode. Value range: [0, 2]. |
 | auto\_math | Motion decision threshold for the 0th level. Value range: [0, 999]. |
 | \_rb0\_, \_rb1\_ | Reserved. |
@@ -207,12 +206,12 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/Hi3403V1
 
 | Member Name | Description |
 | --- | --- |
-| sfc | Spatial strength parameter.  Value range: [0, 31]. |
-| sfc\_enhance | Spatial enhancement strength coarse adjustment parameter.  Value range: [0, 255]. |
-| sfc\_ext | Spatial enhancement strength fine adjustment parameter.  Value range: [0, 255]. |
-| trc | Used to suppress color contamination in motion areas.  Value range: [0, 255]. |
-| tfc | Indicates chroma temporal filtering strength.  Value range: [0, 32]. |
-| auto\_math | Chroma motion decision threshold.  Value range: [0, 999]. |
+| sfc | Spatial strength parameter. Value range: [0, 31]. |
+| sfc\_enhance | Spatial enhancement strength coarse adjustment parameter. Value range: [0, 255]. |
+| sfc\_ext | Spatial enhancement strength fine adjustment parameter. Value range: [0, 255]. |
+| trc | Used to suppress color contamination in motion areas. Value range: [0, 255]. |
+| tfc | Indicates chroma temporal filtering strength. Value range: [0, 32]. |
+| auto\_math | Chroma motion decision threshold. Value range: [0, 999]. |
 
 [Correspondence between 3DNR X Interface and MPI Interface] - sfc corresponds to nrc0.sfc
 - tfc corresponds to nrc0.tfc
@@ -223,20 +222,20 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/Hi3403V1
 
 | Member Name | Description |
 | --- | --- |
-| sfs1, sfs2, sfs4 | Indicates the strength of filters 1~4 (filters 3 and 4 have the same strength).  Value range: [0, 255]. |
-| sft2, sft4 | Indicates additional strength of filters 2~4.  Value range: [0, 255]. |
-| sbr1, sbr2, sbr4 | Indicates the asymmetric filtering strength of filters 1~4 and 6.  Value range: [0, 255]. |
-| sf5\_str\_u, sf5\_str\_v | Filtering strength of filter 5 (large window) for U and V components respectively.  Value range: [0, 31]. |
-| sfc6, sfc\_ext6 | Coarse adjustment strength and fine adjustment strength of filter 6.  Value range: [0, 255]. |
-| sfr6\_u, sfr6\_v | Strength of filter 6 applied to U and V components.  Value range: [0, 15]. |
-| spn0, sbn0, pbr0  spn1, sbn1, pbr1 | spn0, sbn0 and spn1, sbn1 select mixing filters for the motion foreground and background regions respectively.  Value range: [0, 6].  pbr0 and pbr1 indicate the mixing ratios for the motion foreground and background respectively. Value range: [0, 15]. |
-| sat0\_l\_sfn8, sat0\_h\_sfn8  sat1\_l\_sfn8, sat1\_h\_sfn8 | Selects filters for mixing based on saturation. sat0 and sat1 act on motion foreground and background respectively.  Value range: [0, 7]. |
-| hue0\_l\_sfn9, hue0\_h\_sfn9  hue1\_l\_sfn9, hue1\_h\_sfn9 | Selects filters for mixing based on hue. hue0 and hue1 act on motion foreground and background respectively.  Value range: [0, 8]. |
-| bri0\_l\_sfn10, bri0\_h\_sfn10  bri1\_l\_sfn10, bri1\_h\_sfn10 | Selects filters for mixing based on brightness. bri0 and bri1 act on motion foreground and background respectively.  Value range: [0, 9]. |
+| sfs1, sfs2, sfs4 | Indicates the strength of filters 1~4 (filters 3 and 4 have the same strength). Value range: [0, 255]. |
+| sft2, sft4 | Indicates additional strength of filters 2~4. Value range: [0, 255]. |
+| sbr1, sbr2, sbr4 | Indicates the asymmetric filtering strength of filters 1~4 and 6. Value range: [0, 255]. |
+| sf5\_str\_u, sf5\_str\_v | Filtering strength of filter 5 (large window) for U and V components respectively. Value range: [0, 31]. |
+| sfc6, sfc\_ext6 | Coarse adjustment strength and fine adjustment strength of filter 6. Value range: [0, 255]. |
+| sfr6\_u, sfr6\_v | Strength of filter 6 applied to U and V components. Value range: [0, 15]. |
+| spn0, sbn0, pbr0 spn1, sbn1, pbr1 | spn0, sbn0 and spn1, sbn1 select mixing filters for the motion foreground and background regions respectively. Value range: [0, 6]. pbr0 and pbr1 indicate the mixing ratios for the motion foreground and background respectively. Value range: [0, 15]. |
+| sat0\_l\_sfn8, sat0\_h\_sfn8 sat1\_l\_sfn8, sat1\_h\_sfn8 | Selects filters for mixing based on saturation. sat0 and sat1 act on motion foreground and background respectively. Value range: [0, 7]. |
+| hue0\_l\_sfn9, hue0\_h\_sfn9 hue1\_l\_sfn9, hue1\_h\_sfn9 | Selects filters for mixing based on hue. hue0 and hue1 act on motion foreground and background respectively. Value range: [0, 8]. |
+| bri0\_l\_sfn10, bri0\_h\_sfn10 bri1\_l\_sfn10, bri1\_h\_sfn10 | Selects filters for mixing based on brightness. bri0 and bri1 act on motion foreground and background respectively. Value range: [0, 9]. |
 | sfn0, sfn1 | Indicates mixing filters acting on the motion foreground and background. |
-| bak\_grd\_sat  for\_grd\_sat | Configure mixing ratio based on saturation (acting on foreground and background respectively). Value range: [0, 255]. |
-| bak\_grd\_hue  for\_grd\_hue | Configure mixing ratio based on hue (acting on foreground and background respectively). Value range: [0, 255]. |
-| bak\_grd\_bri  for\_grd\_bri | Configure mixing ratio based on brightness (acting on foreground and background respectively). Value range: [0, 255]. |
+| bak\_grd\_sat for\_grd\_sat | Configure mixing ratio based on saturation (acting on foreground and background respectively). Value range: [0, 255]. |
+| bak\_grd\_hue for\_grd\_hue | Configure mixing ratio based on hue (acting on foreground and background respectively). Value range: [0, 255]. |
+| bak\_grd\_bri for\_grd\_bri | Configure mixing ratio based on brightness (acting on foreground and background respectively). Value range: [0, 255]. |
 
 [Correspondence between 3DNR X Interface and MPI Interface] - n Csf1 corresponds to nrc1.sfs1 and nrc1.sbr1;
 - n Csf2 corresponds to nrc1.sfs2, nrc1.sft2, and nrc1.sbr2;
@@ -255,9 +254,9 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/Hi3403V1
 - Table c0hue0~c0hue12 corresponds to for\_grd\_hue[OT\_VPSS\_S\_IDX\_LEN];
 - Table c1hue0~c1hue12 corresponds to bak\_grd\_hue[OT\_VPSS\_S\_IDX\_LEN];
 - Table c0bri0~c0bri12 corresponds to for\_grd\_bri[OT\_VPSS\_S\_IDX\_LEN];
-- Table c1bri0~c1bri12 corresponds to bak\_grd\_bri[OT\_VPSS\_S\_IDX\_LEN]; **Note: For parameters in the MPI interface that do not correspond to the debug interface, it is recommended to set the default value to 0.** ## Default Parameters The default interface parameters for Hi3403V100 YUV 3DNR parameters are shown in [Figure 1](#ref515453020). **Figure 1** 3DNR parameter interface parameter screen [](figures/3DNR Parameter Interface Parameterboundary.png) The luminance denoising (N Ry) of 3DNR consists of four series-connected denoising functions, divided into 4 levels numbered N0, N1, N2, N3. Due to implementation differences, series effects, etc., filters of the same number and type at different levels may not produce completely identical results. N0~N2 can select temporal filtering and spatial filtering. N3 is a pure spatial filter (with temporal assistance). The color filter is independent of the luminance filter, divided into two levels, C1 and C2, as shown in [Figure 2](#ref515443368). **Figure 2** 3DNR parameter numbering diagram [](figures/3DNR Parametercodec No.shownmeaninggraph.png)
+- Table c1bri0~c1bri12 corresponds to bak\_grd\_bri[OT\_VPSS\_S\_IDX\_LEN]; **Note: For parameters in the MPI interface that do not correspond to the debug interface, it is recommended to set the default value to 0.** ## Default Parameters The default interface parameters for Hi3403V100 YUV 3DNR parameters are shown in [Figure 1](#ref515453020). **Figure 1** 3DNR parameter interface parameter screen  The luminance denoising (N Ry) of 3DNR consists of four series-connected denoising functions, divided into 4 levels numbered N0, N1, N2, N3. Due to implementation differences, series effects, etc., filters of the same number and type at different levels may not produce completely identical results. N0~N2 can select temporal filtering and spatial filtering. N3 is a pure spatial filter (with temporal assistance). The color filter is independent of the luminance filter, divided into two levels, C1 and C2, as shown in [Figure 2](#ref515443368). **Figure 2** 3DNR parameter numbering diagram 
 
-> [](../../../multimedia/3dnr/public_sys-resources/icon-note.gif) **Note:** >- The X in nX\*\* and mX\*\* parameters represents the level number, referring to the nth level. For example, n0sf2 specifically refers to the N0 level parameter in the n Xsf2 series parameters, and m1id0 specifically refers to the first-level parameter in the m Xid0 series.
+> **Note:** >- The X in nX\*\* and mX\*\* parameters represents the level number, referring to the nth level. For example, n0sf2 specifically refers to the N0 level parameter in the n Xsf2 series parameters, and m1id0 specifically refers to the first-level parameter in the m Xid0 series.
 > - [en] enables the denoising function for that level. 0 indicates the function at this level is off, 1 indicates the function is active. Parameters marked in red font are parameters not recommended for adjustment.
 > - The N3 spatial filter parameters [n Xsf6], [n Xsf7], [n Xsfr7], [n Xsbr7], [n Xsf8], [n Xsfn], [n Xsth], and [sfr] each have two sets of interfaces (as shown in the N3a and N3b areas in [Figure 2](#ref515443368)), acting on the motion area (N3a) and the still area (N3b) to achieve different processing effects. For the N3 level to take effect, the N2 level must be enabled with temporal reference turned on; otherwise, N3 has no practical effect.
 > - Chroma is divided into two levels, C0 and C2, controlled by the nC0en and nC1en switches respectively. [n Csfc6], [n Csfc6uv], [nC Xsf7], [nC Xsf8], [nC Xsf9], and [nC Xsf10] each have two sets of interfaces (as shown in the C3a and C3b areas in [Figure 2](#ref515443368)), acting on the motion area (C3a) and the still area (C3b) to achieve different processing effects.

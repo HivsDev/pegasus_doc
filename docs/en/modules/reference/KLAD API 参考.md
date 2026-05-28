@@ -5,22 +5,20 @@ title: KLAD
 title: "Preface"
 source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/KLAD API 参考/KLAD API 参考.md
 --- # Preface
-**Overview** KLAD is the key management module, integrating key derivation, plaintext KEY transfer, and ROOTKEY hierarchical transfer. >[](../../../../reference/api/klad/public_sys-resources/icon-note.gif) **Note:**
+**Overview** KLAD is the key management module, integrating key derivation, plaintext KEY transfer, and ROOTKEY hierarchical transfer. > **Note:**
 
 > Unless otherwise specified in this document, the content for and Hi3403V100 is completely identical. **Product Version** The product versions corresponding to this document are as follows.
 
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
-| V100 |
 
 **Intended Audience** This document (guide) is primarily intended for the following engineers: - Technical Support Engineers
 - Software Development Engineers **Symbol Conventions** The following symbols may appear in this document, and their meanings are described below.
 
 | Symbol | Description |
 | --- | --- |
-|  | Indicates a high-level hazard which, if not avoided, will result in death or serious injury. |
+| | Indicates a high-level hazard which, if not avoided, will result in death or serious injury. |
 
 **Revision History**
 
@@ -411,7 +409,7 @@ The error codes provided by KLAD are as follows. **Table 1** KLAD module error c
 
 # Acronyms and Abbreviations
 
-|  |  |  |
+| | | |
 | --- | --- | --- |
 | **K** | | |
 | KDF | Key Derivation Function | Key Derivation Function |

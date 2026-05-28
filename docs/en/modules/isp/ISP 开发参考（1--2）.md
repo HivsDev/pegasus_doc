@@ -5,19 +5,18 @@ title: Chapter 1–2
 title: "Preface"
 source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/ISP Development Reference/ISP Development Reference (1-2).md
 --- # Preface
-**Overview** This document is written for programmers using ISP development, aiming to provide solutions and assistance for issues encountered during development. >[](../../../../../multimedia/isp/dev-ref/public_sys-resources/icon-note.gif) **Note:** >This document uses Hi3403V100 as the description example. Unless otherwise specified, the content for is the same as Hi3403V100. **Product Version** The product version corresponding to this document is as follows.
+**Overview** This document is written for programmers using ISP development, aiming to provide solutions and assistance for issues encountered during development. > **Note:** >This document uses Hi3403V100 as the description example. Unless otherwise specified, the content for is the same as Hi3403V100. **Product Version** The product version corresponding to this document is as follows.
 
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
 
 **Target Audience** This document (guide) is mainly applicable to the following engineers: - Technical Support Engineers
 - Software Development Engineers **Symbol Conventions** The following symbols may appear in this document, and their meanings are as follows.
 
 | Symbol | Description |
 | --- | --- |
-|  | Indicates a high-risk hazard which, if not avoided, will result in death or serious injury. |
+| | Indicates a high-risk hazard which, if not avoided, will result in death or serious injury. |
 
 **Revision History** The revision history accumulates descriptions of each document update. The latest version of the document contains the updates from all previous document versions.
 
@@ -29,9 +28,7 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/ISP Deve
 
 ## Overview ISP completes the processing of digital image effects through a series of digital image processing algorithms. It mainly includes 3A, bad pixel correction, denoising, highlight suppression, backlight compensation, color enhancement, lens shading correction, and other processing. ISP consists of a logic part and the firmware running on it. This section mainly introduces the ISP user interface. ## Function Description The ISP control structure is shown in [Figure 1](#fig19534124782113). After the lens projects the light signal onto the sensor's photosensitive area, the sensor performs photoelectric conversion and sends the original Bayer format image to the ISP. The ISP processes it through algorithms and outputs an RGB space domain image to the backend video capture unit. During this process, the ISP controls the ISP logic, lens, and sensor through the firmware running on it, thereby implementing functions such as auto iris, auto exposure, and auto white balance. The firmware operation is driven by interrupts from the video capture unit. The PQ Tools tool performs online image quality adjustment of the ISP through the network port or serial port. The ISP consists of ISP logic and the firmware running on it. In addition to completing part of the algorithm processing, the logic unit can also collect real-time information about the current image. The firmware obtains image statistics from the ISP logic, recalculates, and provides feedback control to the lens, sensor, and ISP logic to achieve automatic image quality adjustment. **Figure 1** ISP Control Structure Diagram For the main ISP logic flow, specific concepts, and functional points, please refer to the chip manual. ### Architecture The ISP firmware consists of three parts: one part is the ISP control unit and basic algorithm library, one part is the AE/AWB algorithm library, and one part is the sensor library. The basic idea of the firmware design is to provide the 3A algorithm library separately, with the ISP control unit scheduling the basic algorithm library and the 3A algorithm library, while the sensor library registers function callbacks to the ISP basic algorithm library and the 3A algorithm library respectively, to achieve differentiated sensor adaptation. The ISP firmware architecture is shown in [Figure 1](#fig1959110622411). **Figure 1** ISP Firmware Architecture Different sensors all register control functions with the ISP algorithm library in the form of callback functions. When the ISP control unit schedules the basic algorithm library and the 3A algorithm library, it will obtain initialization parameters through these callback functions and control the sensor, such as adjusting exposure time, analog gain, digital gain, and controlling lens step focusing or iris rotation. ### Development Mode The SDK supports users using multiple development modes: 1. Users use the SDK's 3A algorithm library. In this case, users need to adapt different sensors according to the sensor adaptation interfaces provided by the ISP basic algorithm library and the 3A algorithm library. Each sensor corresponds to a folder, which contains two main files: - sensor\_cmos.c This file mainly implements the callback functions required by ISP. These callback functions contain the sensor adaptation algorithm, which may vary for different sensors. - sensor\_ctrl.c The sensor's low-level control driver, mainly implementing sensor read/write and initialization operations. Users can develop these two files based on the sensor's datasheet, and can seek support from the sensor manufacturer when necessary. 2. Users implement their own 3A algorithm library development based on the 3A algorithm registration interface provided by the ISP library. In this case, users need to adapt different sensors according to the sensor adaptation interfaces provided by the ISP basic algorithm library and the user's 3A algorithm library.[¶](#overview-isp-completes-the-processing-of-digital-image-effects-through-a-series-of-digital-image-processing-algorithms-it-mainly-includes-3a-bad-pixel-correction-denoising-highlight-suppression-backlight-compensation-color-enhancement-lens-shading-correction-and-other-processing-isp-consists-of-a-logic-part-and-the-firmware-running-on-it-this-section-mainly-introduces-the-isp-user-interface-function-description-the-isp-control-structure-is-shown-in-figure-1-after-the-lens-projects-the-light-signal-onto-the-sensors-photosensitive-area-the-sensor-performs-photoelectric-conversion-and-sends-the-original-bayer-format-image-to-the-isp-the-isp-processes-it-through-algorithms-and-outputs-an-rgb-space-domain-image-to-the-backend-video-capture-unit-during-this-process-the-isp-controls-the-isp-logic-lens-and-sensor-through-the-firmware-running-on-it-thereby-implementing-functions-such-as-auto-iris-auto-exposure-and-auto-white-balance-the-firmware-operation-is-driven-by-interrupts-from-the-video-capture-unit-the-pq-tools-tool-performs-online-image-quality-adjustment-of-the-isp-through-the-network-port-or-serial-port-the-isp-consists-of-isp-logic-and-the-firmware-running-on-it-in-addition-to-completing-part-of-the-algorithm-processing-the-logic-unit-can-also-collect-real-time-information-about-the-current-image-the-firmware-obtains-image-statistics-from-the-isp-logic-recalculates-and-provides-feedback-control-to-the-lens-sensor-and-isp-logic-to-achieve-automatic-image-quality-adjustment-figure-1-isp-control-structure-diagram-for-the-main-isp-logic-flow-specific-concepts-and-functional-points-please-refer-to-the-chip-manual-architecture-the-isp-firmware-consists-of-three-parts-one-part-is-the-isp-control-unit-and-basic-algorithm-library-one-part-is-the-aeawb-algorithm-library-and-one-part-is-the-sensor-library-the-basic-idea-of-the-firmware-design-is-to-provide-the-3a-algorithm-library-separately-with-the-isp-control-unit-scheduling-the-basic-algorithm-library-and-the-3a-algorithm-library-while-the-sensor-library-registers-function-callbacks-to-the-isp-basic-algorithm-library-and-the-3a-algorithm-library-respectively-to-achieve-differentiated-sensor-adaptation-the-isp-firmware-architecture-is-shown-in-figure-1-figure-1-isp-firmware-architecture-different-sensors-all-register-control-functions-with-the-isp-algorithm-library-in-the-form-of-callback-functions-when-the-isp-control-unit-schedules-the-basic-algorithm-library-and-the-3a-algorithm-library-it-will-obtain-initialization-parameters-through-these-callback-functions-and-control-the-sensor-such-as-adjusting-exposure-time-analog-gain-digital-gain-and-controlling-lens-step-focusing-or-iris-rotation-development-mode-the-sdk-supports-users-using-multiple-development-modes-1-users-use-the-sdks-3a-algorithm-library-in-this-case-users-need-to-adapt-different-sensors-according-to-the-sensor-adaptation-interfaces-provided-by-the-isp-basic-algorithm-library-and-the-3a-algorithm-library-each-sensor-corresponds-to-a-folder-which-contains-two-main-files-sensor_cmosc-this-file-mainly-implements-the-callback-functions-required-by-isp-these-callback-functions-contain-the-sensor-adaptation-algorithm-which-may-vary-for-different-sensors-sensor_ctrlc-the-sensors-low-level-control-driver-mainly-implementing-sensor-readwrite-and-initialization-operations-users-can-develop-these-two-files-based-on-the-sensors-datasheet-and-can-seek-support-from-the-sensor-manufacturer-when-necessary-2-users-implement-their-own-3a-algorithm-library-development-based-on-the-3a-algorithm-registration-interface-provided-by-the-isp-library-in-this-case-users-need-to-adapt-different-sensors-according-to-the-sensor-adaptation-interfaces-provided-by-the-isp-basic-algorithm-library-and-the-users-3a-algorithm-library "锚链接")
 
-1. Users partially use the 3A algorithm library from the SDK and partially implement their own 3A algorithm library. For example, AE uses libot\_ae.a, and AWB uses its own 3A algorithm library. The SDK provides flexible and diverse support methods. ### Internal Flow The firmware internal flow is divided into two parts, as shown in [Figure 1](#fig39021449132613). One part is the initialization task, which mainly completes the initialization of the ISP control unit, ISP basic algorithm library, and 3A algorithm library, including calling sensor callbacks to obtain sensor-specific initialization parameters. The other part is the dynamic adjustment process, during which the ISP control unit in the firmware schedules the ISP basic algorithm library and the 3A algorithm library, performing real-time calculations and corresponding control. The firmware software structure is shown in [Figure 2](#fig81434122714). **Figure 1** ISP Firmware Internal Flow [](figures/ISP-firmware-Internalstream.png) **Figure 2** ISP Firmware Software Structure [](figures/ISP-firmware-Software.png)
-
-### Software Flow As the front-end capture component, ISP needs to work together with the Video Input Unit (VIU). After ISP initialization and basic configuration, the VIU needs to perform interface timing matching. This is done first to match the input timing of different sensors, and second to configure the correct input timing for the ISP. Once the timing configuration is complete, the ISP can start running to perform dynamic image quality adjustment. The output image is then captured by the VIU and sent for display or encoding. The software usage flow is shown in [Figure 1](#fig796617213110). The PQ Tools tool mainly performs dynamic image quality adjustment on the PC side, allowing adjustment of multiple factors that affect image quality, such as denoising strength, color conversion matrix, and saturation. **Figure 1** ISP Firmware Usage Flow After the user has debugged the image effect, they can use the configuration file save function provided by the PQ Tools tool to save the configuration parameters. On the next startup, the system can use the configuration file loading function provided by the PQ Tools tool to load the already adjusted image parameters. Code Example: ```[¶](#software-flow-as-the-front-end-capture-component-isp-needs-to-work-together-with-the-video-input-unit-viu-after-isp-initialization-and-basic-configuration-the-viu-needs-to-perform-interface-timing-matching-this-is-done-first-to-match-the-input-timing-of-different-sensors-and-second-to-configure-the-correct-input-timing-for-the-isp-once-the-timing-configuration-is-complete-the-isp-can-start-running-to-perform-dynamic-image-quality-adjustment-the-output-image-is-then-captured-by-the-viu-and-sent-for-display-or-encoding-the-software-usage-flow-is-shown-in-figure-1-the-pq-tools-tool-mainly-performs-dynamic-image-quality-adjustment-on-the-pc-side-allowing-adjustment-of-multiple-factors-that-affect-image-quality-such-as-denoising-strength-color-conversion-matrix-and-saturation-figure-1-isp-firmware-usage-flow-after-the-user-has-debugged-the-image-effect-they-can-use-the-configuration-file-save-function-provided-by-the-pq-tools-tool-to-save-the-configuration-parameters-on-the-next-startup-the-system-can-use-the-configuration-file-loading-function-provided-by-the-pq-tools-tool-to-load-the-already-adjusted-image-parameters-code-example "锚链接")
+1. Users partially use the 3A algorithm library from the SDK and partially implement their own 3A algorithm library. For example, AE uses libot\_ae.a, and AWB uses its own 3A algorithm library. The SDK provides flexible and diverse support methods. ### Internal Flow The firmware internal flow is divided into two parts, as shown in [Figure 1](#fig39021449132613). One part is the initialization task, which mainly completes the initialization of the ISP control unit, ISP basic algorithm library, and 3A algorithm library, including calling sensor callbacks to obtain sensor-specific initialization parameters. The other part is the dynamic adjustment process, during which the ISP control unit in the firmware schedules the ISP basic algorithm library and the 3A algorithm library, performing real-time calculations and corresponding control. The firmware software structure is shown in [Figure 2](#fig81434122714). **Figure 1** ISP Firmware Internal Flow **Figure 2** ISP Firmware Software Structure ### Software Flow As the front-end capture component, ISP needs to work together with the Video Input Unit (VIU). After ISP initialization and basic configuration, the VIU needs to perform interface timing matching. This is done first to match the input timing of different sensors, and second to configure the correct input timing for the ISP. Once the timing configuration is complete, the ISP can start running to perform dynamic image quality adjustment. The output image is then captured by the VIU and sent for display or encoding. The software usage flow is shown in [Figure 1](#fig796617213110). The PQ Tools tool mainly performs dynamic image quality adjustment on the PC side, allowing adjustment of multiple factors that affect image quality, such as denoising strength, color conversion matrix, and saturation. **Figure 1** ISP Firmware Usage Flow After the user has debugged the image effect, they can use the configuration file save function provided by the PQ Tools tool to save the configuration parameters. On the next startup, the system can use the configuration file loading function provided by the PQ Tools tool to load the already adjusted image parameters. Code Example: ```[¶](#software-flow-as-the-front-end-capture-component-isp-needs-to-work-together-with-the-video-input-unit-viu-after-isp-initialization-and-basic-configuration-the-viu-needs-to-perform-interface-timing-matching-this-is-done-first-to-match-the-input-timing-of-different-sensors-and-second-to-configure-the-correct-input-timing-for-the-isp-once-the-timing-configuration-is-complete-the-isp-can-start-running-to-perform-dynamic-image-quality-adjustment-the-output-image-is-then-captured-by-the-viu-and-sent-for-display-or-encoding-the-software-usage-flow-is-shown-in-figure-1-the-pq-tools-tool-mainly-performs-dynamic-image-quality-adjustment-on-the-pc-side-allowing-adjustment-of-multiple-factors-that-affect-image-quality-such-as-denoising-strength-color-conversion-matrix-and-saturation-figure-1-isp-firmware-usage-flow-after-the-user-has-debugged-the-image-effect-they-can-use-the-configuration-file-save-function-provided-by-the-pq-tools-tool-to-save-the-configuration-parameters-on-the-next-startup-the-system-can-use-the-configuration-file-loading-function-provided-by-the-pq-tools-tool-to-load-the-already-adjusted-image-parameters-code-example "锚链接")
 
 td\_s32 ret;
 ot\_isp\_3a\_alg\_lib ae\_lib;
@@ -69,9 +66,7 @@ if (TD\_SUCCESS != ret) {
 printf(”isp exit failed!\n”);
 return ret;
 } pthread\_join(isp\_pid, 0);
-return TD\_SUCCESS; ``` >[](../../../../../multimedia/isp/dev-ref/public_sys-resources/icon-note.gif) **Note:** >The AE library uses the standard C math library. Please add the -lm compilation flag in the Makefile. ### File Organization The file organization structure of the ISP firmware is shown in [Figure 1](#fig142122515335). The ISP library, 3A library, sensor library, dehaze library, ldci library, and drc library are each independent. The driver generated by drv in the firmware reports ISP interrupts to user space and drives the ISP control unit of the firmware to operate using these interrupts. The ISP control unit obtains statistics from the driver program and schedules the basic algorithm unit and 3A algorithm library, finally configuring registers through the driver. The Src folder contains the ISP control unit and basic algorithm unit, which are compiled to generate libss\_isp.a and libot\_isp.a, i.e., the ISP library. The 3a folder contains the AE/AWB algorithm library; users can also develop their own 3A algorithms based on a unified interface. The Sensor folder contains driver programs for each sensor; this code is open source. The dehaze folder corresponds to the dehazing algorithm program, the ldci folder corresponds to the local automatic contrast enhancement algorithm program, and the drc folder corresponds to the dynamic range compression algorithm program; these parts are not open source. **Figure 1** ISP Firmware File Organization [](figures/ISP-firmware-File Group.png)
-
-# System Control[¶](#system-control "锚链接")
+return TD\_SUCCESS; ``` > **Note:** >The AE library uses the standard C math library. Please add the -lm compilation flag in the Makefile. ### File Organization The file organization structure of the ISP firmware is shown in [Figure 1](#fig142122515335). The ISP library, 3A library, sensor library, dehaze library, ldci library, and drc library are each independent. The driver generated by drv in the firmware reports ISP interrupts to user space and drives the ISP control unit of the firmware to operate using these interrupts. The ISP control unit obtains statistics from the driver program and schedules the basic algorithm unit and 3A algorithm library, finally configuring registers through the driver. The Src folder contains the ISP control unit and basic algorithm unit, which are compiled to generate libss\_isp.a and libot\_isp.a, i.e., the ISP library. The 3a folder contains the AE/AWB algorithm library; users can also develop their own 3A algorithms based on a unified interface. The Sensor folder contains driver programs for each sensor; this code is open source. The dehaze folder corresponds to the dehazing algorithm program, the ldci folder corresponds to the local automatic contrast enhancement algorithm program, and the drc folder corresponds to the dynamic range compression algorithm program; these parts are not open source. **Figure 1** ISP Firmware File Organization # System Control[¶](#system-control "锚链接")
 
 ## Function Overview The system control section includes ISP public attribute configuration, initializing the ISP firmware, running the ISP firmware, exiting the ISP firmware, and setting ISP modules and other functions. ## API Reference The interfaces in this document, unless otherwise specified, support multi-process. - [ss\_mpi\_isp\_mem\_init](#ZH-CN_TOPIC_0000002471084920): Initialize the ISP external registers.[¶](#function-overview-the-system-control-section-includes-isp-public-attribute-configuration-initializing-the-isp-firmware-running-the-isp-firmware-exiting-the-isp-firmware-and-setting-isp-modules-and-other-functions-api-reference-the-interfaces-in-this-document-unless-otherwise-specified-support-multi-process-ss_mpi_isp_mem_init-initialize-the-isp-external-registers "锚链接")
 
@@ -338,7 +333,7 @@ td_u32 g_SlaveSensorModeTime[ISP_MAX_PIPE_NUM] = {0, x, 1, x, 2, x, 3, x};` Here
 | Parameter Name | Description | Input/Output |
 | --- | --- | --- |
 | vi\_pipe | vi\_pipe number. | Input |
-| mod\_ctrl | Module control value.Each bit controls the enabling of a function module in the ISP.  0: Enable this module;  1: Disable this module. | Input |
+| mod\_ctrl | Module control value.Each bit controls the enabling of a function module in the ISP. 0: Enable this module; 1: Disable this module. | Input |
 
 **Return Value**
 
@@ -401,7 +396,7 @@ td_u32 g_SlaveSensorModeTime[ISP_MAX_PIPE_NUM] = {0, x, 1, x, 2, x, 3, x};` Here
 **Requirements** - Header: ot\_common\_isp.h、ss\_mpi\_isp.h
 - Library: libss\_isp.a、libot\_isp.a **Note** - sensor\_id is a user-defined value within the sensor library, primarily used to verify that the sensor registered with the ISP and the sensor registered with 3A are the same sensor.
 - The ISP acquires differentiated initialization parameters and controls the sensor through a series of callback interfaces registered by the sensor.
-- This interfacedoes not support multi-process operation. **Figure 1** Interface between ISP library and sensor library [](figures/ISP Andsensor Interface.png) **Example** `ot_vi_pipe vi_pipe = 0;
+- This interfacedoes not support multi-process operation. **Figure 1** Interface between ISP library and sensor library **Example** `ot_vi_pipe vi_pipe = 0;
 td_s32 ret;
 ot_isp_sensor_register isp_register;
 ot_isp_sns_attr_info sns_attr_info;
@@ -453,7 +448,7 @@ return ret;
 **Requirements** - Header: ot\_common\_isp.h、ss\_mpi\_isp.h
 - Library: libss\_isp.a、libot\_isp.a **Note** - The ISP provides a unified AE algorithm library interface for initializing, running, controlling, and destroying the AE library. When using the SDK's AE algorithm library, this interface does not need to be called. When using a custom AE algorithm library, this interface must be used to register callback functions.
 - This interfacedoes not support multi-process operation.
-- A maximum of 2 AE libraries can be registered. **Figure 1** Interface between ISP library and AE library [](figures/ISP And AE Interface.png) **Example** `ot_isp_ae_register ae_register;
+- A maximum of 2 AE libraries can be registered. **Figure 1** Interface between ISP library and AE library **Example** `ot_isp_ae_register ae_register;
 td_s32 ret = TD_SUCCESS;
 ae_register.ae_exp_func.pfn_ae_init = ae_init;
 ae_register.ae_exp_func.pfn_ae_run = ae_run;
@@ -501,7 +496,7 @@ return ret;` **Related Topics** [ss\_mpi\_isp\_ae\_lib\_reg\_callback](#ss_mpi_i
 **Requirements** - Header: ot\_common\_isp.h、ss\_mpi\_isp.h
 - Library: libss\_isp.a、libot\_isp.a **Note** - ISP provides a unified AWB algorithm library interface for initializing, running, controlling, and destroying the AWB algorithm library. When using the SDK's AWB algorithm library, you do not need to pay attention to this interface. When using your own AWB algorithm library, you need to call this interface to register the callback function with the ISP.
 - This interface does not support multi-process operation.
-- Supports a maximum of 2 AWB library registrations. **Figure 1** Interface between ISP library and AWB library [](figures/ISP And AWB Interface.png) **Example** None **Related Topics** [ss\_mpi\_isp\_awb\_lib\_unreg\_callback](#ss_mpi_isp_awb_lib_unreg_callback) ### ss\_mpi\_isp\_awb\_lib\_unreg\_callback [Description] ISP callback interface for AWB library unregistration. **Syntax** `td_s32 ss_mpi_isp_awb_lib_unreg_callback(ot_vi_pipe vi_pipe, ot_isp_3a_alg_lib *awb_lib);` **Parameters**
+- Supports a maximum of 2 AWB library registrations. **Figure 1** Interface between ISP library and AWB library **Example** None **Related Topics** [ss\_mpi\_isp\_awb\_lib\_unreg\_callback](#ss_mpi_isp_awb_lib_unreg_callback) ### ss\_mpi\_isp\_awb\_lib\_unreg\_callback [Description] ISP callback interface for AWB library unregistration. **Syntax** `td_s32 ss_mpi_isp_awb_lib_unreg_callback(ot_vi_pipe vi_pipe, ot_isp_3a_alg_lib *awb_lib);` **Parameters**
 
 | Parameter Name | Description | Input/Output |
 | --- | --- | --- |
@@ -1295,8 +1290,8 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 
 | Member Name | Description |
 | --- | --- |
-| width | Sensor output width.  Hi3403V100Valid range: [120, 8192] |
-| height | Sensor output height.  Hi3403V100Valid range: [120, 8192] |
+| width | Sensor output width. Hi3403V100Valid range: [120, 8192] |
+| height | Sensor output height. Hi3403V100Valid range: [120, 8192] |
 
 **Precautions** Image width must be less than the sensor output image width; image height must be less than the sensor output image height. **Related Data Types and Interfaces** None ### ot\_color\_gamut **Description** Defines channel color gamut attributes. **Definition** `typedef enum { OT_COLOR_GAMUT_BT601 = 0, OT_COLOR_GAMUT_BT709, OT_COLOR_GAMUT_BT2020, OT_COLOR_GAMUT_USER, OT_COLOR_GAMUT_BUTT
 } ot_color_gamut;` **Members**
@@ -1371,7 +1366,7 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | Member Name | Description |
 | --- | --- |
 | bit16\_reserved | Reserved field. |
-| bit\_h\_inv | XHS polarity configuration.   - 0: positive polarity; - 1: negative polarity. |
+| bit\_h\_inv | XHS polarity configuration. - 0: positive polarity; - 1: negative polarity. |
 | bit\_v\_inv | XVS polarity configuration. |
 | bit12\_reserved | Reserved field. |
 | bit\_h\_enable | XHS output enable. |
@@ -1381,9 +1376,9 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | vs\_cyc | XVS active level width, unit: sensor input clock cycles. |
 | hs\_cyc | XHS active level width, unit: sensor input clock cycles. |
 | hs\_dly\_cyc | XHS pulse output delay relative to XVS pulse, unit: sensor input clock cycles. |
-| slave\_mode\_time | Sensor slave mode timing configuration selection register:  0: Select SENSOR0 timing configuration;  1: Select SENSOR1 timing configuration;  2: Select SENSOR2 timing configuration;  3: Select SENSOR3 timing configuration. |
+| slave\_mode\_time | Sensor slave mode timing configuration selection register: 0: Select SENSOR0 timing configuration; 1: Select SENSOR1 timing configuration; 2: Select SENSOR2 timing configuration; 3: Select SENSOR3 timing configuration. |
 
-**Precautions** As shown in [Figure 1](#_Ref440016125) to [Figure 3](#_Ref440016130), the meaning of each configuration parameter for the sync signal generator module is illustrated. **Figure 1** Sync signal configuration timing diagram [](figures/Sync Signal Configuration Timing Diagram.png) **Figure 2** Sync signal polarity inversion [](figures/Sync Signal Polarity Inversion.png) **Figure 3** Sync signal enabled [](figures/Sync No.Makecan.png) **Related Data Types and Interfaces** None ### ot\_isp\_wdr\_mode **Description** Defines ISP wide dynamic range mode. **Definition** `typedef struct { ot_wdr_mode wdr_mode;
+**Precautions** As shown in [Figure 1](#_Ref440016125) to [Figure 3](#_Ref440016130), the meaning of each configuration parameter for the sync signal generator module is illustrated. **Figure 1** Sync signal configuration timing diagram **Figure 2** Sync signal polarity inversion **Figure 3** Sync signal enabled **Related Data Types and Interfaces** None ### ot\_isp\_wdr\_mode **Description** Defines ISP wide dynamic range mode. **Definition** `typedef struct { ot_wdr_mode wdr_mode;
 } ot_isp_wdr_mode;` **Members**
 
 | Member Name | Description |
@@ -1430,7 +1425,7 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | bit\_bypass\_sharpen | Bypass Sharpen. |
 | bit\_bypass\_local\_cac | Bypass Local CAC. |
 | bit\_bypass\_acac | Bypass ACAC |
-| bit2\_chn\_select | WDR mode main-path data source; typically used for debug after bypassing the multi-frame WDR synthesis module.  0: Main-path data source is the ultra-short frame;  1: Main-path data source is the short frame;  2: Main-path data source is the medium frame;  3: Main-path data source is the long frame. |
+| bit2\_chn\_select | WDR mode main-path data source; typically used for debug after bypassing the multi-frame WDR synthesis module. 0: Main-path data source is the ultra-short frame; 1: Main-path data source is the short frame; 2: Main-path data source is the medium frame; 3: Main-path data source is the long frame. |
 | bit\_bypass\_ldci | Bypass Local DCI. |
 | bit\_bypass\_pregamma | Bypass Pre Gamma. |
 | bit\_bypass\_ae\_stat\_fe | Bypass AE statistics at the FE. |
@@ -1634,16 +1629,16 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | bit1\_anti\_false\_color | Flag bit for whether the Anti-False-Color module uses the CMOS default configuration. |
 | bit1\_bayer\_nr | Flag bit for whether the Bayer NR module uses the CMOS default configuration. |
 | bit1\_ca | Flag bit for whether the CA module uses the CMOS default configuration. |
-| bit1\_expander | Flag bit for whether the Expander module uses the CMOS default configuration.  Valid only in sensor built-in mode. |
+| bit1\_expander | Flag bit for whether the Expander module uses the CMOS default configuration. Valid only in sensor built-in mode. |
 | bit1\_clut | Flag bit for whether the CLUT module uses the CMOS default configuration. |
 | bit1\_wdr | Flag bit for whether the WDR module uses the CMOS default configuration. |
 | bit1\_dehaze | Flag bit for whether the Dehaze module uses the CMOS default configuration. |
 | bit1\_lcac | Flag bit for whether the Local CAC module uses the CMOS default configuration. |
 | bit1\_acs | Flag bit for whether the ACS module uses the CMOS default configuration. |
-| bit1\_rgbir | Flag bit for whether the RGBIR module uses the CMOS default configuration.  Valid only in linear mode. |
+| bit1\_rgbir | Flag bit for whether the RGBIR module uses the CMOS default configuration. Valid only in linear mode. |
 | bit1\_bshp | Flag bit for whether the Bayer Sharpen module uses the CMOS default configuration. |
 | bit1\_acac | Flag bit for whether the ACAC module uses the CMOS default configuration. |
-| bit1\_crb | Flag bit for whether the CRB module uses the CMOS default configuration.  Valid only in WDR mode. |
+| bit1\_crb | Flag bit for whether the CRB module uses the CMOS default configuration. Valid only in WDR mode. |
 
 **Precautions** To use the CMOS configuration for an ISP algorithm module, set the corresponding flag bit to 1; otherwise, the algorithm's internal default configuration is used. **Related Data Types and Interfaces** [ot\_isp\_cmos\_default](#ot_isp_cmos_default) ### ot\_isp\_cmos\_default **Description** Defines the initialization parameter struct for the ISP base algorithm library. **Definition** Definition for Hi3403V100: `typedef struct { ot_isp_cmos_alg_key key; const ot_isp_drc_attr *drc; const ot_isp_demosaic_attr *demosaic; const ot_isp_pregamma_attr *pregamma; const ot_isp_gamma_attr *gamma; const ot_isp_sharpen_attr *sharpen; const ot_isp_ldci_attr *ldci; const ot_isp_dp_dynamic_auto_attr *dpc; const ot_isp_cmos_lsc *lsc; const ot_isp_cr_attr *ge; const ot_isp_anti_false_color_attr *anti_false_color; const ot_isp_nr_attr *bayer_nr; const ot_isp_ca_attr *ca; const ot_isp_expander_attr *expander; const ot_isp_cmos_clut *clut; const ot_isp_wdr_fs_attr *wdr; const ot_isp_dehaze_attr *dehaze; const ot_isp_local_cac_attr *lcac; const ot_isp_acac_attr *acac; const ot_isp_bayershp_attr *bshp; const ot_isp_cmos_acs *acs; const ot_isp_rgbir_attr *rgbir; const ot_isp_crb_attr *crb; ot_isp_noise_calibration noise_calibration; ot_isp_cmos_sensor_max_resolution sensor_max_resolution; ot_isp_cmos_sensor_mode sensor_mode; ot_isp_cmos_dng_color_param dng_color_param; ot_isp_cmos_wdr_switch_attr wdr_switch_attr;
 } ot_isp_cmos_default;` **Members**
@@ -1663,7 +1658,7 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | \*anti\_false\_color | Anti Falsestructure pointer. |
 | \*bayer\_nr | BayerN Rstructure pointer. |
 | \*ca | CA module structure pointer. |
-| \*expander | Expanderstructure pointer.  Valid only in sensor built-in mode. |
+| \*expander | Expanderstructure pointer. Valid only in sensor built-in mode. |
 | \*clut | Clutstructure pointer. |
 | \*wdr | WDR mode structure pointer. |
 | \*dehaze | Dehazestructure pointer. |
@@ -1671,8 +1666,8 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | \*acac | acacstructure pointer. |
 | \*bshp | Bayer sharpenstructure pointer. |
 | \*acs | AC Sstructure pointer. |
-| \*rgbir | RGBIR mode structure pointer.  Valid only in linear mode. |
-| \*crb | CR Bstructure pointer.  Valid only in WDR mode. |
+| \*rgbir | RGBIR mode structure pointer. Valid only in linear mode. |
+| \*crb | CR Bstructure pointer. Valid only in WDR mode. |
 | noise\_calibration | Noise calibration struct. |
 | sensor\_max\_resolution | Sensor maximum width/height struct. |
 | sensor\_mode | Sensor mode struct. |
@@ -1686,14 +1681,14 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | Member Name | Description |
 | --- | --- |
 | update | Indicates whether the sensor black level changes dynamically with gain. Valid range: [0, 1]. If set to TD\_TRUE, the ISP always uses the dynamic black level configured in cmos.c; to manually change the ISP black level, set ss\_mpi\_isp\_set\_black\_level\_attr to manual mode. |
-| black\_level | Sensor black level array. Valid range: [0, 0x3FFF]  black\_level is the black level for 14-bit raw data. |
+| black\_level | Sensor black level array. Valid range: [0, 0x3FFF] black\_level is the black level for 14-bit raw data. |
 
 **Precautions** If the sensor black level does not change dynamically with gain, set update to TD\_FALSE. **Related Data Types and Interfaces** [ot\_isp\_sensor\_exp\_func](#ot_isp_sensor_exp_func) ### ot\_isp\_sensor\_total\_size\_attr **Description** Defines the actual width and height of the data written out by the sensor. **Definition** `typedef struct { ot_size ob_sensor_size;
 } ot_isp_sensor_total_size_attr;` **Members**
 
 | Member Name | Description |
 | --- | --- |
-| ob\_sensor\_size | Actual width and height of the data written out by the sensor.  If the data written by the sensor includes the OB region,ob\_sensor\_size should be the width and height including the OB region. |
+| ob\_sensor\_size | Actual width and height of the data written out by the sensor. If the data written by the sensor includes the OB region,ob\_sensor\_size should be the width and height including the OB region. |
 
 **Precautions** If the sensor output data includes an OB region, the MIPI output width and height must match ob\_sensor\_size to ensure correct dynamic BLC operation. **Related Data Types and Interfaces** [ot\_isp\_cmos\_black\_level](#ot_isp_cmos_black_level) ### ot\_isp\_cmos\_black\_level **Description** Defines the sensor black level struct. **Definition** `typedef struct { td_bool user_black_level_en; td_u16 user_black_level[OT_ISP_WDR_MAX_FRAME_NUM][OT_ISP_BAYER_CHN_NUM]; ot_isp_black_level_mode black_level_mode; ot_isp_black_level_manual_attr manual_attr; ot_isp_black_level_dynamic_attr dynamic_attr; ot_isp_black_level_auto_attr auto_attr; ot_isp_sensor_total_size_attr sensor_with_ob_attr;
 } ot_isp_cmos_black_level;` **Members**
@@ -1727,9 +1722,9 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | ssp\_dev | SPI device number struct bound to the sensor. | |
 | bit4\_ssp\_dev | SPI device number bound to the sensor. |
 | bit4\_ssp\_cs | SPI chip-select signal bound to the sensor. |
-| i2c\_data | update | TD\_TRUE: data will be written to the sensor registers;  TD\_FALSE: data will not be written to the sensor registers. | |
+| i2c\_data | update | TD\_TRUE: data will be written to the sensor registers; TD\_FALSE: data will not be written to the sensor registers. | |
 | delay\_frame\_num | Number of frames the sensor register configuration is delayed. This variable ensures that exposure time and gain take effect simultaneously. | |
-| interrupt\_pos | Position at which the sensor register configuration takes effect.   - 0x0: at the ultra-short frame start interrupt; 0x1: at the ultra-short frame end interrupt. - 0x10: at the short frame start interrupt; 0x11: at the short frame end interrupt. - 0x20: at the medium frame start interrupt; 0x21: at the medium frame end interrupt. - 0x30: at the long frame start interrupt; 0x31: at the long frame end interrupt. | |
+| interrupt\_pos | Position at which the sensor register configuration takes effect. - 0x0: at the ultra-short frame start interrupt; 0x1: at the ultra-short frame end interrupt. - 0x10: at the short frame start interrupt; 0x11: at the short frame end interrupt. - 0x20: at the medium frame start interrupt; 0x21: at the medium frame end interrupt. - 0x30: at the long frame start interrupt; 0x31: at the long frame end interrupt. | |
 | dev\_addr | Sensor device address. | |
 | reg\_addr | Sensor register address. | |
 | addr\_byte\_num | Sensor register address bit width. | |
@@ -1737,18 +1732,18 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | data\_byte\_num | Sensor register data bit width. | |
 | ssp\_data | update | TD\_TRUE: data will be written to the sensor registers; TD\_FALSE: data will not be written to the sensor registers. | |
 | delay\_frame\_num | Number of frames the sensor register configuration is delayed. This variable ensures that exposure time and gain take effect simultaneously. | |
-| interrupt\_pos | Position at which the sensor register configuration takes effect.   - 0x0: at the frame start interrupt; 0x1: at the AF interrupt. - 0x10: at the short frame start interrupt; 0x11: at the short frame end interrupt. - 0x20: at the medium frame start interrupt; 0x21: at the medium frame end interrupt. - 0x30: at the long frame start interrupt; 0x31: at the long frame end interrupt. | |
+| interrupt\_pos | Position at which the sensor register configuration takes effect. - 0x0: at the frame start interrupt; 0x1: at the AF interrupt. - 0x10: at the short frame start interrupt; 0x11: at the short frame end interrupt. - 0x20: at the medium frame start interrupt; 0x21: at the medium frame end interrupt. - 0x30: at the long frame start interrupt; 0x31: at the long frame end interrupt. | |
 | dev\_addr | Sensor device address. | |
 | dev\_addr\_byte\_num | Sensor device address bit width. | |
 | reg\_addr | Sensor register address. | |
 | reg\_addr\_byte\_num | Sensor register address bit width. | |
 | data | Sensor register data. | |
 | data\_byte\_num | Sensor register data bit width. | |
-| slv\_sync | update | TD\_TRUE: data will be written to the sensor registers;  TD\_FALSE: data will not be written to the sensor registers. | |
+| slv\_sync | update | TD\_TRUE: data will be written to the sensor registers; TD\_FALSE: data will not be written to the sensor registers. | |
 | delay\_frame\_num | Number of frames the sensor register configuration is delayed. This variable ensures that exposure time and gain take effect simultaneously. | |
 | slave\_vs\_time | XVS signal period, unit: sensor input clock cycles. | |
 | slave\_bind\_dev | Binding relationship between the slave device number and vi\_pipe. | |
-| config | -- | Sensor register data configuration completion flag.   - TD\_TRUE: configuration complete. - TD\_FALSE: not yet configured. | |
+| config | -- | Sensor register data configuration completion flag. - TD\_TRUE: configuration complete. - TD\_FALSE: not yet configured. | |
 
 **Precautions** None **Related Data Types and Interfaces** [ot\_isp\_sensor\_exp\_func](#ot_isp_sensor_exp_func) ### ot\_isp\_3a\_alg\_lib **Description** Defines the AE/AWB algorithm library struct. **Definition** `typedef struct { td_s32 id; ot_char lib_name[ALG_LIB_NAME_SIZE_MAX];
 } ot_isp_3a_alg_lib;` **Members**
@@ -1811,7 +1806,7 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | stitch\_enable | Stitch enable. |
 | main\_pipe | Whether this is the main pipe. |
 | stitch\_pipe\_num | Total number of stitched pipes. |
-| stitch\_bind\_id | Pipe numbers bound for stitching.  For OT\_VI\_MAX\_PIPE\_NUM details, see the “Video Input” chapter of the MPP Media Processing Software V5.0 Development Reference. |
+| stitch\_bind\_id | Pipe numbers bound for stitching. For OT\_VI\_MAX\_PIPE\_NUM details, see the “Video Input” chapter of the MPP Media Processing Software V5.0 Development Reference. |
 
 **Precautions** None. **Related Data Types and Interfaces** None. ### ot\_isp\_ae\_register **Description** Defines the AE registration struct. **Definition** `typedef struct { ot_isp_ae_exp_func ae_exp_func;
 } ot_isp_ae_register;` **Members**
@@ -1840,7 +1835,7 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | --- | --- |
 | sensor\_id | ID of the sensor registered with ISP; used to verify that the sensor registered with ISP and the sensor registered with AE are consistent. |
 | wdr\_mode | WDR mode; ISP provides WDR mode information to AE. |
-| hdr\_mode | HDR mode; ISP provides HDR mode information to AE.  Not supported. |
+| hdr\_mode | HDR mode; ISP provides HDR mode information to AE. Not supported. |
 | black\_level | Black level value with 12-bit precision; ISP provides black level information to AE. |
 | fps | Frame rate; ISP provides frame rate information to AE. |
 | bayer | Sensor Bayer pattern; includes RGGB, GRBG, GBRG, and BGGR formats. |
@@ -1926,7 +1921,7 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | global\_avg\_ir | Supported on FE0 only. |
 | fe\_ae\_stat3 | zone\_avg | Per-zone R/Gr/Gb/B channel averages. Valid range: [0, 0x FFFF] |
 | zone\_avg\_ir | Supported on FE0 only. |
-| fe\_ae\_sti\_stat | zone\_avg | Post-stitch Per-zone R/Gr/Gb/B channel averages. Valid range: [0, 0x FFFF]  Only per-zone averages for pipes participating in stitching are valid; averages for other pipes are invalid. |
+| fe\_ae\_sti\_stat | zone\_avg | Post-stitch Per-zone R/Gr/Gb/B channel averages. Valid range: [0, 0x FFFF] Only per-zone averages for pipes participating in stitching are valid; averages for other pipes are invalid. |
 | be\_ae\_stat1 | pixel\_count | Total number of counted pixels. |
 | pixel\_weight | Total number of weighted counted pixels. |
 | histogram\_mem\_array | 1024-bin histogram statistics array. Valid range: [0, 0x FFFFFFFF] |
@@ -1936,7 +1931,7 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | global\_avg\_gb | Global Gb channel average. Valid range: [0, 0x FFFF] |
 | global\_avg\_b | Global B channel average. Valid range: [0, 0x FFFF] |
 | be\_ae\_stat3 | zone\_avg | Per-zone R/Gr/Gb/B channel averages. Valid range: [0, 0x FFFF] |
-| be\_ae\_sti\_stat | zone\_avg | Post-stitch Per-zone R/Gr/Gb/B channel averages. Valid range: [0, 0x FFFF]  Only per-zone averages for the corresponding stitched pipe are valid; averages for other pipes are invalid. |
+| be\_ae\_sti\_stat | zone\_avg | Post-stitch Per-zone R/Gr/Gb/B channel averages. Valid range: [0, 0x FFFF] Only per-zone averages for the corresponding stitched pipe are valid; averages for other pipes are invalid. |
 
 **Precautions** - The AE library can control its computation frequency based on frame\_cnt, e.g., running once every two frames.
 - fe\_ae\_stat1 and be\_ae\_stat1 are the global 1024-bin histogram statistics at the FE and BE, respectively. These statisticsis obtained by taking the upper 10 bits of the input data stream; each bin value represents the pixel count for that grayscale level. The global 1024-bin histogram is affected by per-zone weights; the sum of all 1024 bins equals the weighted number of pixels participating in the statistics. Currently, the AE algorithm defaults to using only the Gr channel statistics. When a large red area is present, R and Gb channel statistics are used; when a large blue area is present, B and Gr channel statistics are used.
@@ -1954,7 +1949,7 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | be\_ae\_stat2 | Global average after WDR synthesis | After BE-WB | Subtracted | Yes |
 | be\_ae\_stat3 | Per-zone average after WDR synthesis | After BE-WB | Subtracted | No |
 
-> [](../../../../../multimedia/isp/dev-ref/public_sys-resources/icon-note.gif) **Note:** >- The descriptions in the table are valid only under the ISP default configuration; actual behavior is affected by the black level configuration and the AE statistics position.
+> **Note:** >- The descriptions in the table are valid only under the ISP default configuration; actual behavior is affected by the black level configuration and the AE statistics position.
 > - The pre-WDR (FE) statistics are fixed after the WB module, not configurable. When using FE statistics, the black level must be subtracted: subtract the 10-bit black level for histograms and the 16-bit black level for averages.The pre-WDR (FE) statistics are affected by the gain of processing modules preceding the FE AE (in Hi3403V100, these are DG/WB). The FE gain values for these modules are guaranteed by the algorithm internals to be consistent with BE; no separate configuration is needed.
 > - In Hi3403V100, the channel-0 FE statistics pass through horizontal downsampling, so the number of points is halved.
 > - In linear mode, the pre-WDR (FE) 1024-bin histogram is recommended. In WDR mode, either the pre-WDR (FE) 1024-bin histogram or the post-WDR (BE) 1024-bin histogram with square-root mode is recommended. In offline mode under heavy workloads, the pre-WDR (FE) statistics have better real-time performance, so FE statistics are recommended. The SDK-provided AE algorithm defaults to using BE statistics without square-root mode in linear mode, and BE statistics with square-root mode in WDR mode. Using BE statistics with square-root mode in linear mode, or BE statistics without square-root mode in WDR mode, will cause anomalies in the SDK-provided AE algorithm. **Related Data Types and Interfaces** [ot\_isp\_ae\_exp\_func](#ot_isp_ae_exp_func) ### ot\_isp\_ae\_stat\_attr **Description** Defines the register configuration struct returned by the AE library to the ISP. **Definition** `typedef struct { td_bool change; td_bool hist_adjust; td_u8 ae_be_sel; td_u8 four_plane_mode; td_u8 hist_offset_x; td_u8 hist_offset_y; td_u8 hist_skip_x; td_u8 hist_skip_y; td_bool mode_update; td_u8 hist_mode; td_u8 aver_mode; td_u8 max_gain_mode; td_bool wight_table_update; td_u8 weight_table[OT_ISP_MAX_PIPE_NUM][OT_ISP_AE_ZONE_ROW][OT_ISP_AE_ZONE_COLUMN];
@@ -1963,18 +1958,18 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | Sub-member Name | Description |
 | --- | --- |
 | change | Whether the values in this structwhether the register needs to be configured. |
-| hist\_adjust | AE histogram adjustment enable; controls the configuration of the six parameters: ae\_be\_sel, four\_plane\_mode, hist\_offset\_x, hist\_offset\_y, hist\_skip\_x, hist\_skip\_y.  When hist\_adjust is enabled, the above six parameters take the values from ot\_isp\_ae\_result to configure the chip registers;  When hist\_adjust is disabled, the above six parameters take the values from external registers (MPI configuration) to configure the chip registers. |
-| ae\_be\_sel | Position of the AE statistics module in the ISP pipeline at the BE; default is 1. The AE statistics module at the FE is fixed after WB and its position cannot be moved.  0：After ISP digital gain；  1：After static WB；  2：After DRC。 |
-| four\_plane\_mode | Four-plane mode enable; default is 0. When enabled, the 1024-bin histogram becomes a four-channel 256-bin histogram per BGGR channel.  0: Disabled;  1: Enabled. |
-| hist\_skip\_x | Horizontal sampling point setting for histogram statistics. 0 = every pixel; 1 = every 2nd pixel; 2 = every 3rd pixel; 3 = every 4th pixel; 4 = every 5th pixel; 5 = every 8th pixel; 6+ = every 9th pixel.  A value of 0 means sample every pixel for statistics;  A value of 1 means sample every 2nd pixel, and so on.  0 is only supported when Four Plane Mode is enabled. |
+| hist\_adjust | AE histogram adjustment enable; controls the configuration of the six parameters: ae\_be\_sel, four\_plane\_mode, hist\_offset\_x, hist\_offset\_y, hist\_skip\_x, hist\_skip\_y. When hist\_adjust is enabled, the above six parameters take the values from ot\_isp\_ae\_result to configure the chip registers; When hist\_adjust is disabled, the above six parameters take the values from external registers (MPI configuration) to configure the chip registers. |
+| ae\_be\_sel | Position of the AE statistics module in the ISP pipeline at the BE; default is 1. The AE statistics module at the FE is fixed after WB and its position cannot be moved. 0：After ISP digital gain； 1：After static WB； 2：After DRC。 |
+| four\_plane\_mode | Four-plane mode enable; default is 0. When enabled, the 1024-bin histogram becomes a four-channel 256-bin histogram per BGGR channel. 0: Disabled; 1: Enabled. |
+| hist\_skip\_x | Horizontal sampling point setting for histogram statistics. 0 = every pixel; 1 = every 2nd pixel; 2 = every 3rd pixel; 3 = every 4th pixel; 4 = every 5th pixel; 5 = every 8th pixel; 6+ = every 9th pixel. A value of 0 means sample every pixel for statistics; A value of 1 means sample every 2nd pixel, and so on. 0 is only supported when Four Plane Mode is enabled. |
 | hist\_skip\_y | Vertical sampling point setting for histogram statistics. 0 = every pixel; 1 = every 2nd pixel; 2 = every 3rd pixel; 3 = every 4th pixel; 4 = every 5th pixel; 5 = every 8th pixel; 6+ = every 9th pixel. |
-| hist\_offset\_x | Horizontal starting point setting for histogram statistics.  0: start from the first column;  1: start from the second column. |
-| hist\_offset\_y | Vertical starting point setting for histogram statistics.  0: start from the first row;  1: start from the second row. |
-| mode\_update | AE square-root mode configuration enable; controls the configuration of the three parameters hist\_mode, aver\_mode, and max\_gain\_mode.  When mode\_update is non-zero, the above three parameters take the values from ot\_isp\_ae\_result to configure the logic registers;  When mode\_update is 0, the above three parameters take the values from external registers (MPI configuration) to configure the logic registers. |
-| hist\_mode | Square-root mode for the global 1024-bin histogram.  0: disabled (no square-root);  1: enabled (square-root).  Affects only BE histogram statistics. |
-| aver\_mode | Square-root mode for averages.  0: disabled (no square-root);  1: enabled (square-root).  Affects only BE average statistics. |
-| max\_gain\_mode | Square-root mode for the MG module.  0: disabled (no square-root);  1: enabled (square-root).  Affects only MG module statistics. For comparison with AE per-zone statistics, it is recommended to configure the same mode as aver\_mode. |
-| wight\_table\_update | AE weight table configuration enable; controls the weight\_table configuration.   - When wight\_table\_update is non-zero, the weight table takes values from ot\_isp\_ae\_result to configure the chip registers; - When wight\_table\_update is 0, the weight table takes values from external registers (MPI configuration) to configure the chip registers. |
+| hist\_offset\_x | Horizontal starting point setting for histogram statistics. 0: start from the first column; 1: start from the second column. |
+| hist\_offset\_y | Vertical starting point setting for histogram statistics. 0: start from the first row; 1: start from the second row. |
+| mode\_update | AE square-root mode configuration enable; controls the configuration of the three parameters hist\_mode, aver\_mode, and max\_gain\_mode. When mode\_update is non-zero, the above three parameters take the values from ot\_isp\_ae\_result to configure the logic registers; When mode\_update is 0, the above three parameters take the values from external registers (MPI configuration) to configure the logic registers. |
+| hist\_mode | Square-root mode for the global 1024-bin histogram. 0: disabled (no square-root); 1: enabled (square-root). Affects only BE histogram statistics. |
+| aver\_mode | Square-root mode for averages. 0: disabled (no square-root); 1: enabled (square-root). Affects only BE average statistics. |
+| max\_gain\_mode | Square-root mode for the MG module. 0: disabled (no square-root); 1: enabled (square-root). Affects only MG module statistics. For comparison with AE per-zone statistics, it is recommended to configure the same mode as aver\_mode. |
+| wight\_table\_update | AE weight table configuration enable; controls the weight\_table configuration. - When wight\_table\_update is non-zero, the weight table takes values from ot\_isp\_ae\_result to configure the chip registers; - When wight\_table\_update is 0, the weight table takes values from external registers (MPI configuration) to configure the chip registers. |
 | weight\_table | AE weight table for the 15×17 zones. Valid range: [0, 15] |
 
 **Precautions** - weight\_table supports configuring multi-channel weights on the main pipe in stitch mode: on the main pipe, assign values to the weight tables corresponding to each branch pipe index. In non-stitch mode, only the weight table for the corresponding pipe index takes effect.
@@ -1983,7 +1978,7 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 
 | Member Name | Description |
 | --- | --- |
-| int\_time | AE-computed exposure time in 1/16 µs units; When converting exposure time from line count to µs, the offset in cmos.c must be taken into account.  In linear mode and sensor built-in WDR mode, only int\_time[0] is valid; int\_time[1:3] should be set equal to int\_time[0]. In N-frame synthesis WDR mode, int\_time[0:(N-1)] are valid, with values in ascending order representing the shortest to the longest exposure time and used to calculate the long/short frame exposure ratio; int\_time[(N-1):3] should be set equal to int\_time[(N-1)]. int\_time[0] is also passed to other modules for exposure-time-related inter-module control and affects the AWB result provided by the SDK. This struct must be configured when using the AWB algorithm and multi-frame WDR mode. |
+| int\_time | AE-computed exposure time in 1/16 µs units; When converting exposure time from line count to µs, the offset in cmos.c must be taken into account. In linear mode and sensor built-in WDR mode, only int\_time[0] is valid; int\_time[1:3] should be set equal to int\_time[0]. In N-frame synthesis WDR mode, int\_time[0:(N-1)] are valid, with values in ascending order representing the shortest to the longest exposure time and used to calculate the long/short frame exposure ratio; int\_time[(N-1):3] should be set equal to int\_time[(N-1)]. int\_time[0] is also passed to other modules for exposure-time-related inter-module control and affects the AWB result provided by the SDK. This struct must be configured when using the AWB algorithm and multi-frame WDR mode. |
 | isp\_dgain | ISP digital gain with 8-bit precision. Must be configured when ISP digital gain is used; set to 0x100 when not used. |
 | again | Sensor analog gain with 10-bit precision. Must be configured when the multi-frame WDR algorithm is used; set to 0x400 when not used. |
 | dgain | Sensor digital gain with 10-bit precision. Must be configured when the multi-frame WDR algorithm is used; set to 0x400 when not used. |
@@ -1992,12 +1987,12 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | again\_sf | Sensor analog gain for the short frame with 10-bit precision. Must be configured when the WDR algorithm is used; set to 0x400 when not used. |
 | dgain\_sf | Sensor digital gain for the short frame with 10-bit precision. Must be configured when the WDR algorithm is used; set to 0x400 when not used. |
 | iso\_sf | AE-computed total gain for the short frame. In 2-frame WDR mode, the ISO calculation includes WDR\_GAIN. |
-| ae\_run\_interval | AE algorithm execution interval. Valid range: [1, 255]  1: AE runs every frame;  2: AE runs once every 2 frames; and so on.  It is recommended not to set this value greater than 2, otherwise the AE adjustment speed is affected. In WDR mode, setting this value to 1 is recommended for smoother AE convergence. This variable determines the frame interval for configuring the AE result into the sensor and ISP registers; it must be configured. |
-| piris\_valid | Flag indicating whether P-iris is valid.   - When TD\_TRUE: the P-iris driver is called back in kernel mode to configure the stepper motor position. - When TD\_FALSE: no callback. - When using the AE algorithm with a P-iris driver and P-iris lens, this must be set to TD\_TRUE. When connecting a non-P-iris lens, set to TD\_FALSE. |
+| ae\_run\_interval | AE algorithm execution interval. Valid range: [1, 255] 1: AE runs every frame; 2: AE runs once every 2 frames; and so on. It is recommended not to set this value greater than 2, otherwise the AE adjustment speed is affected. In WDR mode, setting this value to 1 is recommended for smoother AE convergence. This variable determines the frame interval for configuring the AE result into the sensor and ISP registers; it must be configured. |
+| piris\_valid | Flag indicating whether P-iris is valid. - When TD\_TRUE: the P-iris driver is called back in kernel mode to configure the stepper motor position. - When TD\_FALSE: no callback. - When using the AE algorithm with a P-iris driver and P-iris lens, this must be set to TD\_TRUE. When connecting a non-P-iris lens, set to TD\_FALSE. |
 | piris\_pos | P-iris stepper motor position. Valid range depends on the specific P-iris lens. This value must be configured when using a P-iris driver with a P-iris lens. |
-| piris\_gain | P-iris aperture equivalent gain. Valid range depends on the specific P-iris lens. Can be used to calculate the equivalent exposure when the P-iris is active, for reference by other modules. When using a non-P-iris lens, it is recommended to set this value to 512.  Valid range: [0, 1024] |
+| piris\_gain | P-iris aperture equivalent gain. Valid range depends on the specific P-iris lens. Can be used to calculate the equivalent exposure when the P-iris is active, for reference by other modules. When using a non-P-iris lens, it is recommended to set this value to 512. Valid range: [0, 1024] |
 | sns\_lhcg\_exp\_ratio | Baseline exposure ratio for LCG+HCG mode. Only effective when the sensor supports LCG+HCG mode. Set to 64 when not used. |
-| fswdr\_mode | WDR synthesis mode.  0: normal multi-frame WDR synthesis mode;  1: long-frame mode;  2: automatic long-frame mode. |
+| fswdr\_mode | WDR synthesis mode. 0: normal multi-frame WDR synthesis mode; 1: long-frame mode; 2: automatic long-frame mode. |
 | wdr\_gain | Multi-channel digital gain before WDR synthesis with 8-bit precision. Must be configured when using multi-channel ISP digital gain before WDR synthesis; set to 0x100 when not used. |
 | hmax\_times | Time for the sensor to read out one line, in ns. |
 | vmax | Total number of lines actually active per sensor frame, in lines. |
@@ -2048,32 +2043,32 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 
 | Member Name | Description |
 | --- | --- |
-| metering\_awb\_avg\_r | R-channel average of white points in Bayer-domain global statistics.  R channel average. Valid range: [0, 0x FFFF]. |
-| metering\_awb\_avg\_g | G-channel average of white points in Bayer-domain global statistics.  G channel average. Valid range: [0, 0x FFFF]. |
-| metering\_awb\_avg\_b | B-channel average of white points in Bayer-domain global statistics.  B channel average. Valid range: [0, 0x FFFF]. |
-| metering\_awb\_count\_all | Number of white points in Bayer-domain global statistics. Normalized.  White point count. Valid range: [0, 0x FFFF]. |
+| metering\_awb\_avg\_r | R-channel average of white points in Bayer-domain global statistics. R channel average. Valid range: [0, 0x FFFF]. |
+| metering\_awb\_avg\_g | G-channel average of white points in Bayer-domain global statistics. G channel average. Valid range: [0, 0x FFFF]. |
+| metering\_awb\_avg\_b | B-channel average of white points in Bayer-domain global statistics. B channel average. Valid range: [0, 0x FFFF]. |
+| metering\_awb\_count\_all | Number of white points in Bayer-domain global statistics. Normalized. White point count. Valid range: [0, 0x FFFF]. |
 
 **Precautions** None **Related Data Types and Interfaces** [ot\_isp\_awb\_info](#ot_isp_awb_info) ### ot\_isp\_awb\_stat\_result **Description** Defines the AWB statistics struct. **Definition** `typedef struct { td_u16 *zone_avg_r; td_u16 *zone_avg_g; td_u16 *zone_avg_b; td_u16 *zone_count;
 } ot_isp_awb_stat_result;` **Members**
 
 | Member Name | Description |
 | --- | --- |
-| \*zone\_avg\_r | Start address of the R-channel average array for white points in Bayer-domain per-zone statistics.  R channel average. Valid range: [0, 0x FFFF]. |
-| \*zone\_avg\_g | Start address of the G-channel average array for white points in Bayer-domain per-zone statistics.  G channel average. Valid range: [0, 0x FFFF]. |
-| \*zone\_avg\_b | Start address of the B-channel average array for white points in Bayer-domain per-zone statistics.  B channel average. Valid range: [0, 0x FFFF]. |
-| \*zone\_count | Start address of the white point count array in Bayer-domain per-zone statistics. Normalized.  White point count. Valid range: [0, 0x FFFF]. |
+| \*zone\_avg\_r | Start address of the R-channel average array for white points in Bayer-domain per-zone statistics. R channel average. Valid range: [0, 0x FFFF]. |
+| \*zone\_avg\_g | Start address of the G-channel average array for white points in Bayer-domain per-zone statistics. G channel average. Valid range: [0, 0x FFFF]. |
+| \*zone\_avg\_b | Start address of the B-channel average array for white points in Bayer-domain per-zone statistics. B channel average. Valid range: [0, 0x FFFF]. |
+| \*zone\_count | Start address of the white point count array in Bayer-domain per-zone statistics. Normalized. White point count. Valid range: [0, 0x FFFF]. |
 
 **Precautions** None **Related Data Types and Interfaces** [ot\_isp\_awb\_info](#ot_isp_awb_info) ### ot\_isp\_awb\_info **Description** Defines the statistics struct that ISP provides to AWB. **Definition** `typedef struct { td_u32 frame_cnt; ot_isp_awb_stat_1 *awb_stat1; ot_isp_awb_stat_result awb_stat2; td_u8 awb_gain_switch; td_u8 awb_stat_switch; td_bool wb_gain_in_sensor; td_u32 wdr_wb_gain[OT_ISP_BAYER_CHN_NUM];
 } ot_isp_awb_info;` **Members**
 
 | Member Name | Description |
 | --- | --- |
-| frame\_cnt | Cumulative frame count.  Valid range: [0, 0x FFFFFFFF] |
+| frame\_cnt | Cumulative frame count. Valid range: [0, 0x FFFFFFFF] |
 | \*awb\_stat1 | Awbstatistics1 |
 | awb\_stat2 | Awbstatistics2 |
-| awb\_gain\_switch | Position of white balance gain in the ISP. Valid range: [0, 1].  0: WB gain configured at DG1 before WDR synthesis.  1: WB gain configured at WB.  Hi3403V100 does not support configuring WB gain at DG1 for now. |
-| awb\_stat\_switch | Position of the white balance statistics module in the ISP. Valid range: [0, 1, 2].  0: WB statistics module after DG.  1: WB statistics module after EXPANDER.  2: WB statistics module after DRC.  Hi3403V100 does not support configuring the WB statistics module after EXPANDER for now. |
-| wb\_gain\_in\_sensor | Whether the white balance gain is configured in the sensor. Valid range: [0, 1].  0: WB gain configured in ISP.  1: WB gain configured in sensor.  Hi3403V100 does not support configuring WB gain in sensor for now. |
+| awb\_gain\_switch | Position of white balance gain in the ISP. Valid range: [0, 1]. 0: WB gain configured at DG1 before WDR synthesis. 1: WB gain configured at WB. Hi3403V100 does not support configuring WB gain at DG1 for now. |
+| awb\_stat\_switch | Position of the white balance statistics module in the ISP. Valid range: [0, 1, 2]. 0: WB statistics module after DG. 1: WB statistics module after EXPANDER. 2: WB statistics module after DRC. Hi3403V100 does not support configuring the WB statistics module after EXPANDER for now. |
+| wb\_gain\_in\_sensor | Whether the white balance gain is configured in the sensor. Valid range: [0, 1]. 0: WB gain configured in ISP. 1: WB gain configured in sensor. Hi3403V100 does not support configuring WB gain in sensor for now. |
 | wdr\_wb\_gain[-] | White balance gain value configured at DG1 before WDR synthesis. |
 
 **Precautions** - The AWB library can control its computation frequency based on frame\_cnt, e.g., running once every two frames.
@@ -2085,20 +2080,20 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | Member Name | Description |
 | --- | --- |
 | stat\_cfg\_update | Whether the values in this structwhether the register needs to be configured. |
-| metering\_white\_level\_awb | Upper luminance limit for finding white points in Bayer-domain statistics.  Valid range: [0x0, 0x FFFF]，Default value0x FFFF。 |
-| metering\_black\_level\_awb | Lower luminance limit for finding white points in Bayer-domain statistics.  Valid range: [0x0, metering\_white\_level\_awb]，Default value0x0。 |
+| metering\_white\_level\_awb | Upper luminance limit for finding white points in Bayer-domain statistics. Valid range: [0x0, 0x FFFF]，Default value0x FFFF。 |
+| metering\_black\_level\_awb | Lower luminance limit for finding white points in Bayer-domain statistics. Valid range: [0x0, metering\_white\_level\_awb]，Default value0x0。 |
 | metering\_cr\_ref\_max\_awb | Maximum R/G chromaticity for finding white points in Bayer-domain statistics, 8-bit precision, valid range: [0x0, 0x FFF]，Default value512。 |
 | metering\_cb\_ref\_max\_awb | Maximum B/G chromaticity for finding white points in Bayer-domain statistics, 8-bit precision, valid range: [0x0, 0x FFF]，Default value512。 |
 | metering\_cr\_ref\_min\_awb | Minimum R/G chromaticity for finding white points in Bayer-domain statistics, 8-bit precision, valid range: [0x0, metering\_cr\_ref\_max\_awb]，Default value128。 |
 | metering\_cb\_ref\_min\_awb | Minimum B/G chromaticity for finding white points in Bayer-domain statistics, 8-bit precision, valid range: [0x0, metering\_cb\_ref\_max\_awb]，Default value128。 |
 
-**Figure 1** White region selection parameters [](figures/White Region Selection Parameters.png) **Precautions** - The information in [ot\_isp\_awb\_raw\_stat\_attr](#ZH-CN_TOPIC_0000001174819192) determines which pixels are considered white points and thus participate in statistics. When developing a new AWB algorithm, the default values can be used, or custom configurations can be set. The stat\_cfg\_update flag indicates whether the current frame needs the stat\_attr struct values to be written to the registers at runtime.
+**Figure 1** White region selection parameters **Precautions** - The information in [ot\_isp\_awb\_raw\_stat\_attr](#ZH-CN_TOPIC_0000001174819192) determines which pixels are considered white points and thus participate in statistics. When developing a new AWB algorithm, the default values can be used, or custom configurations can be set. The stat\_cfg\_update flag indicates whether the current frame needs the stat\_attr struct values to be written to the registers at runtime.
 - Only Bayer-domain statistics are supported. **Related Data Types and Interfaces** None ### ot\_isp\_awb\_result **Description** Defines the register configuration struct returned by the AWB library to the ISP. **Definition** `typedef struct { td_u32 white_balance_gain[OT_ISP_BAYER_CHN_NUM]; td_u16 color_matrix[OT_ISP_CCM_MATRIX_SIZE]; td_u32 color_temp; td_u8 saturation; ot_isp_awb_raw_stat_attr raw_stat_attr;
 } ot_isp_awb_result;` **Members**
 
 | Member Name | Description |
 | --- | --- |
-| white\_balance\_gain[[OT\_ISP\_BAYER\_CHN\_NUM](#OT_ISP_BAYER_CHN_NUM)] | R, Gr, Gb, B color channel gains computed by the white balance algorithm; represented with 16-bit precision.  Valid range: [0x10000, 0x FFF00] |
+| white\_balance\_gain[[OT\_ISP\_BAYER\_CHN\_NUM](#OT_ISP_BAYER_CHN_NUM)] | R, Gr, Gb, B color channel gains computed by the white balance algorithm; represented with 16-bit precision. Valid range: [0x10000, 0x FFF00] |
 | color\_matrix[[OT\_ISP\_CCM\_MATRIX\_SIZE](#OT_ISP_CCM_MATRIX_SIZE)] | Color restoration matrix; represented with 8-bit precision. |
 | color\_temp | Current AWB color temperature. |
 | saturation | Current saturation. |
@@ -2119,19 +2114,19 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 
 | Member Name | Description |
 | --- | --- |
-| image\_description | Image description and source; the tool that generated the image.  Data format: ASCII string, max 32 characters. |
-| make | Manufacturer; the product manufacturer.  Data format: ASCII string, max 32 characters. |
-| model | Model; the device model.  Data format: ASCII string, max 32 characters. |
-| software | Software; displays the firmware version.  Data format: ASCII string, max 32 characters. |
-| light\_source | Light source; indicates the white balance setting.  0: Unknown.  1: Daylight;  2: Fluorescent;  3: Incandescent (tungsten);  4: Flash;  10: Cloudy;  17: Standard Light A;  18: Standard Light B;  19: Standard Light C;  20：D55；  21：D65；  22：D75；  255: Other. |
+| image\_description | Image description and source; the tool that generated the image. Data format: ASCII string, max 32 characters. |
+| make | Manufacturer; the product manufacturer. Data format: ASCII string, max 32 characters. |
+| model | Model; the device model. Data format: ASCII string, max 32 characters. |
+| software | Software; displays the firmware version. Data format: ASCII string, max 32 characters. |
+| light\_source | Light source; indicates the white balance setting. 0: Unknown. 1: Daylight; 2: Fluorescent; 3: Incandescent (tungsten); 4: Flash; 10: Cloudy; 17: Standard Light A; 18: Standard Light B; 19: Standard Light C; 20：D55； 21：D65； 22：D75； 255: Other. |
 | focal\_length | Focal length of the lens when the photo was taken, in mm. Upper 16 bits: numerator; lower 16 bits: denominator. |
-| scene\_type | Indicates the type of capture scene. Value '0x01' means the image was captured directly by the camera.  Not supported for now. |
+| scene\_type | Indicates the type of capture scene. Value '0x01' means the image was captured directly by the camera. Not supported for now. |
 | custom\_rendered | Custom image processing. 0: Standard; 1: Custom. |
 | focal\_length\_in35mm\_film | 35 mm equivalent focal length. 0: this focal length does not exist. |
-| scene\_capture\_type | Scene capture type.  0: Standard;  1: Landscape mode;  2: Portrait mode;  3: Night mode. |
-| gain\_control | Gain control.  0：None；  1：Low gain up；  2 ：High gain up；  3：Low gain down；  4：High gain down。 |
+| scene\_capture\_type | Scene capture type. 0: Standard; 1: Landscape mode; 2: Portrait mode; 3: Night mode. |
+| gain\_control | Gain control. 0：None； 1：Low gain up； 2 ：High gain up； 3：Low gain down； 4：High gain down。 |
 | contrast | Contrast。 |
-| saturation | Saturation。  0: None;  1: Low;  2: High. |
+| saturation | Saturation。 0: None; 1: Low; 2: High. |
 | sharpness | Sharpness. |
 | metering\_mode | Metering mode; user-configurable. |
 
@@ -2141,14 +2136,14 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 
 | Member Name | Description |
 | --- | --- |
-| iso\_speed\_ratings | ISO speed.  Read-only. |
-| exposure\_time | Exposure time (reciprocal of shutter speed), in seconds.  Upper 16 bits: numerator; lower 16 bits: denominator.  Read-only. |
-| exposure\_bias\_value | Exposure compensation at the time of capture, in APEX (EV).  Upper 16 bits: numerator; lower 16 bits: denominator.  Read-only. |
-| exposure\_program | Exposure program used by the camera when capturing.  1: Manual exposure;  2: Normal program AE;  3: Aperture priority AE;  4: Shutter priority AE;  5: Creative program (slow);  6: Action program (high-speed);  7: Portrait mode;  8: Landscape mode.  Read-only. |
-| f\_number | Aperture value.  Upper 16 bits: numerator; lower 16 bits: denominator.  Read-only. |
-| max\_aperture\_value | Maximum aperture of the lens.  Upper 16 bits: numerator; lower 16 bits: denominator.  Read-only. |
-| exposure\_mode | Exposure mode.  0: Auto exposure;  1: Manual exposure;  2: Auto bracket exposure.  Read-only. |
-| white\_balance | White balance.  0: Auto white balance;  1: Manual white balance.  Read-only. |
+| iso\_speed\_ratings | ISO speed. Read-only. |
+| exposure\_time | Exposure time (reciprocal of shutter speed), in seconds. Upper 16 bits: numerator; lower 16 bits: denominator. Read-only. |
+| exposure\_bias\_value | Exposure compensation at the time of capture, in APEX (EV). Upper 16 bits: numerator; lower 16 bits: denominator. Read-only. |
+| exposure\_program | Exposure program used by the camera when capturing. 1: Manual exposure; 2: Normal program AE; 3: Aperture priority AE; 4: Shutter priority AE; 5: Creative program (slow); 6: Action program (high-speed); 7: Portrait mode; 8: Landscape mode. Read-only. |
+| f\_number | Aperture value. Upper 16 bits: numerator; lower 16 bits: denominator. Read-only. |
+| max\_aperture\_value | Maximum aperture of the lens. Upper 16 bits: numerator; lower 16 bits: denominator. Read-only. |
+| exposure\_mode | Exposure mode. 0: Auto exposure; 1: Manual exposure; 2: Auto bracket exposure. Read-only. |
+| white\_balance | White balance. 0: Auto white balance; 1: Manual white balance. Read-only. |
 
 **Precautions** None **Related Data Types and Interfaces** - [ss\_mpi\_isp\_set\_dcf\_info](#ss_mpi_isp_set_dcf_info)
 - [ss\_mpi\_isp\_get\_dcf\_info](#ss_mpi_isp_get_dcf_info) ### ot\_isp\_dcf\_info **Description** Defines the DCF info parameter struct. **Definition** `typedef struct { ot_isp_dcf_const_info isp_dcf_const_info; ot_isp_dcf_update_info isp_dcf_update_info;
@@ -2173,9 +2168,9 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 
 | Member Name | Description |
 | --- | --- |
-| offset[[OT\_ISP\_BAYER\_CHN\_NUM](#OT_ISP_BAYER_CHN_NUM)] | Multi-channel black level difference offset.  Valid range: [-0x3FFF, 0x3FFF]  The four values in this array correspond to the R, Gr, Gb, and B channels, respectively.  Configuration is based on 14-bit raw data. |
-| gain[[OT\_ISP\_BAYER\_CHN\_NUM](#OT_ISP_BAYER_CHN_NUM)] | Multi-channel gain difference ratio with 8-bit fractional precision.  Valid range: [0x80, 0x400]  The four values in this array correspond to the R, Gr, Gb, and B channels, respectively. |
-| color\_matrix[[OT\_ISP\_CCM\_MATRIX\_SIZE](#OT_ISP_CCM_MATRIX_SIZE)] | Multi-channel color correction matrix difference ratio with 8-bit fractional precision.  bit 15is the sign bit，0: positive; 1: negative, e.g., 0x8010 represents -16.  Valid range: [0x0, 0x FFFF] |
+| offset[[OT\_ISP\_BAYER\_CHN\_NUM](#OT_ISP_BAYER_CHN_NUM)] | Multi-channel black level difference offset. Valid range: [-0x3FFF, 0x3FFF] The four values in this array correspond to the R, Gr, Gb, and B channels, respectively. Configuration is based on 14-bit raw data. |
+| gain[[OT\_ISP\_BAYER\_CHN\_NUM](#OT_ISP_BAYER_CHN_NUM)] | Multi-channel gain difference ratio with 8-bit fractional precision. Valid range: [0x80, 0x400] The four values in this array correspond to the R, Gr, Gb, and B channels, respectively. |
+| color\_matrix[[OT\_ISP\_CCM\_MATRIX\_SIZE](#OT_ISP_CCM_MATRIX_SIZE)] | Multi-channel color correction matrix difference ratio with 8-bit fractional precision. bit 15is the sign bit，0: positive; 1: negative, e.g., 0x8010 represents -16. Valid range: [0x0, 0x FFFF] |
 
 **Precautions** Offset is only valid when ot\_isp\_black\_level\_mode is set to OT\_ISP\_BLACK\_LEVEL\_MODE\_AUTO. **Related Data Types and Interfaces** [ot\_isp\_pipe\_diff\_attr](#ot_isp_pipe_diff_attr) ### ot\_isp\_pipe\_diff\_attr **Description** Defines the two-channel ISP difference attribute struct. **Definition** `typedef struct { ot_isp_pipe_diff_mode mode; ot_isp_pipe_diff_param param;
 } ot_isp_pipe_diff_attr;` **Members**
@@ -2219,16 +2214,16 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 | Member Name | Description |
 | --- | --- |
 | be\_buf\_num | Number of ISP BE config buffers in offline mode. Only effective in offline mode. Valid range: [2, 20]; Hi3403V100 default: 8. |
-| proc\_param | ISP PROC information update frequency. Default: 30.  Minimum is 1, no upper limit.When proc\_param is n, the ISP PROC information is updated once every n frames. |
-| stat\_interval | ISP statistics update frequency. Note: for high frame rate scenarios (120 fps and above), reduce the ISP statistics update frequency via stat\_interval to lower ISP CPU utilization and reduce performance consumption.  Valid range: (0,0xffffffff]。Default: 1. |
-| update\_pos | Default value is 0。  0: Based on the configured value of the u8IntPos member in ot\_isp\_sns\_regs\_info, sensor registers are configured at the frame start or frame end interrupt;  Any other value: sensor registers are configured at the frame end interrupt.  Valid range: [0,1] |
+| proc\_param | ISP PROC information update frequency. Default: 30. Minimum is 1, no upper limit.When proc\_param is n, the ISP PROC information is updated once every n frames. |
+| stat\_interval | ISP statistics update frequency. Note: for high frame rate scenarios (120 fps and above), reduce the ISP statistics update frequency via stat\_interval to lower ISP CPU utilization and reduce performance consumption. Valid range: (0,0xffffffff]。Default: 1. |
+| update\_pos | Default value is 0。 0: Based on the configured value of the u8IntPos member in ot\_isp\_sns\_regs\_info, sensor registers are configured at the frame start or frame end interrupt; Any other value: sensor registers are configured at the frame end interrupt. Valid range: [0,1] |
 | interrupt\_time\_out | Interrupt timeout in ms. Default: 200. |
 | pwm\_num | PWM number. Default: 3. |
-| port\_interrupt\_delay | Port interrupt delay time. Default: 0.  Resolves flicker that occurs in some sensors in half WDR mode when configuring sensor registers in the first few lines; a delay is needed.  port\_interrupt\_delay is calculated based on the VI operating clock frequency, in clock cycles. For example, if the VI clock is 300 M Hz and the delay is 1 ms, the calculation of port\_interrupt\_delay is as follows:  port\_interrupt\_delay（1ms）= 300M/1000ms = 300000  Note: port\_interrupt\_delay is effective only in half WDR mode, since configuring the sensor in other modes does not use Port interrupts. |
+| port\_interrupt\_delay | Port interrupt delay time. Default: 0. Resolves flicker that occurs in some sensors in half WDR mode when configuring sensor registers in the first few lines; a delay is needed. port\_interrupt\_delay is calculated based on the VI operating clock frequency, in clock cycles. For example, if the VI clock is 300 M Hz and the delay is 1 ms, the calculation of port\_interrupt\_delay is as follows: port\_interrupt\_delay（1ms）= 300M/1000ms = 300000 Note: port\_interrupt\_delay is effective only in half WDR mode, since configuring the sensor in other modes does not use Port interrupts. |
 | ldci\_tpr\_flt\_en | Indicates whether LDCI temporal filtering is enabled. Default: 0. |
 | ob\_stats\_update\_pos | Indicates Location for reading OB region statistics. Default value is 0. |
-| alg\_run\_select | ISP algorithm execution selection.  0: Run all ISP algorithms;  1: Run only ISP FE algorithms.  Default value is 0。 |
-| isp\_run\_wakeup\_select | Wakeup interrupt source selection for ISP.  0：ISP woken up by the FE frame start interrupt.  1：ISP woken up by the BE frame end interrupt.  Default value is 0。 |
+| alg\_run\_select | ISP algorithm execution selection. 0: Run all ISP algorithms; 1: Run only ISP FE algorithms. Default value is 0。 |
+| isp\_run\_wakeup\_select | Wakeup interrupt source selection for ISP. 0：ISP woken up by the FE frame start interrupt. 1：ISP woken up by the BE frame end interrupt. Default value is 0。 |
 
 **Precautions** - The default value of proc\_param is 30, meaning the ISP Proc information is updated once every 30 frames. To disable ISP Proc information, set proc\_param to 0 via [ss\_mpi\_isp\_set\_ctrl\_param](#ZH-CN_TOPIC_0000002504084839) before [ss\_mpi\_isp\_mem\_init](#ZH-CN_TOPIC_0000002471084920); no memory is allocated for ISP Proc information, and proc\_param cannot later be set to a non-zero value.
 - When setting proc\_param to a non-zero value for the first time via [ss\_mpi\_isp\_set\_ctrl\_param](#ZH-CN_TOPIC_0000002504084839), it must be done before [ss\_mpi\_isp\_mem\_init](#ZH-CN_TOPIC_0000002471084920) because memory for Proc information storage must be allocated. Subsequent changes can only switch between non-zero values.
@@ -2247,9 +2242,9 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 
 | Member Name | Description |
 | --- | --- |
-| interrupt\_bottom\_half | Indicates whether ISP interrupt processing uses the bottom-half mechanism. Default: 0.   - interrupt\_bottom\_half =0：ISP kernel-mode processing (reading statistics and configuring sensor and ISP synchronization registers) is completed in the interrupt service routine; - interrupt\_bottom\_half = 1: ISP kernel-mode processing (reading statistics and configuring sensor and ISP synchronization registers) is completed in the interrupt bottom half. |
-| quick\_start | Indicates whether ISP uses fast startup. Default: 0.   - quick\_start=0：ISP initialization configures the sensor sequence. - quick\_start=1: ISP initialization does not configure the sensor sequence. Not supported on Hi3403V100. |
-| long\_frame\_interrupt\_en | Indicates whether ISP responds to the long-frame interrupt in WDR mode. Default: 0.  0: Disabled;  1: Enabled. |
+| interrupt\_bottom\_half | Indicates whether ISP interrupt processing uses the bottom-half mechanism. Default: 0. - interrupt\_bottom\_half =0：ISP kernel-mode processing (reading statistics and configuring sensor and ISP synchronization registers) is completed in the interrupt service routine; - interrupt\_bottom\_half = 1: ISP kernel-mode processing (reading statistics and configuring sensor and ISP synchronization registers) is completed in the interrupt bottom half. |
+| quick\_start | Indicates whether ISP uses fast startup. Default: 0. - quick\_start=0：ISP initialization configures the sensor sequence. - quick\_start=1: ISP initialization does not configure the sensor sequence. Not supported on Hi3403V100. |
+| long\_frame\_interrupt\_en | Indicates whether ISP responds to the long-frame interrupt in WDR mode. Default: 0. 0: Disabled; 1: Enabled. |
 
 **Precautions** - Setting the interrupt bottom half is not supported. The [ss\_mpi\_isp\_get\_mod\_param](#ZH-CN_TOPIC_0000002503964891) interface has no call-order restrictions and can be used to query the current state.
 - When setting quick\_start fast startup via [ss\_mpi\_isp\_set\_mod\_param](#ZH-CN_TOPIC_0000002503965069), the interface call must precede the main ISP service (e.g., for multi-pipe scenarios, the call order must come before starting the main multi-pipe service), and the ISP kernel module must already be loaded. The [ss\_mpi\_isp\_get\_mod\_param](#ZH-CN_TOPIC_0000002503964891) interface has no call-order restrictions and can be used to query the current state.
@@ -2393,13 +2388,13 @@ typedef struct { td\_s32 x; td\_s32 y; td\_u32 width; td\_u32 height;
 
 | Member Name | Description |
 | --- | --- |
-| en | IR auto-switch enabled.  TD\_FALSE: Disable;  TD\_TRUE: Enable. |
-| normal\_to\_ir\_iso\_threshold | ISO threshold for switching from normal state to IR state. When the actual effective ISO is greater than this threshold, the system needs to switch to IR state.  Valid range: [0, 0x FFFFFFFF] |
-| ir\_to\_normal\_iso\_threshold | ISO threshold for switching from IR state to normal state. When the actual effective ISO is less than this threshold, the system needs to switch to normal state.  Valid range: [0, 0x FFFFFFFF] |
-| rg\_max | Maximum R/G value in IR state. When the actual image R/G exceeds this parameter, the system needs to switch to normal state. 4.8 format.  Valid range: [0, 0x FFF] |
-| rg\_min | Minimum R/G value in IR state. When the actual image R/G is less than this parameter, the system needs to switch to normal state. 4.8 format.  Valid range: [0, rg\_max] |
+| en | IR auto-switch enabled. TD\_FALSE: Disable; TD\_TRUE: Enable. |
+| normal\_to\_ir\_iso\_threshold | ISO threshold for switching from normal state to IR state. When the actual effective ISO is greater than this threshold, the system needs to switch to IR state. Valid range: [0, 0x FFFFFFFF] |
+| ir\_to\_normal\_iso\_threshold | ISO threshold for switching from IR state to normal state. When the actual effective ISO is less than this threshold, the system needs to switch to normal state. Valid range: [0, 0x FFFFFFFF] |
+| rg\_max | Maximum R/G value in IR state. When the actual image R/G exceeds this parameter, the system needs to switch to normal state. 4.8 format. Valid range: [0, 0x FFF] |
+| rg\_min | Minimum R/G value in IR state. When the actual image R/G is less than this parameter, the system needs to switch to normal state. 4.8 format. Valid range: [0, rg\_max] |
 | bg\_max | Maximum B/G value in IR state. When the actual image B/G exceeds this parameter, the system needs to switch to normal state. 4.8 format.Valid range: [0, 0x FFF] |
-| bg\_min | Minimum B/G value in IR state. When the actual image B/G is less than this parameter, the system needs to switch to normal state. 4.8 format.  Valid range: [0, bg\_max] |
+| bg\_min | Minimum B/G value in IR state. When the actual image B/G is less than this parameter, the system needs to switch to normal state. 4.8 format. Valid range: [0, bg\_max] |
 | ir\_status | The current IR state of the device. Should be configured to the actual IR state of the device. The user must ensure the correctness of the state. |
 | ir\_switch | The IR switching state of the device, read-only. |
 

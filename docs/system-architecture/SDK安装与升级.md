@@ -23,7 +23,7 @@
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p163mcpsimp"><a name="p163mcpsimp"></a><a name="p163mcpsimp"></a>V100</p>
 </td>
 </tr>
-<tr id="row1127814474269"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p632375032618"><a name="p632375032618"></a><a name="p632375032618"></a>SS927</p>
+<tr id="row1127814474269"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p632375032618"><a name="p632375032618"></a><a name="p632375032618"></a>Hi3403V100</p>
 </td>
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p13236502265"><a name="p13236502265"></a><a name="p13236502265"></a>V100</p>
 </td>
@@ -249,7 +249,7 @@ ping serverip (确保网络畅通)
 ```
 
 > **须知：** 
->-   Hi3403V100启动方案分快速启动（使用u-boot-ss928v100.bin）和非快速启动（非安全启动/安全启动，使用boot\_image.bin），详见《Hi3403V100/SS927V100 安全启动使用指南》文档第二章节 “启动方案”。
+>-   Hi3403V100启动方案分快速启动（使用u-boot-ss928v100.bin）和非快速启动（非安全启动/安全启动，使用boot\_image.bin），详见《Hi3403V100/Hi3403V100 安全启动使用指南》文档第二章节 “启动方案”。
 >-   其启动方案可通过读取0x10122090寄存器查看确认，如值为0x5为快速启动，其余值为非快速启动。
 >-   默认出厂单板为“非安全启动”，下文以该模式为例烧写镜像。
 
@@ -493,7 +493,7 @@ reset	\# 重启进入新系统。
 
 与媒体业务相关的管脚复用、DDR优先级配置等在interdrv/sys\_config开源驱动中配置（使用linux DTS进行管理），如果与实际情况不符可直接修改，sys\_config.ko驱动被load\_ss928v100调用，在加载mpp内核模块之前被执行。
 
-MPP之外的其他管脚复用统一在uboot中配置，详细说明请参见《Hi3403V100/SS927V100 U-boot 移植应用开发指南》。
+MPP之外的其他管脚复用统一在uboot中配置，详细说明请参见《Hi3403V100/Hi3403V100 U-boot 移植应用开发指南》。
 
 # 使用SDK和DEMO板进行开发<a name="ZH-CN_TOPIC_0000002457836405"></a>
 

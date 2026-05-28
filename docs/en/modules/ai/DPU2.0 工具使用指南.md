@@ -36,6 +36,6 @@ patterns, parameter ranges, troubleshooting — lives in the rest of the
 upstream guide. The Chinese page renders today via the i18n fallback
 (switch the language toggle to read it directly); a fully translated
 English version is on the docs roadmap. For the runtime side (how to load the LUT and call the DPU AP Is from
-your application code), see the [Motion Fusion](../../motionfusion/)
+your application code), see the ![Motion Fusion](figures/)
 chapter and the
-[Open Harmony / Linux peripheral interface](../../../soc-linux/peripherals/).
+![Open Harmony / Linux peripheral interface](figures/).

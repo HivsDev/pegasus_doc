@@ -5,7 +5,7 @@
 本文分别从硬件环境准备、软件环境准备等方面介绍Demo板PCIe级联操作的相关指导，同时介绍了PCIe的基础知识、PCIe级联的业务实现和PCIe MPI接口函数等，可为用户在使用PCIe级联功能时提供参考。
 
 > **说明：** 
->-   未有特殊说明，下文中的ssxx表示的解决方案包含SS528V100、SS625V100、Hi3403V100、SS927V100、SS626V100。
+>-   未有特殊说明，下文中的ssxx表示的解决方案包含SS528V100、SS625V100、Hi3403V100、Hi3403V100、SS626V100。
 >-   未有特殊说明，SS927V100与Hi3403V100内容完全一致。
 
 **产品版本<a name="section1375mcpsimp"></a>**
@@ -24,22 +24,10 @@
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p1393mcpsimp"><a name="p1393mcpsimp"></a><a name="p1393mcpsimp"></a>V100</p>
 </td>
 </tr>
-<tr id="row1394mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p1396mcpsimp"><a name="p1396mcpsimp"></a><a name="p1396mcpsimp"></a>SS626</p>
-</td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p1398mcpsimp"><a name="p1398mcpsimp"></a><a name="p1398mcpsimp"></a>V100</p>
-</td>
-</tr>
-<tr id="row2762104316540"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p191707516282"><a name="p191707516282"></a><a name="p191707516282"></a>SS528</p>
-</td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p14171957287"><a name="p14171957287"></a><a name="p14171957287"></a>V100</p>
-</td>
-</tr>
-<tr id="row46220598515"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p144315455217"><a name="p144315455217"></a><a name="p144315455217"></a>SS625</p>
-</td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p1062316593517"><a name="p1062316593517"></a><a name="p1062316593517"></a>V100</p>
-</td>
-</tr>
-<tr id="row1425220334618"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p8622349102117"><a name="p8622349102117"></a><a name="p8622349102117"></a>SS927</p>
+
+
+
+<tr id="row1425220334618"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p8622349102117"><a name="p8622349102117"></a><a name="p8622349102117"></a>Hi3403V100</p>
 </td>
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p9185184311112"><a name="p9185184311112"></a><a name="p9185184311112"></a>V100</p>
 </td>
@@ -401,7 +389,7 @@ PCIe从启动时，注意时钟硬件选择管脚的设置：
     **图 4**  两片PCIe X2级联示意图<a name="fig251748193818"></a>  
     <img src="figures/两片PCIe-X2级联示意图.png" alt="" />
 
-### Hi3403V100/SS927V100<a name="ZH-CN_TOPIC_0000002441674833"></a>
+### Hi3403V100/Hi3403V100<a name="ZH-CN_TOPIC_0000002441674833"></a>
 
 -   PCIe差分时钟PCIE\_REFCLKM和PCIE\_REFCLKP为电流型信号，以Hi3403V100为例，当差分时钟信号需要输出给外部设备时，在差分时钟输出端对地加49.9Ω电阻，如[图1](#fig74118483404)所示。
 

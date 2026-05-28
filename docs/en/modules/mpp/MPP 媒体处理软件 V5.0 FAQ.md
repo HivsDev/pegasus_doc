@@ -7,26 +7,20 @@ title: MPP
 title: "Preface"
 source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/MPP 媒体处理软件 V5.0 FAQ/MPP 媒体处理软件 V5.0 FAQ.md
 --- # Preface
-**Overview** This document is written for programmers developing with the MPP media processing software. Its purpose is to provide solutions and assistance for problems encountered during development. >[](../../../../reference/faq/mpp/public_sys-resources/icon-note.gif) **Note:**
+**Overview** This document is written for programmers developing with the MPP media processing software. Its purpose is to provide solutions and assistance for problems encountered during development. > **Note:**
 
 > Unless otherwise specified, the content for is identical to Hi3403V100. **Product Version** The product version corresponding to this document is as follows.
 
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
-| V100 |
-| V100 |
-| V100 |
-| V100 |
-| V100 |
 
 **Target Audience** This document is mainly intended for the following engineers: - Technical Support Engineers
 - Software Development Engineers **Symbol Conventions** The following symbols may appear in this document. Their meanings are as follows.
 
 | Symbol | Description |
 | --- | --- |
-|  | Indicates a high-level hazard which, if not avoided, will result in death or serious injury. |
+| | Indicates a high-level hazard which, if not avoided, will result in death or serious injury. |
 
 **Register Access Type Conventions**
 
@@ -107,7 +101,7 @@ Address and data representations are described as follows.
 - Hi3403V100 support ECS interrupt output (ss\_mpi\_venc\_set\_mjpeg\_param). ### VI - Input/output low latency is only supported on Hi3403V100.
 - Configure pipe output low latency via ss\_mpi\_vi\_set\_pipe\_low\_delay\_attr.
 - Configure channel/channel post-processing output low latency via ss\_mpi\_vi\_set\_chn\_low\_delay\_attr.
-- Adjust VI interrupt type via ss\_mpi\_vi\_set\_pipe\_frame\_interrupt\_attr. ## Pixel Format Description The byte ordering for VGS module reading and writing YUV PACKAGE 422 format is as follows. 32-bit data byte-to-memory mapping: a7~0 = Byte0 bits, b7~0 = Byte1 bits, etc. **Figure 1** 32-bit Data to Memory Byte Mapping [](figures/32bit Data To Memoryeachsave Corresponding Relationship.png) YUV PACKAGE 422 format component-to-memory byte mapping (using YUYV as example): **Figure 2** YUV PACKAGE 422 Component to Memory Byte Mapping [](figures/YUV-PACKAGE-422Formateach And Memoryeachsave Corresponding Relationship.png) All YUV PACKAGE 422 formats mapping: **Table 1** Pixel Format Component to Memory Byte Mapping
+- Adjust VI interrupt type via ss\_mpi\_vi\_set\_pipe\_frame\_interrupt\_attr. ## Pixel Format Description The byte ordering for VGS module reading and writing YUV PACKAGE 422 format is as follows. 32-bit data byte-to-memory mapping: a7~0 = Byte0 bits, b7~0 = Byte1 bits, etc. **Figure 1** 32-bit Data to Memory Byte Mapping YUV PACKAGE 422 format component-to-memory byte mapping (using YUYV as example): **Figure 2** YUV PACKAGE 422 Component to Memory Byte Mapping All YUV PACKAGE 422 formats mapping: **Table 1** Pixel Format Component to Memory Byte Mapping
 
 | Pixel Format | Byte3[7:0] | Byte2[7:0] | Byte1[7:0] | Byte0[7:0] |
 | --- | --- | --- | --- | --- |
@@ -129,25 +123,25 @@ Address and data representations are described as follows.
 - cfg\_num set to 60.
 - frame\_rate set to 50.
 - sd\_mux etc. configured based on hardware. ### T1 Aitemp Type Detector Configuration Similar to T1 LVDS but with different sync codes and register configurations. ### T1 ISC Type Detector Configuration Uses INPUT\_MODE\_MIPI with RAW data type. Similar to T1 but with MIPI instead of LVDS. ### T2 Type Detector Configuration Uses LVDS interface. Notable attributes include 160x120 resolution image rectangle. ## VI Frame Rate Readback Description The frame rate readback interface provides VICAP's internal frame rate statistics. See ss\_mpi\_vi\_get\_pipe\_fps and ss\_mpi\_vi\_get\_chn\_fps. ## VI Channel Offline Crop Invalid Issue [Phenomenon] VI channel offline crop may not take effect.
-  [Solution] Ensure that the pipe's first enable is online mode. ## VI Channel Pipe Bind and Unbind VI supports dynamic bind/unbind. For different modes (online/offline), follow specific sequences for create, bind, start, and stop operations. ## VI Pipe Dynamic Frame Rate Setting Function Supports dynamic frame rate changes via ss\_mpi\_vi\_set\_pipe\_frame\_rate. Must stop dev/pipe first. ## VI Bind VPSS in Offline Mode - Scaler Performance Issue - Scale-down factor >= 16x is not supported in offline mode.
+ [Solution] Ensure that the pipe's first enable is online mode. ## VI Channel Pipe Bind and Unbind VI supports dynamic bind/unbind. For different modes (online/offline), follow specific sequences for create, bind, start, and stop operations. ## VI Pipe Dynamic Frame Rate Setting Function Supports dynamic frame rate changes via ss\_mpi\_vi\_set\_pipe\_frame\_rate. Must stop dev/pipe first. ## VI Bind VPSS in Offline Mode - Scaler Performance Issue - Scale-down factor >= 16x is not supported in offline mode.
 - Scale-down factor >= 8x may cause performance bottlenecks. ## VI Intf Sync Horizontal Pixel Count Not Aligned to 16 For BT.1120/BT.656 interfaces, ensure horizontal pixel count is aligned to 16 to avoid image shift. ## VI Ringing Green Border Issue [Phenomenon] Green border ringing on images.
-  [Solution] Adjust VI module filter coefficients. # VO ## Static Logo Loading Flicker Issue [Phenomenon] Static logo loading causes flicker.
-  [Solution] Set the channel layer to VGS layer before sending the logo. Logo configuration timing differs between HD and SD. ## Hi3403V100 Cascade VO Part Screen Flicker [Phenomenon] Flicker on cascaded VO partial screens.
-  [Solution] Enable BTA for BT.1120 output. ## VO BT.1120 Clock Phase Setting [Phenomenon] Data sampling errors due to BT.1120 clock phase.
-  [Solution] Use the debug register or sample delay interface ss\_mpi\_vo\_set\_sample\_delay to adjust delay. ## VO Compositing Graphical Layers and Video Layers [Phenomenon] Composited display of graphical layers over video layers may show only the graphical layer.
-  [Analysis] Graphical layers have higher overlay priority and may completely cover the video layer if alpha transparency is not properly configured.
-  [Solution] Set proper alpha values for the overlay operation. ## VO Channel Does Not Display Images [Phenomenon] After configuring all VO parameters per the document, no image is displayed.
-  [Analysis] Possible issues with device enable timing and channel enable sequence.
-  [Solution] - Enable the device before enabling channels.
+ [Solution] Adjust VI module filter coefficients. # VO ## Static Logo Loading Flicker Issue [Phenomenon] Static logo loading causes flicker.
+ [Solution] Set the channel layer to VGS layer before sending the logo. Logo configuration timing differs between HD and SD. ## Hi3403V100 Cascade VO Part Screen Flicker [Phenomenon] Flicker on cascaded VO partial screens.
+ [Solution] Enable BTA for BT.1120 output. ## VO BT.1120 Clock Phase Setting [Phenomenon] Data sampling errors due to BT.1120 clock phase.
+ [Solution] Use the debug register or sample delay interface ss\_mpi\_vo\_set\_sample\_delay to adjust delay. ## VO Compositing Graphical Layers and Video Layers [Phenomenon] Composited display of graphical layers over video layers may show only the graphical layer.
+ [Analysis] Graphical layers have higher overlay priority and may completely cover the video layer if alpha transparency is not properly configured.
+ [Solution] Set proper alpha values for the overlay operation. ## VO Channel Does Not Display Images [Phenomenon] After configuring all VO parameters per the document, no image is displayed.
+ [Analysis] Possible issues with device enable timing and channel enable sequence.
+ [Solution] - Enable the device before enabling channels.
 - After enabling channels, delay at least 2 frames before sending images. ## VO Crop Feature Does Not Cover Entire Screen After Configuring Compositing Parameters [Phenomenon] After setting VO compositing parameters, configuring crop overlay area results in incomplete screen coverage.
-  [Solution] Configure the compositing attribute bord\_en to set a border area and ensure the crop area dimensions are correct. ## VO Layer Extended Configuration Method Use ss\_mpi\_vo\_set\_video\_layer\_ext\_para to set custom timing parameters for the video layer. ## MIPI DSI Read Data Register Check Method [Phenomenon] Need to check MIPI DSI register data.
-  [Solution] Use 'himdL' to read registers at mipi\_tx\_base + specific offsets for command packet, RX DATA, and payload. ## VO Cascading Common Issues - Confirm VO BT.1120 is outputting correct timing.
+ [Solution] Configure the compositing attribute bord\_en to set a border area and ensure the crop area dimensions are correct. ## VO Layer Extended Configuration Method Use ss\_mpi\_vo\_set\_video\_layer\_ext\_para to set custom timing parameters for the video layer. ## MIPI DSI Read Data Register Check Method [Phenomenon] Need to check MIPI DSI register data.
+ [Solution] Use 'himdL' to read registers at mipi\_tx\_base + specific offsets for command packet, RX DATA, and payload. ## VO Cascading Common Issues - Confirm VO BT.1120 is outputting correct timing.
 - Confirm VI can lock onto BT.1120 timing.
 - Check for MIPI\_TX signal using an oscilloscope.
 - Check cascade register configuration. # VENC ## JPEG Quantization Table Configuration Precautions Use ss\_mpi\_venc\_set\_jpeg\_param to set quantization tables. The luminance and chrominance tables should be configured separately. ## JPEG Dull/Gray Issue [Phenomenon] JPEG images appear dull or gray.
-  [Solution] Adjust quantization tables and enable JPEG quality enhancement features. ## P-frame Intra Refresh Causes Visible Screen Scrolling [Phenomenon] P-frame intra refresh produces a visible scrolling effect.
-  [Solution] Reduce the intra refresh cycle or use a different refresh mode. ## H.264 AVBR Bitrate Differences Compared to Other Platforms [Phenomenon] H.264 AVBR bitrates differ from other platforms.
-  [Solution] Use VBV buffer size adjustment to fine-tune bitrate control. # VDEC ## MDC Decode Memory Usage When DDR > 3GB Configure VB pool properly for MDC decode mode. Memory mapping differs for DDR configurations exceeding 3GB. ## MDC Decode Module VB Usage Precautions Use module VB pool for MDC decode. Ensure VB size meets MDC requirements. ## VO Display Differences When Destroying VDEC Channels in Different Scenarios Destroying VDEC channels may cause different VO display behaviors depending on the pipeline configuration (direct display vs. VPSS processing). ## Decode Timeliness Optimization Optimize decode latency by adjusting decode buffer count and thread priority. # Pipeline Debugging Guide
+ [Solution] Adjust quantization tables and enable JPEG quality enhancement features. ## P-frame Intra Refresh Causes Visible Screen Scrolling [Phenomenon] P-frame intra refresh produces a visible scrolling effect.
+ [Solution] Reduce the intra refresh cycle or use a different refresh mode. ## H.264 AVBR Bitrate Differences Compared to Other Platforms [Phenomenon] H.264 AVBR bitrates differ from other platforms.
+ [Solution] Use VBV buffer size adjustment to fine-tune bitrate control. # VDEC ## MDC Decode Memory Usage When DDR > 3GB Configure VB pool properly for MDC decode mode. Memory mapping differs for DDR configurations exceeding 3GB. ## MDC Decode Module VB Usage Precautions Use module VB pool for MDC decode. Ensure VB size meets MDC requirements. ## VO Display Differences When Destroying VDEC Channels in Different Scenarios Destroying VDEC channels may cause different VO display behaviors depending on the pipeline configuration (direct display vs. VPSS processing). ## Decode Timeliness Optimization Optimize decode latency by adjusting decode buffer count and thread priority. # Pipeline Debugging Guide
 
 ## VI Pipeline Debugging ### I2C Errors Check I2C communication: verify pull-up resistors, clock frequency, and device address. Use i2c-tools for debugging. ### No Output Image or Black Screen [Phenomenon] No image output or black screen.[¶](#vi-pipeline-debugging-i2c-errors-check-i2c-communication-verify-pull-up-resistors-clock-frequency-and-device-address-use-i2c-tools-for-debugging-no-output-image-or-black-screen-phenomenon-no-image-output-or-black-screen "锚链接")
 

@@ -5,25 +5,20 @@ title: GFBG
 title: "Preface"
 source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/GFBG API 参考/GFBG API 参考.md
 --- # Preface
-**Overview** This document mainly introduces the GFBG API, data types, and Proc debug information. >[](../../../../reference/api/gfbg/public_sys-resources/icon-note.gif) **Note:**
+**Overview** This document mainly introduces the GFBG API, data types, and Proc debug information. > **Note:**
 
 > - Unless otherwise specified, is identical to Hi3403V100, and is identical to . **Product Version** The product version corresponding to this document is as follows.
 
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
-| V100 |
-| V101 |
-| V100 |
-| V100 |
 
 **Target Audience** This document is mainly intended for the following engineers: - Technical Support Engineers
 - Software Development Engineers **Symbol Conventions** The following symbols may appear in this document.
 
 | Symbol | Description |
 | --- | --- |
-|  | Indicates a high-level hazard which, if not avoided, will result in death or serious injury. |
+| | Indicates a high-level hazard which, if not avoided, will result in death or serious injury. |
 
 **Revision History**
 

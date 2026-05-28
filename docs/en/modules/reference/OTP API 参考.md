@@ -5,26 +5,20 @@ title: OTP
 title: "Preface"
 source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/OTP API 参考/OTP API 参考.md
 --- # Preface
-**Overview** OTP is a non-volatile memory. Its main characteristic is that once the bit content of the corresponding storage space is written from 0 to 1, or after locking the corresponding area according to the lock mechanism, it can no longer be modified. OTP is mainly used to store specific data, such as the root key for the CIPHER module, security enable flags, and other information. >[](../../../../reference/api/otp/public_sys-resources/icon-note.gif) **Note:**
+**Overview** OTP is a non-volatile memory. Its main characteristic is that once the bit content of the corresponding storage space is written from 0 to 1, or after locking the corresponding area according to the lock mechanism, it can no longer be modified. OTP is mainly used to store specific data, such as the root key for the CIPHER module, security enable flags, and other information. > **Note:**
 
 > Unless otherwise specified, the content for and , and , and Hi3403V100 is identical. **Product Version** The product versions corresponding to this document are as follows.
 
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
-| V100 |
-| V100 |
-| V100 |
-| V100 |
-| V100 |
 
 **Intended Audience** This document (guide) is primarily intended for the following engineers: - Technical Support Engineers
 - Software Development Engineers **Symbol Conventions** The following symbols may appear in this document, and their meanings are described below.
 
 | Symbol | Description |
 | --- | --- |
-|  | Indicates a high-level hazard which, if not avoided, will result in death or serious injury. |
+| | Indicates a high-level hazard which, if not avoided, will result in death or serious injury. |
 
 **Revision History** The revision history summarizes the changes made in each document update. The latest version of the document includes updates from all previous document versions.
 
@@ -34,8 +28,8 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/OTP API 
 
 # Overview
 The OTP module provides MPI interfaces for driving one-time programmable operations, enabling CIPHER module root key Flashing, jtag key Flashing, key Flashing status verification, and user reserved space data read/write. ## Key Usage Mechanism in OTP **Figure 1** Key Usage Mechanism in , OTP
-[](figures--OT Pdensekey Uses.png) **Figure 2** Key Usage Mechanism in Hi3403V100, OTP
-[](figures/Hi3403V100--OT Pdensekey Uses.png) ## OTP Usage Notes When OTP is deployed in different scenarios, its usage may vary. - In the Linux environment - User-mode OTP can be used by linking the static library libss\_otp.a or the dynamic library libss\_otp.so, depending on libsecurec.a or libsecurec.so. - Kernel-mode OTP uses module insertion, i.e., insmod ot\_otp.ko, which depends on ot\_osal.ko, ot\_base.ko, sys\_config.ko, and ot\_sys.ko. - In the OPTEE environment, the user-mode OTP external interface naming convention changes from ss\_mpi\_xxx in the Linux environment to ot\_tee\_xxx.
+**Figure 2** Key Usage Mechanism in Hi3403V100, OTP
+## OTP Usage Notes When OTP is deployed in different scenarios, its usage may vary. - In the Linux environment - User-mode OTP can be used by linking the static library libss\_otp.a or the dynamic library libss\_otp.so, depending on libsecurec.a or libsecurec.so. - Kernel-mode OTP uses module insertion, i.e., insmod ot\_otp.ko, which depends on ot\_osal.ko, ot\_base.ko, sys\_config.ko, and ot\_sys.ko. - In the OPTEE environment, the user-mode OTP external interface naming convention changes from ss\_mpi\_xxx in the Linux environment to ot\_tee\_xxx.
 - In the UBOOT environment, the user-mode OTP external interface naming convention changes from ss\_mpi\_xxx in the Linux environment to ot\_mpi\_xxx. # API Reference
 OTP provides the following AP Is: - [ss\_mpi\_otp\_init](#ZH-CN_TOPIC_0000002457868853): Initializes the OTP module.
 - [ss\_mpi\_otp\_deinit](#ZH-CN_TOPIC_0000002457828757): Deinitializes the OTP module.
@@ -249,7 +243,7 @@ The error codes provided by OTP are as follows. **Table 1** OTP module error cod
 
 # Acronyms and Abbreviations
 
-|  |  |  |
+| | | |
 | --- | --- | --- |
 | **A** | | |
 | AES | Advanced Encryption Standard | Advanced Encryption Standard |

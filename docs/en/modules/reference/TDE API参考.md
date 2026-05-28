@@ -5,18 +5,13 @@ title: TDE
 title: "Preface"
 source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/TDE API参考/TDE API参考.md
 --- # Preface
-**Overview** This document mainly introduces the TDE API, data types, and Proc debug information. >[](../../../../reference/api/tde/public_sys-resources/icon-note.gif) **Note:**
+**Overview** This document mainly introduces the TDE API, data types, and Proc debug information. > **Note:**
 
 > - Unless otherwise specified, is consistent with Hi3403V100. **Product Version** The product version corresponding to this document is as follows.
 
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
-| V100 |
-| V100 |
-| V100 |
-| V100 |
 
 **Target Audience** This document is mainly intended for the following engineers: - Technical Support Engineers
 - Software Development Engineers **Symbol Conventions (see original document for icon images)** **Revision History** | Document Version | Release Date | Revision Description |
@@ -126,15 +121,15 @@ Enable or disable regional de-flicker for specific regions. # Data Type
 - **ot\_tde\_deflicker\_level**: De-flicker level enumeration.
 - **ot\_tde\_alpha\_threshold**: Alpha threshold configuration structure.
 - **ot\_tde\_rop\_code**: Raster operation code type. ## Color Format Mapping **Table 1** Color Format Mapping | ot\_tde\_color\_format | Description | Byte Order (in memory) |
-  |---|---|---|
-  | OT\_TDE\_COLOR\_FMT\_ARGB1555 | ARGB 1:5:5:5 | A1R5G5B5 |
-  | OT\_TDE\_COLOR\_FMT\_ARGB4444 | ARGB 4:4:4:4 | A4R4G4B4 |
-  | OT\_TDE\_COLOR\_FMT\_ARGB8888 | ARGB 8:8:8:8 | B0G0R0A0 |
-  | OT\_TDE\_COLOR\_FMT\_RGB565 | RGB 5:6:5 | B5G6R5 | (For the complete color format list, refer to the header file ss\_tde.h.) ## Detailed Data Type Descriptions ### ot\_tde\_surface [Definition]
-  `c
-  typedef struct { td_u32 phys_addr; td_u32 virt_addr; td_u32 width; td_u32 height; td_u32 stride; ot_tde_color_format color_format; td_bool alpha_enable; td_u8 alpha0; td_u8 alpha1;
-  } ot_tde_surface;` [Description]
-  Defines a surface (image buffer) for TDE operations. [Members]
+ |---|---|---|
+ | OT\_TDE\_COLOR\_FMT\_ARGB1555 | ARGB 1:5:5:5 | A1R5G5B5 |
+ | OT\_TDE\_COLOR\_FMT\_ARGB4444 | ARGB 4:4:4:4 | A4R4G4B4 |
+ | OT\_TDE\_COLOR\_FMT\_ARGB8888 | ARGB 8:8:8:8 | B0G0R0A0 |
+ | OT\_TDE\_COLOR\_FMT\_RGB565 | RGB 5:6:5 | B5G6R5 | (For the complete color format list, refer to the header file ss\_tde.h.) ## Detailed Data Type Descriptions ### ot\_tde\_surface [Definition]
+ `c
+ typedef struct { td_u32 phys_addr; td_u32 virt_addr; td_u32 width; td_u32 height; td_u32 stride; ot_tde_color_format color_format; td_bool alpha_enable; td_u8 alpha0; td_u8 alpha1;
+ } ot_tde_surface;` [Description]
+ Defines a surface (image buffer) for TDE operations. [Members]
 - phys\_addr: Physical address of the surface buffer.
 - virt\_addr: Virtual address of the surface buffer.
 - width: Width in pixels.
@@ -143,10 +138,10 @@ Enable or disable regional de-flicker for specific regions. # Data Type
 - color\_format: Color format of the surface.
 - alpha\_enable: Whether global alpha is enabled.
 - alpha0/alpha1: Global alpha values for the surface. ### ot\_tde\_color\_format [Definition]
-  `c
-  typedef enum { OT_TDE_COLOR_FMT_RGB565 = 0x0, OT_TDE_COLOR_FMT_ARGB1555, OT_TDE_COLOR_FMT_ARGB4444, OT_TDE_COLOR_FMT_ARGB8888, OT_TDE_COLOR_FMT_ARGB8888, /* ... additional formats */
-  } ot_tde_color_format;` [Description]
-  Enumeration of supported color formats for TDE surfaces. ### Additional Data Types Refer to the header files for complete definitions of ot\_tde\_fill\_rect, ot\_tde\_rect, ot\_tde\_point, ot\_tde\_deflicker\_level, and other related types. # Proc Debug Information TDE module debug information is available through: - `/proc/umap/tde`: Displays TDE job status, hardware utilization, error counts, and current configuration parameters. The proc output includes:
+ `c
+ typedef enum { OT_TDE_COLOR_FMT_RGB565 = 0x0, OT_TDE_COLOR_FMT_ARGB1555, OT_TDE_COLOR_FMT_ARGB4444, OT_TDE_COLOR_FMT_ARGB8888, OT_TDE_COLOR_FMT_ARGB8888, /* ... additional formats */
+ } ot_tde_color_format;` [Description]
+ Enumeration of supported color formats for TDE surfaces. ### Additional Data Types Refer to the header files for complete definitions of ot\_tde\_fill\_rect, ot\_tde\_rect, ot\_tde\_point, ot\_tde\_deflicker\_level, and other related types. # Proc Debug Information TDE module debug information is available through: - `/proc/umap/tde`: Displays TDE job status, hardware utilization, error counts, and current configuration parameters. The proc output includes:
 - TDE version information.
 - Job queue status (queued, running, completed).
 - Module parameters (resize filter, max node num, tmp buf, truncation mode).

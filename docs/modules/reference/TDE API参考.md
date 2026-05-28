@@ -24,32 +24,12 @@
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p123mcpsimp"><a name="p123mcpsimp"></a><a name="p123mcpsimp"></a>V100</p>
 </td>
 </tr>
-<tr id="row124mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p126mcpsimp"><a name="p126mcpsimp"></a><a name="p126mcpsimp"></a>SS626</p>
-</td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p128mcpsimp"><a name="p128mcpsimp"></a><a name="p128mcpsimp"></a>V100</p>
-</td>
-</tr>
-<tr id="row12175630191918"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p881081984715"><a name="p881081984715"></a><a name="p881081984715"></a>SS524</p>
-</td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p34921898474"><a name="p34921898474"></a><a name="p34921898474"></a>V100</p>
-</td>
-</tr>
-<tr id="row6539113711611"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p653993731616"><a name="p653993731616"></a><a name="p653993731616"></a>SS522</p>
-</td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p25392377163"><a name="p25392377163"></a><a name="p25392377163"></a>V100</p>
-</td>
-</tr>
-<tr id="row199441051135716"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p175361749141815"><a name="p175361749141815"></a><a name="p175361749141815"></a>SS528</p>
-</td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p13835920181"><a name="p13835920181"></a><a name="p13835920181"></a>V100</p>
-</td>
-</tr>
-<tr id="row66912387424"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p769273818422"><a name="p769273818422"></a><a name="p769273818422"></a>SS625</p>
-</td>
-<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p17692193818426"><a name="p17692193818426"></a><a name="p17692193818426"></a>V100</p>
-</td>
-</tr>
-<tr id="row3972248661"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p8622349102117"><a name="p8622349102117"></a><a name="p8622349102117"></a>SS927</p>
+
+
+
+
+
+<tr id="row3972248661"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p8622349102117"><a name="p8622349102117"></a><a name="p8622349102117"></a>Hi3403V100</p>
 </td>
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p9185184311112"><a name="p9185184311112"></a><a name="p9185184311112"></a>V100</p>
 </td>
@@ -2092,7 +2072,7 @@ td_s32 ss_tde_quick_resize(td_s32 handle, const ot_tde_single_src *single_src);
 <td class="cellrowborder" valign="top" width="55.00000000000001%" headers="mcps1.1.3.1.2 "><p id="p839mcpsimp"><a name="p839mcpsimp"></a><a name="p839mcpsimp"></a>2048</p>
 </td>
 </tr>
-<tr id="row7386112917158"><td class="cellrowborder" valign="top" width="45%" headers="mcps1.1.3.1.1 "><p id="p1238620299155"><a name="p1238620299155"></a><a name="p1238620299155"></a>SS927V100</p>
+<tr id="row7386112917158"><td class="cellrowborder" valign="top" width="45%" headers="mcps1.1.3.1.1 "><p id="p1238620299155"><a name="p1238620299155"></a><a name="p1238620299155"></a>Hi3403V100</p>
 </td>
 <td class="cellrowborder" valign="top" width="55.00000000000001%" headers="mcps1.1.3.1.2 "><p id="p193869292158"><a name="p193869292158"></a><a name="p193869292158"></a>2048</p>
 </td>

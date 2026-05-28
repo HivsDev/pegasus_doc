@@ -12,7 +12,6 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/en/MotionFusio
 | Product Name | Product Version |
 | --- | --- |
 | Hi3403V100 | V100 |
-| V100 |
 
 **Revision History** The revision history cumulates documentation changes for each document update. The latest version of the document contains all updates from previous versions.
 

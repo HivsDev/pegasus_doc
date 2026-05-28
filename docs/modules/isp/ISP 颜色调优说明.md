@@ -23,7 +23,7 @@
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p324mcpsimp"><a name="p324mcpsimp"></a><a name="p324mcpsimp"></a>V100</p>
 </td>
 </tr>
-<tr id="row650476102011"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p16117171192015"><a name="p16117171192015"></a><a name="p16117171192015"></a>SS927</p>
+<tr id="row650476102011"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p16117171192015"><a name="p16117171192015"></a><a name="p16117171192015"></a>Hi3403V100</p>
 </td>
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p1711771112016"><a name="p1711771112016"></a><a name="p1711771112016"></a>V100</p>
 </td>

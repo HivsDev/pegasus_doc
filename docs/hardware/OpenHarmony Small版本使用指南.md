@@ -2,7 +2,7 @@
 
 **概述<a name="section191mcpsimp"></a>**
 
-本文档基于OpenHarmony 5.1.0 Release版本适配Hi3403V100/SS927V100，支持OpenHarmony Small型系统运行媒体、图形基本功能，支持XTS认证。
+本文档基于OpenHarmony 5.1.0 Release版本适配Hi3403V100/Hi3403V100，支持OpenHarmony Small型系统运行媒体、图形基本功能，支持XTS认证。
 
 > **说明：** 
 >-   本文以Hi3403V100为例，未有特殊说明，SS927V100与Hi3403V100内容一致。
@@ -24,7 +24,7 @@
 <td class="cellrowborder" valign="top" width="78.97%" headers="mcps1.1.3.1.2 "><p id="p8554215538"><a name="p8554215538"></a><a name="p8554215538"></a>V100</p>
 </td>
 </tr>
-<tr id="row83018832212"><td class="cellrowborder" valign="top" width="21.029999999999998%" headers="mcps1.1.3.1.1 "><p id="p12301983225"><a name="p12301983225"></a><a name="p12301983225"></a>SS927</p>
+<tr id="row83018832212"><td class="cellrowborder" valign="top" width="21.029999999999998%" headers="mcps1.1.3.1.1 "><p id="p12301983225"><a name="p12301983225"></a><a name="p12301983225"></a>Hi3403V100</p>
 </td>
 <td class="cellrowborder" valign="top" width="78.97%" headers="mcps1.1.3.1.2 "><p id="p3301118102211"><a name="p3301118102211"></a><a name="p3301118102211"></a>V100</p>
 </td>
@@ -118,7 +118,7 @@
 
 ## OpenHarmony版本<a name="ZH-CN_TOPIC_0000002408172597"></a>
 
-SS927V100/Hi3403V100 OpenHarmony版本基于5.1.0 Release版本开发。
+Hi3403V100/Hi3403V100 OpenHarmony版本基于5.1.0 Release版本开发。
 
 -   OpenHarmony 5.1.0社区发布地址：
 
