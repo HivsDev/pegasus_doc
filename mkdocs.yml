@@ -222,8 +222,6 @@ extra:
       link: https://github.com/HivsDev/pegasus_doc
     - icon: fontawesome/solid/globe
       link: https://www.hisilicon.com
-  version:
-    provider: mike
   generator: false
   consent:
     title: Cookie 同意
