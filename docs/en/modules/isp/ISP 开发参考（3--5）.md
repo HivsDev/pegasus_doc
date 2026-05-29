@@ -14,11 +14,11 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/ISP Dev 
 - Aperture: The aperture is a mechanical device in the lens that can change the size of the aperture opening.
 - Anti-flicker: Image flicker caused by the mismatch between the power frequency of electric lights and the sensor's frame rate. Anti-flicker is generally achieved by limiting the exposure time and modifying the sensor's frame rate. ## Function Description The AE module consists of two parts: the ISP AE statistics information module and the AE algorithm Firmware for AE control strategy. The ISP AE statistics information module mainly provides brightness information statistics of the sensor input data. The statistics information provided includes histograms and average values, which can simultaneously provide 1024-bin histograms of the entire image and R/Gr/Gb/B four-component average statistics, as well as R/Gr/Gb/B four-component average statistics for each block when the entire image is divided into MxN blocks, as shown in [Figure 1](#fig1568813224314). **Figure 1** AE 1024-bin Statistics Histogram [](figures/AE 1024-bin Statistics Histogram) The main working principle of the AE algorithm is to obtain the statistical information of the input image in real time, compare it with the set target brightness, and dynamically adjust the sensor's exposure time, gain, and lens aperture size so that the actual brightness approaches the set target brightness. Its working principle is shown in [Figure 2](#fig85992506321). **Figure 2** AE Working Principle Diagram [](figures/AE Working Principle Diagram)
 
-## API Reference ### AE Library Interfaces All AE library interfaces are only for the AE library provided by the SDK. If the customer implements their own AE library, they do not need to pay attention to these interfaces and cannot use them. - [ss\_mpi\_ae\_register](#ZH-CN_TOPIC_0000002470925134): Register the AE library with ISP.[¶](#api-reference-ae-library-interfaces-all-ae-library-interfaces-are-only-for-the-ae-library-provided-by-the-sdk-if-the-customer-implements-their-own-ae-library-they-do-not-need-to-pay-attention-to-these-interfaces-and-cannot-use-them-ss_mpi_ae_register-register-the-ae-library-with-isp "锚链接")
+<a name="ZH-CN_TOPIC_0000002470925134"></a>## API Reference ### AE Library Interfaces All AE library interfaces are only for the AE library provided by the SDK. If the customer implements their own AE library, they do not need to pay attention to these interfaces and cannot use them. - [ss\_mpi\_ae\_register](#ZH-CN_TOPIC_0000002470925134): Register the AE library with ISP.[¶](#api-reference-ae-library-interfaces-all-ae-library-interfaces-are-only-for-the-ae-library-provided-by-the-sdk-if-the-customer-implements-their-own-ae-library-they-do-not-need-to-pay-attention-to-these-interfaces-and-cannot-use-them-ss_mpi_ae_register-register-the-ae-library-with-isp "锚链接")
 
-- [ss\_mpi\_ae\_unregister](#ZH-CN_TOPIC_0000002471084866): Unregister the AE library from ISP.
-- [ss\_mpi\_ae\_sensor\_reg\_callback](#ZH-CN_TOPIC_0000002470924952): The sensor registration callback interface provided by the AE library.
-- [ss\_mpi\_ae\_sensor\_unreg\_callback](#ZH-CN_TOPIC_0000002471084858): The sensor unregistration callback interface provided by the AE library. #### ss\_mpi\_ae\_register 【Description】 Register the AE library with ISP. 【Syntax】 `td_s32 ss_mpi_ae_register(ot_vi_pipe vi_pipe, const ot_isp_3a_alg_lib *ae_lib);` 【Parameters】
+<a name="ZH-CN_TOPIC_0000002471084866"></a>- [ss\_mpi\_ae\_unregister](#ZH-CN_TOPIC_0000002471084866): Unregister the AE library from ISP.
+<a name="ZH-CN_TOPIC_0000002470924952"></a>- [ss\_mpi\_ae\_sensor\_reg\_callback](#ZH-CN_TOPIC_0000002470924952): The sensor registration callback interface provided by the AE library.
+<a name="ZH-CN_TOPIC_0000002471084858"></a>- [ss\_mpi\_ae\_sensor\_unreg\_callback](#ZH-CN_TOPIC_0000002471084858): The sensor unregistration callback interface provided by the AE library. #### ss\_mpi\_ae\_register 【Description】 Register the AE library with ISP. 【Syntax】 `td_s32 ss_mpi_ae_register(ot_vi_pipe vi_pipe, const ot_isp_3a_alg_lib *ae_lib);` 【Parameters】
 
 | Parameter Name | Description | Input/Output |
 | --- | --- | --- |
@@ -117,27 +117,27 @@ ae_lib.id = 0;
 strncpy(ae_lib.lib_name, OT_AE_LIB_NAME, sizeof(OT_AE_LIB_NAME));
 ret = ss_mpi_ae_sensor_unreg_callback(vi_pipe, &ae_lib, SENSOR_NAME_ID);
 if (ret != TD_SUCCESS) { printf("sensor register callback function to ae lib failed!\n"); return ret;
-}` 【Related Topics】 None ### AE Control Module Exposure control interfaces: - [ss\_mpi\_isp\_set\_exposure\_attr](#ZH-CN_TOPIC_0000002503964781): Set AE exposure attributes.
-- [ss\_mpi\_isp\_get\_exposure\_attr](#ZH-CN_TOPIC_0000002504084835): Get AE exposure attributes.
-- [ss\_mpi\_isp\_set\_wdr\_exposure\_attr](#ZH-CN_TOPIC_0000002504084905): Set AE exposure attributes in WDR mode.
-- [ss\_mpi\_isp\_get\_wdr\_exposure\_attr](#ZH-CN_TOPIC_0000002470924854): Get AE exposure attributes in WDR mode.
-- [ss\_mpi\_isp\_set\_hdr\_exposure\_attr](#ZH-CN_TOPIC_0000002504084737): Set AE exposure attributes in HDR mode.
-- [ss\_mpi\_isp\_get\_hdr\_exposure\_attr](#ZH-CN_TOPIC_0000002504084897): Get AE exposure attributes in HDR mode.
-- [ss\_mpi\_isp\_set\_smart\_exposure\_attr](#ZH-CN_TOPIC_0000002471084856): Set AE exposure attributes in smart mode.
-- [ss\_mpi\_isp\_get\_smart\_exposure\_attr](#ZH-CN_TOPIC_0000002504084961): Get AE exposure attributes in smart mode.
-- [ss\_mpi\_isp\_set\_fast\_face\_ae\_attr](#ZH-CN_TOPIC_0000002503964919): Set AE exposure attributes in face fast convergence mode.
-- [ss\_mpi\_isp\_get\_fast\_face\_ae\_attr](#ZH-CN_TOPIC_0000002504084751): Get AE exposure attributes in face fast convergence mode.
-- [ss\_mpi\_isp\_set\_ae\_route\_attr](#ZH-CN_TOPIC_0000002504084821): Set AE exposure allocation strategy attributes.
-- [ss\_mpi\_isp\_get\_ae\_route\_attr](#ZH-CN_TOPIC_0000002471084932): Get AE exposure allocation strategy attributes.
-- [ss\_mpi\_isp\_set\_ae\_route\_attr\_ex](#ZH-CN_TOPIC_0000002503965045): Set AE exposure allocation extension attributes, supporting separate configuration of sensor analog gain, sensor digital gain, and ISP digital gain in the AE allocation strategy.
-- [ss\_mpi\_isp\_get\_ae\_route\_attr\_ex](#ZH-CN_TOPIC_0000002471084852): Get AE exposure allocation strategy extension attributes.
-- [ss\_mpi\_isp\_set\_ae\_route\_sf\_attr](#ZH-CN_TOPIC_0000002503964803): In WDR mode, set the AE short frame exposure allocation strategy attributes.
-- [ss\_mpi\_isp\_get\_ae\_route\_sf\_attr](#ZH-CN_TOPIC_0000002471085052): Get AE short frame exposure allocation strategy attributes.
-- [ss\_mpi\_isp\_set\_ae\_route\_sf\_attr\_ex](#ZH-CN_TOPIC_0000002503964835): In WDR mode, set the AE short frame exposure allocation strategy extension attributes.
-- [ss\_mpi\_isp\_get\_ae\_route\_sf\_attr\_ex](#ZH-CN_TOPIC_0000002470925156): Get AE short frame exposure allocation strategy extension attributes.
-- [ss\_mpi\_isp\_query\_exposure\_info](#ZH-CN_TOPIC_0000002503964993): Get AE internal status information.
-- [ss\_mpi\_isp\_set\_exp\_convert](#ZH-CN_TOPIC_0000002470925022): Set attributes related to equal exposure conversion at different frame rates.
-- [ss\_mpi\_isp\_get\_exp\_convert](#ZH-CN_TOPIC_0000002504084753): Get exposure parameter attributes related to equal exposure conversion results at different frame rates. #### ss\_mpi\_isp\_set\_exposure\_attr 【Description】 Set AE exposure attributes. 【Syntax】 `td_s32 ss_mpi_isp_set_exposure_attr (ot_vi_pipe vi_pipe, const ot_isp_exposure_attr *exp_attr);` 【Parameters】
+<a name="ZH-CN_TOPIC_0000002503964781"></a>}` 【Related Topics】 None ### AE Control Module Exposure control interfaces: - [ss\_mpi\_isp\_set\_exposure\_attr](#ZH-CN_TOPIC_0000002503964781): Set AE exposure attributes.
+<a name="ZH-CN_TOPIC_0000002504084835"></a>- [ss\_mpi\_isp\_get\_exposure\_attr](#ZH-CN_TOPIC_0000002504084835): Get AE exposure attributes.
+<a name="ZH-CN_TOPIC_0000002504084905"></a>- [ss\_mpi\_isp\_set\_wdr\_exposure\_attr](#ZH-CN_TOPIC_0000002504084905): Set AE exposure attributes in WDR mode.
+<a name="ZH-CN_TOPIC_0000002470924854"></a>- [ss\_mpi\_isp\_get\_wdr\_exposure\_attr](#ZH-CN_TOPIC_0000002470924854): Get AE exposure attributes in WDR mode.
+<a name="ZH-CN_TOPIC_0000002504084737"></a>- [ss\_mpi\_isp\_set\_hdr\_exposure\_attr](#ZH-CN_TOPIC_0000002504084737): Set AE exposure attributes in HDR mode.
+<a name="ZH-CN_TOPIC_0000002504084897"></a>- [ss\_mpi\_isp\_get\_hdr\_exposure\_attr](#ZH-CN_TOPIC_0000002504084897): Get AE exposure attributes in HDR mode.
+<a name="ZH-CN_TOPIC_0000002471084856"></a>- [ss\_mpi\_isp\_set\_smart\_exposure\_attr](#ZH-CN_TOPIC_0000002471084856): Set AE exposure attributes in smart mode.
+<a name="ZH-CN_TOPIC_0000002504084961"></a>- [ss\_mpi\_isp\_get\_smart\_exposure\_attr](#ZH-CN_TOPIC_0000002504084961): Get AE exposure attributes in smart mode.
+<a name="ZH-CN_TOPIC_0000002503964919"></a>- [ss\_mpi\_isp\_set\_fast\_face\_ae\_attr](#ZH-CN_TOPIC_0000002503964919): Set AE exposure attributes in face fast convergence mode.
+<a name="ZH-CN_TOPIC_0000002504084751"></a>- [ss\_mpi\_isp\_get\_fast\_face\_ae\_attr](#ZH-CN_TOPIC_0000002504084751): Get AE exposure attributes in face fast convergence mode.
+<a name="ZH-CN_TOPIC_0000002504084821"></a>- [ss\_mpi\_isp\_set\_ae\_route\_attr](#ZH-CN_TOPIC_0000002504084821): Set AE exposure allocation strategy attributes.
+<a name="ZH-CN_TOPIC_0000002471084932"></a>- [ss\_mpi\_isp\_get\_ae\_route\_attr](#ZH-CN_TOPIC_0000002471084932): Get AE exposure allocation strategy attributes.
+<a name="ZH-CN_TOPIC_0000002503965045"></a>- [ss\_mpi\_isp\_set\_ae\_route\_attr\_ex](#ZH-CN_TOPIC_0000002503965045): Set AE exposure allocation extension attributes, supporting separate configuration of sensor analog gain, sensor digital gain, and ISP digital gain in the AE allocation strategy.
+<a name="ZH-CN_TOPIC_0000002471084852"></a>- [ss\_mpi\_isp\_get\_ae\_route\_attr\_ex](#ZH-CN_TOPIC_0000002471084852): Get AE exposure allocation strategy extension attributes.
+<a name="ZH-CN_TOPIC_0000002503964803"></a>- [ss\_mpi\_isp\_set\_ae\_route\_sf\_attr](#ZH-CN_TOPIC_0000002503964803): In WDR mode, set the AE short frame exposure allocation strategy attributes.
+<a name="ZH-CN_TOPIC_0000002471085052"></a>- [ss\_mpi\_isp\_get\_ae\_route\_sf\_attr](#ZH-CN_TOPIC_0000002471085052): Get AE short frame exposure allocation strategy attributes.
+<a name="ZH-CN_TOPIC_0000002503964835"></a>- [ss\_mpi\_isp\_set\_ae\_route\_sf\_attr\_ex](#ZH-CN_TOPIC_0000002503964835): In WDR mode, set the AE short frame exposure allocation strategy extension attributes.
+<a name="ZH-CN_TOPIC_0000002470925156"></a>- [ss\_mpi\_isp\_get\_ae\_route\_sf\_attr\_ex](#ZH-CN_TOPIC_0000002470925156): Get AE short frame exposure allocation strategy extension attributes.
+<a name="ZH-CN_TOPIC_0000002503964993"></a>- [ss\_mpi\_isp\_query\_exposure\_info](#ZH-CN_TOPIC_0000002503964993): Get AE internal status information.
+<a name="ZH-CN_TOPIC_0000002470925022"></a>- [ss\_mpi\_isp\_set\_exp\_convert](#ZH-CN_TOPIC_0000002470925022): Set attributes related to equal exposure conversion at different frame rates.
+<a name="ZH-CN_TOPIC_0000002504084753"></a>- [ss\_mpi\_isp\_get\_exp\_convert](#ZH-CN_TOPIC_0000002504084753): Get exposure parameter attributes related to equal exposure conversion results at different frame rates. #### ss\_mpi\_isp\_set\_exposure\_attr 【Description】 Set AE exposure attributes. 【Syntax】 `td_s32 ss_mpi_isp_set_exposure_attr (ot_vi_pipe vi_pipe, const ot_isp_exposure_attr *exp_attr);` 【Parameters】
 
 | Parameter Name | Description | Input/Output |
 | --- | --- | --- |
@@ -152,7 +152,7 @@ if (ret != TD_SUCCESS) { printf("sensor register callback function to ae lib fai
 | Non-0 | Failure, the value is the error code. |
 
 【Requirements】 - Header files: ot\_common\_isp.h, ss\_mpi\_isp.h, ss\_mpi\_ae.h
-- Library files: libss\_isp.a, libot\_isp.a, libot\_ae.a 【Notes】 - When the AE exposure control type is Auto, the exposure time and exposure gain are automatically controlled by the AE algorithm. Different exposure effects can be achieved by configuring parameters in the auto exposure attribute structure [ot\_isp\_ae\_attr](#ZH-CN_TOPIC_0000002470924872).
+<a name="ZH-CN_TOPIC_0000002470924872"></a>- Library files: libss\_isp.a, libot\_isp.a, libot\_ae.a 【Notes】 - When the AE exposure control type is Auto, the exposure time and exposure gain are automatically controlled by the AE algorithm. Different exposure effects can be achieved by configuring parameters in the auto exposure attribute structure [ot\_isp\_ae\_attr](#ZH-CN_TOPIC_0000002470924872).
 - When the AE exposure control type is Manual, you can control the enable types (exposure time enable, sensor analog gain enable, sensor digital gain enable, ISP digital gain enable) and the corresponding exposure parameters (exposure time, sensor analog gain, sensor digital gain, ISP digital gain) through the manual exposure attribute structure manual\_attr.
 - When the AE exposure control type is Auto, the parameters configured for manual exposure attributes are invalid. Similarly, when the AE exposure control type is Manual, the parameters configured for auto exposure attributes are invalid.
 - When the AE exposure control type is Manual, if the exposure parameter settings exceed the maximum (minimum) value, the sensor's supported maximum (minimum) value will be used instead.
@@ -272,7 +272,7 @@ exp_attr. manual_attr. exp_time = 0x40000; ss_mpi_isp_get_exposure_attr(vi_pipe,
 
 【Requirements】 - Header files: ot\_common\_isp.h, ss\_mpi\_isp.h, ss\_mpi\_ae.h
 - Library files: libot\_isp.a, libss\_isp.a, libot\_ae.a 【Notes】 - When customers use this function, they can obtain corresponding smart information through their own smart module and pass it to ISP. For the transfer method, refer to the ss\_mpi\_isp\_set\_smart\_info interface. After ISP obtains the brightness information of faces or human figures, it will adjust the exposure accordingly so that the brightness of faces or human figures reaches the set target value.
-- For detailed usage of the interface, refer to the [ot\_isp\_smart\_exposure\_attr](#ZH-CN_TOPIC_0000002503964907) description. 【Example】 None 【Related Topics】 [ss\_mpi\_isp\_get\_smart\_exposure\_attr](#ss_mpi_isp_get_smart_exposure_attr) #### ss\_mpi\_isp\_get\_smart\_exposure\_attr 【Description】 Get AE exposure attributes in smart mode. Only takes effect when smart information is available. 【Syntax】 `td_s32 ss_mpi_isp_get_smart_exposure_attr(ot_vi_pipe vi_pipe, ot_isp_smart_exposure_attr *smart_exp_attr);` 【Parameters】
+<a name="ZH-CN_TOPIC_0000002503964907"></a>- For detailed usage of the interface, refer to the [ot\_isp\_smart\_exposure\_attr](#ZH-CN_TOPIC_0000002503964907) description. 【Example】 None 【Related Topics】 [ss\_mpi\_isp\_get\_smart\_exposure\_attr](#ss_mpi_isp_get_smart_exposure_attr) #### ss\_mpi\_isp\_get\_smart\_exposure\_attr 【Description】 Get AE exposure attributes in smart mode. Only takes effect when smart information is available. 【Syntax】 `td_s32 ss_mpi_isp_get_smart_exposure_attr(ot_vi_pipe vi_pipe, ot_isp_smart_exposure_attr *smart_exp_attr);` 【Parameters】
 
 | Parameter Name | Description | Input/Output |
 | --- | --- | --- |
@@ -549,12 +549,12 @@ for(i = 0; i < 1024; i++)
 
 【Requirements】 - Header files: ot\_common\_isp.h, ss\_mpi\_isp.h, ss\_mpi\_ae.h
 - Library files: libot\_isp.a, libss\_isp.a, libot\_ae.a 【Notes】 - The converted Sensor exposure time, analog gain, and digital gain are all Sensor register values with corresponding register addresses, which can be directly written to the Sensor registers. The converted ISP digital gain is in multiples with 10-bit precision.
-- The converted Sensor exposure time, analog gain, and digital gain each have up to 10 register values and 10 register addresses. 【Example】 None 【Related Topics】 None ### AI Control Module Iris control interfaces: - [ss\_mpi\_isp\_set\_iris\_attr](#ZH-CN_TOPIC_0000002503964851): Set iris control attributes.
-- [ss\_mpi\_isp\_get\_iris\_attr](#ZH-CN_TOPIC_0000002503964783): Get iris control attributes.
-- [ss\_mpi\_isp\_set\_dciris\_attr](#ZH-CN_TOPIC_0000002470924940): Set DC-Iris auto iris control attributes.
-- [ss\_mpi\_isp\_get\_dciris\_attr](#ZH-CN_TOPIC_0000002504084869): Get DC-Iris auto iris control attributes.
-- [ss\_mpi\_isp\_set\_piris\_attr](#ZH-CN_TOPIC_0000002503964847): Set P-Iris auto iris control attributes.
-- [ss\_mpi\_isp\_get\_piris\_attr](#ZH-CN_TOPIC_0000002471084962): Get P-Iris auto iris control attributes. #### ss\_mpi\_isp\_set\_iris\_attr 【Description】 Set iris control attributes. This function can realize settings for manual iris attributes and iris type parameters. 【Syntax】 `td_s32 ss_mpi_isp_set_iris_attr(ot_vi_pipe vi_pipe, const ot_isp_iris_attr *iris_attr);` 【Parameters】
+<a name="ZH-CN_TOPIC_0000002503964851"></a>- The converted Sensor exposure time, analog gain, and digital gain each have up to 10 register values and 10 register addresses. 【Example】 None 【Related Topics】 None ### AI Control Module Iris control interfaces: - [ss\_mpi\_isp\_set\_iris\_attr](#ZH-CN_TOPIC_0000002503964851): Set iris control attributes.
+<a name="ZH-CN_TOPIC_0000002503964783"></a>- [ss\_mpi\_isp\_get\_iris\_attr](#ZH-CN_TOPIC_0000002503964783): Get iris control attributes.
+<a name="ZH-CN_TOPIC_0000002470924940"></a>- [ss\_mpi\_isp\_set\_dciris\_attr](#ZH-CN_TOPIC_0000002470924940): Set DC-Iris auto iris control attributes.
+<a name="ZH-CN_TOPIC_0000002504084869"></a>- [ss\_mpi\_isp\_get\_dciris\_attr](#ZH-CN_TOPIC_0000002504084869): Get DC-Iris auto iris control attributes.
+<a name="ZH-CN_TOPIC_0000002503964847"></a>- [ss\_mpi\_isp\_set\_piris\_attr](#ZH-CN_TOPIC_0000002503964847): Set P-Iris auto iris control attributes.
+<a name="ZH-CN_TOPIC_0000002471084962"></a>- [ss\_mpi\_isp\_get\_piris\_attr](#ZH-CN_TOPIC_0000002471084962): Get P-Iris auto iris control attributes. #### ss\_mpi\_isp\_set\_iris\_attr 【Description】 Set iris control attributes. This function can realize settings for manual iris attributes and iris type parameters. 【Syntax】 `td_s32 ss_mpi_isp_set_iris_attr(ot_vi_pipe vi_pipe, const ot_isp_iris_attr *iris_attr);` 【Parameters】
 
 | Parameter Name | Description | Input/Output |
 | --- | --- | --- |
@@ -654,13 +654,13 @@ for(i = 0; i < 1024; i++)
 | Non-0 | Failure, the value is the error code. |
 
 【Requirements】 - Header files: ot\_common\_isp.h, ss\_mpi\_isp.h, ss\_mpi\_ae.h
-- Library files: libot\_isp.a, libss\_isp.a, libot\_ae.a 【Notes】 None 【Example】 None 【Related Topics】 None ## Data Types ### Register - [OT\_ISP\_HIST\_NUM](#ZH-CN_TOPIC_0000002470924896): Defines the number of histogram bins.
+<a name="ZH-CN_TOPIC_0000002470924896"></a>- Library files: libot\_isp.a, libss\_isp.a, libot\_ae.a 【Notes】 None 【Example】 None 【Related Topics】 None ## Data Types ### Register - [OT\_ISP\_HIST\_NUM](#ZH-CN_TOPIC_0000002470924896): Defines the number of histogram bins.
 - [OT\_ISP\_AI\_MAX\_STEP\_FNO\_NUM](#ZH-CN_TOPIC_0000002470924950): Defines the maximum number of aperture steps.
 - [ot\_isp\_ae\_sensor\_register](#ZH-CN_TOPIC_0000002504084731): Defines the sensor registration structure.
-- [ot\_isp\_ae\_sensor\_exp\_func](#ZH-CN_TOPIC_0000002504084949): Defines the sensor callback function structure.
-- [ot\_isp\_ae\_sensor\_default](#ZH-CN_TOPIC_0000002470924862): Defines the initialization parameter structure for the AE algorithm library.
-- [ot\_isp\_ae\_accuracy\_type](#ZH-CN_TOPIC_0000002470924972): Defines the enumeration for precision types of exposure time and gain.
-- [ot\_isp\_ae\_accuracy](#ZH-CN_TOPIC_0000002503964839): Defines the structure for precision of exposure time and gain. #### OT\_ISP\_HIST\_NUM 【Description】 Defines the number of histogram bins. 【Definition】 ```
+<a name="ZH-CN_TOPIC_0000002504084949"></a>- [ot\_isp\_ae\_sensor\_exp\_func](#ZH-CN_TOPIC_0000002504084949): Defines the sensor callback function structure.
+<a name="ZH-CN_TOPIC_0000002470924862"></a>- [ot\_isp\_ae\_sensor\_default](#ZH-CN_TOPIC_0000002470924862): Defines the initialization parameter structure for the AE algorithm library.
+<a name="ZH-CN_TOPIC_0000002470924972"></a>- [ot\_isp\_ae\_accuracy\_type](#ZH-CN_TOPIC_0000002470924972): Defines the enumeration for precision types of exposure time and gain.
+<a name="ZH-CN_TOPIC_0000002503964839"></a>- [ot\_isp\_ae\_accuracy](#ZH-CN_TOPIC_0000002503964839): Defines the structure for precision of exposure time and gain. #### OT\_ISP\_HIST\_NUM 【Description】 Defines the number of histogram bins. 【Definition】 ```
 
 # define OT\_ISP\_HIST\_NUM 1024[¶](#define-ot_isp_hist_num-1024 "锚链接")
 
@@ -709,3 +709,4 @@ typedef struct { ot\_isp\_ae\_sensor\_exp\_func sns\_exp;
 | lines\_per500ms | Total number of lines per 500ms. |
 | flicker\_freq | Anti-flicker frequency, 256x power frequency. |
 | fps | Base frame rate. |
+

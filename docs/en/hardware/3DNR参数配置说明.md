@@ -28,14 +28,14 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/Hi3403V1
 
 # Interface and Parameter Description
 
-## Parameter Description of ot\_vpss\_nrx\_v2 The following describes the interfaces and parameters of 3DNR. - [ot\_vpss\_nrx\_v2](#ZH-CN_TOPIC_0000002457840685): defines the parameters of the 3DNR X interface version V2.[¶](#parameter-description-of-ot_vpss_nrx_v2-the-following-describes-the-interfaces-and-parameters-of-3dnr-ot_vpss_nrx_v2-defines-the-parameters-of-the-3dnr-x-interface-version-v2 "锚链接")
+<a name="ZH-CN_TOPIC_0000002457840685"></a>## Parameter Description of ot\_vpss\_nrx\_v2 The following describes the interfaces and parameters of 3DNR. - [ot\_vpss\_nrx\_v2](#ZH-CN_TOPIC_0000002457840685): defines the parameters of the 3DNR X interface version V2.[¶](#parameter-description-of-ot_vpss_nrx_v2-the-following-describes-the-interfaces-and-parameters-of-3dnr-ot_vpss_nrx_v2-defines-the-parameters-of-the-3dnr-x-interface-version-v2 "锚链接")
 
-- [ot\_vpss\_nrx\_v2\_iey](#ZH-CN_TOPIC_0000002457840633): 3DNR enhancement module parameters.
-- [ot\_vpss\_nrx\_v2\_sfy](#ZH-CN_TOPIC_0000002457840665): 3DNR spatial filter parameters.
-- [ot\_vpss\_nrx\_v2\_mdy](#ZH-CN_TOPIC_0000002457880749): 3DNR motion detection parameters.
-- [ot\_vpss\_nrx\_v2\_tfy](#ZH-CN_TOPIC_0000002424361842): 3DNR temporal filter parameters.
-- [ot\_vpss\_nrx\_v2\_nrc0](#ZH-CN_TOPIC_0000002424202038): 3DNR video chroma C0 filter parameters.
-- [ot\_vpss\_nrx\_v2\_nrc1](#ZH-CN_TOPIC_0000002424361850): 3DNR video chroma C1 filter parameters. ### ot\_vpss\_nrx\_v2 [Description] Defines the parameters of the 3DNR X interface version V2. [Definition] `typedef struct { ot_vpss_nrx_v2_iey iey[5]; ot_vpss_nrx_v2_sfy sfy[5]; ot_vpss_nrx_v2_mdy mdy[2]; ot_vpss_nrx_v2_tfy tfy[3]; ot_vpss_nrx_v2_nrc0 nrc0; ot_vpss_nrx_v2_nrc1 nrc1; struct { td_u16 limit_range_en : 1; td_u16 nry0_en : 1; td_u16 nry1_en : 1; td_u16 nry2_en : 1; td_u16 nry3_en : 1; td_u16 nrc0_en : 1; td_u16 nrc1_en : 1; td_u16 _rb_ : 9; };` `} ot_vpss_nrx_v2;` [Members]
+<a name="ZH-CN_TOPIC_0000002457840633"></a>- [ot\_vpss\_nrx\_v2\_iey](#ZH-CN_TOPIC_0000002457840633): 3DNR enhancement module parameters.
+<a name="ZH-CN_TOPIC_0000002457840665"></a>- [ot\_vpss\_nrx\_v2\_sfy](#ZH-CN_TOPIC_0000002457840665): 3DNR spatial filter parameters.
+<a name="ZH-CN_TOPIC_0000002457880749"></a>- [ot\_vpss\_nrx\_v2\_mdy](#ZH-CN_TOPIC_0000002457880749): 3DNR motion detection parameters.
+<a name="ZH-CN_TOPIC_0000002424361842"></a>- [ot\_vpss\_nrx\_v2\_tfy](#ZH-CN_TOPIC_0000002424361842): 3DNR temporal filter parameters.
+<a name="ZH-CN_TOPIC_0000002424202038"></a>- [ot\_vpss\_nrx\_v2\_nrc0](#ZH-CN_TOPIC_0000002424202038): 3DNR video chroma C0 filter parameters.
+<a name="ZH-CN_TOPIC_0000002424361850"></a>- [ot\_vpss\_nrx\_v2\_nrc1](#ZH-CN_TOPIC_0000002424361850): 3DNR video chroma C1 filter parameters. ### ot\_vpss\_nrx\_v2 [Description] Defines the parameters of the 3DNR X interface version V2. [Definition] `typedef struct { ot_vpss_nrx_v2_iey iey[5]; ot_vpss_nrx_v2_sfy sfy[5]; ot_vpss_nrx_v2_mdy mdy[2]; ot_vpss_nrx_v2_tfy tfy[3]; ot_vpss_nrx_v2_nrc0 nrc0; ot_vpss_nrx_v2_nrc1 nrc1; struct { td_u16 limit_range_en : 1; td_u16 nry0_en : 1; td_u16 nry1_en : 1; td_u16 nry2_en : 1; td_u16 nry3_en : 1; td_u16 nrc0_en : 1; td_u16 nrc1_en : 1; td_u16 _rb_ : 9; };` `} ot_vpss_nrx_v2;` [Members]
 
 | Member Name | Description |
 | --- | --- |
@@ -295,3 +295,4 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/Hi3403V1
 2. After the luminance noise debugging is satisfactory, debug the chroma denoising N Rc interface.
 3. Debug the chroma noise N0 parameters. Set the chroma motion/still decision threshold n Cmath to around 128, and adjust until the background chroma noise no longer flickers. It is recommended to set sfc to 31 to control motion area noise.
 4. Debug the chroma noise N1 parameters. Different spatial filters can be used separately for the motion background and motion foreground. Use filter 4 or filter 6, with saturation, hue, and brightness tables for debugging and filter mixing to achieve spatial chroma denoising. Under low illumination, filter 5 (large window) can be used to control low-frequency noise.
+

@@ -65,11 +65,11 @@ Note: "--" indicates this scenario is not supported. **Table 3** AAC Encoder Low
 | 8k Hz | Mono | 16 to 96 | 24 | 32 to 96 | 32 |
 | Stereo | 16 to 192 | 48 |
 
-Note: "--" indicates this scenario is not supported. (remaining AAC Encoder Low Delay bitrate table data continues with similar rows for 16k Hz, 22.05k Hz, 24k Hz, 32k Hz, 44.1k Hz, and 48k Hz sample rates for both Mono and Stereo channels, following the same pattern) ## API Reference The following AP Is in the SDK release package are used for registering and unregistering encoders and decoders. - [ss\_mpi\_aenc\_register\_encoder](#ZH-CN_TOPIC_0000002408115490): Registers an encoder.
-- [ss\_mpi\_aenc\_unregister\_encoder](#ZH-CN_TOPIC_0000002441714653): Unregisters an encoder.
-- [ss\_mpi\_adec\_register\_decoder](#ZH-CN_TOPIC_0000002408115474): Registers a decoder.
-- [ss\_mpi\_adec\_unregister\_decoder](#ZH-CN_TOPIC_0000002408275418): Unregisters a decoder. Registration examples provided in the audio component: - [ss\_mpi\_aenc\_aac\_init](#ZH-CN_TOPIC_0000002408275398): Registers the AAC encoder.
-- [ss\_mpi\_adec\_aac\_init](#ZH-CN_TOPIC_0000002441714637): Registers the AAC decoder. ### ss\_mpi\_aenc\_register\_encoder [Description] Registers an encoder. [Syntax] `td_s32 ss_mpi_aenc_register_encoder(td_s32 *handle, const ot_aenc_encoder *encoder);` [Parameters]
+<a name="ZH-CN_TOPIC_0000002408115490"></a>Note: "--" indicates this scenario is not supported. (remaining AAC Encoder Low Delay bitrate table data continues with similar rows for 16k Hz, 22.05k Hz, 24k Hz, 32k Hz, 44.1k Hz, and 48k Hz sample rates for both Mono and Stereo channels, following the same pattern) ## API Reference The following AP Is in the SDK release package are used for registering and unregistering encoders and decoders. - [ss\_mpi\_aenc\_register\_encoder](#ZH-CN_TOPIC_0000002408115490): Registers an encoder.
+<a name="ZH-CN_TOPIC_0000002441714653"></a>- [ss\_mpi\_aenc\_unregister\_encoder](#ZH-CN_TOPIC_0000002441714653): Unregisters an encoder.
+<a name="ZH-CN_TOPIC_0000002408115474"></a>- [ss\_mpi\_adec\_register\_decoder](#ZH-CN_TOPIC_0000002408115474): Registers a decoder.
+<a name="ZH-CN_TOPIC_0000002408275418"></a><a name="ZH-CN_TOPIC_0000002408275398"></a>- [ss\_mpi\_adec\_unregister\_decoder](#ZH-CN_TOPIC_0000002408275418): Unregisters a decoder. Registration examples provided in the audio component: - [ss\_mpi\_aenc\_aac\_init](#ZH-CN_TOPIC_0000002408275398): Registers the AAC encoder.
+<a name="ZH-CN_TOPIC_0000002441714637"></a>- [ss\_mpi\_adec\_aac\_init](#ZH-CN_TOPIC_0000002441714637): Registers the AAC decoder. ### ss\_mpi\_aenc\_register\_encoder [Description] Registers an encoder. [Syntax] `td_s32 ss_mpi_aenc_register_encoder(td_s32 *handle, const ot_aenc_encoder *encoder);` [Parameters]
 
 | Parameter Name | Description | Input/Output |
 | --- | --- | --- |
@@ -81,7 +81,7 @@ Note: "--" indicates this scenario is not supported. (remaining AAC Encoder Low 
 | Return Value | Description |
 | --- | --- |
 | 0 | Success. |
-| Non-0 | Failed. See [Error Codes](#ZH-CN_TOPIC_0000002408115506). |
+<a name="ZH-CN_TOPIC_0000002408115506"></a>| Non-0 | Failed. See [Error Codes](#ZH-CN_TOPIC_0000002408115506). |
 
 [Requirements] - Header files: ot\_comm\_aenc.h, ss\_mpi\_audio.h
 - Library file: libss\_mpi.a [Notes] - Users register an encoder with the AENC module by passing the encoder attribute structure, and a registration handle is returned. Users can later unregister the encoder using this handle.
@@ -112,13 +112,13 @@ if (ret) { return ret;
 - Decoder attributes include the decoder type, decoder name, function pointers for opening the decoder, decoding, getting frame info, and closing the decoder.
 - The relevant decoder type must be registered before creating a decoding channel. ### ss\_mpi\_adec\_unregister\_decoder [Description] Unregisters a decoder. Generally not necessary. ### ss\_mpi\_aenc\_aac\_init [Description] Registers the AAC encoder. [Syntax] `td_s32 ss_mpi_aenc_aac_init(td_void);` [Parameters] None. [Requirements] - Source file: audio\_aac\_adp.c
 - Header file: audio\_aac\_adp.h
-- Library files: libaac\_comm.so, libaac\_enc.so [Notes] This interface is implemented in audio\_aac\_adp.c, which is not packaged as a library. Therefore, when using this interface, audio\_aac\_adp.c and audio\_aac\_adp.h must be included for compilation. These two files are placed in the sample/audio/adp folder by default. Additionally, when SBRENC functionality is needed, the libaac\_sbr\_enc.so library must be added. ### ss\_mpi\_adec\_aac\_init [Description] Registers the AAC decoder. (Similar structure to the encoder init) # Data Types The audio component related data types and data structures are defined as follows: - [ot\_aenc\_encoder](#ZH-CN_TOPIC_0000002408275394): Defines the encoder attribute structure.
-- [ot\_adec\_decoder](#ZH-CN_TOPIC_0000002441714629): Defines the decoder attribute structure.
-- [ot\_aac\_type](#ZH-CN_TOPIC_0000002441674777): Defines the AAC audio codec protocol type.
-- [ot\_aac\_bps](#ZH-CN_TOPIC_0000002408275382): Defines the AAC audio encoding bitrate.
-- [ot\_aac\_transport\_type](#ZH-CN_TOPIC_0000002408115466): Defines the AAC audio codec protocol transport encapsulation type.
-- [ot\_aenc\_attr\_aac](#ZH-CN_TOPIC_0000002408115470): Defines the AAC encoding protocol attribute structure.
-- [ot\_adec\_attr\_aac](#ZH-CN_TOPIC_0000002441714625): Defines the AAC decoding protocol attribute structure. ## ot\_aenc\_encoder [Description] Defines the encoder attribute structure. [Definition] `typedef struct { ot_payload_type type; td_u32 max_frame_len; ot_char name[OT_MAX_ENCODER_NAME_LEN]; td_s32 (*func_open_encoder)(td_void *encoder_attr, td_void **encoder); td_s32 (*func_enc_frame)(td_void *encoder, const ot_audio_frame *data, td_u8 *out_buf, td_u32 *out_len); td_s32 (*func_close_encoder)(td_void *encoder);
+<a name="ZH-CN_TOPIC_0000002408275394"></a>- Library files: libaac\_comm.so, libaac\_enc.so [Notes] This interface is implemented in audio\_aac\_adp.c, which is not packaged as a library. Therefore, when using this interface, audio\_aac\_adp.c and audio\_aac\_adp.h must be included for compilation. These two files are placed in the sample/audio/adp folder by default. Additionally, when SBRENC functionality is needed, the libaac\_sbr\_enc.so library must be added. ### ss\_mpi\_adec\_aac\_init [Description] Registers the AAC decoder. (Similar structure to the encoder init) # Data Types The audio component related data types and data structures are defined as follows: - [ot\_aenc\_encoder](#ZH-CN_TOPIC_0000002408275394): Defines the encoder attribute structure.
+<a name="ZH-CN_TOPIC_0000002441714629"></a>- [ot\_adec\_decoder](#ZH-CN_TOPIC_0000002441714629): Defines the decoder attribute structure.
+<a name="ZH-CN_TOPIC_0000002441674777"></a>- [ot\_aac\_type](#ZH-CN_TOPIC_0000002441674777): Defines the AAC audio codec protocol type.
+<a name="ZH-CN_TOPIC_0000002408275382"></a>- [ot\_aac\_bps](#ZH-CN_TOPIC_0000002408275382): Defines the AAC audio encoding bitrate.
+<a name="ZH-CN_TOPIC_0000002408115466"></a>- [ot\_aac\_transport\_type](#ZH-CN_TOPIC_0000002408115466): Defines the AAC audio codec protocol transport encapsulation type.
+<a name="ZH-CN_TOPIC_0000002408115470"></a>- [ot\_aenc\_attr\_aac](#ZH-CN_TOPIC_0000002408115470): Defines the AAC encoding protocol attribute structure.
+<a name="ZH-CN_TOPIC_0000002441714625"></a>- [ot\_adec\_attr\_aac](#ZH-CN_TOPIC_0000002441714625): Defines the AAC decoding protocol attribute structure. ## ot\_aenc\_encoder [Description] Defines the encoder attribute structure. [Definition] `typedef struct { ot_payload_type type; td_u32 max_frame_len; ot_char name[OT_MAX_ENCODER_NAME_LEN]; td_s32 (*func_open_encoder)(td_void *encoder_attr, td_void **encoder); td_s32 (*func_enc_frame)(td_void *encoder, const ot_audio_frame *data, td_u8 *out_buf, td_u32 *out_len); td_s32 (*func_close_encoder)(td_void *encoder);
 } ot_aenc_encoder;` [Members]
 
 | Member Name | Description |
@@ -158,3 +158,4 @@ if (ret) { return ret;
 | 0xa0178041 | OT\_ERR\_AENC\_VQE\_ERR | AENC VQE processing error |
 
 ## Audio Decoding Error Codes (The audio decoding error codes follow a similar pattern with the prefix OT\_ERR\_ADEC\_ and corresponding descriptions.)
+

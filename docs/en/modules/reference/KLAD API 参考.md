@@ -28,26 +28,26 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/KLAD API
 
 # Overview
 
-## Overview KLAD is the key management module. It supports key derivation, plaintext KEY transfer, and ROOTKEY hierarchical transfer. It supports 16 KLAD software channels. ### Key Derivation Users can generate different keys based on different application scenarios, with the ability to derive up to 232 ROOTKE Ys. The work key derived from the key can be calculated using the provided derivation tool. For usage instructions, refer to "[Key Derivation Tool Description](#ZH-CN_TOPIC_0000002457828277)". ### Plaintext KEY Transfer Plaintext KEY refers to the working key used by the encryption/decryption engine, which is securely stored by the user. - Supports AES 128/192/256 bits encryption/decryption.[¶](#overview-klad-is-the-key-management-module-it-supports-key-derivation-plaintext-key-transfer-and-rootkey-hierarchical-transfer-it-supports-16-klad-software-channels-key-derivation-users-can-generate-different-keys-based-on-different-application-scenarios-with-the-ability-to-derive-up-to-232-rootke-ys-the-work-key-derived-from-the-key-can-be-calculated-using-the-provided-derivation-tool-for-usage-instructions-refer-to-key-derivation-tool-description-plaintext-key-transfer-plaintext-key-refers-to-the-working-key-used-by-the-encryptiondecryption-engine-which-is-securely-stored-by-the-user-supports-aes-128192256-bits-encryptiondecryption "锚链接")
+<a name="ZH-CN_TOPIC_0000002457828277"></a>## Overview KLAD is the key management module. It supports key derivation, plaintext KEY transfer, and ROOTKEY hierarchical transfer. It supports 16 KLAD software channels. ### Key Derivation Users can generate different keys based on different application scenarios, with the ability to derive up to 232 ROOTKE Ys. The work key derived from the key can be calculated using the provided derivation tool. For usage instructions, refer to "[Key Derivation Tool Description](#ZH-CN_TOPIC_0000002457828277)". ### Plaintext KEY Transfer Plaintext KEY refers to the working key used by the encryption/decryption engine, which is securely stored by the user. - Supports AES 128/192/256 bits encryption/decryption.[¶](#overview-klad-is-the-key-management-module-it-supports-key-derivation-plaintext-key-transfer-and-rootkey-hierarchical-transfer-it-supports-16-klad-software-channels-key-derivation-users-can-generate-different-keys-based-on-different-application-scenarios-with-the-ability-to-derive-up-to-232-rootke-ys-the-work-key-derived-from-the-key-can-be-calculated-using-the-provided-derivation-tool-for-usage-instructions-refer-to-key-derivation-tool-description-plaintext-key-transfer-plaintext-key-refers-to-the-working-key-used-by-the-encryptiondecryption-engine-which-is-securely-stored-by-the-user-supports-aes-128192256-bits-encryptiondecryption "锚链接")
 
 - Supports SM4 128 bits encryption/decryption.
 - Hi3403V100 and do not support SM4. ### ROOTKEY Transfer ROOTKEY is the key generated from the root key of the OTP module through key de-obfuscation and key derivation. The ROOTKEY is stored in hardware and is not readable by the user. The working key for encryption/decryption is a KEY obtained after multiple levels of KLAD hierarchical transfer. This KEY is also stored in hardware and is not readable by the user. This scheme is mostly used in scenarios with high security requirements. The OTP root key is securely stored by the user. - Supports AES 128/256 bits encryption/decryption.
 - Supports SM4 128 bits encryption/decryption.
 - Hi3403V100 and do not support SM4.
-- Hi3403V100 and support 2-level KLAD transfer. ### KLAD Usage Notes When KLAD is deployed in different scenarios, its usage may vary. - In the Linux environment - User-mode KLAD can be used by linking the static library libss\_klad.a or the dynamic library libss\_klad.so, depending on libsecurec.a or libsecurec.so. - Kernel-mode KLAD uses module insertion, i.e., insmod ot\_klad.ko, which depends on ot\_osal.ko, ot\_base.ko, sys\_config.ko, and ot\_sys.ko. - In the OPTEE environment - The user-mode KLAD external interface naming convention changes from ss\_mpi\_xxx in the Linux environment to ot\_tee\_xxx; - The kernel-mode KLAD external interface naming convention changes from ss\_mpi\_xxx in the Linux environment to ot\_drv\_xxx. - In the UBOOT environment, the user-mode KLAD external interface naming convention changes from ss\_mpi\_xxx in the Linux environment to ot\_mpi\_xxx. ## Usage Flow ### Plaintext KEY Transfer #### Scenario Description When the working key used for encryption/decryption is provided by the user, the plaintext KEY related interfaces need to be used. KLAD transfers the working key to a KEYSLOT. During encryption/decryption, the encryption/decryption engine retrieves the KEY from the corresponding KEYSLOT for encryption/decryption. #### Workflow The plaintext KEY transfer development steps are as follows: 1. Initialize the KLAD device. Call the interface [ss\_mpi\_klad\_init](#ZH-CN_TOPIC_0000002457868405).
-- Create a KLAD handle. Call the interface [ss\_mpi\_klad\_create](#ZH-CN_TOPIC_0000002457828273).
-- Bind the KLAD and KEYSLOT handles. Call the interface [ss\_mpi\_klad\_attach](#ZH-CN_TOPIC_0000002424349510).
-- Set KLAD attributes. Call the interface [ss\_mpi\_klad\_set\_attr](#ZH-CN_TOPIC_0000002457868393).
-- Set the plaintext KEY. Call the interface [ss\_mpi\_klad\_set\_clear\_key](#ZH-CN_TOPIC_0000002457868373).
-- Unbind the KLAD and KEYSLOT handles. Call the interface [ss\_mpi\_klad\_detach](#ZH-CN_TOPIC_0000002424349486).
-- Destroy the KLAD handle. Call the interface [ss\_mpi\_klad\_destroy](#ZH-CN_TOPIC_0000002424189642).
-- Deinitialize the KLAD device. Call the interface [ss\_mpi\_klad\_deinit](#ZH-CN_TOPIC_0000002424349506). #### Notes When using plaintext KEY transfer, please pay special attention to the following points. - The KEYSLOT handle must be created through the CIPHER module during KLAD configuration.
+<a name="ZH-CN_TOPIC_0000002457868405"></a>- Hi3403V100 and support 2-level KLAD transfer. ### KLAD Usage Notes When KLAD is deployed in different scenarios, its usage may vary. - In the Linux environment - User-mode KLAD can be used by linking the static library libss\_klad.a or the dynamic library libss\_klad.so, depending on libsecurec.a or libsecurec.so. - Kernel-mode KLAD uses module insertion, i.e., insmod ot\_klad.ko, which depends on ot\_osal.ko, ot\_base.ko, sys\_config.ko, and ot\_sys.ko. - In the OPTEE environment - The user-mode KLAD external interface naming convention changes from ss\_mpi\_xxx in the Linux environment to ot\_tee\_xxx; - The kernel-mode KLAD external interface naming convention changes from ss\_mpi\_xxx in the Linux environment to ot\_drv\_xxx. - In the UBOOT environment, the user-mode KLAD external interface naming convention changes from ss\_mpi\_xxx in the Linux environment to ot\_mpi\_xxx. ## Usage Flow ### Plaintext KEY Transfer #### Scenario Description When the working key used for encryption/decryption is provided by the user, the plaintext KEY related interfaces need to be used. KLAD transfers the working key to a KEYSLOT. During encryption/decryption, the encryption/decryption engine retrieves the KEY from the corresponding KEYSLOT for encryption/decryption. #### Workflow The plaintext KEY transfer development steps are as follows: 1. Initialize the KLAD device. Call the interface [ss\_mpi\_klad\_init](#ZH-CN_TOPIC_0000002457868405).
+<a name="ZH-CN_TOPIC_0000002457828273"></a>- Create a KLAD handle. Call the interface [ss\_mpi\_klad\_create](#ZH-CN_TOPIC_0000002457828273).
+<a name="ZH-CN_TOPIC_0000002424349510"></a>- Bind the KLAD and KEYSLOT handles. Call the interface [ss\_mpi\_klad\_attach](#ZH-CN_TOPIC_0000002424349510).
+<a name="ZH-CN_TOPIC_0000002457868393"></a>- Set KLAD attributes. Call the interface [ss\_mpi\_klad\_set\_attr](#ZH-CN_TOPIC_0000002457868393).
+<a name="ZH-CN_TOPIC_0000002457868373"></a>- Set the plaintext KEY. Call the interface [ss\_mpi\_klad\_set\_clear\_key](#ZH-CN_TOPIC_0000002457868373).
+<a name="ZH-CN_TOPIC_0000002424349486"></a>- Unbind the KLAD and KEYSLOT handles. Call the interface [ss\_mpi\_klad\_detach](#ZH-CN_TOPIC_0000002424349486).
+<a name="ZH-CN_TOPIC_0000002424189642"></a>- Destroy the KLAD handle. Call the interface [ss\_mpi\_klad\_destroy](#ZH-CN_TOPIC_0000002424189642).
+<a name="ZH-CN_TOPIC_0000002424349506"></a>- Deinitialize the KLAD device. Call the interface [ss\_mpi\_klad\_deinit](#ZH-CN_TOPIC_0000002424349506). #### Notes When using plaintext KEY transfer, please pay special attention to the following points. - The KEYSLOT handle must be created through the CIPHER module during KLAD configuration.
 - When transferring a plaintext KEY, the KLAD type must be configured as plaintext KLAD (OT\_KLAD\_TYPE\_CLEARCW). ### ROOTKEY Transfer #### Scenario Description Used in scenarios with high security requirements. The ROOTKEY is generated after key de-obfuscation and key derivation, and after multiple levels of KLAD transfer, a real working key is obtained. The working key is stored in hardware and is not readable by the user. KLAD transfers the working key to a KEYSLOT. During encryption/decryption, the encryption/decryption engine retrieves the KEY from the corresponding KEYSLOT for encryption/decryption. #### Workflow The ROOTKEY transfer development steps are as follows: 1. Initialize the KLAD device. Call the interface [ss\_mpi\_klad\_init](#ZH-CN_TOPIC_0000002457868405).
 - Create a KLAD handle. Call the interface [ss\_mpi\_klad\_create](#ZH-CN_TOPIC_0000002457828273).
 - Bind the KLAD and KEYSLOT handles. Call the interface [ss\_mpi\_klad\_attach](#ZH-CN_TOPIC_0000002424349510).
 - Set KLAD attributes. Call the interface [ss\_mpi\_klad\_set\_attr](#ZH-CN_TOPIC_0000002457868393).
-- Set the 1st to (n-1)th level KLAD key information. Call the interface [ss\_mpi\_klad\_set\_session\_key](#ZH-CN_TOPIC_0000002457868369).
-- Set the nth level KLAD key information. Call the interface [ss\_mpi\_klad\_set\_content\_key](#ZH-CN_TOPIC_0000002457828237).
+<a name="ZH-CN_TOPIC_0000002457868369"></a>- Set the 1st to (n-1)th level KLAD key information. Call the interface [ss\_mpi\_klad\_set\_session\_key](#ZH-CN_TOPIC_0000002457868369).
+<a name="ZH-CN_TOPIC_0000002457828237"></a>- Set the nth level KLAD key information. Call the interface [ss\_mpi\_klad\_set\_content\_key](#ZH-CN_TOPIC_0000002457828237).
 - Unbind the KLAD and KEYSLOT handles. Call the interface [ss\_mpi\_klad\_detach](#ZH-CN_TOPIC_0000002424349486).
 - Destroy the KLAD handle. Call the interface [ss\_mpi\_klad\_destroy](#ZH-CN_TOPIC_0000002424189642).
 - Deinitialize the KLAD device. Call the interface [ss\_mpi\_klad\_deinit](#ZH-CN_TOPIC_0000002424349506). #### Notes When using ROOTKEY transfer, please pay special attention to the following points. - The KEYSLOT handle must be created through the CIPHER module during KLAD configuration.
@@ -73,7 +73,7 @@ KLAD provides the following AP Is: - [ss\_mpi\_klad\_init](#ZH-CN_TOPIC_00000024
 - [ss\_mpi\_klad\_attach](#ZH-CN_TOPIC_0000002424349510): Binds a KLAD handle and a KEYSLOT handle.
 - [ss\_mpi\_klad\_detach](#ZH-CN_TOPIC_0000002424349486): Unbinds a KLAD handle and a KEYSLOT handle.
 - [ss\_mpi\_klad\_set\_attr](#ZH-CN_TOPIC_0000002457868393): Sets KLAD attributes.
-- [ss\_mpi\_klad\_get\_attr](#ZH-CN_TOPIC_0000002424189662): Gets KLAD attributes.
+<a name="ZH-CN_TOPIC_0000002424189662"></a>- [ss\_mpi\_klad\_get\_attr](#ZH-CN_TOPIC_0000002424189662): Gets KLAD attributes.
 - [ss\_mpi\_klad\_set\_session\_key](#ZH-CN_TOPIC_0000002457868369): Configures the 1st to (n-1)th level KLAD KEY.
 - [ss\_mpi\_klad\_set\_content\_key](#ZH-CN_TOPIC_0000002457828237): Configures the last level KLAD KEY and simultaneously passes the key to KEYSLOT.
 - [ss\_mpi\_klad\_set\_clear\_key](#ZH-CN_TOPIC_0000002457868373): Configures a plaintext KEY and simultaneously passes the key to KEYSLOT. ## ss\_mpi\_klad\_init [Description] Initializes the KLAD module. [Syntax] `td_s32 ss_mpi_klad_init(td_void);` [Parameters] None. [Return Values]
@@ -81,7 +81,7 @@ KLAD provides the following AP Is: - [ss\_mpi\_klad\_init](#ZH-CN_TOPIC_00000024
 | Return Value | Description |
 | --- | --- |
 | 0 | Success. |
-| Non-0 | See [Error Codes](#ZH-CN_TOPIC_0000002424349490). |
+<a name="ZH-CN_TOPIC_0000002424349490"></a>| Non-0 | See [Error Codes](#ZH-CN_TOPIC_0000002424349490). |
 
 [Requirements] - Header files: ot\_common\_klad.h, ss\_mpi\_klad.h
 - Library files: libss\_klad.a, libss\_klad.so [Notes] - Supports multiple calls.
@@ -237,19 +237,19 @@ KLAD provides the following AP Is: - [ss\_mpi\_klad\_init](#ZH-CN_TOPIC_00000024
 [Requirements] - Header files: ot\_common\_klad.h, ss\_mpi\_klad.h
 - Library files: libss\_klad.a, libss\_klad.so [Notes] - The KLAD handle must have been created.
 - Can be called multiple times; the last set attributes take effect. [Example] None. # Data Types
-The relevant data types and data structures are defined as follows (for other common data type definitions, refer to ot\_type.h): - [ot\_klad\_rootkey\_sel](#ZH-CN_TOPIC_0000002424189634): Defines the KLAD ROOTKEY selection enum.
-- [ot\_klad\_rootkey\_secure](#ZH-CN_TOPIC_0000002457868397): Defines the KLAD ROOTKEY static value enum.
-- [ot\_klad\_rootkey\_attr](#ZH-CN_TOPIC_0000002424189658): Defines the KLAD ROOTKEY attribute structure.
-- [ot\_klad\_type](#ZH-CN_TOPIC_0000002457828233): Defines the KLAD type enum.
-- [ot\_klad\_cfg](#ZH-CN_TOPIC_0000002424189638): Defines the KLAD configuration information structure.
-- [ot\_klad\_crypto\_alg](#ZH-CN_TOPIC_0000002457868381): Defines the algorithm for which the KEY is used in the encryption/decryption engine.
-- [ot\_klad\_attr](#ZH-CN_TOPIC_0000002424349482): Defines the KLAD attribute structure.
-- [ot\_klad\_alg\_type](#ZH-CN_TOPIC_0000002457868401): Defines the KLAD algorithm type enum.
-- [ot\_klad\_level](#ZH-CN_TOPIC_0000002457868385): Defines the KLAD level enum.
-- [ot\_klad\_session\_key](#ZH-CN_TOPIC_0000002424349502): Defines the 1st to (n-1)th level KLAD key information structure.
-- [ot\_klad\_content\_key](#ZH-CN_TOPIC_0000002424189666): Defines the nth level KLAD key information structure.
-- [ot\_klad\_clear\_key](#ZH-CN_TOPIC_0000002457828245): Defines the plaintext key information structure.
-- [OT\_KLAD\_MAX\_KEY\_LEN](#ZH-CN_TOPIC_0000002424189646): Defines the KLAD maximum key length. ## ot\_klad\_rootkey\_sel [Description] Defines the KLAD ROOTKEY selection enum. [Definition] `/* klad rootkey select */ typedef enum { OT_KLAD_ROOTKEY_SEL_OEM0 = 0x00, OT_KLAD_ROOTKEY_SEL_OEM1, OT_KLAD_ROOTKEY_SEL_OEM2, OT_KLAD_ROOTKEY_SEL_OEM3, OT_KLAD_ROOTKEY_SEL_VENDOR, OT_KLAD_ROOTKEY_SEL_BUTT, } ot_klad_rootkey_sel;<a name="ot_klad_rootkey_sel"></a>` [Members]
+<a name="ZH-CN_TOPIC_0000002424189634"></a>The relevant data types and data structures are defined as follows (for other common data type definitions, refer to ot\_type.h): - [ot\_klad\_rootkey\_sel](#ZH-CN_TOPIC_0000002424189634): Defines the KLAD ROOTKEY selection enum.
+<a name="ZH-CN_TOPIC_0000002457868397"></a>- [ot\_klad\_rootkey\_secure](#ZH-CN_TOPIC_0000002457868397): Defines the KLAD ROOTKEY static value enum.
+<a name="ZH-CN_TOPIC_0000002424189658"></a>- [ot\_klad\_rootkey\_attr](#ZH-CN_TOPIC_0000002424189658): Defines the KLAD ROOTKEY attribute structure.
+<a name="ZH-CN_TOPIC_0000002457828233"></a>- [ot\_klad\_type](#ZH-CN_TOPIC_0000002457828233): Defines the KLAD type enum.
+<a name="ZH-CN_TOPIC_0000002424189638"></a>- [ot\_klad\_cfg](#ZH-CN_TOPIC_0000002424189638): Defines the KLAD configuration information structure.
+<a name="ZH-CN_TOPIC_0000002457868381"></a>- [ot\_klad\_crypto\_alg](#ZH-CN_TOPIC_0000002457868381): Defines the algorithm for which the KEY is used in the encryption/decryption engine.
+<a name="ZH-CN_TOPIC_0000002424349482"></a>- [ot\_klad\_attr](#ZH-CN_TOPIC_0000002424349482): Defines the KLAD attribute structure.
+<a name="ZH-CN_TOPIC_0000002457868401"></a>- [ot\_klad\_alg\_type](#ZH-CN_TOPIC_0000002457868401): Defines the KLAD algorithm type enum.
+<a name="ZH-CN_TOPIC_0000002457868385"></a>- [ot\_klad\_level](#ZH-CN_TOPIC_0000002457868385): Defines the KLAD level enum.
+<a name="ZH-CN_TOPIC_0000002424349502"></a>- [ot\_klad\_session\_key](#ZH-CN_TOPIC_0000002424349502): Defines the 1st to (n-1)th level KLAD key information structure.
+<a name="ZH-CN_TOPIC_0000002424189666"></a>- [ot\_klad\_content\_key](#ZH-CN_TOPIC_0000002424189666): Defines the nth level KLAD key information structure.
+<a name="ZH-CN_TOPIC_0000002457828245"></a>- [ot\_klad\_clear\_key](#ZH-CN_TOPIC_0000002457828245): Defines the plaintext key information structure.
+<a name="ZH-CN_TOPIC_0000002424189646"></a>- [OT\_KLAD\_MAX\_KEY\_LEN](#ZH-CN_TOPIC_0000002424189646): Defines the KLAD maximum key length. ## ot\_klad\_rootkey\_sel [Description] Defines the KLAD ROOTKEY selection enum. [Definition] `/* klad rootkey select */ typedef enum { OT_KLAD_ROOTKEY_SEL_OEM0 = 0x00, OT_KLAD_ROOTKEY_SEL_OEM1, OT_KLAD_ROOTKEY_SEL_OEM2, OT_KLAD_ROOTKEY_SEL_OEM3, OT_KLAD_ROOTKEY_SEL_VENDOR, OT_KLAD_ROOTKEY_SEL_BUTT, } ot_klad_rootkey_sel;<a name="ot_klad_rootkey_sel"></a>` [Members]
 
 | Member Name | Description |
 | --- | --- |
@@ -419,3 +419,4 @@ The error codes provided by KLAD are as follows. **Table 1** KLAD module error c
 | RKP | Root Key Process | Root Key Process |
 | **T** | | |
 | TEE | Trusted Execution Environment | Trusted Execution Environment |
+

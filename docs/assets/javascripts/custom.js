@@ -10,120 +10,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 100);
   }
 
-  // ========== 布局优化：首页右侧目录合并到左侧 ==========
-
-  // 是否已经渲染了首页目录，避免重复操作
-  var homepageTocRendered = false;
+  // ========== 首页布局：隐藏右侧目录栏 ==========
 
   function setupHomepageLayout() {
     var path = window.location.pathname.replace(/\/+$/, '');
     var isHomepage = path === '/pegasus_doc'
       || path === '/pegasus_doc/index.html'
+      || path === '/pegasus_doc/cn'
+      || path === '/pegasus_doc/cn/index.html'
+      || path === '/pegasus_doc/en'
+      || path === '/pegasus_doc/en/index.html'
+      || path === '/cn'
+      || path === '/cn/index.html'
+      || path === '/en'
+      || path === '/en/index.html'
       || path === ''
       || path === '/'
       || path === '/index.html';
 
-    var leftInner = document.querySelector('.md-sidebar--primary .md-sidebar__inner');
-    var contentArea = document.querySelector('.md-content__inner');
-
-    if (!isHomepage) {
-      // 非首页：清除 body class，移除旧 TOC，重置标记
-      document.body.classList.remove('homepage');
-      var oldTitle = document.querySelector('.cloned-homepage-toc-title');
-      if (oldTitle) oldTitle.remove();
-      var oldList = document.querySelector('.cloned-homepage-toc-list');
-      if (oldList) oldList.remove();
-      homepageTocRendered = false;
-      return;
-    }
-
-    document.body.classList.add('homepage');
-
-    // 元素未就绪，跳过本轮（等待下次轮询）
-    if (!leftInner || !contentArea) {
-      return;
-    }
-
-    // 隐藏右侧栏
-    var rightSidebar = document.querySelector('.md-sidebar--secondary');
-    if (rightSidebar) {
-      rightSidebar.style.display = 'none';
-      rightSidebar.setAttribute('hidden', '');
-    }
-
-    // 已经渲染过了，跳过
-    if (homepageTocRendered) {
-      return;
-    }
-
-    // 清除之前生成的目录（防止重复）
-    var oldTitle = leftInner.querySelector('.cloned-homepage-toc-title');
-    if (oldTitle) oldTitle.remove();
-    var oldList = leftInner.querySelector('.cloned-homepage-toc-list');
-    if (oldList) oldList.remove();
-
-    // 从页面内容中提取 h2/h3 标题，生成纯链接目录
-    var headings = contentArea.querySelectorAll('h2, h3');
-    var items = [];
-    headings.forEach(function(h) {
-      var id = h.id || (h.querySelector('[id]') ? h.querySelector('[id]').id : null);
-      if (id && id.length > 0) {
-        // 获取纯净的标题文字（去掉 MkDocs 自动添加的 ¶ permalink 符号）
-        var hClone = h.cloneNode(true);
-        var perm = hClone.querySelector('.headerlink');
-        if (perm) perm.remove();
-        var cleanText = hClone.textContent.trim();
-        items.push({ id: id, text: cleanText, tag: h.tagName });
+    if (isHomepage) {
+      document.body.classList.add('homepage');
+      var rightSidebar = document.querySelector('.md-sidebar--secondary');
+      if (rightSidebar) {
+        rightSidebar.style.display = 'none';
+        rightSidebar.setAttribute('hidden', '');
       }
-    });
-
-    if (items.length > 0) {
-      // 分隔标题
-      var tocTitle = document.createElement('div');
-      tocTitle.className = 'cloned-homepage-toc-title';
-      tocTitle.textContent = '📑 本页目录';
-      leftInner.appendChild(tocTitle);
-
-      // 生成目录列表
-      var list = document.createElement('ul');
-      list.className = 'cloned-homepage-toc-list';
-
-      items.forEach(function(item) {
-        var li = document.createElement('li');
-        li.className = 'cloned-homepage-toc-item';
-        if (item.tag === 'H3') {
-          li.classList.add('toc-level-h3');
-        }
-
-        var link = document.createElement('a');
-        link.href = '#' + item.id;
-        link.className = 'cloned-homepage-toc-link';
-        link.textContent = item.text;
-
-        // 自定义点击处理：绕过 MkDocs 即时导航，平滑滚动到目标
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          var target = document.getElementById(item.id);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            history.pushState(null, '', '#' + item.id);
-          }
-        });
-
-        li.appendChild(link);
-        list.appendChild(li);
-      });
-
-      leftInner.appendChild(list);
-      homepageTocRendered = true;
     }
   }
 
-  // 使用轮询检测代替 MutationObserver：防止即时导航替换 DOM 导致观察器失效
-  setInterval(function() {
-    setupHomepageLayout();
-  }, 500);
+  setupHomepageLayout();
 
   // 在代码块右上角显示语言标签
   var codeBlocks = document.querySelectorAll('div.highlight pre');

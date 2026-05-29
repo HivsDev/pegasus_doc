@@ -31,20 +31,20 @@ The OTP module provides MPI interfaces for driving one-time programmable operati
 **Figure 2** Key Usage Mechanism in Hi3403V100, OTP
 ## OTP Usage Notes When OTP is deployed in different scenarios, its usage may vary. - In the Linux environment - User-mode OTP can be used by linking the static library libss\_otp.a or the dynamic library libss\_otp.so, depending on libsecurec.a or libsecurec.so. - Kernel-mode OTP uses module insertion, i.e., insmod ot\_otp.ko, which depends on ot\_osal.ko, ot\_base.ko, sys\_config.ko, and ot\_sys.ko. - In the OPTEE environment, the user-mode OTP external interface naming convention changes from ss\_mpi\_xxx in the Linux environment to ot\_tee\_xxx.
 - In the UBOOT environment, the user-mode OTP external interface naming convention changes from ss\_mpi\_xxx in the Linux environment to ot\_mpi\_xxx. # API Reference
-OTP provides the following AP Is: - [ss\_mpi\_otp\_init](#ZH-CN_TOPIC_0000002457868853): Initializes the OTP module.
-- [ss\_mpi\_otp\_deinit](#ZH-CN_TOPIC_0000002457828757): Deinitializes the OTP module.
-- [ss\_mpi\_otp\_set\_user\_data](#ZH-CN_TOPIC_0000002457828753): Sets OTP user space data.
-- [ss\_mpi\_otp\_get\_user\_data](#ZH-CN_TOPIC_0000002424349934): Reads OTP user space data.
-- [ss\_mpi\_otp\_set\_user\_data\_lock](#ZH-CN_TOPIC_0000002424349926): Sets OTP user data lock.
-- [ss\_mpi\_otp\_get\_user\_data\_lock](#ZH-CN_TOPIC_0000002457868865): Gets OTP user data lock.
-- [ss\_mpi\_otp\_burn\_product\_pv](#ZH-CN_TOPIC_0000002424190098): Burns PV data and lock flags to the chip internal OTP.
-- [ss\_mpi\_otp\_read\_product\_pv](#ZH-CN_TOPIC_0000002424349922): Reads PV data or lock flags from the chip internal OTP.
-- [ss\_mpi\_otp\_get\_key\_verify\_status](#ZH-CN_TOPIC_0000002457828745): Gets the verification status of the KEY stored in the chip internal OTP. ## ss\_mpi\_otp\_init [Description] Initializes the OTP module. [Syntax] `td_s32 ss_mpi_otp_init(td_void);` [Parameters] None. [Return Values]
+<a name="ZH-CN_TOPIC_0000002457868853"></a>OTP provides the following AP Is: - [ss\_mpi\_otp\_init](#ZH-CN_TOPIC_0000002457868853): Initializes the OTP module.
+<a name="ZH-CN_TOPIC_0000002457828757"></a>- [ss\_mpi\_otp\_deinit](#ZH-CN_TOPIC_0000002457828757): Deinitializes the OTP module.
+<a name="ZH-CN_TOPIC_0000002457828753"></a>- [ss\_mpi\_otp\_set\_user\_data](#ZH-CN_TOPIC_0000002457828753): Sets OTP user space data.
+<a name="ZH-CN_TOPIC_0000002424349934"></a>- [ss\_mpi\_otp\_get\_user\_data](#ZH-CN_TOPIC_0000002424349934): Reads OTP user space data.
+<a name="ZH-CN_TOPIC_0000002424349926"></a>- [ss\_mpi\_otp\_set\_user\_data\_lock](#ZH-CN_TOPIC_0000002424349926): Sets OTP user data lock.
+<a name="ZH-CN_TOPIC_0000002457868865"></a>- [ss\_mpi\_otp\_get\_user\_data\_lock](#ZH-CN_TOPIC_0000002457868865): Gets OTP user data lock.
+<a name="ZH-CN_TOPIC_0000002424190098"></a>- [ss\_mpi\_otp\_burn\_product\_pv](#ZH-CN_TOPIC_0000002424190098): Burns PV data and lock flags to the chip internal OTP.
+<a name="ZH-CN_TOPIC_0000002424349922"></a>- [ss\_mpi\_otp\_read\_product\_pv](#ZH-CN_TOPIC_0000002424349922): Reads PV data or lock flags from the chip internal OTP.
+<a name="ZH-CN_TOPIC_0000002457828745"></a>- [ss\_mpi\_otp\_get\_key\_verify\_status](#ZH-CN_TOPIC_0000002457828745): Gets the verification status of the KEY stored in the chip internal OTP. ## ss\_mpi\_otp\_init [Description] Initializes the OTP module. [Syntax] `td_s32 ss_mpi_otp_init(td_void);` [Parameters] None. [Return Values]
 
 | Return Value | Description |
 | --- | --- |
 | 0 | Success. |
-| Non-0 | See [Error Codes](#ZH-CN_TOPIC_0000002424349930). |
+<a name="ZH-CN_TOPIC_0000002424349930"></a>| Non-0 | See [Error Codes](#ZH-CN_TOPIC_0000002424349930). |
 
 [Requirements] - Header files: ot\_common\_otp.h, ss\_mpi\_otp.h
 - Library file: libss\_otp.a [Notes] Initialization and deinitialization must be paired. [Example] None. ## ss\_mpi\_otp\_deinit [Description] Deinitializes the OTP module. [Syntax] `td_s32 ss_mpi_otp_deinit(td_void);` [Parameters] None. [Return Values]
@@ -187,9 +187,9 @@ OTP provides the following AP Is: - [ss\_mpi\_otp\_init](#ZH-CN_TOPIC_0000002457
 
 [Requirements] - Header files: ot\_common\_otp.h, ss\_mpi\_otp.h
 - Library file: libss\_otp.a [Notes] The parameter key\_name refers to the "Field Name" column in Section 2.2 "S Sxxxx OTP Field Definitions" of the "Security Subsystem Usage Guide". [Example] None. # Data Types
-The relevant data types and data structures are defined as follows: - [ot\_otp\_burn\_pv\_item](#ZH-CN_TOPIC_0000002457868869): OTP PV data type.
-- [ot\_otp\_lock\_status](#ZH-CN_TOPIC_0000002424190110): Defines OTP data lock status.
-- [OT\_OTP\_PV\_NAME\_MAX\_LEN](#ZH-CN_TOPIC_0000002457828749): Maximum byte length of field name (unit: byte).
+<a name="ZH-CN_TOPIC_0000002457868869"></a>The relevant data types and data structures are defined as follows: - [ot\_otp\_burn\_pv\_item](#ZH-CN_TOPIC_0000002457868869): OTP PV data type.
+<a name="ZH-CN_TOPIC_0000002424190110"></a>- [ot\_otp\_lock\_status](#ZH-CN_TOPIC_0000002424190110): Defines OTP data lock status.
+<a name="ZH-CN_TOPIC_0000002457828749"></a>- [OT\_OTP\_PV\_NAME\_MAX\_LEN](#ZH-CN_TOPIC_0000002457828749): Maximum byte length of field name (unit: byte).
 - [OT\_OTP\_PV\_VALUE\_MAX\_LEN](#ZH-CN_TOPIC_0000002424349938): Maximum byte length of the value member in ot\_otp\_burn\_pv\_item (unit: byte). ## ot\_otp\_burn\_pv\_item [Description] OTP PV data type. [Definition] `typedef struct { td_bool burn; td_char field_name[OT_OTP_PV_NAME_MAX_LEN]; td_u32 value_len; td_u8 value[OT_OTP_PV_VALUE_MAX_LEN]; td_bool lock;
 } ot_otp_burn_pv_item;` [Members]
 
@@ -253,3 +253,4 @@ The error codes provided by OTP are as follows. **Table 1** OTP module error cod
 | OTP | One Time Programmable | One Time Programmable |
 | **S** | | |
 | SPACC | Security Protocol Accelerator | Security Protocol Accelerator |
+

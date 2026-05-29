@@ -7,10 +7,11 @@ site_url: https://HivsDev.github.io/pegasus_doc/
 repo_url: https://github.com/HivsDev/pegasus_doc
 repo_name: Hi3403V100-docs
 
-use_directory_urls: false
+use_directory_urls: true
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/images/hisilicon_light.svg
   language: zh
   palette:
@@ -53,18 +54,20 @@ theme:
 
 plugins:
   - i18n:
-      docs_structure: folder
+      docs_structure: single_folder
       reconfigure_material: true
       languages:
-        - locale: zh
+        - locale: cn
           name: 中文
           default: true
           build: true
+          link: /cn/
           theme:
             language: zh
         - locale: en
           name: English
           build: true
+          link: /en/
           theme:
             language: en
           nav_translations:
@@ -231,8 +234,8 @@ extra:
   homepage: https://developers.hisilicon.com
   alternate:
     - name: 中文
-      link: /
-      lang: zh
+      link: /cn/
+      lang: cn
     - name: English
       link: /en/
       lang: en

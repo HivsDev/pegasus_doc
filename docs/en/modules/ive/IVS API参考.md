@@ -32,19 +32,19 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/IVS API�
 
 ## Functional Description ### Motion Detection Motion detection detects the motion state of a video by detecting changes in video brightness, producing video detection analysis results. #### Basic Concepts - MD Algorithm The MD algorithm includes two types: frame difference method (MD\_ALG\_MODE\_REF) and background method (MD\_ALG\_MODE\_BG). - Frame Difference Method (MD\_ALG\_MODE\_REF) An algorithm that directly uses the user-specified image as a reference frame to produce video detection analysis results is called the frame difference method. - Background Method (MD\_ALG\_MODE\_BG) During MD processing, a background image of the current video is generated. An algorithm that then uses the background image as a reference frame to produce video detection analysis results is called the background method. - Background Update Weight When the MD algorithm is set to the background method, each MD process generates a static partial image. This partial image and the background undergo a pixel value overlay. New background = (static partial image overlay weight x static partial image + dynamic partial image overlay weight y old background) >> 16. > **Caution:**[¶](#functional-description-motion-detection-motion-detection-detects-the-motion-state-of-a-video-by-detecting-changes-in-video-brightness-producing-video-detection-analysis-results-basic-concepts-md-algorithm-the-md-algorithm-includes-two-types-frame-difference-method-md_alg_mode_ref-and-background-method-md_alg_mode_bg-frame-difference-method-md_alg_mode_ref-an-algorithm-that-directly-uses-the-user-specified-image-as-a-reference-frame-to-produce-video-detection-analysis-results-is-called-the-frame-difference-method-background-method-md_alg_mode_bg-during-md-processing-a-background-image-of-the-current-video-is-generated-an-algorithm-that-then-uses-the-background-image-as-a-reference-frame-to-produce-video-detection-analysis-results-is-called-the-background-method-background-update-weight-when-the-md-algorithm-is-set-to-the-background-method-each-md-process-generates-a-static-partial-image-this-partial-image-and-the-background-undergo-a-pixel-value-overlay-new-background-static-partial-image-overlay-weight-x-static-partial-image-dynamic-partial-image-overlay-weight-y-old-background-16-caution "锚链接")
 
-> If using a 64-bit operating system, the MMZ address used must be within a 4 GB space, otherwise exceptions may occur. ## API Reference The MD API provides basic interfaces for initialization, exit, handle acquisition, handle release, background acquisition, and detection processing. This functional module provides the following AP Is: - [ss\_ivs\_md\_init](#ZH-CN_TOPIC_0000002441733309): Initialization.
-> - [ss\_ivs\_md\_exit](#ZH-CN_TOPIC_0000002408134148): Exit.
-> - [ss\_ivs\_md\_create\_chn](#ZH-CN_TOPIC_0000002441733333): Creates an MD channel.
-> - [ss\_ivs\_md\_destroy\_chn](#ZH-CN_TOPIC_0000002441853505): Destroys an MD channel.
-> - [ss\_ivs\_md\_set\_chn\_attr](#ZH-CN_TOPIC_0000002408294068): Sets MD channel attributes.
-> - [ss\_ivs\_md\_get\_chn\_attr](#ZH-CN_TOPIC_0000002408294052): Gets MD channel attributes.
-> - [ss\_ivs\_md\_get\_bg](#ZH-CN_TOPIC_0000002408134192): Gets the background.
-> - [ss\_ivs\_md\_proc](#ZH-CN_TOPIC_0000002441733297): Detection processing. ### ss\_ivs\_md\_init [Description] Initializes motion detection. [Syntax] `td_s32 ss_ivs_md_init(td_void)；` [Parameters] None. [Return Values]
+<a name="ZH-CN_TOPIC_0000002441733309"></a>> If using a 64-bit operating system, the MMZ address used must be within a 4 GB space, otherwise exceptions may occur. ## API Reference The MD API provides basic interfaces for initialization, exit, handle acquisition, handle release, background acquisition, and detection processing. This functional module provides the following AP Is: - [ss\_ivs\_md\_init](#ZH-CN_TOPIC_0000002441733309): Initialization.
+<a name="ZH-CN_TOPIC_0000002408134148"></a>> - [ss\_ivs\_md\_exit](#ZH-CN_TOPIC_0000002408134148): Exit.
+<a name="ZH-CN_TOPIC_0000002441733333"></a>> - [ss\_ivs\_md\_create\_chn](#ZH-CN_TOPIC_0000002441733333): Creates an MD channel.
+<a name="ZH-CN_TOPIC_0000002441853505"></a>> - [ss\_ivs\_md\_destroy\_chn](#ZH-CN_TOPIC_0000002441853505): Destroys an MD channel.
+<a name="ZH-CN_TOPIC_0000002408294068"></a>> - [ss\_ivs\_md\_set\_chn\_attr](#ZH-CN_TOPIC_0000002408294068): Sets MD channel attributes.
+<a name="ZH-CN_TOPIC_0000002408294052"></a>> - [ss\_ivs\_md\_get\_chn\_attr](#ZH-CN_TOPIC_0000002408294052): Gets MD channel attributes.
+<a name="ZH-CN_TOPIC_0000002408134192"></a>> - [ss\_ivs\_md\_get\_bg](#ZH-CN_TOPIC_0000002408134192): Gets the background.
+<a name="ZH-CN_TOPIC_0000002441733297"></a>> - [ss\_ivs\_md\_proc](#ZH-CN_TOPIC_0000002441733297): Detection processing. ### ss\_ivs\_md\_init [Description] Initializes motion detection. [Syntax] `td_s32 ss_ivs_md_init(td_void)；` [Parameters] None. [Return Values]
 
 | Return Value | Description |
 | --- | --- |
 | 0 | Success. |
-| Non-0 | Failed. See [Error Codes](#ZH-CN_TOPIC_0000002408294036). |
+<a name="ZH-CN_TOPIC_0000002408294036"></a>| Non-0 | Failed. See [Error Codes](#ZH-CN_TOPIC_0000002408294036). |
 
 [Requirements] - Header files: ot\_common\_svp.h, ot\_common\_md.h, ss\_ivs\_md.h
 - Library file: libss\_md.a [Notes] - Before calling other MD interfaces, this interface must be called first for initialization, and it only needs to be called once. Otherwise, an error is returned.
@@ -267,3 +267,4 @@ source: /sessions/sharp-sweet-allen/mnt/hi3403-build/pegasus/docs/zh-CN/IVS API�
 | ywt | Background method update Y weight. |
 | frm\_rate | Frame rate. |
 | cost\_tm\_per\_frm | Time per frame (unit: us). **Note: Frame rate and time per frame are calculated every 10 seconds.** |
+

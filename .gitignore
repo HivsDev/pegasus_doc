@@ -3,7 +3,7 @@ site/
 scripts/
 *.py
 *.json
-*.html
+# *.html (removed — needed for docs/index.html redirect)
 *.pyc
 *.pyo
 __pycache__/
