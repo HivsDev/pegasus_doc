@@ -15,3 +15,5 @@ venv*/
 .venv*/
 venv*
 .venv*
+node_modules/
+Thumbs.db
