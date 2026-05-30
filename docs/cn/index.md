@@ -118,47 +118,61 @@ make && make flash
 
 <div class="grid cards" markdown>
 
--   :material-cpu-64-bit: **硬件资料**
+-   :material-rocket-launch: **快速入门**
 
     ---
 
-    - [产品简介](system-architecture/产品简介.md) — 芯片规格与关键特性
-    - [外围设备驱动](hardware/外围设备驱动%20操作指南.md) — GPIO / I2C / SPI / UART
-    - [DDR 小型化指南](hardware/DDR%20小型化指南.md) — DDR 布局与布线
-    - [HDMI 开发参考](modules/video/HDMI%20开发参考.md) — HDMI 输出配置
-    - [MIPI 使用指南](modules/video/MIPI%20使用指南.md) — MIPI DSI/CSI 接口
+    - [快速上手指南](getting-started/快速上手指南.md) — 30 分钟快速上手开发流程
+    - [Hi3403V100 环境搭建指南](getting-started/Hi3403V100环境搭建指南.md) — 开发工具链配置与 SDK 安装
+    - [应用开发指南](getting-started/应用开发指南.md) — 应用层开发框架与 API 参考
+    - [图形开发用户指南](getting-started/图形开发用户指南.md) — 图形子系统与 UI 开发
+    - [安全子系统使用说明](getting-started/安全子系统使用说明.md) — 安全启动与加密配置
 
--   :material-code-tags: **软件开发**
-
-    ---
-
-    - [SDK 安装与升级](system-architecture/SDK安装与升级.md) — SDK 环境搭建
-    - [应用开发指南](getting-started/应用开发指南.md) — 应用框架与 API
-    - [媒体处理 MPP](modules/mpp/01%20概述.md) — 视频/音频/图形处理
-    - [SVP2.0 开发指南](modules/ai/SVP2.0%20开发指南.md) — NN 推理引擎
-    - [芯片参考 API](modules/reference/CIPHER%20API%20参考.md) — 底层 API 速查
-
--   :material-tools: **工具链**
+-   :material-cog-outline: **系统架构**
 
     ---
 
-    - [ATC 工具使用指南](modules/ai/ATC工具使用指南.md) — 模型转换工具
-    - [BurnTool 烧录工具](tools/BurnTool%20工具使用指南.md) — 固件烧录
-    - [Profiling 工具](modules/ai/Profiling工具使用指南.md) — 性能分析
-    - [精度比对工具](modules/ai/精度比对工具使用指南.md) — 模型精度验证
-    - [图像质量调试工具](modules/ai/图像质量调试工具使用指南.md) — ISP 调优
+    - [产品简介](system-architecture/产品简介.md) — Hi3403V100/SS927V100 SoC 核心规格与关键特性
+    - [SDK 安装与升级](system-architecture/SDK安装与升级.md) — SDK 环境搭建与版本管理
+    - [SS928V100 产品简介](getting-started/SS928V100%20超高清智能网络录像机%20SoC%20产品简介.md) — SS928V100 产品规格
+    - [SS928V100/SS927V100 SDK 安装升级](getting-started/SS928V100╱SS927V100%20SDK%20安装以及升级使用说明.md) — SDK 安装详细说明
 
--   :material-help-circle: **常见问题 FAQ**
+-   :material-memory: **硬件手册**
 
     ---
 
-    - :material-alert-circle: 串口无输出？检查 TX/RX 是否反接，波特率是否为 115200
-    - :material-alert-circle: 驱动安装失败？确认系统是否禁用驱动签名（Windows）
-    - :material-alert-circle: 烧录卡在 waiting 状态？检查 USB 线是否为数据线
-    - :material-alert-circle: SDK 编译报错？检查交叉编译工具链版本是否匹配
-    - :material-alert-circle: DTS 配置不生效？确认是否重新编译并替换 dtb 分区
+    - [外围设备驱动](hardware/外围设备驱动%20操作指南.md) — GPIO / I2C / SPI / UART 操作
+    - [DDR 小型化指南](hardware/DDR%20小型化指南.md) — DDR 布局与布线优化
+    - [U-Boot 移植开发](hardware/U-boot%20移植应用开发指南.md) — Bootloader 移植指南
+    - [安全启动](hardware/安全启动使用指南.md) — 安全启动配置与验证
+    - [内存布局调整](hardware/内存布局调整指南.md) — 内存分区与地址映射
 
-    [:octicons-arrow-right-24: 查看全部 FAQ](other/BSP%20FAQ.md)
+-   :material-code-json: **模块 API**
+
+    ---
+
+    - [媒体处理 MPP](modules/mpp/01%20概述.md) — 视频/音频/图形处理子系统
+    - [ISP 图像处理器](modules/isp/ISP%20开发参考（1--2）.md) — 图像信号处理开发参考
+    - [IVE/IVS 智能视觉](modules/ive/IVE%20API%20参考（1--2）.md) — 智能视觉加速 API
+    - [智能分析引擎](modules/ai/SVP2.0%20开发指南.md) — SVP2.0 NN 推理与 ATC 工具
+    - [芯片参考 API](modules/reference/CIPHER%20API%20参考.md) — CIPHER / KLAD / OTP / TDE
+
+-   :material-lightbulb-on-outline: **样例中心**
+
+    ---
+
+    - [小型系统移植案例](getting-started/小型系统SS928V100移植案例.md) — SS928V100 小型系统完整移植
+    - [开机画面使用指南](getting-started/开机画面使用指南.md) — 开机动画与 Logo 配置
+    - [抓拍使用指南](getting-started/抓拍%20使用指南.md) — 图像抓拍与快照功能
+
+-   :material-wrench: **工具平台**
+
+    ---
+
+    - [BurnTool 烧录工具](tools/BurnTool%20工具使用指南.md) — 固件烧录与分区管理
+    - [ToolPlatform 工具平台](tools/ToolPlatform工具平台使用指南.md) — 芯片调试与配置平台
+    - [MindCmd 命令行工具](tools/MindCmd%20使用指南.md) — 命令行调试与诊断
+    - [DIS 调试指南](tools/DIS%20调试指南.md) — 数字防抖调试与参数配置
 
 </div>
 

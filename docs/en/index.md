@@ -118,47 +118,61 @@ Once the LED lights up, explore the [Application Development Guide](getting-star
 
 <div class="grid cards" markdown>
 
--   :material-cpu-64-bit: **Hardware**
+-   :material-rocket-launch: **Quick Start**
 
     ---
 
-    - [Product Overview](system-architecture/产品简介.md) — Chip specs & features
+    - [Quick Start Guide](getting-started/快速上手指南.md) — Get started in 30 minutes
+    - [Environment Setup](getting-started/Hi3403V100环境搭建指南.md) — Toolchain & SDK installation
+    - [Application Development](getting-started/应用开发指南.md) — Framework & API reference
+    - [Graphics Development](getting-started/图形开发用户指南.md) — Graphics subsystem & UI
+    - [Security Subsystem](getting-started/安全子系统使用说明.md) — Secure boot & encryption
+
+-   :material-cog-outline: **System Architecture**
+
+    ---
+
+    - [Product Overview](system-architecture/产品简介.md) — Hi3403V100/SS927V100 SoC specs & features
+    - [SDK Setup & Upgrade](system-architecture/SDK安装与升级.md) — SDK environment & version management
+    - [SS928V100 Product Overview](getting-started/SS928V100%20超高清智能网络录像机%20SoC%20产品简介.md) — SS928V100 product specs
+    - [SS928V100/SS927V100 SDK](getting-started/SS928V100╱SS927V100%20SDK%20安装以及升级使用说明.md) — SDK installation details
+
+-   :material-memory: **Hardware Manual**
+
+    ---
+
     - [Peripheral Drivers](hardware/外围设备驱动%20操作指南.md) — GPIO / I2C / SPI / UART
-    - [DDR Miniaturization](hardware/DDR%20小型化指南.md) — DDR layout & routing
-    - [HDMI Reference](modules/video/HDMI%20开发参考.md) — HDMI output config
-    - [MIPI Guide](modules/video/MIPI%20使用指南.md) — MIPI DSI/CSI interface
+    - [DDR Miniaturization](hardware/DDR%20小型化指南.md) — DDR layout & routing optimization
+    - [U-Boot Porting](hardware/U-boot%20移植应用开发指南.md) — Bootloader porting guide
+    - [Secure Boot](hardware/安全启动使用指南.md) — Secure boot configuration
+    - [Memory Layout](hardware/内存布局调整指南.md) — Memory partition & address mapping
 
--   :material-code-tags: **Software**
-
-    ---
-
-    - [SDK Setup](system-architecture/SDK安装与升级.md) — SDK environment setup
-    - [App Development](getting-started/应用开发指南.md) — Framework & API
-    - [Media Processing](modules/mpp/01%20概述.md) — Video/Audio/Graphics
-    - [SVP2.0 Guide](modules/ai/SVP2.0%20开发指南.md) — NN inference engine
-    - [Chip API Reference](modules/reference/CIPHER%20API%20参考.md) — Low-level API
-
--   :material-tools: **Tools**
+-   :material-code-json: **Module API**
 
     ---
 
-    - [ATC Tool Guide](modules/ai/ATC工具使用指南.md) — Model conversion
-    - [BurnTool](tools/BurnTool%20工具使用指南.md) — Firmware flashing
-    - [Profiling Tool](modules/ai/Profiling工具使用指南.md) — Performance analysis
-    - [Accuracy Comparison](modules/ai/精度比对工具使用指南.md) — Model accuracy
-    - [Image Quality Tool](modules/ai/图像质量调试工具使用指南.md) — ISP tuning
+    - [Media Processing (MPP)](modules/mpp/01%20概述.md) — Video/Audio/Graphics subsystem
+    - [ISP Image Processor](modules/isp/ISP%20开发参考（1--2）.md) — Image signal processing reference
+    - [IVE/IVS Smart Vision](modules/ive/IVE%20API%20参考（1--2）.md) — Intelligent vision acceleration API
+    - [AI Engine](modules/ai/SVP2.0%20开发指南.md) — SVP2.0 NN inference & ATC tools
+    - [Chip Reference API](modules/reference/CIPHER%20API%20参考.md) — CIPHER / KLAD / OTP / TDE
 
--   :material-help-circle: **FAQ**
+-   :material-lightbulb-on-outline: **Examples**
 
     ---
 
-    - :material-alert-circle: No serial output? Check TX/RX swap, baud rate 115200
-    - :material-alert-circle: Driver install failed? Disable driver signature enforcement (Windows)
-    - :material-alert-circle: Flashing stuck? Verify USB cable supports data transfer
-    - :material-alert-circle: SDK build errors? Check cross-compiler toolchain version
-    - :material-alert-circle: DTS not applying? Rebuild and reflash dtb partition
+    - [SS928V100 Porting Case](getting-started/小型系统SS928V100移植案例.md) — Small system porting example
+    - [Splash Screen Guide](getting-started/开机画面使用指南.md) — Boot animation & logo config
+    - [Snapshot Guide](getting-started/抓拍%20使用指南.md) — Image capture & snapshot
 
-    [:octicons-arrow-right-24: View All FAQs](other/BSP%20FAQ.md)
+-   :material-wrench: **Tools Platform**
+
+    ---
+
+    - [BurnTool](tools/BurnTool%20工具使用指南.md) — Firmware flashing & partition management
+    - [ToolPlatform](tools/ToolPlatform工具平台使用指南.md) — Chip debug & configuration platform
+    - [MindCmd](tools/MindCmd%20使用指南.md) — CLI debugging & diagnostics
+    - [DIS Debug Guide](tools/DIS%20调试指南.md) — Digital image stabilization tuning
 
 </div>
 
