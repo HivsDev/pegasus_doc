@@ -926,45 +926,387 @@ div.highlight {
   }
 }
 
-/* ========== 首页左侧自定义目录 ========== */
-.homepage .cloned-homepage-toc-title {
-  padding: 0.6rem 0.6rem 0.2rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--hi-red);
-  border-top: 1px solid var(--hi-border);
-  margin-top: 0.6rem;
+/* =============================================
+ * 新版首页 — Hero Banner
+ * ============================================= */
+.hero-banner {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin: -12px 0 0;
+  padding: 36px 40px;
+  background: var(--hi-white);
+  border: 1px solid var(--hi-border);
+  border-radius: 12px;
+  box-shadow: var(--hi-card-shadow);
 }
 
-.homepage .cloned-homepage-toc-list {
+.hero-banner h1 {
+  display: none;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-left > p:first-of-type {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--hi-black);
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+.hero-left > p:nth-of-type(2) {
+  font-size: 14px;
+  color: var(--hi-gray);
+  margin: 0 0 24px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.hero-actions .md-button {
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  text-decoration: none !important;
+  border: none;
+}
+
+.hero-actions .md-button--primary {
+  background-color: #C7000B;
+  color: #ffffff !important;
+  box-shadow: 0 3px 10px rgba(199, 0, 11, 0.35);
+}
+
+.hero-actions .md-button--primary:hover {
+  background-color: #A00009;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(199, 0, 11, 0.45);
+}
+
+.hero-actions .md-button:not(.md-button--primary) {
+  background-color: var(--hi-bg);
+  color: var(--hi-dark) !important;
+  border: 1px solid var(--hi-border);
+}
+
+.hero-actions .md-button:not(.md-button--primary):hover {
+  background-color: var(--hi-border);
+  color: var(--hi-black) !important;
+}
+
+/* Hero 右侧 — 芯片图片 */
+.hero-right {
+  flex: 0 0 260px;
+}
+
+.hero-chip-image {
+  margin: 0;
+}
+
+.hero-chip-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+/* =============================================
+ * 新版首页 — 规格参数条（左右双栏）
+ * ============================================= */
+.spec-strip {
+  margin: 0 0 8px;
+  padding: 20px 28px;
+  background: var(--hi-bg);
+  border: 1px solid var(--hi-border);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+}
+
+.spec-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 32px;
+}
+
+.spec-col {
+  min-width: 0;
+}
+
+.spec-col ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.homepage .cloned-homepage-toc-item {
+.spec-col ul li {
+  font-size: 13px;
+  color: var(--hi-gray);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--hi-border);
+  line-height: 1.7;
+}
+
+.spec-col ul li:last-child {
+  border-bottom: none;
+}
+
+.spec-col ul li strong {
+  color: var(--hi-dark);
+  font-weight: 600;
+}
+
+.spec-col .twemoji,
+.spec-col .emojione {
+  width: 16px;
+  height: 16px;
+  color: var(--hi-red);
+  vertical-align: -0.15em;
+  margin-right: 2px;
+}
+
+/* =============================================
+ * 新版首页 — 快速入门步骤卡片
+ * ============================================= */
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 16px 0 8px;
+}
+
+.step-card {
+  position: relative;
+  background: var(--hi-white);
+  border: 1px solid var(--hi-border);
+  border-radius: 12px;
+  padding: 24px 20px 20px;
+  transition: all 0.25s ease;
+  box-shadow: var(--hi-card-shadow);
+}
+
+.step-card:hover {
+  box-shadow: var(--hi-card-hover-shadow);
+  border-color: #d0d0d0;
+  transform: translateY(-2px);
+}
+
+.step-number {
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  width: 28px;
+  height: 28px;
+  background: var(--hi-red);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(199, 0, 11, 0.3);
+}
+
+.step-card h3 {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: var(--hi-black) !important;
+  margin: 6px 0 12px !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.step-card p,
+.step-card ul {
+  font-size: 13px;
+  color: var(--hi-gray);
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+.step-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.step-card ul li {
+  margin-bottom: 4px;
+}
+
+.step-card .highlight {
+  margin: 12px 0 8px;
+  font-size: 12px;
+}
+
+.step-card .highlight pre {
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.step-card .highlight code {
+  font-size: 12px;
+  color: #dcdde1 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.step-card a {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =============================================
+ * 新版首页 — 示例项目区域
+ * ============================================= */
+.examples-section {
+  margin: 8px 0 12px;
+}
+
+.examples-section .grid.cards {
+  gap: 16px;
+}
+
+/* =============================================
+ * 新版首页 — 底部信息条
+ * ============================================= */
+.footer-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 28px 0 8px;
+  margin-top: 8px;
+  border-top: 1px solid var(--hi-border);
+}
+
+.footer-col h3 {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--hi-black) !important;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+.footer-col ul {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.homepage .cloned-homepage-toc-link {
-  display: block;
-  font-size: 0.65rem;
-  padding: 0.15rem 0.6rem;
-  color: var(--hi-dark);
-  text-decoration: none;
-  transition: color 0.15s;
-  border-radius: 4px;
+.footer-col ul li {
+  font-size: 13px;
+  color: var(--hi-gray);
+  margin-bottom: 6px;
+  line-height: 1.5;
 }
 
-.homepage .cloned-homepage-toc-link:hover {
-  color: var(--hi-red);
-  background-color: var(--hi-red-light);
+.footer-col p {
+  font-size: 13px;
+  color: var(--hi-gray);
+  line-height: 1.6;
+  margin: 0 0 6px;
 }
 
-.homepage .toc-level-h3 .cloned-homepage-toc-link {
-  padding-left: 1.4rem;
-  font-size: 0.6rem;
+.footer-col a {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =============================================
+ * 响应式 — 新版首页
+ * ============================================= */
+@media screen and (max-width: 76.2344em) {
+  .hero-banner {
+    flex-direction: column;
+    gap: 24px;
+    padding: 28px 24px;
+  }
+
+  .hero-right {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .spec-two-col {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 16px;
+  }
+
+  .spec-col ul li {
+    font-size: 12px;
+  }
+
+  .step-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .footer-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero-banner {
+    padding: 20px 16px;
+    border-radius: 8px;
+  }
+
+  .hero-left > p:first-of-type {
+    font-size: 15px;
+  }
+
+  .hero-actions .md-button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-right {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .spec-strip {
+    padding: 12px 14px;
+  }
+
+  .spec-two-col {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .spec-col ul li {
+    font-size: 12px;
+    padding: 5px 0;
+  }
+
+  .step-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-strip {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 /* =============================================
