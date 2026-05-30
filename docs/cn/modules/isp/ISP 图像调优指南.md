@@ -34,76 +34,16 @@
 -   技术支持工程师
 -   软件开发工程师
 
-**符号约定<a name="section133020216410"></a>**
+**符号约定**
 
 在本文中可能出现下列标志，它们所代表的含义如下。
 
-<a name="table2622507016410"></a>
-<table><thead align="left"><tr id="row1530720816410"><th class="cellrowborder" valign="top" width="20.580000000000002%" id="mcps1.1.3.1.1"><p id="p6450074116410"><a name="p6450074116410"></a><a name="p6450074116410"></a><strong id="b2136615816410"><a name="b2136615816410"></a><a name="b2136615816410"></a>符号</strong></p>
-</th>
-<th class="cellrowborder" valign="top" width="79.42%" id="mcps1.1.3.1.2"><p id="p5435366816410"><a name="p5435366816410"></a><a name="p5435366816410"></a><strong id="b5941558116410"><a name="b5941558116410"></a><a name="b5941558116410"></a>说明</strong></p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span><img src="figures/zh-cn_image_0000002424362510.png" alt="" /></span></p>
-</td>
-<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p1757432116410"><a name="p1757432116410"></a><a name="p1757432116410"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
-</td>
-</tr>
-
-
-<tr id="row607mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p609mcpsimp"><a name="p609mcpsimp"></a><a name="p609mcpsimp"></a>mesh_strength</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p611mcpsimp"><a name="p611mcpsimp"></a><a name="p611mcpsimp"></a>用来全局纠正LSC标定后的强度。当镜头shading很严重的时候，画面四个角补偿的增益很大，容易导致噪声很大，而且画面有格子现象。这个调整<span xml:lang="sv-SE" id="ph612mcpsimp"><a name="ph612mcpsimp"></a><a name="ph612mcpsimp"></a>mesh_strength小于一倍强度，可以减少LSC的补偿值，让四个角的补偿增益较小一些，达到优化噪声和画面格子问题。</span></p>
-<p id="p613mcpsimp"><a name="p613mcpsimp"></a><a name="p613mcpsimp"></a>取值范围：[0, 65535]</p>
-</td>
-</tr>
-<tr id="row614mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p616mcpsimp"><a name="p616mcpsimp"></a><a name="p616mcpsimp"></a>blend_ratio</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p xml:lang="sv-SE" id="p618mcpsimp"><a name="p618mcpsimp"></a><a name="p618mcpsimp"></a>两张增益表的融合比例</p>
-<p xml:lang="sv-SE" id="p619mcpsimp"><a name="p619mcpsimp"></a><a name="p619mcpsimp"></a><span xml:lang="en-US" id="ph620mcpsimp"><a name="ph620mcpsimp"></a><a name="ph620mcpsimp"></a>取值范围：</span>[0, 256]</p>
-</td>
-</tr>
-<tr id="row621mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p623mcpsimp"><a name="p623mcpsimp"></a><a name="p623mcpsimp"></a>bnr_lsc_auto_en</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p625mcpsimp"><a name="p625mcpsimp"></a><a name="p625mcpsimp"></a>BNR LSC的表参考Mesh LSC表的使能。默认关，使用用户配置的bnr_lsc_gain_lut表；开启后参考会lsc_gain_lut的表，自动刷新bnr_lsc_gain_lut。</p>
-<p id="p626mcpsimp"><a name="p626mcpsimp"></a><a name="p626mcpsimp"></a>取值范围：[0,1]</p>
-</td>
-</tr>
-<tr id="row627mcpsimp"><td class="cellrowborder" rowspan="5" valign="top" width="18%" headers="mcps1.2.4.1.1 "><p id="p629mcpsimp"><a name="p629mcpsimp"></a><a name="p629mcpsimp"></a>ot_isp_shading_lut_attr</p>
-</td>
-<td class="cellrowborder" valign="top" width="22%" headers="mcps1.2.4.1.1 "><p xml:lang="sv-SE" id="p631mcpsimp"><a name="p631mcpsimp"></a><a name="p631mcpsimp"></a>mesh_scale</p>
-</td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.2 "><p xml:lang="sv-SE" id="p633mcpsimp"><a name="p633mcpsimp"></a><a name="p633mcpsimp"></a>增益表精度控制参数</p>
-<p id="p634mcpsimp"><a name="p634mcpsimp"></a><a name="p634mcpsimp"></a>取值范围：<span xml:lang="sv-SE" id="ph635mcpsimp"><a name="ph635mcpsimp"></a><a name="ph635mcpsimp"></a>[0, 7]</span></p>
-</td>
-</tr>
-<tr id="row636mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p638mcpsimp"><a name="p638mcpsimp"></a><a name="p638mcpsimp"></a>x_grid_width [(OT_ISP_LSC_GRID_COL - 1)/2]</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p xml:lang="sv-SE" id="p640mcpsimp"><a name="p640mcpsimp"></a><a name="p640mcpsimp"></a>用来储存各GRID分区宽度大小信息。该接口各分量最小值为4，总和应为原画面宽度的四分之一。（例如原画面大小为1080p，则该接口各参数总和应为480）</p>
-<p xml:lang="sv-SE" id="p641mcpsimp"><a name="p641mcpsimp"></a><a name="p641mcpsimp"></a><span xml:lang="en-US" id="ph642mcpsimp"><a name="ph642mcpsimp"></a><a name="ph642mcpsimp"></a>取值范围：</span>[4, width/4 - 60]，width为原画面的宽度</p>
-</td>
-</tr>
-<tr id="row643mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p645mcpsimp"><a name="p645mcpsimp"></a><a name="p645mcpsimp"></a>y_grid_width[(OT_ISP_LSC_GRID_ROW - 1)/2]</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p xml:lang="sv-SE" id="p647mcpsimp"><a name="p647mcpsimp"></a><a name="p647mcpsimp"></a>用来储存各GRID分区高度大小信息。该接口各分量最小值为4，总和应为原画面高度的四分之一。（例如原画面大小为1080p，则该接口各参数总和应为270）</p>
-<p xml:lang="sv-SE" id="p648mcpsimp"><a name="p648mcpsimp"></a><a name="p648mcpsimp"></a><span xml:lang="en-US" id="ph649mcpsimp"><a name="ph649mcpsimp"></a><a name="ph649mcpsimp"></a>取值范围：</span>[4,height/4 - 60]，height为原画面的高度</p>
-</td>
-</tr>
-<tr id="row650mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p xml:lang="sv-SE" id="p652mcpsimp"><a name="p652mcpsimp"></a><a name="p652mcpsimp"></a>lsc_gain_lut[2]</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p xml:lang="sv-SE" id="p654mcpsimp"><a name="p654mcpsimp"></a><a name="p654mcpsimp"></a>两组色温下的增益表配置。硬件基于这两组表以及blend_ratio进行当前色温下校正增益表的计算</p>
-<p xml:lang="sv-SE" id="p655mcpsimp"><a name="p655mcpsimp"></a><a name="p655mcpsimp"></a><span xml:lang="en-US" id="ph656mcpsimp"><a name="ph656mcpsimp"></a><a name="ph656mcpsimp"></a>取值范围：</span>[0, 1023]</p>
-</td>
-</tr>
-<tr id="row657mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p xml:lang="sv-SE" id="p659mcpsimp"><a name="p659mcpsimp"></a><a name="p659mcpsimp"></a>bnr_lsc_gain_lut</p>
-</td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p xml:lang="sv-SE" id="p661mcpsimp"><a name="p661mcpsimp"></a><a name="p661mcpsimp"></a>用于BNR LSC参考所用的增益表。</p>
-<p xml:lang="sv-SE" id="p662mcpsimp"><a name="p662mcpsimp"></a><a name="p662mcpsimp"></a><span xml:lang="en-US" id="ph663mcpsimp"><a name="ph663mcpsimp"></a><a name="ph663mcpsimp"></a>取值范围：</span>[0, 65535]</p>
-</td>
-</tr>
-</tbody>
-</table>
+| 符号 | 说明 |
+|------|------|
+| :material-alert: **危险** | 表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。 |
+| :material-alert-circle: **警告** | 表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。 |
+| :material-information: **注意** | 表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。 |
+| :material-information-outline: **须知** | 用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。"须知"不涉及人身伤害。 |
 
 ### 调试步骤<a name="ZH-CN_TOPIC_0000002457881153"></a>
 

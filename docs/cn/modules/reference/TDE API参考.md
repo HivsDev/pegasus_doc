@@ -34,46 +34,16 @@
 -   技术支持工程师
 -   软件开发工程师
 
-**符号约定<a name="section137mcpsimp"></a>**
+**符号约定**
 
 在本文中可能出现下列标志，它们所代表的含义如下。
 
-<a name="table140mcpsimp"></a>
-<table><thead align="left"><tr id="row145mcpsimp"><th class="cellrowborder" valign="top" width="18%" id="mcps1.1.3.1.1"><p id="p147mcpsimp"><a name="p147mcpsimp"></a><a name="p147mcpsimp"></a>符号</p>
-</th>
-<th class="cellrowborder" valign="top" width="82%" id="mcps1.1.3.1.2"><p id="p149mcpsimp"><a name="p149mcpsimp"></a><a name="p149mcpsimp"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row151mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p153mcpsimp"><a name="p153mcpsimp"></a><a name="p153mcpsimp"></a><a name="image103"></a><a name="image103"></a><span><img src="figures/zh-cn_image_0000002441678633.png" alt="" /></span></p>
-</td>
-<td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p155mcpsimp"><a name="p155mcpsimp"></a><a name="p155mcpsimp"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
-</td>
-</tr>
-<tr id="row156mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p158mcpsimp"><a name="p158mcpsimp"></a><a name="p158mcpsimp"></a><a name="image104"></a><a name="image104"></a><span><img src="figures/zh-cn_image_0000002408279254.png" alt="" /></span></p>
-</td>
-<td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p160mcpsimp"><a name="p160mcpsimp"></a><a name="p160mcpsimp"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
-</td>
-</tr>
-<tr id="row161mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p163mcpsimp"><a name="p163mcpsimp"></a><a name="p163mcpsimp"></a><a name="image105"></a><a name="image105"></a><span><img src="figures/zh-cn_image_0000002441718501.png" alt="" /></span></p>
-</td>
-<td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p165mcpsimp"><a name="p165mcpsimp"></a><a name="p165mcpsimp"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
-</td>
-</tr>
-<tr id="row166mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p168mcpsimp"><a name="p168mcpsimp"></a><a name="p168mcpsimp"></a><a name="image106"></a><a name="image106"></a><span><img src="figures/zh-cn_image_0000002441678637.png" alt="" /></span></p>
-</td>
-<td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p170mcpsimp"><a name="p170mcpsimp"></a><a name="p170mcpsimp"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
-<p id="p171mcpsimp"><a name="p171mcpsimp"></a><a name="p171mcpsimp"></a>“须知”不涉及人身伤害。</p>
-</td>
-</tr>
-<tr id="row172mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p174mcpsimp"><a name="p174mcpsimp"></a><a name="p174mcpsimp"></a><a name="image107"></a><a name="image107"></a><span><img src="figures/zh-cn_image_0000002408279250.png" alt="" /></span></p>
-</td>
-<td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p176mcpsimp"><a name="p176mcpsimp"></a><a name="p176mcpsimp"></a>对正文中重点信息的补充说明。</p>
-<p id="p177mcpsimp"><a name="p177mcpsimp"></a><a name="p177mcpsimp"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
-</td>
-</tr>
-</tbody>
-</table>
+| 符号 | 说明 |
+|------|------|
+| :material-alert: **危险** | 表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。 |
+| :material-alert-circle: **警告** | 表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。 |
+| :material-information: **注意** | 表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。 |
+| :material-information-outline: **须知** | 用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。"须知"不涉及人身伤害。 |
 
 **修订记录<a name="section178mcpsimp"></a>**
 

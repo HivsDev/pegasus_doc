@@ -33,46 +33,16 @@ KLAD是密钥管理模块，集成密钥派生、明文KEY传递、ROOTKEY层级
 -   技术支持工程师
 -   软件开发工程师
 
-**符号约定<a name="section1622mcpsimp"></a>**
+**符号约定**
 
 在本文中可能出现下列标志，它们所代表的含义如下。
 
-<a name="table1625mcpsimp"></a>
-<table><thead align="left"><tr id="row1630mcpsimp"><th class="cellrowborder" valign="top" width="18%" id="mcps1.1.3.1.1"><p id="p1632mcpsimp"><a name="p1632mcpsimp"></a><a name="p1632mcpsimp"></a>符号</p>
-</th>
-<th class="cellrowborder" valign="top" width="82%" id="mcps1.1.3.1.2"><p id="p1634mcpsimp"><a name="p1634mcpsimp"></a><a name="p1634mcpsimp"></a>说明</p>
-</th>
-</tr>
-</thead>
-<tbody><tr id="row1636mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p1638mcpsimp"><a name="p1638mcpsimp"></a><a name="p1638mcpsimp"></a><a name="image158"></a><a name="image158"></a><span><img src="figures/zh-cn_image_0000002424349514.png" alt="" /></span></p>
-</td>
-<td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p1640mcpsimp"><a name="p1640mcpsimp"></a><a name="p1640mcpsimp"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
-</td>
-</tr>
-<tr id="row1641mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p1643mcpsimp"><a name="p1643mcpsimp"></a><a name="p1643mcpsimp"></a><a name="image159"></a><a name="image159"></a><span><img src="figures/zh-cn_image_0000002457868413.png" alt="" /></span></p>
-</td>
-<td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p1645mcpsimp"><a name="p1645mcpsimp"></a><a name="p1645mcpsimp"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
-</td>
-</tr>
-<tr id="row1646mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p1648mcpsimp"><a name="p1648mcpsimp"></a><a name="p1648mcpsimp"></a><a name="image160"></a><a name="image160"></a><span><img src="figures/zh-cn_image_0000002424189674.png" alt="" /></span></p>
-</td>
-<td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p1650mcpsimp"><a name="p1650mcpsimp"></a><a name="p1650mcpsimp"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
-</td>
-</tr>
-<tr id="row1651mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p1653mcpsimp"><a name="p1653mcpsimp"></a><a name="p1653mcpsimp"></a><a name="image161"></a><a name="image161"></a><span><img src="figures/zh-cn_image_0000002457828281.png" alt="" /></span></p>
-</td>
-<td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p1655mcpsimp"><a name="p1655mcpsimp"></a><a name="p1655mcpsimp"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
-<p id="p1656mcpsimp"><a name="p1656mcpsimp"></a><a name="p1656mcpsimp"></a>“须知”不涉及人身伤害。</p>
-</td>
-</tr>
-<tr id="row1657mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p1659mcpsimp"><a name="p1659mcpsimp"></a><a name="p1659mcpsimp"></a><a name="image162"></a><a name="image162"></a><span><img src="figures/zh-cn_image_0000002424189678.png" alt="" /></span></p>
-</td>
-<td class="cellrowborder" valign="top" width="82%" headers="mcps1.1.3.1.2 "><p id="p1661mcpsimp"><a name="p1661mcpsimp"></a><a name="p1661mcpsimp"></a>对正文中重点信息的补充说明。</p>
-<p id="p1662mcpsimp"><a name="p1662mcpsimp"></a><a name="p1662mcpsimp"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
-</td>
-</tr>
-</tbody>
-</table>
+| 符号 | 说明 |
+|------|------|
+| :material-alert: **危险** | 表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。 |
+| :material-alert-circle: **警告** | 表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。 |
+| :material-information: **注意** | 表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。 |
+| :material-information-outline: **须知** | 用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。"须知"不涉及人身伤害。 |
 
 **修改记录<a name="section182223334015"></a>**
 
