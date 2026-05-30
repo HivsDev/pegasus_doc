@@ -1339,7 +1339,7 @@ td_s32 ss_mpi_pciv_hide_chn(ot_pciv_chn chn);
 <td class="cellrowborder" valign="top" width="68.32000000000001%" headers="mcps1.1.4.1.2 "><p id="p1174mcpsimp"><a name="p1174mcpsimp"></a><a name="p1174mcpsimp"></a>PCIV通道号。</p>
 <p id="p1175mcpsimp"><a name="p1175mcpsimp"></a><a name="p1175mcpsimp"></a>取值范围：`ss_mpi_pciv_show_chn`接口恢复显示时，也需要将对应的VO通道设置为显示\(ss\_mpi\_vo\_show\_chn\)。
 
-注：ss\_mpi\_vo\_hide\_chn和ss\_mpi\_vo\_show\_chn请参考《MPP 媒体处理软件V5.0开发参考》“视频输出”章节。
+注：ss\_mpi\_vo\_hide\_chn和ss\_mpi\_vo\_show\_chn请参考[《MPP 媒体处理软件V5.0开发参考》](../mpp/01 概述.md)“视频输出”章节。
 
 【举例】
 
@@ -2296,13 +2296,13 @@ typedef struct {
 <td class="cellrowborder" valign="top" width="71.33%" headers="mcps1.1.3.1.2 "><p id="p143mcpsimp"><a name="p143mcpsimp"></a><a name="p143mcpsimp"></a>图像跨度。</p>
 <p id="p144mcpsimp"><a name="p144mcpsimp"></a><a name="p144mcpsimp"></a>取值范围：stride[0]大于等于width，16对齐。</p>
 <p id="p145mcpsimp"><a name="p145mcpsimp"></a><a name="p145mcpsimp"></a>stride后续参数保留，暂未使用。</p>
-<p xml:lang="sv-SE" id="p146mcpsimp"><a name="p146mcpsimp"></a><a name="p146mcpsimp"></a><span xml:lang="en-US" id="ph147mcpsimp"><a name="ph147mcpsimp"></a><a name="ph147mcpsimp"></a>OT_MAX_COLOR_COMPONENT</span>具体描述请参见《MPP 媒体处理软件V5.0开发参考》的“系统控制”章节。</p>
+<p xml:lang="sv-SE" id="p146mcpsimp"><a name="p146mcpsimp"></a><a name="p146mcpsimp"></a><span xml:lang="en-US" id="ph147mcpsimp"><a name="ph147mcpsimp"></a><a name="ph147mcpsimp"></a>OT_MAX_COLOR_COMPONENT</span>具体描述请参见[《MPP 媒体处理软件V5.0开发参考》](../mpp/01 概述.md)的“系统控制”章节。</p>
 </td>
 </tr>
 <tr id="row148mcpsimp"><td class="cellrowborder" valign="top" width="28.67%" headers="mcps1.1.3.1.1 "><p id="p150mcpsimp"><a name="p150mcpsimp"></a><a name="p150mcpsimp"></a>field</p>
 </td>
 <td class="cellrowborder" valign="top" width="71.33%" headers="mcps1.1.3.1.2 "><p id="p152mcpsimp"><a name="p152mcpsimp"></a><a name="p152mcpsimp"></a>图像帧场选择。此项保留，暂未使用</p>
-<p xml:lang="sv-SE" id="p153mcpsimp"><a name="p153mcpsimp"></a><a name="p153mcpsimp"></a>范围描述请参见《MPP 媒体处理软件V5.0开发参考》的“系统控制”章节。</p>
+<p xml:lang="sv-SE" id="p153mcpsimp"><a name="p153mcpsimp"></a><a name="p153mcpsimp"></a>范围描述请参见[《MPP 媒体处理软件V5.0开发参考》](../mpp/01 概述.md)的“系统控制”章节。</p>
 </td>
 </tr>
 <tr id="row154mcpsimp"><td class="cellrowborder" valign="top" width="28.67%" headers="mcps1.1.3.1.1 "><p id="p156mcpsimp"><a name="p156mcpsimp"></a><a name="p156mcpsimp"></a>pixel_format</p>
@@ -2372,7 +2372,7 @@ typedef struct {
 <tr id="row2909mcpsimp"><td class="cellrowborder" valign="top" width="36%" headers="mcps1.1.3.1.1 "><p id="p2911mcpsimp"><a name="p2911mcpsimp"></a><a name="p2911mcpsimp"></a>blk_size</p>
 </td>
 <td class="cellrowborder" valign="top" width="64%" headers="mcps1.1.3.1.2 "><p id="p2913mcpsimp"><a name="p2913mcpsimp"></a><a name="p2913mcpsimp"></a>图像缓存块尺寸。</p>
-<p xml:lang="sv-SE" id="p2914mcpsimp"><a name="p2914mcpsimp"></a><a name="p2914mcpsimp"></a><span xml:lang="en-US" id="ph2915mcpsimp"><a name="ph2915mcpsimp"></a><a name="ph2915mcpsimp"></a>取值范围：不应小于所传输图像实际尺寸。为节约性能，可参考</span>《MPP 媒体处理软件V5.0开发参考》的“系统控制”章节下视频缓存池小节中提供的视频缓存池大小计算接口简介所提供的计算方式计算该尺寸。</p>
+<p xml:lang="sv-SE" id="p2914mcpsimp"><a name="p2914mcpsimp"></a><a name="p2914mcpsimp"></a><span xml:lang="en-US" id="ph2915mcpsimp"><a name="ph2915mcpsimp"></a><a name="ph2915mcpsimp"></a>取值范围：不应小于所传输图像实际尺寸。为节约性能，可参考</span>[《MPP 媒体处理软件V5.0开发参考》](../mpp/01 概述.md)的“系统控制”章节下视频缓存池小节中提供的视频缓存池大小计算接口简介所提供的计算方式计算该尺寸。</p>
 <p xml:lang="sv-SE" id="p2916mcpsimp"><a name="p2916mcpsimp"></a><a name="p2916mcpsimp"></a><strong id="b2917mcpsimp"><a name="b2917mcpsimp"></a><a name="b2917mcpsimp"></a>注意：由于部分图像格式数据分布存在差异，需要额外信息才能计算大小，如VDEC输出YUV大小，Hi3403V100中VPSS输出的紧凑段压缩图像等，PCIV内部对于blk_size的校验可能不准确，请以实际提供的计算公式为准，否则可能出现解压错误，图像不完整等未知错误。</strong></p>
 </td>
 </tr>
