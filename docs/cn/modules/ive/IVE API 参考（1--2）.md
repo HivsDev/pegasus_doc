@@ -886,7 +886,7 @@ td_s32 ss_mpi_ive_svm_predict(ot_ive_handle *handle, const ot_svp_src_data *src,
 
 【注意】
 
--   文件名必须以.bin为后缀；.bin文件必须用配套工具ive\_tool\_caffe（参考《IVE 工具使用指南》）生成。
+-   文件名必须以.bin为后缀；.bin文件必须用配套工具ive\_tool\_caffe（参考[《IVE 工具使用指南》](IVE API 参考（1--2）.md)）生成。
 -   用户必需保证.bin文件的完整性和正确性。
 -   该接口必须和`ss_mpi_ive_cnn_unload_model`配套使用。
 

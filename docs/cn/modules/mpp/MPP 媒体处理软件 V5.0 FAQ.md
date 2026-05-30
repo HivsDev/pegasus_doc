@@ -279,7 +279,7 @@ echo 4096 \>/proc/sys/vm/min\_free\_kbytes
 
 1.  确认OS及MMZ内存分配情况。
 
-    详见发布包中的文件《SSxxxx SDK安装以及升级使用说明》中的 “地址空间分配与使用”。
+    详见发布包中的文件[《SSxxxx SDK安装以及升级使用说明》](../../getting-started/SS928V100╱SS927V100 SDK 安装以及升级使用说明.md)中的 “地址空间分配与使用”。
 
 2.  根据实际使用情况调整SDK相关业务内存占用。
     -   产品应保证所有分辨率图像的大小应成整数倍的关系，如1080P为1920x1080，960H为960x480，而不应出现960H为960x756的类似情况；同时，也不应出现VI采集1920x1088大小的图像，而VENC编码为1920x1080的情况。
@@ -1124,7 +1124,7 @@ VI进YUV的场景配置需要注意的地方比较多，首先要配置管脚复
 > **须知：** 
 >-   VI进YUV且Bypass ISP的场景下\(pipe属性中的bIspBypass配置为TD\_TRUE\)，强烈建议不起ISP业务，避免内存等资源的浪费。
 >-   各接口的load脚本的参数，请参考各芯片的load脚本。
->-   接线时序不用会导致dev component\_mask配置不同，具体请参考《MPP媒体处理软件 V5.0 开发参考》“视频输入”章节的掩码配置介绍。
+>-   接线时序不用会导致dev component\_mask配置不同，具体请参考[《MPP媒体处理软件 V5.0 开发参考》](01 概述.md)“视频输入”章节的掩码配置介绍。
 
 
 
@@ -3109,7 +3109,7 @@ static ot_vi_dev_attr g_mipi_yuv422_dev_attr = {
 
 对于SS626V100解决方案，在部署模式选择为OT\_VDEC\_DEPLOYMENT\_MODE1时，由于MDC仅支持访问32bit地址空间，需要保证MDC侧业务使用的内存地址不能超过0x100000000。
 
-解决方案：划分一部分32bit范围内的mmz空间，指定相应模块从这部分mmz中获取内存。涉及如下模块：vdec/vdec\_adapt/dcc/vfmw。mmz划分可参考文档《BSP FAQ》中1.2章节，指定mmz可参考接口ss\_mpi\_sys\_set\_mem\_cfg。需要注意base模块只能从anonymous区分配，模块中使用的mdc\_log\_buf需要共享给mdc使用，需要保证该buffer在32bit范围内，buf大小为68KB。
+解决方案：划分一部分32bit范围内的mmz空间，指定相应模块从这部分mmz中获取内存。涉及如下模块：vdec/vdec\_adapt/dcc/vfmw。mmz划分可参考文档[《BSP FAQ》](../../other/BSP FAQ.md)中1.2章节，指定mmz可参考接口ss\_mpi\_sys\_set\_mem\_cfg。需要注意base模块只能从anonymous区分配，模块中使用的mdc\_log\_buf需要共享给mdc使用，需要保证该buffer在32bit范围内，buf大小为68KB。
 
 ## SS626V100部署MDC解码模块vb使用注意事项<a name="ZH-CN_TOPIC_0000002408275578"></a>
 

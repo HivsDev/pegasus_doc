@@ -54,7 +54,7 @@ DSP硬件规格，可参考对应的芯片手册。
 
 ## 软件开发<a name="ZH-CN_TOPIC_0000002441691653"></a>
 
-SVP为_识别_加速平台，因此需要结合 MPP平台一起来进行软件开发，可参考相关文档《MPP 媒体处理软件 Vx.0 开发参考》。用户可以根据SVP的软硬件特性开发出能最大化利用SVP硬件资源的视觉处理应用。
+SVP为_识别_加速平台，因此需要结合 MPP平台一起来进行软件开发，可参考相关文档[《MPP 媒体处理软件 Vx.0 开发参考》](../mpp/01 概述.md)。用户可以根据SVP的软硬件特性开发出能最大化利用SVP硬件资源的视觉处理应用。
 
 ## 开发环境<a name="ZH-CN_TOPIC_0000002408132354"></a>
 
@@ -567,7 +567,7 @@ DSP应用程序开发框图如[图1](#__fig11884284184)所示。
     开发基于ss\_mpi\_svp\_dsp\_rpc/ ss\_mpi\_svp\_dsp\_query接口封装自定义算子
 
     > **说明：** 
-    >请参考Sample\(sample\_svp\_dsp\_enca\_dilate\_3x3/sample\_svp\_dsp\_enca\_erode\_3x3封装\)和《SVP2.0 API参考.pdf》接口ss\_mpi\_svp\_dsp\_rpc/ss\_mpi\_svp\_dsp\_query说明。
+    >请参考Sample\(sample\_svp\_dsp\_enca\_dilate\_3x3/sample\_svp\_dsp\_enca\_erode\_3x3封装\)和[《SVP2.0 API参考.pdf》](SVP2.0 API 参考.md)接口ss\_mpi\_svp\_dsp\_rpc/ss\_mpi\_svp\_dsp\_query说明。
 
 在DSP端：
 
