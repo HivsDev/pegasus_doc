@@ -567,7 +567,7 @@ apt-get update
 </td>
 <td class="cellrowborder" colspan="2" valign="top" headers="mcps1.2.5.1.2 mcps1.2.5.1.3 "><p id="p2722mcpsimp"><a name="p2722mcpsimp"></a><a name="p2722mcpsimp"></a>Caffe框架AMCT目录。</p>
 </td>
-<td class="cellrowborder" rowspan="4" valign="top" headers="mcps1.2.5.1.4 "><a name="ul2724mcpsimp"></a><a name="ul2724mcpsimp"></a><ul id="ul2724mcpsimp"><li><strong id="b2726mcpsimp"><a name="b2726mcpsimp"></a><a name="b2726mcpsimp"></a>只支持部署在Ubuntu 18.04 x86_64架构服务器。</strong></li><li>使用方法请参见《AMCT使用指南（Caffe）》。</li><li>量化完的模型，如果要执行推理，则需要借助安装SoC的推理环境。</li></ul>
+<td class="cellrowborder" rowspan="4" valign="top" headers="mcps1.2.5.1.4 "><a name="ul2724mcpsimp"></a><a name="ul2724mcpsimp"></a><ul id="ul2724mcpsimp"><li><strong id="b2726mcpsimp"><a name="b2726mcpsimp"></a><a name="b2726mcpsimp"></a>只支持部署在Ubuntu 18.04 x86_64架构服务器。</strong></li><li>使用方法请参见[《AMCT使用指南（Caffe）》](AMCT使用指南（Caffe）.md)。</li><li>量化完的模型，如果要执行推理，则需要借助安装SoC的推理环境。</li></ul>
 </td>
 </tr>
 <tr id="row2729mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p2731mcpsimp"><a name="p2731mcpsimp"></a><a name="p2731mcpsimp"></a>hotwheels_amct_caffe-<em id="i2732mcpsimp"><a name="i2732mcpsimp"></a><a name="i2732mcpsimp"></a>{version}</em>-py3-none-linux_<em id="i2733mcpsimp"><a name="i2733mcpsimp"></a><a name="i2733mcpsimp"></a>{arch}</em>.whl</p>
@@ -1356,7 +1356,7 @@ AMCT的安装用户将需要量化的Caffe模型文件和权重文件上传到Li
         -   ResNet50\_quant\_param\_record.txt：量化参数文件文本格式\(推荐使用\)，用于atc生成om模型。
         -   ResNet50\_quant\_param\_record.bin：量化参数文件二进制形式，用于atc生成om模型。
 
-3.  如果用户需要将量化后的deploy模型，转换为适配SoC的离线模型，则请参见《MindCmd 用户指南》。
+3.  如果用户需要将量化后的deploy模型，转换为适配SoC的离线模型，则请参见[《MindCmd 用户指南》](../../tools/MindCmd 使用指南.md)。
 
 #### 模型精度测试<a name="ZH-CN_TOPIC_0000002408581178"></a>
 
@@ -1502,7 +1502,7 @@ AMCT的安装用户将需要量化的Caffe模型文件和权重文件上传到Li
         -   faster\_rcnn\_quant\_param\_record.txt：量化参数文件文本格式\(推荐使用\)，用于atc生成om模型。
         -   faster\_rcnn\_quant\_param\_record.bin：量化参数文件二进制形式，用于atc生成om模型。
 
-4.  如果用户需要将量化后的deploy模型，转换为适配SoC的离线模型，则请参见《MindCmd 用户指南》。
+4.  如果用户需要将量化后的deploy模型，转换为适配SoC的离线模型，则请参见[《MindCmd 用户指南》](../../tools/MindCmd 使用指南.md)。
 
 #### 模型精度测试<a name="ZH-CN_TOPIC_0000002441980585"></a>
 
@@ -3023,7 +3023,7 @@ bash init_env.sh CPU **/caffe-master python3.7.5 /usr/include/python3.7m with_be
 
     > **说明：** 
     >retrain\_atc\_model.prototxt模型文件是resnet50 sample执行量化感知训练后生成的，并非AMCT生成，如果用户使用其他网络模型，则不会生成该文件，需要参见步骤4手动修改。
-    >量化感知训练之后的部署模型retrain\_deploy\_model.prototxt不能直接用于ATC工具进行模型转换，因为该文件中包括ATC工具不支持的层。resnet50 sample量化感知训练脚本自动完成了不支持层的删除动作，用户才可以直接使用retrain\_atc\_model.prototxt模型文件与retrain\_deploy\_weights.caffemodel权重文件在ATC工具完成模型转换，详情请参见《ATC工具使用指南》。
+    >量化感知训练之后的部署模型retrain\_deploy\_model.prototxt不能直接用于ATC工具进行模型转换，因为该文件中包括ATC工具不支持的层。resnet50 sample量化感知训练脚本自动完成了不支持层的删除动作，用户才可以直接使用retrain\_atc\_model.prototxt模型文件与retrain\_deploy\_weights.caffemodel权重文件在ATC工具完成模型转换，详情请参见[《ATC工具使用指南》](ATC工具使用指南.md)。
 
     -   tmp：执行量化感知训练过程中产生的文件，包括：
         -   量化配置文件：config.json，描述了如何对模型中的每一层进行量化感知训练。如果量化感知训练脚本所在目录下已经存在该配置文件，则再次调用`create\_quant\_retrain\_config`接口时，如果新生成的配置文件与已有的文件同名，则会覆盖已有的配置文件，否则生成新的配置文件。
@@ -3085,7 +3085,7 @@ bash init_env.sh CPU **/caffe-master python3.7.5 /usr/include/python3.7m with_be
 
 1.  <a name="li66339321256"></a>（后续处理）修改量化感知训练后的deploy模型。
 
-    如果用户使用其他网络模型进行量化感知训练，然后要将量化感知训练后的deploy模型文件转换为适配SoC的离线模型，则需要参见如下方法进行修改，不同模型需要修改的层不同，请以实际模型为准。ATC工具支持的层请参见《ATC工具使用指南》中的算子规格说明\>Caffe框架算子规格。
+    如果用户使用其他网络模型进行量化感知训练，然后要将量化感知训练后的deploy模型文件转换为适配SoC的离线模型，则需要参见如下方法进行修改，不同模型需要修改的层不同，请以实际模型为准。ATC工具支持的层请参见[《ATC工具使用指南》](ATC工具使用指南.md)中的算子规格说明\>Caffe框架算子规格。
 
     -   检查deploy模型，其中的层必须为ATC工具支持的层。
     -   以resnet50 sample为例，将deploy模型文件中的Data层改为Input层，并删除Accuracy和SoftmaxWithLoss的输出层。修改效果如下。

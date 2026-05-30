@@ -132,7 +132,7 @@
 
 ### 获取ATC工具<a name="ZH-CN_TOPIC_0000002441982845"></a>
 
-参考《ATC工具使用指南》"2.1.1 获取ATC工具" 小节。
+参考[《ATC工具使用指南》](ATC工具使用指南.md)"2.1.1 获取ATC工具" 小节。
 
 ### 获取custom样例工程<a name="ZH-CN_TOPIC_0000002442022697"></a>
 
@@ -396,7 +396,7 @@ export LD_LIBRARY_PATH=${install_path}/9_custom/lib/output/lib:$LD_LIBRARY_PATH
 
 ### 运行ATC<a name="ZH-CN_TOPIC_0000002408423442"></a>
 
-参考《ATC工具使用指南》“2.2 转换样例”章节。
+参考[《ATC工具使用指南》](ATC工具使用指南.md)“2.2 转换样例”章节。
 
 ## 调试模式使用<a name="ZH-CN_TOPIC_0000002442022605"></a>
 

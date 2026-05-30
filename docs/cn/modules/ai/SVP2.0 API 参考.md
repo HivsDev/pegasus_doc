@@ -5098,7 +5098,7 @@ td_s32 ss_mpi_dpu_rect_send_frame(ot_dpu_rect_grp rect_grp, const ot_video_frame
 <td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.4.1.2 "><p id="p5935mcpsimp"><a name="p5935mcpsimp"></a><a name="p5935mcpsimp"></a>左图图像。</p>
 <p id="p5936mcpsimp"><a name="p5936mcpsimp"></a><a name="p5936mcpsimp"></a>不能为空。</p>
 <p id="p5937mcpsimp"><a name="p5937mcpsimp"></a><a name="p5937mcpsimp"></a>分辨率大小与组属性中的左图分辨率一致。</p>
-<p id="p5938mcpsimp"><a name="p5938mcpsimp"></a><a name="p5938mcpsimp"></a>ot_video_frame_info请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节。</p>
+<p id="p5938mcpsimp"><a name="p5938mcpsimp"></a><a name="p5938mcpsimp"></a>ot_video_frame_info请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节。</p>
 </td>
 <td class="cellrowborder" valign="top" width="11%" headers="mcps1.1.4.1.3 "><p id="p5940mcpsimp"><a name="p5940mcpsimp"></a><a name="p5940mcpsimp"></a>输入</p>
 </td>
@@ -5108,7 +5108,7 @@ td_s32 ss_mpi_dpu_rect_send_frame(ot_dpu_rect_grp rect_grp, const ot_video_frame
 <td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.4.1.2 "><p id="p5945mcpsimp"><a name="p5945mcpsimp"></a><a name="p5945mcpsimp"></a>右图图像。</p>
 <p id="p5946mcpsimp"><a name="p5946mcpsimp"></a><a name="p5946mcpsimp"></a>当组属性设置OT_DPU_RECT_MODE_DOUBL时，不能为空。</p>
 <p id="p5947mcpsimp"><a name="p5947mcpsimp"></a><a name="p5947mcpsimp"></a>分辨率大小与组属性中的右图分辨率一致。</p>
-<p id="p5948mcpsimp"><a name="p5948mcpsimp"></a><a name="p5948mcpsimp"></a>ot_video_frame_info请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节。</p>
+<p id="p5948mcpsimp"><a name="p5948mcpsimp"></a><a name="p5948mcpsimp"></a>ot_video_frame_info请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节。</p>
 </td>
 <td class="cellrowborder" valign="top" width="11%" headers="mcps1.1.4.1.3 "><p id="p5950mcpsimp"><a name="p5950mcpsimp"></a><a name="p5950mcpsimp"></a>输入</p>
 </td>
@@ -5577,13 +5577,13 @@ typedef struct {
 <tr id="row10754mcpsimp"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.3.1.1 "><p id="p10756mcpsimp"><a name="p10756mcpsimp"></a><a name="p10756mcpsimp"></a>left_image_size</p>
 </td>
 <td class="cellrowborder" valign="top" width="75%" headers="mcps1.1.3.1.2 "><p id="p10758mcpsimp"><a name="p10758mcpsimp"></a><a name="p10758mcpsimp"></a>左图分辨率。取值范围：宽[128, 2048]; 高[64, 2048]。</p>
-<p id="p10759mcpsimp"><a name="p10759mcpsimp"></a><a name="p10759mcpsimp"></a>ot_size请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节。</p>
+<p id="p10759mcpsimp"><a name="p10759mcpsimp"></a><a name="p10759mcpsimp"></a>ot_size请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节。</p>
 </td>
 </tr>
 <tr id="row10760mcpsimp"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.3.1.1 "><p id="p10762mcpsimp"><a name="p10762mcpsimp"></a><a name="p10762mcpsimp"></a>right_image_size</p>
 </td>
 <td class="cellrowborder" valign="top" width="75%" headers="mcps1.1.3.1.2 "><p id="p10764mcpsimp"><a name="p10764mcpsimp"></a><a name="p10764mcpsimp"></a>右图分辨率。取值范围：宽[128, 2048]; 高[64, 2048]。</p>
-<p id="p10765mcpsimp"><a name="p10765mcpsimp"></a><a name="p10765mcpsimp"></a>ot_size请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节。</p>
+<p id="p10765mcpsimp"><a name="p10765mcpsimp"></a><a name="p10765mcpsimp"></a>ot_size请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节。</p>
 </td>
 </tr>
 <tr id="row10766mcpsimp"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.3.1.1 "><p id="p10768mcpsimp"><a name="p10768mcpsimp"></a><a name="p10768mcpsimp"></a>left_lut_id</p>
@@ -5609,7 +5609,7 @@ typedef struct {
 <tr id="row10786mcpsimp"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.3.1.1 "><p id="p10788mcpsimp"><a name="p10788mcpsimp"></a><a name="p10788mcpsimp"></a>frame_rate</p>
 </td>
 <td class="cellrowborder" valign="top" width="75%" headers="mcps1.1.3.1.2 "><p id="p10790mcpsimp"><a name="p10790mcpsimp"></a><a name="p10790mcpsimp"></a>组帧率。</p>
-<a name="ul10791mcpsimp"></a><a name="ul10791mcpsimp"></a><ul id="ul10791mcpsimp"><li>源帧率(src_frame_rate) 取值范围：-1 或[1, 240]；</li><li>目的帧率(dst_frame_rate) 取值范围：[1, src_frame_rate] 或 -1（仅在src_frame_rate为-1时，目的帧率才能取值为-1）。</li><li>ot_frame_rate_ctrl请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节。</li></ul>
+<a name="ul10791mcpsimp"></a><a name="ul10791mcpsimp"></a><ul id="ul10791mcpsimp"><li>源帧率(src_frame_rate) 取值范围：-1 或[1, 240]；</li><li>目的帧率(dst_frame_rate) 取值范围：[1, src_frame_rate] 或 -1（仅在src_frame_rate为-1时，目的帧率才能取值为-1）。</li><li>ot_frame_rate_ctrl请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节。</li></ul>
 </td>
 </tr>
 </tbody>
@@ -5649,7 +5649,7 @@ typedef struct {
 <tbody><tr id="row7174mcpsimp"><td class="cellrowborder" valign="top" width="16%" headers="mcps1.1.3.1.1 "><p id="p7176mcpsimp"><a name="p7176mcpsimp"></a><a name="p7176mcpsimp"></a>image_size</p>
 </td>
 <td class="cellrowborder" valign="top" width="84%" headers="mcps1.1.3.1.2 "><p id="p7178mcpsimp"><a name="p7178mcpsimp"></a><a name="p7178mcpsimp"></a>目标分辨率。取值范围: 宽[128, 1920]; 高[64, 1080]。</p>
-<p id="p7179mcpsimp"><a name="p7179mcpsimp"></a><a name="p7179mcpsimp"></a>ot_size请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节。</p>
+<p id="p7179mcpsimp"><a name="p7179mcpsimp"></a><a name="p7179mcpsimp"></a>ot_size请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节。</p>
 </td>
 </tr>
 </tbody>
@@ -5743,13 +5743,13 @@ typedef struct {
 <tbody><tr id="row1565mcpsimp"><td class="cellrowborder" valign="top" width="39%" headers="mcps1.1.3.1.1 "><p id="p1567mcpsimp"><a name="p1567mcpsimp"></a><a name="p1567mcpsimp"></a>src_frame[<a href="OT_DPU_RECT_MAX_PIPE_NUM.md">OT_DPU_RECT_MAX_PIPE_NUM</a>]</p>
 </td>
 <td class="cellrowborder" valign="top" width="61%" headers="mcps1.1.3.1.2 "><p id="p1570mcpsimp"><a name="p1570mcpsimp"></a><a name="p1570mcpsimp"></a>左右原始图像帧。</p>
-<p id="p1571mcpsimp"><a name="p1571mcpsimp"></a><a name="p1571mcpsimp"></a>ot_video_frame_info请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节</p>
+<p id="p1571mcpsimp"><a name="p1571mcpsimp"></a><a name="p1571mcpsimp"></a>ot_video_frame_info请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节</p>
 </td>
 </tr>
 <tr id="row1572mcpsimp"><td class="cellrowborder" valign="top" width="39%" headers="mcps1.1.3.1.1 "><p id="p1574mcpsimp"><a name="p1574mcpsimp"></a><a name="p1574mcpsimp"></a>rect_frame[<a href="OT_DPU_RECT_MAX_PIPE_NUM.md">OT_DPU_RECT_MAX_PIPE_NUM</a>]</p>
 </td>
 <td class="cellrowborder" valign="top" width="61%" headers="mcps1.1.3.1.2 "><p id="p1577mcpsimp"><a name="p1577mcpsimp"></a><a name="p1577mcpsimp"></a>左右校正图像帧。</p>
-<p id="p1578mcpsimp"><a name="p1578mcpsimp"></a><a name="p1578mcpsimp"></a>ot_video_frame_info请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节</p>
+<p id="p1578mcpsimp"><a name="p1578mcpsimp"></a><a name="p1578mcpsimp"></a>ot_video_frame_info请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节</p>
 </td>
 </tr>
 </tbody>
@@ -7400,7 +7400,7 @@ td_s32 ss_mpi_dpu_match_get_frame(ot_dpu_match_grp match_grp, td_s32 milli_sec, 
 </td>
 <td class="cellrowborder" valign="top" width="69%" headers="mcps1.1.4.1.2 "><p id="p6264mcpsimp"><a name="p6264mcpsimp"></a><a name="p6264mcpsimp"></a>匹配后图像。</p>
 <p id="p6265mcpsimp"><a name="p6265mcpsimp"></a><a name="p6265mcpsimp"></a>不能为空。</p>
-<p id="p6266mcpsimp"><a name="p6266mcpsimp"></a><a name="p6266mcpsimp"></a>详情请见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节。</p>
+<p id="p6266mcpsimp"><a name="p6266mcpsimp"></a><a name="p6266mcpsimp"></a>详情请见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节。</p>
 </td>
 <td class="cellrowborder" valign="top" width="11.000000000000002%" headers="mcps1.1.4.1.3 "><p id="p6268mcpsimp"><a name="p6268mcpsimp"></a><a name="p6268mcpsimp"></a>输出</p>
 </td>
@@ -8244,13 +8244,13 @@ typedef struct {
 <tbody><tr id="row636mcpsimp"><td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.3.1.1 "><p id="p638mcpsimp"><a name="p638mcpsimp"></a><a name="p638mcpsimp"></a>left_image_size</p>
 </td>
 <td class="cellrowborder" valign="top" width="69%" headers="mcps1.1.3.1.2 "><p id="p640mcpsimp"><a name="p640mcpsimp"></a><a name="p640mcpsimp"></a>左图分辨率。取值范围: 宽[128, 1920]; 高[64, 1080]。</p>
-<p id="p641mcpsimp"><a name="p641mcpsimp"></a><a name="p641mcpsimp"></a>ot_size请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节。</p>
+<p id="p641mcpsimp"><a name="p641mcpsimp"></a><a name="p641mcpsimp"></a>ot_size请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节。</p>
 </td>
 </tr>
 <tr id="row642mcpsimp"><td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.3.1.1 "><p id="p644mcpsimp"><a name="p644mcpsimp"></a><a name="p644mcpsimp"></a>right_image_size</p>
 </td>
 <td class="cellrowborder" valign="top" width="69%" headers="mcps1.1.3.1.2 "><p id="p646mcpsimp"><a name="p646mcpsimp"></a><a name="p646mcpsimp"></a>右图分辨率。取值范围: 宽[128, 1920]; 高[64, 1080]。</p>
-<p id="p647mcpsimp"><a name="p647mcpsimp"></a><a name="p647mcpsimp"></a>ot_size请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节。</p>
+<p id="p647mcpsimp"><a name="p647mcpsimp"></a><a name="p647mcpsimp"></a>ot_size请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节。</p>
 </td>
 </tr>
 <tr id="row648mcpsimp"><td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.3.1.1 "><p id="p650mcpsimp"><a name="p650mcpsimp"></a><a name="p650mcpsimp"></a>match_mask_mode</p>
@@ -8302,7 +8302,7 @@ typedef struct {
 <tr id="row694mcpsimp"><td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.3.1.1 "><p id="p696mcpsimp"><a name="p696mcpsimp"></a><a name="p696mcpsimp"></a>frame_rate</p>
 </td>
 <td class="cellrowborder" valign="top" width="69%" headers="mcps1.1.3.1.2 "><p id="p698mcpsimp"><a name="p698mcpsimp"></a><a name="p698mcpsimp"></a>组帧率。</p>
-<a name="ul699mcpsimp"></a><a name="ul699mcpsimp"></a><ul id="ul699mcpsimp"><li>源帧率(src_frame_rate) 取值范围：-1 或[1, 240]；</li><li>目的帧率(dst_frame_rate) 取值范围：[1, src_frame_rate]或-1（仅在src_frame_rate为-1时，目的帧率才能取值为-1）。</li><li>ot_frame_rate_ctrl请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节。</li></ul>
+<a name="ul699mcpsimp"></a><a name="ul699mcpsimp"></a><ul id="ul699mcpsimp"><li>源帧率(src_frame_rate) 取值范围：-1 或[1, 240]；</li><li>目的帧率(dst_frame_rate) 取值范围：[1, src_frame_rate]或-1（仅在src_frame_rate为-1时，目的帧率才能取值为-1）。</li><li>ot_frame_rate_ctrl请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节。</li></ul>
 </td>
 </tr>
 </tbody>
@@ -8347,7 +8347,7 @@ typedef struct {
 </td>
 <td class="cellrowborder" valign="top" width="84%" headers="mcps1.1.3.1.2 "><p id="p3464mcpsimp"><a name="p3464mcpsimp"></a><a name="p3464mcpsimp"></a>目标分辨率。取值范围: 宽[128, 1920]; 高[64, 1080]。</p>
 <p id="p3465mcpsimp"><a name="p3465mcpsimp"></a><a name="p3465mcpsimp"></a>分辨率大小需与组属性中右图分辨率一致。</p>
-<p id="p3466mcpsimp"><a name="p3466mcpsimp"></a><a name="p3466mcpsimp"></a>ot_size请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节。</p>
+<p id="p3466mcpsimp"><a name="p3466mcpsimp"></a><a name="p3466mcpsimp"></a>ot_size请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节。</p>
 </td>
 </tr>
 </tbody>
@@ -8388,13 +8388,13 @@ typedef struct {
 <tbody><tr id="row1757mcpsimp"><td class="cellrowborder" valign="top" width="57.99999999999999%" headers="mcps1.1.3.1.1 "><p id="p1759mcpsimp"><a name="p1759mcpsimp"></a><a name="p1759mcpsimp"></a>src_frame[OT_DPU_RECT_MAX_PIPE_NUM]</p>
 </td>
 <td class="cellrowborder" valign="top" width="42%" headers="mcps1.1.3.1.2 "><p id="p1761mcpsimp"><a name="p1761mcpsimp"></a><a name="p1761mcpsimp"></a>左右原始图像帧。</p>
-<p id="ot_video_frame_info"><a name="ot_video_frame_info"></a><a name="ot_video_frame_info"></a>ot_video_frame_info请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节</p>
+<p id="ot_video_frame_info"><a name="ot_video_frame_info"></a><a name="ot_video_frame_info"></a>ot_video_frame_info请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节</p>
 </td>
 </tr>
 <tr id="row1762mcpsimp"><td class="cellrowborder" valign="top" width="57.99999999999999%" headers="mcps1.1.3.1.1 "><p id="p1764mcpsimp"><a name="p1764mcpsimp"></a><a name="p1764mcpsimp"></a>rect_frame[OT_DPU_RECT_MAX_CHN_NUM]</p>
 </td>
 <td class="cellrowborder" valign="top" width="42%" headers="mcps1.1.3.1.2 "><p id="p1766mcpsimp"><a name="p1766mcpsimp"></a><a name="p1766mcpsimp"></a>左右校正图像帧。</p>
-<p id="p1767mcpsimp"><a name="p1767mcpsimp"></a><a name="p1767mcpsimp"></a>ot_video_frame_info请参见《MPP 媒体处理软件 V5.0 开发参考》“系统控制”章节</p>
+<p id="p1767mcpsimp"><a name="p1767mcpsimp"></a><a name="p1767mcpsimp"></a>ot_video_frame_info请参见[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节</p>
 </td>
 </tr>
 </tbody>

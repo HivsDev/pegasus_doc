@@ -330,10 +330,10 @@ td_s32 ss_mpi_otp_set_user_data(const td_char *field_name, td_u32 offset, const 
 
 【注意】
 
--   参数field\_name设定参考《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
+-   参数field\_name设定参考[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
 -   offset必须 4 字节对齐。
 -   value\_len为value的字节长度。
--   参数offset，value\_len取值范围参考《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“位宽”列。offset + value\_len不能大于最大字节长度。
+-   参数offset，value\_len取值范围参考[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“位宽”列。offset + value\_len不能大于最大字节长度。
 
 【举例】
 
@@ -422,10 +422,10 @@ td_s32 ss_mpi_otp_get_user_data(const td_char *field_name, td_u32 offset, td_u8 
 
 【注意】
 
--   参数field\_name设定参考《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
+-   参数field\_name设定参考[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
 -   offset 必须 4 字节对齐。
 -   value\_len 为value字节长度。
--   参数offset，value\_len取值范围参考《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“位宽”列。offset + value\_len 不能大于最大取值。
+-   参数offset，value\_len取值范围参考[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“位宽”列。offset + value\_len 不能大于最大取值。
 
 【举例】
 
@@ -507,9 +507,9 @@ td_s32 ss_mpi_otp_set_user_data_lock(const td_char *field_name, td_u32 offset, t
 
 【注意】
 
--   参数field\_name设定参考《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
+-   参数field\_name设定参考[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
 -   offset 必须 4 字节对齐。
--   参数offset，value\_len取值范围参考《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义定义”中“位宽”列。offset + value\_len 不能大于最大取值。
+-   参数offset，value\_len取值范围参考[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义定义”中“位宽”列。offset + value\_len 不能大于最大取值。
 -   SS528V100、SS524V100 不支持该接口。
 
 【举例】
@@ -599,9 +599,9 @@ td_s32 ss_mpi_otp_get_user_data_lock(const td_char *field_name, td_u32 offset, t
 
 【注意】
 
--   参数field\_name设定参考《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
+-   参数field\_name设定参考[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
 -   offset 必须 4 字节对齐。
--   参数offset，value\_len取值范围参考《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“位宽”列。offset + value\_len 不能大于最大取值。
+-   参数offset，value\_len取值范围参考[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“位宽”列。offset + value\_len 不能大于最大取值。
 -   SS528V100、SS524V100 不支持该接口。
 
 【举例】
@@ -678,10 +678,10 @@ td_s32 ss_mpi_otp_burn_product_pv(const ot_otp_burn_pv_item *pv, td_u32 num);
 【注意】
 
 -   参数pv的成员burn必须设为TD\_TRUE。
--   参数pv的成员field\_name设定参考《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
--   参数pv的成员value\_len为 value 的位长度，取值参考《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“位宽”列。
--   参数pv的成员value取值参考《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“说明”列。
--   参数pv的成员lock取值为TD\_TRUE或TD\_FALSE，《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“说明”列，自动lock的field\_name配置任何值均会锁定。
+-   参数pv的成员field\_name设定参考[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
+-   参数pv的成员value\_len为 value 的位长度，取值参考[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“位宽”列。
+-   参数pv的成员value取值参考[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“说明”列。
+-   参数pv的成员lock取值为TD\_TRUE或TD\_FALSE，[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“说明”列，自动lock的field\_name配置任何值均会锁定。
 -   参数num有效取值范围是1\~500。
 
 【举例】
@@ -758,9 +758,9 @@ td_s32 ss_mpi_otp_read_product_pv(ot_otp_burn_pv_item *pv, td_u32 num);
 【注意】
 
 -   参数pv的成员burn必须设为TD\_FALSE。
--   参数pv的成员field\_name设定《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
--   参数pv的成员value\_len为value的位长度，取值参考《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“位宽”列。
--   参数pv的成员value取值参考《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“说明”列。
+-   参数pv的成员field\_name设定[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
+-   参数pv的成员value\_len为value的位长度，取值参考[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“位宽”列。
+-   参数pv的成员value取值参考[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“说明”列。
 -   参数num有效取值范围是1\~500。
 
 【举例】
@@ -836,7 +836,7 @@ td_s32 ss_mpi_otp_get_key_verify_status(const td_char *key_name, td_bool *status
 
 【注意】
 
-参数key\_name设定《安全子系统使用说明》2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
+参数key\_name设定[《安全子系统使用说明》](../../getting-started/安全子系统使用说明.md)2.2章节“SSxxxx OTP字段定义”中“字段名称”列。
 
 【举例】
 

@@ -1894,7 +1894,7 @@ typedef union {
 -   不支持加载ko时设置ISP控制参数。
 -   离线模式下，若业务量较大时，采用默认的be\_buf\_num，有可能会出现不丢帧但是ISP中有“get FreeBeBuf is fail”错误打印的问题，此时可以增大be\_buf\_num的配置值，缓解此问题；另外对于业务量不繁重、并且对于内存占用要求较高的应用场景，可以适当的减小be\_buf\_num的配置值。
 -   只能在物理pipe配置alg\_run\_select为OT\_ISP\_ALG\_RUN\_FE\_ONLY。
--   OT\_ISP\_ALG\_RUN\_FE\_ONLY一般应用在只需要获取FE AE/AF的统计信息而不需要运行BE这种场景下。配置为OT\_ISP\_ALG\_RUN\_FE\_ONLY后ISP只注册和运行FE中的算法模块（blc、FE AE、FE AF、HRS、FE isp\_dgain），不再运行BE的算法、不配置BE的寄存器、不读取BE的统计信息，节省CPU运行时间，与bypass be逻辑效果不一致，建议搭配ss\_mpi\_vi\_set\_pipe\_frame\_source\(vi\_pipe, OT\_VI\_PIPE\_FRAME\_SOURCE\_USER\)一起使用来bypass viproc的处理，ss\_mpi\_vi\_set\_pipe\_frame\_source接口具体信息请参见《MPP 媒体处理软件V5.0 开发参考》的VI章节。
+-   OT\_ISP\_ALG\_RUN\_FE\_ONLY一般应用在只需要获取FE AE/AF的统计信息而不需要运行BE这种场景下。配置为OT\_ISP\_ALG\_RUN\_FE\_ONLY后ISP只注册和运行FE中的算法模块（blc、FE AE、FE AF、HRS、FE isp\_dgain），不再运行BE的算法、不配置BE的寄存器、不读取BE的统计信息，节省CPU运行时间，与bypass be逻辑效果不一致，建议搭配ss\_mpi\_vi\_set\_pipe\_frame\_source\(vi\_pipe, OT\_VI\_PIPE\_FRAME\_SOURCE\_USER\)一起使用来bypass viproc的处理，ss\_mpi\_vi\_set\_pipe\_frame\_source接口具体信息请参见[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)的VI章节。
 -   BE 输入为YUV数据时，OT\_ISP\_ALG\_RUN\_FE\_ONLY配置无效
 -   只有在从VI捞帧再灌raw处理的场景下，ISP 需要把中断源选择isp\_run\_wakeup\_select 配置为BE帧结束中断，其他场景下只支持配置为帧起始中断唤醒。
 -   当中断源选择isp\_run\_wakeup\_select 配置为BE帧结束中断时，有如下限制：

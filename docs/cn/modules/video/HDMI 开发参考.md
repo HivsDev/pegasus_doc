@@ -1639,7 +1639,7 @@ td_s32 ss_mpi_hdmi_set_hw_spec(ot_hdmi_id hdmi, const ot_hdmi_hw_spec *hw_spec);
 </table>
 
 -   其他注意事项请参考`ot_hdmi_hw_spec`。
--   color space需要通过VO的ss\_mpi\_vo\_set\_hdmi\_param接口设置。此接口请参考《MPP 媒体处理软件V5.0 开发参考》。
+-   color space需要通过VO的ss\_mpi\_vo\_set\_hdmi\_param接口设置。此接口请参考[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)。
 -   如果用户有开机画面场景，且用户使用此接口自行配置了HDMI硬件指标参数，请在开机画面场景下使用相关的函数设置相同的HDMI硬件指标参数。
 
 【举例】

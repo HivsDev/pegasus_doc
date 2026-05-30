@@ -231,7 +231,7 @@ U-boot镜像生成步骤如下：
 
 ## 通过bootrom工具烧写U-boot<a name="ZH-CN_TOPIC_0000002424355918"></a>
 
-具体操作方式请参考《BurnTool工具使用指南》。
+具体操作方式请参考[《BurnTool工具使用指南》](../tools/BurnTool 工具使用指南.md)。
 
 ## Flash的U-boot烧写方法<a name="ZH-CN_TOPIC_0000002424355886"></a>
 

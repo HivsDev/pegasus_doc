@@ -2338,26 +2338,26 @@ typedef struct {
 <tr id="row154mcpsimp"><td class="cellrowborder" valign="top" width="28.67%" headers="mcps1.1.3.1.1 "><p id="p156mcpsimp"><a name="p156mcpsimp"></a><a name="p156mcpsimp"></a>pixel_format</p>
 </td>
 <td class="cellrowborder" valign="top" width="71.33%" headers="mcps1.1.3.1.2 "><p id="p158mcpsimp"><a name="p158mcpsimp"></a><a name="p158mcpsimp"></a>图像像素格式。目前支持PIXEL_FORMAT_YVU_SEMIPLANAR_420、PIXEL_FORMAT_YVU_SEMIPLANAR_422、PIXEL_FORMAT_YUV_SEMIPLANAR_420、PIXEL_FORMAT_YUV_SEMIPLANAR_422、PIXEL_FORMAT_YUV_400。</p>
-<p xml:lang="sv-SE" id="p160mcpsimp"><a name="p160mcpsimp"></a><a name="p160mcpsimp"></a><span xml:lang="en-US" id="ph161mcpsimp"><a name="ph161mcpsimp"></a><a name="ph161mcpsimp"></a>ot_pixel_format</span>具体描述请参见《MPP媒体处理软件V5.0开发参考》的“系统控制”章节。</p>
+<p xml:lang="sv-SE" id="p160mcpsimp"><a name="p160mcpsimp"></a><a name="p160mcpsimp"></a><span xml:lang="en-US" id="ph161mcpsimp"><a name="ph161mcpsimp"></a><a name="ph161mcpsimp"></a>ot_pixel_format</span>具体描述请参见[《MPP媒体处理软件V5.0开发参考》](../mpp/01 概述.md)的“系统控制”章节。</p>
 </td>
 </tr>
 <tr id="row162mcpsimp"><td class="cellrowborder" valign="top" width="28.67%" headers="mcps1.1.3.1.1 "><p id="p164mcpsimp"><a name="p164mcpsimp"></a><a name="p164mcpsimp"></a>dynamic_range</p>
 </td>
 <td class="cellrowborder" valign="top" width="71.33%" headers="mcps1.1.3.1.2 "><p xml:lang="sv-SE" id="p166mcpsimp"><a name="p166mcpsimp"></a><a name="p166mcpsimp"></a>目标图像动态范围。</p>
 <p xml:lang="sv-SE" id="p167mcpsimp"><a name="p167mcpsimp"></a><a name="p167mcpsimp"></a>取值范围：OT_DYNAMIC_RANGE_SDR8</p>
-<p xml:lang="sv-SE" id="p168mcpsimp"><a name="p168mcpsimp"></a><a name="p168mcpsimp"></a>ot_dynamic_range具体描述请参见《MPP媒体处理软件V5.0开发参考》的“系统控制”章节。</p>
+<p xml:lang="sv-SE" id="p168mcpsimp"><a name="p168mcpsimp"></a><a name="p168mcpsimp"></a>ot_dynamic_range具体描述请参见[《MPP媒体处理软件V5.0开发参考》](../mpp/01 概述.md)的“系统控制”章节。</p>
 </td>
 </tr>
 <tr id="row169mcpsimp"><td class="cellrowborder" valign="top" width="28.67%" headers="mcps1.1.3.1.1 "><p id="p171mcpsimp"><a name="p171mcpsimp"></a><a name="p171mcpsimp"></a>compress_mode</p>
 </td>
 <td class="cellrowborder" valign="top" width="71.33%" headers="mcps1.1.3.1.2 "><p xml:lang="sv-SE" id="p173mcpsimp"><a name="p173mcpsimp"></a><a name="p173mcpsimp"></a>目标图像压缩模式。</p>
-<p xml:lang="sv-SE" id="p174mcpsimp"><a name="p174mcpsimp"></a><a name="p174mcpsimp"></a><span xml:lang="en-US" id="ph175mcpsimp"><a name="ph175mcpsimp"></a><a name="ph175mcpsimp"></a>ot_compress_mode</span>具体描述请参见《MPP媒体处理软件V5.0开发参考》的“系统控制”章节。</p>
+<p xml:lang="sv-SE" id="p174mcpsimp"><a name="p174mcpsimp"></a><a name="p174mcpsimp"></a><span xml:lang="en-US" id="ph175mcpsimp"><a name="ph175mcpsimp"></a><a name="ph175mcpsimp"></a>ot_compress_mode</span>具体描述请参见[《MPP媒体处理软件V5.0开发参考》](../mpp/01 概述.md)的“系统控制”章节。</p>
 </td>
 </tr>
 <tr id="row176mcpsimp"><td class="cellrowborder" valign="top" width="28.67%" headers="mcps1.1.3.1.1 "><p id="p178mcpsimp"><a name="p178mcpsimp"></a><a name="p178mcpsimp"></a>video_format</p>
 </td>
 <td class="cellrowborder" valign="top" width="71.33%" headers="mcps1.1.3.1.2 "><p xml:lang="sv-SE" id="p180mcpsimp"><a name="p180mcpsimp"></a><a name="p180mcpsimp"></a>目标图像视频格式。</p>
-<p xml:lang="sv-SE" id="p181mcpsimp"><a name="p181mcpsimp"></a><a name="p181mcpsimp"></a><span xml:lang="en-US" id="ph182mcpsimp"><a name="ph182mcpsimp"></a><a name="ph182mcpsimp"></a>ot_video_format</span>具体描述请参见《MPP媒体处理软件V5.0开发参考》的“系统控制”章节。</p>
+<p xml:lang="sv-SE" id="p181mcpsimp"><a name="p181mcpsimp"></a><a name="p181mcpsimp"></a><span xml:lang="en-US" id="ph182mcpsimp"><a name="ph182mcpsimp"></a><a name="ph182mcpsimp"></a>ot_video_format</span>具体描述请参见[《MPP媒体处理软件V5.0开发参考》](../mpp/01 概述.md)的“系统控制”章节。</p>
 </td>
 </tr>
 </tbody>
@@ -2365,7 +2365,7 @@ typedef struct {
 
 【注意事项】
 
-PCIV可通过VGS添加OSD或进行缩放，图像格式转换操作，具体能力请参见《MPP媒体处理软件V5.0开发参考》的“视频图形子系统”章节。
+PCIV可通过VGS添加OSD或进行缩放，图像格式转换操作，具体能力请参见[《MPP媒体处理软件V5.0开发参考》](../mpp/01 概述.md)的“视频图形子系统”章节。
 
 ### ot\_pciv\_attr<a name="ZH-CN_TOPIC_0000002441674841"></a>
 

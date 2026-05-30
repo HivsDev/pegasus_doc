@@ -484,7 +484,7 @@ python3.7.5 -m pip --trusted-host=download.pytorch.org install torch==1.10.2+cu1
 </td>
 <td class="cellrowborder" colspan="2" valign="top" headers="mcps1.2.5.1.2 mcps1.2.5.1.3 "><p id="p793mcpsimp"><a name="p793mcpsimp"></a><a name="p793mcpsimp"></a>pytorch框架AMCT目录。</p>
 </td>
-<td class="cellrowborder" rowspan="3" valign="top" headers="mcps1.2.5.1.4 "><a name="ul795mcpsimp"></a><a name="ul795mcpsimp"></a><ul id="ul795mcpsimp"><li><strong id="b797mcpsimp"><a name="b797mcpsimp"></a><a name="b797mcpsimp"></a>只支持部署在Ubuntu 18.04 x86_64架构服务器。</strong></li><li>使用方法请参见《AMCT使用指南（PyTorch）》。</li><li>量化完的模型，如果要执行推理，则需要在板端推理环境运行。</li></ul>
+<td class="cellrowborder" rowspan="3" valign="top" headers="mcps1.2.5.1.4 "><a name="ul795mcpsimp"></a><a name="ul795mcpsimp"></a><ul id="ul795mcpsimp"><li><strong id="b797mcpsimp"><a name="b797mcpsimp"></a><a name="b797mcpsimp"></a>只支持部署在Ubuntu 18.04 x86_64架构服务器。</strong></li><li>使用方法请参见[《AMCT使用指南（PyTorch）》](AMCT使用指南（PyTorch）.md)。</li><li>量化完的模型，如果要执行推理，则需要在板端推理环境运行。</li></ul>
 </td>
 </tr>
 <tr id="row800mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p802mcpsimp"><a name="p802mcpsimp"></a><a name="p802mcpsimp"></a>hotwheels_amct_pytorch-<em id="i803mcpsimp"><a name="i803mcpsimp"></a><a name="i803mcpsimp"></a>{version}</em>-py3-none-linux_<em id="i804mcpsimp"><a name="i804mcpsimp"></a><a name="i804mcpsimp"></a>{arch}</em>.tar.gz</p>
@@ -6577,7 +6577,7 @@ override_layer_configs: # 指定算子名设置量化配置参数
     mindcmd config -g is_quant_analysis_open=1
     注意：误差分析功能仅支持模型的输出的类型为List[torch.Tensor, torch.Tensor]、Tuple(torch.Tensor, torch.Tensor)和torch.Tensor, torch.Tensor
     
-    # mindcmd 一键推理，更多参数请查阅《MindCmd 使用指南》一键推理章节
+    # mindcmd 一键推理，更多参数请查阅[《MindCmd 使用指南》](../../tools/MindCmd 使用指南.md)一键推理章节
     mkdir ./save_dir
     mindcmd oneclick -k ./save_dir pytorch -m model.load_pytorch_model -w quant_model_ckpt.pt --quant_config quant_config.json --input_shape 1,3,64,64 -i input.npy --realquant
     # 执行完成之后，会在workspace中./*/output/latest_result/amct/pytorch/quant_analyzer生成三份分析报告
@@ -6606,7 +6606,7 @@ override_layer_configs: # 指定算子名设置量化配置参数
     quant_analyzer = amct.QuantAnalyzer(model, inputs, save_dir)
     quant_analyzer.analyze()
     
-    # 执行完成之后会在save_dir中生成分析报告，详细请参考《AMCT使用指南（PyTorch）》的“量化误差分析”章节。
+    # 执行完成之后会在save_dir中生成分析报告，详细请参考[《AMCT使用指南（PyTorch）》](AMCT使用指南（PyTorch）.md)的“量化误差分析”章节。
     ```
 
 ## 量化因子记录文件说明<a name="ZH-CN_TOPIC_0000002498353102"></a>

@@ -133,7 +133,7 @@ SVP ATC Graph API接口包含两部分。
 详细流程说明如下。
 
 -   使用OperatorAPI依次构造网络中的各个算子节点，生成一系列的operator对象。该对象包含对应算子的属性配置、连接关系、权重数据等信息，所有operator对象共同构成完整的模型图。
--   将所有operator对象与config信息传递给GenerateModelAPI，完成模型编译并最终生成om知识库文件。Config配置信息可以以文件的形式配置，也可以通过map映射的形式配置。具体参数配置与ATC工具一致，可以参考《ATC工具使用指南》。
+-   将所有operator对象与config信息传递给GenerateModelAPI，完成模型编译并最终生成om知识库文件。Config配置信息可以以文件的形式配置，也可以通过map映射的形式配置。具体参数配置与ATC工具一致，可以参考[《ATC工具使用指南》](ATC工具使用指南.md)。
 
 # 使用入门<a name="ZH-CN_TOPIC_0000002408422490"></a>
 
@@ -153,7 +153,7 @@ SVP ATC Graph API接口包含两部分。
 
 SVP ATC Graph API中包含OperatorAPI与GenerateModelAPI两部分。
 
--   GenerateModelAPI与ATC工具所依赖的第三方库环境相同，请参考《ATC工具使用指南》“设置环境变量”章节进行配置，此处不再赘述。此外，用户工程中需增加头文件svp\_atc\_api.h引用，以及动态链接libsvp\_atc\_api.so库文件。
+-   GenerateModelAPI与ATC工具所依赖的第三方库环境相同，请参考[《ATC工具使用指南》](ATC工具使用指南.md)“设置环境变量”章节进行配置，此处不再赘述。此外，用户工程中需增加头文件svp\_atc\_api.h引用，以及动态链接libsvp\_atc\_api.so库文件。
 -   OperatorAPI在用户使用时需引用一系列算子头文件，部署在“$HOME/Ascend/ascend-toolkit/_\{software version\}_/atc/include”路径下。同时需要动态链接libsvp\_atc\_api.so库文件。
 
 ## 构图与转换使用示例<a name="ZH-CN_TOPIC_0000002442021593"></a>
@@ -16956,7 +16956,7 @@ bool GenerateModelBinary(const char *cfgFile, vector<unique_ptr<BaseOperator>> &
 </td>
 <td class="cellrowborder" valign="top" width="17%" headers="mcps1.1.4.1.2 "><p id="p4897mcpsimp"><a name="p4897mcpsimp"></a><a name="p4897mcpsimp"></a>输入</p>
 </td>
-<td class="cellrowborder" valign="top" width="54%" headers="mcps1.1.4.1.3 "><p id="p4899mcpsimp"><a name="p4899mcpsimp"></a><a name="p4899mcpsimp"></a>配置文件在当前系统中的路径，可以是相对路径或绝对路径。使用方法与ATC工具一致，参考《ATC工具使用指南》。</p>
+<td class="cellrowborder" valign="top" width="54%" headers="mcps1.1.4.1.3 "><p id="p4899mcpsimp"><a name="p4899mcpsimp"></a><a name="p4899mcpsimp"></a>配置文件在当前系统中的路径，可以是相对路径或绝对路径。使用方法与ATC工具一致，参考[《ATC工具使用指南》](ATC工具使用指南.md)。</p>
 </td>
 </tr>
 <tr id="row4900mcpsimp"><td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.1.4.1.1 "><p id="p4902mcpsimp"><a name="p4902mcpsimp"></a><a name="p4902mcpsimp"></a>operatorVec</p>
@@ -17003,7 +17003,7 @@ bool GenerateModelBinaryWithCfgMap(const map<string, string> &cfgMap, vector<uni
 </td>
 <td class="cellrowborder" valign="top" width="10.39%" headers="mcps1.1.4.1.2 "><p id="p4608mcpsimp"><a name="p4608mcpsimp"></a><a name="p4608mcpsimp"></a>输入</p>
 </td>
-<td class="cellrowborder" valign="top" width="60.61%" headers="mcps1.1.4.1.3 "><p id="p4610mcpsimp"><a name="p4610mcpsimp"></a><a name="p4610mcpsimp"></a>保存配置信息的map列表，属性与键值都采用字符串的形式。属性和键值的名称与含义与GenerateModelBinary接口一致。使用方法参考《ATC工具使用指南》。</p>
+<td class="cellrowborder" valign="top" width="60.61%" headers="mcps1.1.4.1.3 "><p id="p4610mcpsimp"><a name="p4610mcpsimp"></a><a name="p4610mcpsimp"></a>保存配置信息的map列表，属性与键值都采用字符串的形式。属性和键值的名称与含义与GenerateModelBinary接口一致。使用方法参考[《ATC工具使用指南》](ATC工具使用指南.md)。</p>
 </td>
 </tr>
 <tr id="row4611mcpsimp"><td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.1.4.1.1 "><p id="p4613mcpsimp"><a name="p4613mcpsimp"></a><a name="p4613mcpsimp"></a>operatorVec</p>

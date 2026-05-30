@@ -634,7 +634,7 @@ td_s32 ss_ivs_md_get_bg(ot_md_chn md_chn, ot_svp_dst_img *bg);
 <tr id="row725mcpsimp"><td class="cellrowborder" valign="top" width="16%" headers="mcps1.1.4.1.1 "><p id="p727mcpsimp"><a name="p727mcpsimp"></a><a name="p727mcpsimp"></a>bg</p>
 </td>
 <td class="cellrowborder" valign="top" width="67%" headers="mcps1.1.4.1.2 "><p id="p729mcpsimp"><a name="p729mcpsimp"></a><a name="p729mcpsimp"></a>背景图像指针；不能为空。</p>
-<p id="p730mcpsimp"><a name="p730mcpsimp"></a><a name="p730mcpsimp"></a>详细定义请参见《IVE API参考》的3.1章节</p>
+<p id="p730mcpsimp"><a name="p730mcpsimp"></a><a name="p730mcpsimp"></a>详细定义请参见[《IVE API参考》](IVE API 参考（1--2）.md)的3.1章节</p>
 </td>
 <td class="cellrowborder" valign="top" width="17%" headers="mcps1.1.4.1.3 "><p id="p732mcpsimp"><a name="p732mcpsimp"></a><a name="p732mcpsimp"></a>输出</p>
 </td>
@@ -742,7 +742,7 @@ td_s32 ss_ivs_md_proc(ot_md_chn md_chn, ot_svp_src_img *cur, ot_svp_src_img *ref
 <tr id="row836mcpsimp"><td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.1.4.1.1 "><p id="p838mcpsimp"><a name="p838mcpsimp"></a><a name="p838mcpsimp"></a>cur</p>
 </td>
 <td class="cellrowborder" valign="top" width="71%" headers="mcps1.1.4.1.2 "><p id="p840mcpsimp"><a name="p840mcpsimp"></a><a name="p840mcpsimp"></a>当前帧图像指针；不能为空。</p>
-<p id="p841mcpsimp"><a name="p841mcpsimp"></a><a name="p841mcpsimp"></a>详细定义请参见《IVE API参考》的3.1章节。</p>
+<p id="p841mcpsimp"><a name="p841mcpsimp"></a><a name="p841mcpsimp"></a>详细定义请参见[《IVE API参考》](IVE API 参考（1--2）.md)的3.1章节。</p>
 </td>
 <td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.4.1.3 "><p id="p843mcpsimp"><a name="p843mcpsimp"></a><a name="p843mcpsimp"></a>输入</p>
 </td>
@@ -750,7 +750,7 @@ td_s32 ss_ivs_md_proc(ot_md_chn md_chn, ot_svp_src_img *cur, ot_svp_src_img *ref
 <tr id="row844mcpsimp"><td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.1.4.1.1 "><p id="p846mcpsimp"><a name="p846mcpsimp"></a><a name="p846mcpsimp"></a>ref</p>
 </td>
 <td class="cellrowborder" valign="top" width="71%" headers="mcps1.1.4.1.2 "><p id="p848mcpsimp"><a name="p848mcpsimp"></a><a name="p848mcpsimp"></a>参考帧图像指针；不能为空。</p>
-<p id="p849mcpsimp"><a name="p849mcpsimp"></a><a name="p849mcpsimp"></a>详细定义请参见《IVE API参考》的3.1章节。</p>
+<p id="p849mcpsimp"><a name="p849mcpsimp"></a><a name="p849mcpsimp"></a>详细定义请参见[《IVE API参考》](IVE API 参考（1--2）.md)的3.1章节。</p>
 </td>
 <td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.4.1.3 "><p id="p851mcpsimp"><a name="p851mcpsimp"></a><a name="p851mcpsimp"></a>输入</p>
 </td>
@@ -759,7 +759,7 @@ td_s32 ss_ivs_md_proc(ot_md_chn md_chn, ot_svp_src_img *cur, ot_svp_src_img *ref
 </td>
 <td class="cellrowborder" valign="top" width="71%" headers="mcps1.1.4.1.2 "><p id="p856mcpsimp"><a name="p856mcpsimp"></a><a name="p856mcpsimp"></a>Sad指针。</p>
 <p id="p857mcpsimp"><a name="p857mcpsimp"></a><a name="p857mcpsimp"></a>根据md_attr-&gt; sad_out_ctrl，若需要输出则不能为空。</p>
-<p id="p858mcpsimp"><a name="p858mcpsimp"></a><a name="p858mcpsimp"></a>详细定义请参见《IVE API参考》的3.1章节。</p>
+<p id="p858mcpsimp"><a name="p858mcpsimp"></a><a name="p858mcpsimp"></a>详细定义请参见[《IVE API参考》](IVE API 参考（1--2）.md)的3.1章节。</p>
 </td>
 <td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.4.1.3 "><p id="p860mcpsimp"><a name="p860mcpsimp"></a><a name="p860mcpsimp"></a>输出</p>
 </td>
@@ -768,7 +768,7 @@ td_s32 ss_ivs_md_proc(ot_md_chn md_chn, ot_svp_src_img *cur, ot_svp_src_img *ref
 </td>
 <td class="cellrowborder" valign="top" width="71%" headers="mcps1.1.4.1.2 "><p id="p865mcpsimp"><a name="p865mcpsimp"></a><a name="p865mcpsimp"></a>区域信息指针。</p>
 <p id="p866mcpsimp"><a name="p866mcpsimp"></a><a name="p866mcpsimp"></a>不能为空。</p>
-<p id="p867mcpsimp"><a name="p867mcpsimp"></a><a name="p867mcpsimp"></a>详细定义请参见《SVPx.0 API参考》的1.4章节。</p>
+<p id="p867mcpsimp"><a name="p867mcpsimp"></a><a name="p867mcpsimp"></a>详细定义请参见[《SVPx.0 API参考》](../ai/SVP2.0 API 参考.md)的1.4章节。</p>
 </td>
 <td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.4.1.3 "><p id="p869mcpsimp"><a name="p869mcpsimp"></a><a name="p869mcpsimp"></a>输出</p>
 </td>
@@ -857,7 +857,7 @@ td_s32 ss_ivs_md_proc(ot_md_chn md_chn, ot_svp_src_img *cur, ot_svp_src_img *ref
 
 -   必须先调用`ss_ivs_md_init`初始化，否则返回错误。
 -   md\_chn必须为`ss_ivs_md_create_chn`已创建的通道号，否则返回错误。
--   最多输出区域信息个数为254，区域信息请参见《IVE API参考》第3章节数据类型中的ot\_ive\_ccblob。ot\_ive\_ccblob的成员info中的cur\_area\_threshold是分块后的面积阈值信息。在这里输出的连通区域信息是连续储存。
+-   最多输出区域信息个数为254，区域信息请参见[《IVE API参考》](IVE API 参考（1--2）.md)第3章节数据类型中的ot\_ive\_ccblob。ot\_ive\_ccblob的成员info中的cur\_area\_threshold是分块后的面积阈值信息。在这里输出的连通区域信息是连续储存。
 -   在同一个线程中，完成初始化和通道创建之后，对同一通道只调用一次ss\_ivs\_md\_proc接口。
 
 【举例】
@@ -958,12 +958,12 @@ typedef struct {
 </tr>
 <tr id="row1042mcpsimp"><td class="cellrowborder" valign="top" width="19%" headers="mcps1.1.3.1.1 "><p id="p1044mcpsimp"><a name="p1044mcpsimp"></a><a name="p1044mcpsimp"></a>sad_mode</p>
 </td>
-<td class="cellrowborder" valign="top" width="81%" headers="mcps1.1.3.1.2 "><p id="p1046mcpsimp"><a name="p1046mcpsimp"></a><a name="p1046mcpsimp"></a>Sad模式，详细定义请参见《IVE API参考》的3.3章节。</p>
+<td class="cellrowborder" valign="top" width="81%" headers="mcps1.1.3.1.2 "><p id="p1046mcpsimp"><a name="p1046mcpsimp"></a><a name="p1046mcpsimp"></a>Sad模式，详细定义请参见[《IVE API参考》](IVE API 参考（1--2）.md)的3.3章节。</p>
 </td>
 </tr>
 <tr id="row1047mcpsimp"><td class="cellrowborder" valign="top" width="19%" headers="mcps1.1.3.1.1 "><p id="p1049mcpsimp"><a name="p1049mcpsimp"></a><a name="p1049mcpsimp"></a>sad_out_ctrl</p>
 </td>
-<td class="cellrowborder" valign="top" width="81%" headers="mcps1.1.3.1.2 "><p id="p1051mcpsimp"><a name="p1051mcpsimp"></a><a name="p1051mcpsimp"></a>Sad输出控制，详细定义请参见《IVE API参考》的3.3章节。</p>
+<td class="cellrowborder" valign="top" width="81%" headers="mcps1.1.3.1.2 "><p id="p1051mcpsimp"><a name="p1051mcpsimp"></a><a name="p1051mcpsimp"></a>Sad输出控制，详细定义请参见[《IVE API参考》](IVE API 参考（1--2）.md)的3.3章节。</p>
 <p id="p1052mcpsimp"><a name="p1052mcpsimp"></a><a name="p1052mcpsimp"></a>只支持OT_IVE_SAD_OUT_CTRL_16BIT_BOTH、OT_IVE_SAD_OUT_CTRL_8BIT_BOTH、OT_IVE_SAD_OUT_CTRL_THRESHOLD输出控制。</p>
 </td>
 </tr>
@@ -986,12 +986,12 @@ typedef struct {
 </tr>
 <tr id="row1072mcpsimp"><td class="cellrowborder" valign="top" width="19%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p1074mcpsimp"><a name="p1074mcpsimp"></a><a name="p1074mcpsimp"></a>ccl_ctrl</p>
 </td>
-<td class="cellrowborder" valign="top" width="81%" headers="mcps1.1.3.1.2 "><p id="p1076mcpsimp"><a name="p1076mcpsimp"></a><a name="p1076mcpsimp"></a><span xml:lang="fr-FR" id="ph1077mcpsimp"><a name="ph1077mcpsimp"></a><a name="ph1077mcpsimp"></a>Ccl</span>控制参数<span xml:lang="fr-FR" id="ph1078mcpsimp"><a name="ph1078mcpsimp"></a><a name="ph1078mcpsimp"></a>，</span>详细定义请参见《IVE API参考》的3.3章节。Ccl控制参数成员信息都是针对分块后的图。</p>
+<td class="cellrowborder" valign="top" width="81%" headers="mcps1.1.3.1.2 "><p id="p1076mcpsimp"><a name="p1076mcpsimp"></a><a name="p1076mcpsimp"></a><span xml:lang="fr-FR" id="ph1077mcpsimp"><a name="ph1077mcpsimp"></a><a name="ph1077mcpsimp"></a>Ccl</span>控制参数<span xml:lang="fr-FR" id="ph1078mcpsimp"><a name="ph1078mcpsimp"></a><a name="ph1078mcpsimp"></a>，</span>详细定义请参见[《IVE API参考》](IVE API 参考（1--2）.md)的3.3章节。Ccl控制参数成员信息都是针对分块后的图。</p>
 </td>
 </tr>
 <tr id="row1079mcpsimp"><td class="cellrowborder" valign="top" width="19%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p1081mcpsimp"><a name="p1081mcpsimp"></a><a name="p1081mcpsimp"></a>add_ctrl</p>
 </td>
-<td class="cellrowborder" valign="top" width="81%" headers="mcps1.1.3.1.2 "><p id="p1083mcpsimp"><a name="p1083mcpsimp"></a><a name="p1083mcpsimp"></a><span xml:lang="fr-FR" id="ph1084mcpsimp"><a name="ph1084mcpsimp"></a><a name="ph1084mcpsimp"></a>Add</span>控制参数<span xml:lang="fr-FR" id="ph1085mcpsimp"><a name="ph1085mcpsimp"></a><a name="ph1085mcpsimp"></a>，</span>详细定义请参见《IVE API参考》的3.3章节。</p>
+<td class="cellrowborder" valign="top" width="81%" headers="mcps1.1.3.1.2 "><p id="p1083mcpsimp"><a name="p1083mcpsimp"></a><a name="p1083mcpsimp"></a><span xml:lang="fr-FR" id="ph1084mcpsimp"><a name="ph1084mcpsimp"></a><a name="ph1084mcpsimp"></a>Add</span>控制参数<span xml:lang="fr-FR" id="ph1085mcpsimp"><a name="ph1085mcpsimp"></a><a name="ph1085mcpsimp"></a>，</span>详细定义请参见[《IVE API参考》](IVE API 参考（1--2）.md)的3.3章节。</p>
 </td>
 </tr>
 </tbody>
@@ -1007,7 +1007,7 @@ typedef struct {
 
 ## 错误码<a name="ZH-CN_TOPIC_0000002408294036"></a>
 
-IVS的错误码与IVE的错误码大部分共用，IVS 错误码表所示中前面部分与《IVE API参考》中相同，其他特殊的列在表后面。
+IVS的错误码与IVE的错误码大部分共用，IVS 错误码表所示中前面部分与[《IVE API参考》](IVE API 参考（1--2）.md)中相同，其他特殊的列在表后面。
 
 **表 1**  IVS 错误码
 

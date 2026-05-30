@@ -336,7 +336,7 @@ td_s32 ss_mpi_ive_update_bg_model(ot_ive_handle *handle, const ot_svp_data *bg_m
 <td class="cellrowborder" valign="top" width="45.45454545454545%" headers="mcps1.1.4.1.2 "><p id="p580mcpsimp"><a name="p580mcpsimp"></a><a name="p580mcpsimp"></a>背景状态数据指针。</p>
 <p id="p581mcpsimp"><a name="p581mcpsimp"></a><a name="p581mcpsimp"></a>不能为空。</p>
 <p id="p582mcpsimp"><a name="p582mcpsimp"></a><a name="p582mcpsimp"></a>内存至少需配置sizeof(ot_ive_bg_status_data)。</p>
-<p id="p584mcpsimp"><a name="p584mcpsimp"></a><a name="p584mcpsimp"></a>具体描述请参见《SVPx.0 API 参考》</p>
+<p id="p584mcpsimp"><a name="p584mcpsimp"></a><a name="p584mcpsimp"></a>具体描述请参见[《SVPx.0 API 参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 <td class="cellrowborder" valign="top" width="23.232323232323232%" headers="mcps1.1.4.1.3 "><p id="p586mcpsimp"><a name="p586mcpsimp"></a><a name="p586mcpsimp"></a>输出</p>
 </td>
@@ -1330,7 +1330,7 @@ td_s32 ss_mpi_ive_cnn_get_result(const ot_svp_src_data *src, const ot_svp_dst_me
 </td>
 <td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p14173mcpsimp"><a name="p14173mcpsimp"></a><a name="p14173mcpsimp"></a>预测结果结构体指针，指向ot_ive_cnn_result的数组，表示各个样本的类别和置信度。</p>
 <p id="p14175mcpsimp"><a name="p14175mcpsimp"></a><a name="p14175mcpsimp"></a>不能为空。</p>
-<p id="p14176mcpsimp"><a name="p14176mcpsimp"></a><a name="p14176mcpsimp"></a>具体描述请参见《SVPx.0 API 参考》</p>
+<p id="p14176mcpsimp"><a name="p14176mcpsimp"></a><a name="p14176mcpsimp"></a>具体描述请参见[《SVPx.0 API 参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 <td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.3 "><p id="p14178mcpsimp"><a name="p14178mcpsimp"></a><a name="p14178mcpsimp"></a>输出</p>
 </td>
@@ -1472,7 +1472,7 @@ td_s32 ss_mpi_ive_persp_trans(ot_ive_handle *handle, const ot_svp_src_img *src, 
 </td>
 <td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p8381mcpsimp"><a name="p8381mcpsimp"></a><a name="p8381mcpsimp"></a>做透视变换的点对信息。</p>
 <p id="p8382mcpsimp"><a name="p8382mcpsimp"></a><a name="p8382mcpsimp"></a>不能为空。</p>
-<p id="p8383mcpsimp"><a name="p8383mcpsimp"></a><a name="p8383mcpsimp"></a>具体描述请参见《SVPx.0 API 参考》</p>
+<p id="p8383mcpsimp"><a name="p8383mcpsimp"></a><a name="p8383mcpsimp"></a>具体描述请参见[《SVPx.0 API 参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 <td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.3 "><p id="p8385mcpsimp"><a name="p8385mcpsimp"></a><a name="p8385mcpsimp"></a>输入</p>
 </td>
@@ -1717,7 +1717,7 @@ td_s32 ss_mpi_ive_kcf_create_obj_list(const ot_svp_mem_info *mem, td_u32 max_obj
 <tbody><tr id="row11808mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.4.1.1 "><p id="p11810mcpsimp"><a name="p11810mcpsimp"></a><a name="p11810mcpsimp"></a>mem</p>
 </td>
 <td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p11812mcpsimp"><a name="p11812mcpsimp"></a><a name="p11812mcpsimp"></a>创建目标链表内存指针。不能为空。</p>
-<p id="p11813mcpsimp"><a name="p11813mcpsimp"></a><a name="p11813mcpsimp"></a>具体描述请参见《SVPx.0 API 参考》</p>
+<p id="p11813mcpsimp"><a name="p11813mcpsimp"></a><a name="p11813mcpsimp"></a>具体描述请参见[《SVPx.0 API 参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 <td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.3 "><p id="p11815mcpsimp"><a name="p11815mcpsimp"></a><a name="p11815mcpsimp"></a>输入</p>
 </td>
@@ -1891,7 +1891,7 @@ td_s32 ss_mpi_ive_kcf_create_gauss_peak(td_u3q5 padding, const ot_svp_dst_mem_in
 </td>
 <td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p14041mcpsimp"><a name="p14041mcpsimp"></a><a name="p14041mcpsimp"></a>高斯峰值表指针。不能为空。</p>
 <p id="p14042mcpsimp"><a name="p14042mcpsimp"></a><a name="p14042mcpsimp"></a>注意：至少需要申请455680字节的内存大小。</p>
-<p id="p14043mcpsimp"><a name="p14043mcpsimp"></a><a name="p14043mcpsimp"></a>具体描述请参见《SVPx.0 API 参考》</p>
+<p id="p14043mcpsimp"><a name="p14043mcpsimp"></a><a name="p14043mcpsimp"></a>具体描述请参见[《SVPx.0 API 参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 <td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.3 "><p id="p14045mcpsimp"><a name="p14045mcpsimp"></a><a name="p14045mcpsimp"></a>输出</p>
 </td>
@@ -1967,7 +1967,7 @@ td_s32 ss_mpi_ive_kcf_create_cos_win(const ot_svp_dst_mem_info *cos_win_x, const
 </td>
 <td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p1533mcpsimp"><a name="p1533mcpsimp"></a><a name="p1533mcpsimp"></a>水平方向汉宁窗指针。不能为空。</p>
 <p id="p1534mcpsimp"><a name="p1534mcpsimp"></a><a name="p1534mcpsimp"></a>注意：至少需要申请832字节的内存大小。</p>
-<p id="p1535mcpsimp"><a name="p1535mcpsimp"></a><a name="p1535mcpsimp"></a>具体描述请参见《SVPx.0 API 参考》</p>
+<p id="p1535mcpsimp"><a name="p1535mcpsimp"></a><a name="p1535mcpsimp"></a>具体描述请参见[《SVPx.0 API 参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 <td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.3 "><p id="p1537mcpsimp"><a name="p1537mcpsimp"></a><a name="p1537mcpsimp"></a>输出</p>
 </td>
@@ -1976,7 +1976,7 @@ td_s32 ss_mpi_ive_kcf_create_cos_win(const ot_svp_dst_mem_info *cos_win_x, const
 </td>
 <td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p1542mcpsimp"><a name="p1542mcpsimp"></a><a name="p1542mcpsimp"></a>垂直方向汉宁窗指针。不能为空。</p>
 <p id="p1543mcpsimp"><a name="p1543mcpsimp"></a><a name="p1543mcpsimp"></a>注意：至少需要申请832字节的内存大小。</p>
-<p id="p1544mcpsimp"><a name="p1544mcpsimp"></a><a name="p1544mcpsimp"></a>具体描述请参见《SVPx.0 API 参考》</p>
+<p id="p1544mcpsimp"><a name="p1544mcpsimp"></a><a name="p1544mcpsimp"></a>具体描述请参见[《SVPx.0 API 参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 <td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.3 "><p id="p1546mcpsimp"><a name="p1546mcpsimp"></a><a name="p1546mcpsimp"></a>输出</p>
 </td>
@@ -2071,7 +2071,7 @@ td_s32 ss_mpi_ive_kcf_get_train_obj(td_u3q5 padding, const ot_ive_roi_info roi_i
 <tr id="row13929mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.4.1.1 "><p id="p13931mcpsimp"><a name="p13931mcpsimp"></a><a name="p13931mcpsimp"></a>cos_win_x</p>
 </td>
 <td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p13933mcpsimp"><a name="p13933mcpsimp"></a><a name="p13933mcpsimp"></a>水平方向汉宁窗指针。不能为空。</p>
-<p id="p13934mcpsimp"><a name="p13934mcpsimp"></a><a name="p13934mcpsimp"></a>具体描述请参见《SVPx.0 API 参考》</p>
+<p id="p13934mcpsimp"><a name="p13934mcpsimp"></a><a name="p13934mcpsimp"></a>具体描述请参见[《SVPx.0 API 参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 <td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.3 "><p id="p13936mcpsimp"><a name="p13936mcpsimp"></a><a name="p13936mcpsimp"></a>输入</p>
 </td>
@@ -2079,7 +2079,7 @@ td_s32 ss_mpi_ive_kcf_get_train_obj(td_u3q5 padding, const ot_ive_roi_info roi_i
 <tr id="row13937mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.4.1.1 "><p id="p13939mcpsimp"><a name="p13939mcpsimp"></a><a name="p13939mcpsimp"></a>cos_win_y</p>
 </td>
 <td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p13941mcpsimp"><a name="p13941mcpsimp"></a><a name="p13941mcpsimp"></a>垂直方向汉宁窗指针。不能为空。</p>
-<p id="p13942mcpsimp"><a name="p13942mcpsimp"></a><a name="p13942mcpsimp"></a>具体描述请参见《SVPx.0 API 参考》</p>
+<p id="p13942mcpsimp"><a name="p13942mcpsimp"></a><a name="p13942mcpsimp"></a>具体描述请参见[《SVPx.0 API 参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 <td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.3 "><p id="p13944mcpsimp"><a name="p13944mcpsimp"></a><a name="p13944mcpsimp"></a>输入</p>
 </td>
@@ -2087,7 +2087,7 @@ td_s32 ss_mpi_ive_kcf_get_train_obj(td_u3q5 padding, const ot_ive_roi_info roi_i
 <tr id="row13945mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.4.1.1 "><p id="p13947mcpsimp"><a name="p13947mcpsimp"></a><a name="p13947mcpsimp"></a>gauss_peak</p>
 </td>
 <td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p13949mcpsimp"><a name="p13949mcpsimp"></a><a name="p13949mcpsimp"></a>高斯峰值表指针。不能为空。</p>
-<p id="p13950mcpsimp"><a name="p13950mcpsimp"></a><a name="p13950mcpsimp"></a>具体描述请参见《SVPx.0 API 参考》</p>
+<p id="p13950mcpsimp"><a name="p13950mcpsimp"></a><a name="p13950mcpsimp"></a>具体描述请参见[《SVPx.0 API 参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 <td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.3 "><p id="p13952mcpsimp"><a name="p13952mcpsimp"></a><a name="p13952mcpsimp"></a>输入</p>
 </td>
@@ -2614,7 +2614,7 @@ td_s32 ss_mpi_ive_hog(ot_ive_handle *handle, const ot_svp_src_img *src, const ot
 <tr id="row1196mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.1.4.1.1 "><p id="p1198mcpsimp"><a name="p1198mcpsimp"></a><a name="p1198mcpsimp"></a>dst[]</p>
 </td>
 <td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p1200mcpsimp"><a name="p1200mcpsimp"></a><a name="p1200mcpsimp"></a>HOG特征。</p>
-<p id="p1201mcpsimp"><a name="p1201mcpsimp"></a><a name="p1201mcpsimp"></a>具体描述请参见《SVPx.0 API 参考》</p>
+<p id="p1201mcpsimp"><a name="p1201mcpsimp"></a><a name="p1201mcpsimp"></a>具体描述请参见[《SVPx.0 API 参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 <td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.3 "><p id="p1203mcpsimp"><a name="p1203mcpsimp"></a><a name="p1203mcpsimp"></a>输出</p>
 </td>
@@ -2720,7 +2720,7 @@ td_s32 ss_mpi_ive_hog(ot_ive_handle *handle, const ot_svp_src_img *src, const ot
 水平切面存储格式时，Stride是C \(固定为31\) 做16byte对齐，需要分配的内存大小为Stride \* 2 \* W \* H。
 
 -   ROI区域的宽度和高度必须在\[64, 1024\]范围内，而且是8的倍数。
--   HOG特征通过ot\_svp\_blob结构描述（具体请见《SVPx.0 API参考》1.4小节描述），类型为OT\_SVP\_BLOB\_TYPE\_U16，存储格式按照HOG特征描述的格式存储。
+-   HOG特征通过ot\_svp\_blob结构描述（具体请见[《SVPx.0 API参考》](../ai/SVP2.0 API 参考.md)1.4小节描述），类型为OT\_SVP\_BLOB\_TYPE\_U16，存储格式按照HOG特征描述的格式存储。
 -   算法描述如下：
 
 HOG是Histogram of Oriented Gridients的缩写为 HOG，是目前计算机视觉、模式识别领域很常用的一种描述图像局部纹理的特征，整体计算处理流程如[图4](#fig18559111016331)所示。

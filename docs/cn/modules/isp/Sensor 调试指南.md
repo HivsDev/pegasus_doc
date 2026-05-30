@@ -246,7 +246,7 @@
 1.  在完成初始化的配置之后，可在ISP目录下编译即可生成新的Sensor的库，新库的路径为mpp/lib/ libsns\_xxx.a和mpp/lib/libsns\_xxx.so。
 2.  基于mpp的sample对新Sensor进行验证。在sample/Makefile.param文件中新增一款Sensor的编译配置SENSOR\_TYPE，然后添加对应的libsns\_xxx.a文件。
 3.  在sample\_comm.h中的sample\_sns\_type 中添加该sensor类型，注意和sample/Makefile.param文件中新增的SENSOR\_TYPE一致。然后再sample\_comm\_isp.c中sample\_comm\_isp\_get\_pub\_attr\_by\_sns 函数中添加这个sensor类型的属性，如：Bayer pattern，帧率，宽高信息。
-4.  配置MIPI属性，在sample\_comm\_vi.c中sample\_comm\_vi\_get\_mipi\_attr 添加MIPI属性，调试MIPI/LVDS部分参考《MIPI使用指南》。
+4.  配置MIPI属性，在sample\_comm\_vi.c中sample\_comm\_vi\_get\_mipi\_attr 添加MIPI属性，调试MIPI/LVDS部分参考[《MIPI使用指南》](../video/MIPI 使用指南.md)。
 5.  配置VI属性。在sample\_comm\_vi.c中sample\_comm\_vi\_get\_default\_dev\_info 添加VI属性。
 6.  编译并运行相应的应用程序sample\_vio，如果一切顺利，此时整个系统已经运行。可以通过cat /proc/umap/isp或者cat /proc/umap/mipi\_rx等查看信息。
 7.  如果ISP没有中断，请先检查Sensor输入时钟、输出信号及Sensor寄存器配置是否正常。具体操作请查阅芯片手册。
@@ -264,7 +264,7 @@
 
 本章节涉及Sensor部分，请仔细阅读Sensor的Datasheet，或联系Sensor原厂FAE。
 
-结构体说明请参考《ISP 开发参考》。
+结构体说明请参考[《ISP 开发参考》](ISP 开发参考（1--2）.md)。
 
 驱动文件一般分为xxx\_cmos.c文件，xxx\_cmos.h、xxx\_cmos\_ex.h和xxx\_sensor\_ctl.c文件，分别用于ISP功能和初始化序列，xxx\_cmos\_ex.h文件用于存放定义的驱动文件中的全局变量。
 
@@ -309,7 +309,7 @@ ISP基本功能，请按如下顺序实现：
 
     该函数配置基本是调试或校正参数，可以在调试及校正时修改参数。
 
-    请注意不同WDR模式参数可能不一样，比如Gamma，DRC等。具体请参考《ISP 开发参考》。
+    请注意不同WDR模式参数可能不一样，比如Gamma，DRC等。具体请参考[《ISP 开发参考》](ISP 开发参考（1--2）.md)。
 
 -   cmos\_get\_isp\_black\_level\(\)
 
@@ -394,7 +394,7 @@ AE配置，请按如下顺序实现：
 
 ## 颜色、去噪等校正<a name="ZH-CN_TOPIC_0000002457880861"></a>
 
-请根据《图像质量调试工具使用指南》校正sensor参数。
+请根据[《图像质量调试工具使用指南》](../ai/图像质量调试工具使用指南.md)校正sensor参数。
 
 ## 图像质量调优<a name="ZH-CN_TOPIC_0000002457840701"></a>
 
@@ -429,7 +429,7 @@ AE配置，请按如下顺序实现：
 
 ## Built-in WDR模式<a name="ZH-CN_TOPIC_0000002424202110"></a>
 
-Sensor输出的raw数据是压缩格式，因此需要使用SPLIT或EXPANDER模块实现解压缩功能。具体方法是在cmos\_get\_isp\_default函数中配置ot\_isp\_expander\_attr结构体，其详细描述见《ISP 开发参考》。参考配置如下：
+Sensor输出的raw数据是压缩格式，因此需要使用SPLIT或EXPANDER模块实现解压缩功能。具体方法是在cmos\_get\_isp\_default函数中配置ot\_isp\_expander\_attr结构体，其详细描述见[《ISP 开发参考》](ISP 开发参考（1--2）.md)。参考配置如下：
 
 ```
 static const  ot_isp_expander_attrg_cmos_expander = {

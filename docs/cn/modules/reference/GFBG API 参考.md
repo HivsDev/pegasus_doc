@@ -6520,9 +6520,9 @@ typedef struct
     -   从Display宽高到Screen宽高使用G0中的缩放功能（支持放大1\~15倍，不支持缩小），将显存内容缩放到Screen宽高显示。
 
     > **须知：** 
-    >-   上述缩放功能中，TDE的缩放能力（放大倍数和缩小倍数）可参考文档《TDE API参考》。
+    >-   上述缩放功能中，TDE的缩放能力（放大倍数和缩小倍数）可参考文档[《TDE API参考》](TDE API参考.md)。
     >    如果仅使用FBIOPAN\_DISPLAY接口进行显示，则不涉及TDE搬移，在使用G0的缩放功能时，GFBG内部以display宽高作为参考，此时需将display宽高设置成Canvas宽高。
-    >-   上述缩放功能中，TDE的缩放能力（放大倍数和缩小倍数）可参考文档《TDE API参考》。
+    >-   上述缩放功能中，TDE的缩放能力（放大倍数和缩小倍数）可参考文档[《TDE API参考》](TDE API参考.md)。
     >    如果仅使用FBIOPAN\_DISPLAY接口进行显示，则不涉及TDE搬移，在使用G0的缩放功能时，GFBG内部以display宽高作为参考，此时需将display宽高设置成Canvas宽高。
 
 -   若设置了display\_width和mask（修改显示宽高的掩码设置参见`ot_fb_layer_info_maskbit`  中的OT\_FB\_LAYER\_MASK\_DISPLAY\_SIZE项）且该宽度值比系统已存在的设置大，则该设置会修改固定屏幕信息`fb_fix_screeninfo`中的line\_length项，修改后的大小为“设置的宽度值\*每像素字节数”的16字节对齐。
@@ -6666,7 +6666,7 @@ typedef enum
 </tbody>
 </table>
 
-注：各刷新类型的含义具体见《GFBG 开发指南》1.2中的“图形层刷新类型”小节。
+注：各刷新类型的含义具体见[《GFBG 开发指南》](GFBG API 参考.md)1.2中的“图形层刷新类型”小节。
 
 【注意】
 
@@ -7380,7 +7380,7 @@ td_s32 ss_mpi_vo_bind_layer(ot_vo_layer layer, ot_vo_dev dev)
 <tbody><tr id="row6430mcpsimp"><td class="cellrowborder" valign="top" width="19.8%" headers="mcps1.1.4.1.1 "><p id="p6432mcpsimp"><a name="p6432mcpsimp"></a><a name="p6432mcpsimp"></a>layer</p>
 </td>
 <td class="cellrowborder" valign="top" width="60.4%" headers="mcps1.1.4.1.2 "><p id="p6434mcpsimp"><a name="p6434mcpsimp"></a><a name="p6434mcpsimp"></a>图形层标识</p>
-<p id="p6435mcpsimp"><a name="p6435mcpsimp"></a><a name="p6435mcpsimp"></a>ot_vo_layer和ot_vo_dev 详情请参见《MPP 媒体处理软件V5.0 开发参考》“视频输出”章节。</p>
+<p id="p6435mcpsimp"><a name="p6435mcpsimp"></a><a name="p6435mcpsimp"></a>ot_vo_layer和ot_vo_dev 详情请参见[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)“视频输出”章节。</p>
 </td>
 <td class="cellrowborder" valign="top" width="19.8%" headers="mcps1.1.4.1.3 "><p id="p6437mcpsimp"><a name="p6437mcpsimp"></a><a name="p6437mcpsimp"></a>输入</p>
 </td>
@@ -7464,7 +7464,7 @@ td_s32 ss_mpi_vo_unbind_layer(ot_vo_layer layer, ot_vo_dev dev)
 <tbody><tr id="row2783mcpsimp"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.4.1.1 "><p id="p2785mcpsimp"><a name="p2785mcpsimp"></a><a name="p2785mcpsimp"></a>layer</p>
 </td>
 <td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p2787mcpsimp"><a name="p2787mcpsimp"></a><a name="p2787mcpsimp"></a>图形层号。</p>
-<p id="p2788mcpsimp"><a name="p2788mcpsimp"></a><a name="p2788mcpsimp"></a>ot_vo_layer和ot_vo_dev详情请参见《MPP 媒体处理软件V5.0 开发参考》“视频输出”章节。</p>
+<p id="p2788mcpsimp"><a name="p2788mcpsimp"></a><a name="p2788mcpsimp"></a>ot_vo_layer和ot_vo_dev详情请参见[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)“视频输出”章节。</p>
 </td>
 <td class="cellrowborder" valign="top" width="16%" headers="mcps1.1.4.1.3 "><p id="p2790mcpsimp"><a name="p2790mcpsimp"></a><a name="p2790mcpsimp"></a>输入</p>
 </td>
@@ -7531,7 +7531,7 @@ ss\_mpi\_vo\_bind\_layer
 td_s32 ss_mpi_vo_set_pub_attr(ot_vo_dev dev, const ot_vo_pub_attr * pub_attr)
 ```
 
-具体请参见《MPP 媒体处理软件V5.0 开发参考》“视频输出”章节。
+具体请参见[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)“视频输出”章节。
 
 ### ss\_mpi\_vo\_get\_pub\_attr<a name="ZH-CN_TOPIC_0000002408095126"></a>
 
@@ -7545,7 +7545,7 @@ td_s32 ss_mpi_vo_set_pub_attr(ot_vo_dev dev, const ot_vo_pub_attr * pub_attr)
 td_s32 ss_mpi_vo_get_pub_attr(ot_vo_dev dev, ot_vo_pub_attr * pub_attr)
 ```
 
-具体请参见《MPP 媒体处理软件V5.0 开发参考》“视频输出”章节。
+具体请参见[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)“视频输出”章节。
 
 ### ss\_mpi\_vo\_enable<a name="ZH-CN_TOPIC_0000002441654453"></a>
 
@@ -7588,7 +7588,7 @@ td_s32 ss_mpi_vo_enable (ot_vo_dev dev)
 td_s32 ss_mpi_vo_disable (ot_vo_dev dev)
 ```
 
-具体请参见《MPP 媒体处理软件V5.0 开发参考》“视频输出”章节。
+具体请参见[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)“视频输出”章节。
 
 # Proc调试信息<a name="ZH-CN_TOPIC_0000002441694261"></a>
 

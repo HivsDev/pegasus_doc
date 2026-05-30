@@ -1098,14 +1098,14 @@ td_s32 ss_mpi_mfusion_bind_vi(const td_u32 fusion_id, ot_vi_pipe vi_pipe, ot_vi_
 </tr>
 <tr id="row14132105314109"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.4.1.1 "><p xml:lang="sv-SE" id="p1013265321012"><a name="p1013265321012"></a><a name="p1013265321012"></a>vi_pipe</p>
 </td>
-<td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p8238mcpsimp"><a name="p8238mcpsimp"></a><a name="p8238mcpsimp"></a>PIPE号。取值范围：0, OT_VI_MAX_PIPE_NUM)，参考《MPP 媒体处理软件 V5.0 开发参考》“视频输入”章节。</p>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p8238mcpsimp"><a name="p8238mcpsimp"></a><a name="p8238mcpsimp"></a>PIPE号。取值范围：0, OT_VI_MAX_PIPE_NUM)，参考[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“视频输入”章节。</p>
 </td>
 <td class="cellrowborder" valign="top" width="16%" headers="mcps1.1.4.1.3 "><p id="p141331853181016"><a name="p141331853181016"></a><a name="p141331853181016"></a>输入</p>
 </td>
 </tr>
 <tr id="row5436318121418"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.4.1.1 "><p id="p643611818148"><a name="p643611818148"></a><a name="p643611818148"></a>vi_chn</p>
 </td>
-<td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p8249mcpsimp"><a name="p8249mcpsimp"></a><a name="p8249mcpsimp"></a>VI通道号。取值范围：[0, OT_VI_MAX_PHYS_CHN_NUM)，参考《MPP 媒体处理软件 V5.0 开发参考》“视频输入”章节。</p>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.1.4.1.2 "><p id="p8249mcpsimp"><a name="p8249mcpsimp"></a><a name="p8249mcpsimp"></a>VI通道号。取值范围：[0, OT_VI_MAX_PHYS_CHN_NUM)，参考[《MPP 媒体处理软件 V5.0 开发参考》](../mpp/01 概述.md)“视频输入”章节。</p>
 </td>
 <td class="cellrowborder" valign="top" width="16%" headers="mcps1.1.4.1.3 "><p id="p84361818161416"><a name="p84361818161416"></a><a name="p84361818161416"></a>输入</p>
 </td>
@@ -3108,12 +3108,12 @@ frm_pts   frm_pts_after_ave        frm_pts_diff    frm_pts_diff_max    frm_pts_d
 </tr>
 <tr id="row1867mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="p1869mcpsimp"><a name="p1869mcpsimp"></a><a name="p1869mcpsimp"></a>hmax_times</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="p1871mcpsimp"><a name="p1871mcpsimp"></a><a name="p1871mcpsimp"></a>Sensor读出一行的时间，相关描述参考《ISP 开发参考》。单位：ns。</p>
+<td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="p1871mcpsimp"><a name="p1871mcpsimp"></a><a name="p1871mcpsimp"></a>Sensor读出一行的时间，相关描述参考[《ISP 开发参考》](../isp/ISP 开发参考（1--2）.md)。单位：ns。</p>
 </td>
 </tr>
 <tr id="row1872mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="p1874mcpsimp"><a name="p1874mcpsimp"></a><a name="p1874mcpsimp"></a>time_delay</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="p1876mcpsimp"><a name="p1876mcpsimp"></a><a name="p1876mcpsimp"></a>陀螺仪与图像时间差。参考《DIS调试指南》。</p>
+<td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="p1876mcpsimp"><a name="p1876mcpsimp"></a><a name="p1876mcpsimp"></a>陀螺仪与图像时间差。参考[《DIS调试指南》](../../tools/DIS 调试指南.md)。</p>
 </td>
 </tr>
 <tr id="row1877mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="p1879mcpsimp"><a name="p1879mcpsimp"></a><a name="p1879mcpsimp"></a>exposure_time</p>
@@ -3143,7 +3143,7 @@ frm_pts   frm_pts_after_ave        frm_pts_diff    frm_pts_diff_max    frm_pts_d
 </tr>
 <tr id="row126413467543"><td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="p1874619811554"><a name="p1874619811554"></a><a name="p1874619811554"></a>vmax</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="p474620815556"><a name="p474620815556"></a><a name="p474620815556"></a>Sensor每帧实际生效的总行数，相关描述参考《ISP 开发参考》。</p>
+<td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="p474620815556"><a name="p474620815556"></a><a name="p474620815556"></a>Sensor每帧实际生效的总行数，相关描述参考[《ISP 开发参考》](../isp/ISP 开发参考（1--2）.md)。</p>
 </td>
 </tr>
 <tr id="row1892mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="p1894mcpsimp"><a name="p1894mcpsimp"></a><a name="p1894mcpsimp"></a>gyro_data_range</p>

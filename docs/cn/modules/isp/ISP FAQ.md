@@ -222,7 +222,7 @@ AE严重过曝或曝光不足，调整目标亮度参数无改善。
 
 通过ot\_mpi\_isp\_query\_inner\_state\_info接口获取当前状态下的曝光时间和增益信息。
 
-> **说明：**  ot\_mpi\_isp\_query\_inner\_state\_info接口请参考《ISP开发参考》文档。
+> **说明：**  ot\_mpi\_isp\_query\_inner\_state\_info接口请参考[《ISP开发参考》](ISP 开发参考（1--2）.md)文档。
 
 【解决】
 
@@ -502,7 +502,7 @@ AE闪烁问题最常见的为两类：同步问题和精度问题。
 因此若要使用Dynamic BLC模块基于OB区统计得到合理的黑电平值，整个数据处理通路的配置说明如下：
 
 -   sensor驱动配置：在驱动中添加可以读出ob区的sensor序列。若启动Dynamic BLC模块一定要关闭sensor中的BLC校正功能。
--   mipi配置：确保mipi的裁剪区域包含OB区。若OB区的datatype与可见光区域图像的datatype不一样，则需要修改mipi的datatype配置，可通过调用OT\_MIPI\_SET\_EXT\_DATA\_TYPE接口实现，接口的具体信息请参见《MIPI 使用指南》，使得mipi输出的数据包含OB区。若Dynamic BLC模块异常要检查mipi检测到的分辨率是否为包含OB区的分辨率。
+-   mipi配置：确保mipi的裁剪区域包含OB区。若OB区的datatype与可见光区域图像的datatype不一样，则需要修改mipi的datatype配置，可通过调用OT\_MIPI\_SET\_EXT\_DATA\_TYPE接口实现，接口的具体信息请参见[《MIPI 使用指南》](../video/MIPI 使用指南.md)，使得mipi输出的数据包含OB区。若Dynamic BLC模块异常要检查mipi检测到的分辨率是否为包含OB区的分辨率。
 -   VI dev配置：宽高与mipi输出宽高保持一致。
 -   pub attr配置：配置wnd\_rect中的起始坐标和宽高信息，使用ISP裁剪功能裁剪掉OB区，保证ISP FE和BE处理的数据为不带OB区的raw数据。
 

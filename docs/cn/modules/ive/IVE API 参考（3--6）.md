@@ -4363,7 +4363,7 @@ typedef struct {
 <tbody><tr id="row3853mcpsimp"><td class="cellrowborder" valign="top" width="37%" headers="mcps1.1.3.1.1 "><p id="p3855mcpsimp"><a name="p3855mcpsimp"></a><a name="p3855mcpsimp"></a>mem</p>
 </td>
 <td class="cellrowborder" valign="top" width="63%" headers="mcps1.1.3.1.2 "><p id="p3857mcpsimp"><a name="p3857mcpsimp"></a><a name="p3857mcpsimp"></a>辅助内存。内存配置大小说明见ss_mpi_ive_canny_hys_edge的【注意】。</p>
-<p id="p3859mcpsimp"><a name="p3859mcpsimp"></a><a name="p3859mcpsimp"></a>详细定义请见《SVPx.0 API参考》1.4小节。</p>
+<p id="p3859mcpsimp"><a name="p3859mcpsimp"></a><a name="p3859mcpsimp"></a>详细定义请见[《SVPx.0 API参考》](../ai/SVP2.0 API 参考.md)1.4小节。</p>
 </td>
 </tr>
 <tr id="row3860mcpsimp"><td class="cellrowborder" valign="top" width="37%" headers="mcps1.1.3.1.1 "><p id="p3862mcpsimp"><a name="p3862mcpsimp"></a><a name="p3862mcpsimp"></a>low_threshold</p>
@@ -4804,7 +4804,7 @@ typedef struct {
 <tbody><tr id="row6034mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p id="p6036mcpsimp"><a name="p6036mcpsimp"></a><a name="p6036mcpsimp"></a>mem</p>
 </td>
 <td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p6038mcpsimp"><a name="p6038mcpsimp"></a><a name="p6038mcpsimp"></a>辅助内存。内存配置大小见ss_mpi_ive_st_cand_corner的【注意】。</p>
-<p id="p6040mcpsimp"><a name="p6040mcpsimp"></a><a name="p6040mcpsimp"></a>详细定义请见《SVPx.0 API参考》</p>
+<p id="p6040mcpsimp"><a name="p6040mcpsimp"></a><a name="p6040mcpsimp"></a>详细定义请见[《SVPx.0 API参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 </tr>
 <tr id="row6041mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p id="p6043mcpsimp"><a name="p6043mcpsimp"></a><a name="p6043mcpsimp"></a>quality_level</p>
@@ -5179,7 +5179,7 @@ typedef struct {
 <tr id="row14996mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p14998mcpsimp"><a name="p14998mcpsimp"></a><a name="p14998mcpsimp"></a>mem</p>
 </td>
 <td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p15000mcpsimp"><a name="p15000mcpsimp"></a><a name="p15000mcpsimp"></a>辅助内存。开辟参照ss_mpi_ive_resize中【注意】。</p>
-<p id="p15002mcpsimp"><a name="p15002mcpsimp"></a><a name="p15002mcpsimp"></a>详细定义请见《SVPx.0 API参考》</p>
+<p id="p15002mcpsimp"><a name="p15002mcpsimp"></a><a name="p15002mcpsimp"></a>详细定义请见[《SVPx.0 API参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 </tr>
 <tr id="row15003mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p15005mcpsimp"><a name="p15005mcpsimp"></a><a name="p15005mcpsimp"></a>num</p>
@@ -6086,7 +6086,7 @@ typedef struct {
 <tr id="row1092mcpsimp"><td class="cellrowborder" valign="top" width="48%" headers="mcps1.1.3.1.1 "><p id="p1094mcpsimp"><a name="p1094mcpsimp"></a><a name="p1094mcpsimp"></a>wgt</p>
 </td>
 <td class="cellrowborder" valign="top" width="52%" headers="mcps1.1.3.1.2 "><p id="p1096mcpsimp"><a name="p1096mcpsimp"></a><a name="p1096mcpsimp"></a>模型数据权重。</p>
-<p id="p1097mcpsimp"><a name="p1097mcpsimp"></a><a name="p1097mcpsimp"></a>详细定义请见《SVPx.0 API参考》</p>
+<p id="p1097mcpsimp"><a name="p1097mcpsimp"></a><a name="p1097mcpsimp"></a>详细定义请见[《SVPx.0 API参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 </tr>
 <tr id="row1098mcpsimp"><td class="cellrowborder" valign="top" width="48%" headers="mcps1.1.3.1.1 "><p xml:lang="da-DK" id="p1100mcpsimp"><a name="p1100mcpsimp"></a><a name="p1100mcpsimp"></a>total_wgt_size</p>
@@ -6620,7 +6620,7 @@ typedef struct {
 <tr id="row328mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p330mcpsimp"><a name="p330mcpsimp"></a><a name="p330mcpsimp"></a>fc_wgt_bias</p>
 </td>
 <td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p332mcpsimp"><a name="p332mcpsimp"></a><a name="p332mcpsimp"></a>全连接运算包中权重系数和偏置系数。</p>
-<p id="p333mcpsimp"><a name="p333mcpsimp"></a><a name="p333mcpsimp"></a>详细定义请见《SVPx.0 API参考》1.4小节。</p>
+<p id="p333mcpsimp"><a name="p333mcpsimp"></a><a name="p333mcpsimp"></a>详细定义请见[《SVPx.0 API参考》](../ai/SVP2.0 API 参考.md)1.4小节。</p>
 </td>
 </tr>
 <tr id="row334mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p336mcpsimp"><a name="p336mcpsimp"></a><a name="p336mcpsimp"></a>fc_wgt_bias_size</p>
@@ -6704,7 +6704,7 @@ typedef struct {
 <tbody><tr id="row7608mcpsimp"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.3.1.1 "><p id="p7610mcpsimp"><a name="p7610mcpsimp"></a><a name="p7610mcpsimp"></a>mem</p>
 </td>
 <td class="cellrowborder" valign="top" width="75%" headers="mcps1.1.3.1.2 "><p id="p7612mcpsimp"><a name="p7612mcpsimp"></a><a name="p7612mcpsimp"></a>CNN预测计算过程的辅助内存，所需内存大小参考ss_mpi_ive_cnn_predict中的【注意】。</p>
-<p id="p7614mcpsimp"><a name="p7614mcpsimp"></a><a name="p7614mcpsimp"></a>详细定义请见《SVPx.0 API参考》</p>
+<p id="p7614mcpsimp"><a name="p7614mcpsimp"></a><a name="p7614mcpsimp"></a>详细定义请见[《SVPx.0 API参考》](../ai/SVP2.0 API 参考.md)</p>
 </td>
 </tr>
 <tr id="row7615mcpsimp"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.1.3.1.1 "><p id="p7617mcpsimp"><a name="p7617mcpsimp"></a><a name="p7617mcpsimp"></a>num</p>

@@ -253,7 +253,7 @@ CIPHER支持的AES、HASH、RSA不同解决方案间的配置差异如表1所示
 3.  创建KEYSLOT句柄。调用接口`ss_mpi_keyslot_create`。
 4.  绑定CIPHER和KEYSLOT句柄。调用接口`ss_mpi_cipher_attach`。
 5.  配置CIPHER控制信息。包含加解密算法、工作模式等信息。调用接口`ss_mpi_cipher_set_cfg`。
-6.  配置密钥。请参考《KLAD API 参考》1.2.1 明文KEY传递或1.2.2 ROOTKEY传递。
+6.  配置密钥。请参考[《KLAD API 参考》](KLAD API 参考.md)1.2.1 明文KEY传递或1.2.2 ROOTKEY传递。
 7.  加解密数据。用户可调用以下任意接口加解密数据。
     -   物理内存中数据的单包加密--ss\_mpi\_cipher\_encrypt
     -   物理内存中数据的单包解密--ss\_mpi\_cipher\_decrypt
@@ -339,7 +339,7 @@ CIPHER支持的AES、HASH、RSA不同解决方案间的配置差异如表1所示
 3.  创建KEYSLOT句柄。调用接口`ss_mpi_keyslot_create`。
 4.  绑定CIPHER和KEYSLOT句柄。调用接口`ss_mpi_cipher_attach`。
 5.  配置CIPHER控制信息。包含加解密算法、工作模式等信息。调用接口`ss_mpi_cipher_set_cfg`。
-6.  配置密钥。请参考《KLAD API 参考》1.2.1 明文KEY传递或1.2.2 ROOTKEY传递。
+6.  配置密钥。请参考[《KLAD API 参考》](KLAD API 参考.md)1.2.1 明文KEY传递或1.2.2 ROOTKEY传递。
 7.  加解密数据。用户可调用以下任意接口加解密数据。
     -   多包加密--ss\_mpi\_cipher\_encrypt\_multi\_pack
     -   多包解密--ss\_mpi\_cipher\_decrypt\_multi\_pack
@@ -374,7 +374,7 @@ CIPHER支持的AES、HASH、RSA不同解决方案间的配置差异如表1所示
 3.  创建KEYSLOT句柄。调用接口`ss_mpi_keyslot_create`。
 4.  绑定CIPHER和KEYSLOT句柄。调用接口`ss_mpi_cipher_attach`。
 5.  配置CIPHER控制信息。包含加解密算法、工作模式等信息。调用接口`ss_mpi_cipher_set_cfg`。
-6.  配置密钥。请参考《KLAD API 参考》1.2.1 明文KEY传递或1.2.2 ROOTKEY传递。
+6.  配置密钥。请参考[《KLAD API 参考》](KLAD API 参考.md)1.2.1 明文KEY传递或1.2.2 ROOTKEY传递。
 7.  加解密数据。用户可调用以下任意接口加解密数据。
     -   物理内存中数据加密--ss\_mpi\_cipher\_encrypt
     -   物理内存中数据解密--ss\_mpi\_cipher\_decrypt

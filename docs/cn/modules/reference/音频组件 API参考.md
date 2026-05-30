@@ -1270,7 +1270,7 @@ typedef struct {
 </thead>
 <tbody><tr id="row1301mcpsimp"><td class="cellrowborder" valign="top" width="43%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p1303mcpsimp"><a name="p1303mcpsimp"></a><a name="p1303mcpsimp"></a>type</p>
 </td>
-<td class="cellrowborder" valign="top" width="56.99999999999999%" headers="mcps1.1.3.1.2 "><p id="p1305mcpsimp"><a name="p1305mcpsimp"></a><a name="p1305mcpsimp"></a>编码协议类型，见《MPP 媒体处理软件V5.0 开发参考》“2.系统控制”章节。</p>
+<td class="cellrowborder" valign="top" width="56.99999999999999%" headers="mcps1.1.3.1.2 "><p id="p1305mcpsimp"><a name="p1305mcpsimp"></a><a name="p1305mcpsimp"></a>编码协议类型，见[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)“2.系统控制”章节。</p>
 </td>
 </tr>
 <tr id="row1306mcpsimp"><td class="cellrowborder" valign="top" width="43%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p1308mcpsimp"><a name="p1308mcpsimp"></a><a name="p1308mcpsimp"></a>max_frame_len</p>
@@ -1290,7 +1290,7 @@ typedef struct {
 </tr>
 <tr id="row1327mcpsimp"><td class="cellrowborder" valign="top" width="43%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p1329mcpsimp"><a name="p1329mcpsimp"></a><a name="p1329mcpsimp"></a>func_enc_frame</p>
 </td>
-<td class="cellrowborder" valign="top" width="56.99999999999999%" headers="mcps1.1.3.1.2 "><p id="p1331mcpsimp"><a name="p1331mcpsimp"></a><a name="p1331mcpsimp"></a>进行编码的函数指针<span xml:lang="fr-FR" id="ph1332mcpsimp"><a name="ph1332mcpsimp"></a><a name="ph1332mcpsimp"></a>。详细描述请参</span>见《MPP 媒体处理软件V5.0 开发参考》<span xml:lang="fr-FR" id="ph1333mcpsimp"><a name="ph1333mcpsimp"></a><a name="ph1333mcpsimp"></a>“音频”</span>章节。</p>
+<td class="cellrowborder" valign="top" width="56.99999999999999%" headers="mcps1.1.3.1.2 "><p id="p1331mcpsimp"><a name="p1331mcpsimp"></a><a name="p1331mcpsimp"></a>进行编码的函数指针<span xml:lang="fr-FR" id="ph1332mcpsimp"><a name="ph1332mcpsimp"></a><a name="ph1332mcpsimp"></a>。详细描述请参</span>见[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)<span xml:lang="fr-FR" id="ph1333mcpsimp"><a name="ph1333mcpsimp"></a><a name="ph1333mcpsimp"></a>“音频”</span>章节。</p>
 </td>
 </tr>
 <tr id="row1334mcpsimp"><td class="cellrowborder" valign="top" width="43%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p1336mcpsimp"><a name="p1336mcpsimp"></a><a name="p1336mcpsimp"></a>func_close_encoder</p>
@@ -1340,12 +1340,12 @@ typedef struct {
 </thead>
 <tbody><tr id="row1371mcpsimp"><td class="cellrowborder" valign="top" width="39%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p1373mcpsimp"><a name="p1373mcpsimp"></a><a name="p1373mcpsimp"></a>type</p>
 </td>
-<td class="cellrowborder" valign="top" width="61%" headers="mcps1.1.3.1.2 "><p id="p1375mcpsimp"><a name="p1375mcpsimp"></a><a name="p1375mcpsimp"></a>解码协议类型，见《MPP 媒体处理软件V5.0 开发参考》“系统控制”章节。</p>
+<td class="cellrowborder" valign="top" width="61%" headers="mcps1.1.3.1.2 "><p id="p1375mcpsimp"><a name="p1375mcpsimp"></a><a name="p1375mcpsimp"></a>解码协议类型，见[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)“系统控制”章节。</p>
 </td>
 </tr>
 <tr id="row1376mcpsimp"><td class="cellrowborder" valign="top" width="39%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p1378mcpsimp"><a name="p1378mcpsimp"></a><a name="p1378mcpsimp"></a>name</p>
 </td>
-<td class="cellrowborder" valign="top" width="61%" headers="mcps1.1.3.1.2 "><p id="p1380mcpsimp"><a name="p1380mcpsimp"></a><a name="p1380mcpsimp"></a>解码器名称。<span xml:lang="fr-FR" id="ph1381mcpsimp"><a name="ph1381mcpsimp"></a><a name="ph1381mcpsimp"></a>OT_MAX_DECODER_NAME_LEN定义</span>见《MPP 媒体处理软件V5.0 开发参考》“音频”章节。</p>
+<td class="cellrowborder" valign="top" width="61%" headers="mcps1.1.3.1.2 "><p id="p1380mcpsimp"><a name="p1380mcpsimp"></a><a name="p1380mcpsimp"></a>解码器名称。<span xml:lang="fr-FR" id="ph1381mcpsimp"><a name="ph1381mcpsimp"></a><a name="ph1381mcpsimp"></a>OT_MAX_DECODER_NAME_LEN定义</span>见[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)“音频”章节。</p>
 </td>
 </tr>
 <tr id="row1382mcpsimp"><td class="cellrowborder" valign="top" width="39%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p1384mcpsimp"><a name="p1384mcpsimp"></a><a name="p1384mcpsimp"></a>func_open_decoder</p>
@@ -1656,19 +1656,19 @@ typedef struct {
 <p id="p1648mcpsimp"><a name="p1648mcpsimp"></a><a name="p1648mcpsimp"></a>AACLD：8～48；</p>
 <p id="p1649mcpsimp"><a name="p1649mcpsimp"></a><a name="p1649mcpsimp"></a>AACELD：8～48；</p>
 <p id="p1650mcpsimp"><a name="p1650mcpsimp"></a><a name="p1650mcpsimp"></a>以kHz为单位。</p>
-<p id="p1651mcpsimp"><a name="p1651mcpsimp"></a><a name="p1651mcpsimp"></a>ot_audio_sample_rate请参见《MPP 媒体处理软件V5.0 开发参考》“音频”章节。</p>
+<p id="p1651mcpsimp"><a name="p1651mcpsimp"></a><a name="p1651mcpsimp"></a>ot_audio_sample_rate请参见[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)“音频”章节。</p>
 </td>
 </tr>
 <tr id="row1652mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p id="p1654mcpsimp"><a name="p1654mcpsimp"></a><a name="p1654mcpsimp"></a>bit_width</p>
 </td>
 <td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p1656mcpsimp"><a name="p1656mcpsimp"></a><a name="p1656mcpsimp"></a>音频数据采样精度，只支持16bit。</p>
-<p id="p1657mcpsimp"><a name="p1657mcpsimp"></a><a name="p1657mcpsimp"></a>ot_audio_bit_width请参见《MPP 媒体处理软件V5.0 开发参考》“音频”章节。</p>
+<p id="p1657mcpsimp"><a name="p1657mcpsimp"></a><a name="p1657mcpsimp"></a>ot_audio_bit_width请参见[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)“音频”章节。</p>
 </td>
 </tr>
 <tr id="row1658mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p id="p1660mcpsimp"><a name="p1660mcpsimp"></a><a name="p1660mcpsimp"></a>snd_mode</p>
 </td>
 <td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p1662mcpsimp"><a name="p1662mcpsimp"></a><a name="p1662mcpsimp"></a>输入数据的声道模式。支持输入为单声道或双声道。</p>
-<p id="p1663mcpsimp"><a name="p1663mcpsimp"></a><a name="p1663mcpsimp"></a>ot_audio_snd_mode请参见《MPP 媒体处理软件V5.0 开发参考》“音频”章节。</p>
+<p id="p1663mcpsimp"><a name="p1663mcpsimp"></a><a name="p1663mcpsimp"></a>ot_audio_snd_mode请参见[《MPP 媒体处理软件V5.0 开发参考》](../mpp/01 概述.md)“音频”章节。</p>
 </td>
 </tr>
 <tr id="row1664mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p id="p1666mcpsimp"><a name="p1666mcpsimp"></a><a name="p1666mcpsimp"></a>transport_type</p>
